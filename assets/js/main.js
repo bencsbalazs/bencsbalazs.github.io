@@ -1,6 +1,10 @@
 (function () {
     ("use strict");
 
+    /* ------------------------
+       --- Helper functions ---
+       ------------------------ */
+
     const select = (el, all = false) => {
         el = el.trim();
         if (all) {
@@ -199,6 +203,10 @@
         },
     });
 
+    /* ------------------------
+       --- Matrix animation ---
+       ------------------------ */
+
     const canvas = document.getElementById("canv");
     const ctx = canvas.getContext("2d");
     const w = canvas.width;
@@ -227,22 +235,31 @@
 
             // randomly reset the end of the column if it's at least 100px high
             if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-            // otherwise just move the y coordinate for the column 20px down,
             else ypos[ind] = y + 20;
         });
     };
 
-    // render the animation at 20 FPS.
-    setInterval(matrix, 100);
-
     window.addEventListener("load", () => {
+        // --- Element rendering ---
         AOS.init({
             duration: 1000,
             easing: "ease-in-out",
             once: true,
             mirror: false,
         });
+
+        // --- Start matrix ---
+        setInterval(matrix, 100);
     });
+
+    /* ------------------------
+       ---- Blog functions ----
+       ------------------------ */
+    const removeAllClass = (where, what) => {
+        [].forEach.call(select(where, (all = true)), function (el) {
+            el.classList.remove(what);
+        });
+    };
 
     window.addEventListener("DOMContentLoaded", function () {
         const blogContent = select(".blogContent", (all = true));
@@ -254,6 +271,15 @@
             link.setAttribute("href", element.getAttribute("id"));
             link.appendChild(linkText);
             document.getElementById("tableOfContents").appendChild(link);
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                removeAllClass("#tableOfContents a", "selected");
+                this.classList.add("selected");
+                removeAllClass(".blogContent", "active");
+                document
+                    .getElementById(this.getAttribute("href"))
+                    .classList.add("active");
+            });
         });
     });
 })();

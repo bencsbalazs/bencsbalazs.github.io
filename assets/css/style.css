@@ -811,3 +811,55 @@ section {
         padding-right: 20px 15px;
     }
 }
+
+/* ---------------------------------------------
+----------- BLOG -------------------------------
+--------------------------------------------- */
+
+.blogContent {
+    text-align: justify;
+    display: none;
+}
+
+.blogContent .title {
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+.blogContent .date {
+    font-style: italic;
+    margin: 1em;
+}
+
+.blogContent p:first-letter {
+    font-size: 2em;
+    font-family: ui-monospace;
+}
+
+.active {
+    display: block;
+}
+
+#tableOfContents a {
+    font-size: 1.4em;
+    float: left;
+    margin: 0.5em 0;
+    border-bottom: #fff solid 0.2em;
+}
+
+#tableOfContents .selected {
+    border-bottom: #173b6c solid 0.2em;
+}
+
+#underDevelopment {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    width: 10em;
+    height: 10em;
+    display: flex;
+    background: url("../../assets/img/uc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
