@@ -816,28 +816,23 @@ section {
 ----------- BLOG -------------------------------
 --------------------------------------------- */
 
-.blogContent {
+#blogContent {
     text-align: justify;
-    display: none;
 }
 
-.blogContent .title {
+#blogContent .title {
     font-weight: bold;
     letter-spacing: 0.2em;
 }
 
-.blogContent .date {
+#blogContent .date {
     font-style: italic;
     margin: 1em;
 }
 
-.blogContent p:first-letter {
+#blogContent p:first-letter {
     font-size: 2em;
     font-family: ui-monospace;
-}
-
-.active {
-    display: block;
 }
 
 #tableOfContents a {

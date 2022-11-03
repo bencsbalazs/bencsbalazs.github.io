@@ -255,6 +255,22 @@
     /* ------------------------
        ---- Blog functions ----
        ------------------------ */
+
+    const addElement = (what, where, style, text, html = false) => {
+        let element = document.createElement(what);
+        if (!html) {
+            let textNode = document.createTextNode(text);
+            element.appendChild(textNode);
+        } else {
+            element.innerHTML = text;
+        }
+        if (style) {
+            element.classList.add(style);
+        }
+
+        document.getElementById(where).appendChild(element);
+    };
+
     const removeAllClass = (where, what) => {
         [].forEach.call(select(where, (all = true)), function (el) {
             el.classList.remove(what);
@@ -262,24 +278,51 @@
     };
 
     window.addEventListener("DOMContentLoaded", function () {
-        const blogContent = select(".blogContent", (all = true));
-        blogContent.forEach((element) => {
-            const link = document.createElement("a");
-            const linkText = document.createTextNode(
-                element.querySelector(".title").innerText
-            );
-            link.setAttribute("href", element.getAttribute("id"));
-            link.appendChild(linkText);
-            document.getElementById("tableOfContents").appendChild(link);
-            link.addEventListener("click", function (e) {
-                e.preventDefault();
-                removeAllClass("#tableOfContents a", "selected");
-                this.classList.add("selected");
-                removeAllClass(".blogContent", "active");
-                document
-                    .getElementById(this.getAttribute("href"))
-                    .classList.add("active");
-            });
-        });
+        async function buildBlog() {
+            blogData = await fetch(
+                "https://bencsbalazs.github.io/assets/blog/blog.json"
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    for (let key in data) {
+                        let link = document.createElement("a");
+                        let text = document.createTextNode(data[key].title);
+                        link.appendChild(text);
+                        link.href = "#" + key;
+                        link.classList.add("blogLink");
+                        document
+                            .getElementById("tableOfContents")
+                            .appendChild(link);
+                    }
+                    return data;
+                })
+                .then((data) => {
+                    on(
+                        "click",
+                        ".blogLink",
+                        function (e) {
+                            e.preventDefault();
+                            document.getElementById("blogContent").innerHTML =
+                                "";
+
+                            addElement(
+                                "h3",
+                                "blogContent",
+                                "title",
+                                data[e.target.hash.substr(1)].title
+                            );
+                            addElement(
+                                "article",
+                                "blogContent",
+                                false,
+                                data[e.target.hash.substr(1)].text,
+                                true
+                            );
+                        },
+                        true
+                    );
+                });
+        }
+        buildBlog();
     });
 })();
