@@ -212,7 +212,7 @@
     const w = canvas.width;
     const h = canvas.height;
 
-    const cols = Math.floor(w / 20) + 1;
+    const cols = Math.floor(w / 14) + 1;
     const ypos = Array(cols).fill(0);
 
     const matrix = () => {
@@ -221,7 +221,7 @@
 
         // Set color to green and font to 15pt monospace in the drawing context
         ctx.fillStyle = "#0f0";
-        ctx.font = "20pt monospace";
+        ctx.font = "14pt monospace";
 
         // for each column put a random character at the end
         ypos.forEach((y, ind) => {
@@ -229,13 +229,13 @@
             const text = String.fromCharCode(Math.random() * 128);
 
             // x coordinate of the column, y coordinate is already given
-            const x = ind * 20;
+            const x = ind * 14;
             // render the character at (x, y)
             ctx.fillText(text, x, y);
 
             // randomly reset the end of the column if it's at least 100px high
             if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-            else ypos[ind] = y + 20;
+            else ypos[ind] = y + 14;
         });
     };
 
@@ -262,7 +262,7 @@
             let textNode = document.createTextNode(text);
             element.appendChild(textNode);
         } else {
-            element.innerHTML = text;
+            element.innerHTML = unescape(text);
         }
         if (style) {
             element.classList.add(style);
@@ -279,9 +279,11 @@
 
     window.addEventListener("DOMContentLoaded", function () {
         async function buildBlog() {
-            blogData = await fetch(
-                "https://bencsbalazs.github.io/assets/blog/blog.json"
-            )
+            domain =
+                window.location.protocol == "http:"
+                    ? "http://127.0.0.1:5500/"
+                    : "https://bencsbalazs.github.io/";
+            blogData = await fetch(domain + "assets/blog/blog.json")
                 .then((response) => response.json())
                 .then((data) => {
                     for (let key in data) {
@@ -302,14 +304,21 @@
                         ".blogLink",
                         function (e) {
                             e.preventDefault();
+                            removeAllClass(".blogLink", "selected");
                             document.getElementById("blogContent").innerHTML =
                                 "";
-
+                            this.classList.add("selected");
                             addElement(
                                 "h3",
                                 "blogContent",
                                 "title",
                                 data[e.target.hash.substr(1)].title
+                            );
+                            addElement(
+                                "div",
+                                "blogContent",
+                                "date",
+                                data[e.target.hash.substr(1)].date
                             );
                             addElement(
                                 "article",
@@ -322,6 +331,7 @@
                         true
                     );
                 });
+            [...document.querySelectorAll("a.blogLink")].pop().click();
         }
         buildBlog();
     });

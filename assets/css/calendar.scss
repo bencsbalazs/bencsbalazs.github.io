@@ -1,0 +1,330 @@
+$perspective: 850px;
+$present-dimension: 12em;
+$date-dimension: $present-dimension / 5;
+$bauble-dimension: $present-dimension / 4.5;
+$strokeColor: grey;
+$heartColor: #db3434;
+$size: 500px;
+$totalAnim: 7s;
+$delay: 1s;
+$squareLen: 240;
+$circleLen: 188.522;
+$heartLen: 308.522;
+$svgSize: 90px;
+$circleW: 60px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.heart-loader {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  margin-top: $size/-2;
+  width: $size;
+  height: $size;
+  overflow: visible;
+
+  &__group {
+    transform-origin: 0 $svgSize;
+    animation: group-anim $totalAnim $delay infinite;
+  }
+
+  &__square {
+    stroke: $strokeColor;
+    stroke-dasharray: $squareLen, $squareLen;
+    stroke-dashoffset: $squareLen;
+    animation: square-anim $totalAnim $delay infinite;
+  }
+
+  &__circle {
+    stroke: $strokeColor;
+    stroke-dasharray: $circleLen, $circleLen;
+    stroke-dashoffset: $circleLen;
+    transform-origin: $circleW $circleW/2;
+
+    &.m--left {
+      animation: left-circle-anim $totalAnim $delay infinite;
+    }
+
+    &.m--right {
+      animation: right-circle-anim $totalAnim $delay infinite;
+    }
+  }
+
+  &__heartPath {
+    stroke: $heartColor;
+    fill: transparent;
+    stroke-dasharray: $heartLen, $heartLen;
+    stroke-dashoffset: $heartLen;
+    animation: heart-anim $totalAnim $delay infinite;
+  }
+}
+
+
+@keyframes square-anim {
+  12% {
+    stroke-dashoffset: 0;
+  }
+  43% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+@keyframes left-circle-anim {
+  12% {
+    stroke-dashoffset: $circleLen;
+  }
+  31% {
+    stroke-dashoffset: 0;
+    transform: translateY(0);
+  }
+  41% {
+    stroke-dashoffset: 0;
+    transform: translateY($circleW/-2);
+  }
+  43% {
+    stroke-dashoffset: 0;
+    transform: translateY($circleW/-2);
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    transform: translateY($circleW/-2);
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    transform: translateY($circleW/-2);
+    opacity: 0;
+  }
+}
+
+@keyframes right-circle-anim {
+  12% {
+    stroke-dashoffset: $circleLen;
+  }
+  31% {
+    stroke-dashoffset: 0;
+    transform: translateX(0);
+  }
+  41% {
+    stroke-dashoffset: 0;
+    transform: translateX($circleW/2);
+  }
+  43% {
+    stroke-dashoffset: 0;
+    transform: translateX($circleW/2);
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    transform: translateX($circleW/2);
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    transform: translateX($circleW/2);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+    0% {
+        visibility: hidden;
+    }
+    99% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes group-anim {
+  43% {
+    transform: rotate(0);
+  }
+  54% {
+    transform: rotate(-45deg);
+  }
+  90% {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+  97% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+}
+@keyframes heart-anim {
+  55% {
+    stroke-dashoffset: $heartLen;
+    fill: transparent;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  87% {
+    stroke-dashoffset: 0;
+    fill: $heartColor;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: $heartColor;
+  }
+}
+
+.other {
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  width: 100%;
+  text-align: right;
+
+  &__link {
+    font-size: 1.3rem;
+    margin: 0 1rem;
+  }
+}
+
+@keyframes shake {
+	0% 		{ transform: rotate(0deg); }
+	20% 	{ transform: rotate(-20deg); }
+	40% 	{ transform: rotate(20deg); }
+	60% 	{ transform: rotate(-10deg); }
+	80% 	{ transform: rotate(10deg); }
+	100% 	{ transform: rotate(0deg); }
+}
+
+html, body {
+	min-height: 100%;
+}
+body {
+	background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+	display: flex;
+	align-items: center;
+}
+main {
+	text-align: center;
+	margin: 0 auto;
+	max-width: $present-dimension * 6 + 6em;
+}
+.present {
+	position: relative;
+	display: inline-block;
+	width: $present-dimension;
+    height: $present-dimension;
+	margin: .3em;
+	perspective: $perspective;
+	z-index: 666;
+    animation: fadeIn $totalAnim+.5s linear ;
+
+}
+.present__pane,
+.present__content {
+	width: inherit; height: inherit;
+}
+.present__pane {
+	position: relative;
+	background: linear-gradient(135deg, lighten(red, 7%) 50%, darkred 50%);
+	transform-style: preserve-3d;
+	transform-origin: 0;
+	perspective: $perspective;
+	text-align: center;
+	box-shadow: 0 0 40px 0 rgba(black, .15);
+	cursor: pointer;
+	transition: all .2s ease-out;
+}
+.present__date {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: $date-dimension;
+	height: $date-dimension;
+	margin: 0;
+	font-size: 2em;
+	line-height: $date-dimension;
+	background: white; color: red;
+	border-radius: 50%;
+	box-shadow: inset 0 0 10px 5px rgba(black, 0.15);
+}
+// hover styles
+.present:hover {
+	z-index: 999;
+}
+.present:hover .present__pane, .present.opened .present__pane {
+	background: linear-gradient(135deg, lighten(gray, 10%) 50%, lighten(gray, 5%) 50%);
+	transform: rotateY(-97deg);
+	perspective-origin: 0;
+	transition: all .25s ease-in;
+}
+.present:hover .present__date, .present.opened .present__date {
+	backface-visibility: hidden; // hide date
+}
+.present:hover .present__bauble, .present.opened:hover .present__bauble {
+	display: inline-block;
+	transform-origin: 50% 0;
+	animation: shake .7s;
+}
+.present__content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: whitesmoke;
+	box-shadow: 0 0 40px 0 rgba(black, .15), inset 0 0 30px 20px rgba(black, .15);
+	z-index: -1;
+}
+.present__bauble {
+	position: relative;
+	width: $bauble-dimension;
+	height: $bauble-dimension;
+	background: goldenrod;
+	margin: 25% auto 0 auto;
+	font-size: $bauble-dimension;
+	line-height: $bauble-dimension;
+	border-radius: 50%;
+}
+// rectangle that has pin
+.present__bauble::after {
+	content: '';
+	position: absolute;
+	top: -5%;
+	left: 50%;
+	width: 30%;
+	height: 10%;
+	margin-left: -15%;
+	background: inherit;
+}
+// pin
+.present__bauble::before {
+	content: '';
+	position: absolute;
+	top: -15%;
+	left: 50%;
+	width: 12%;
+	height: 20%;
+	margin-left: -20%;
+	border: .35rem solid goldenrod;
+	border-radius: 50%;
+	z-index: 0;
+}
