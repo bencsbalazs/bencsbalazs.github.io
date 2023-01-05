@@ -61,4 +61,5 @@
     window.addEventListener("DOMContentLoaded", function () {
         timer("Dec 24, 2022 18:00:00", "counter", "Már karcsony van!");
     });
+    on("click", ".present", true)
 })();
