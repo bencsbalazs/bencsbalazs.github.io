@@ -283,7 +283,7 @@
                 window.location.protocol == "http:"
                     ? "http://127.0.0.1:5500/"
                     : "https://bencsbalazs.github.io/";
-            blogData = await fetch(domain + "assets/blog/blog.json")
+            blogData = await fetch(domain + "assets/blog/personal.json")
                 .then((response) => response.json())
                 .then((data) => {
                     for (let key in data) {
