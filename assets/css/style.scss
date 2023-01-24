@@ -173,225 +173,19 @@ section {
     margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-.about .content h3 {
-    font-weight: 700;
-    font-size: 26px;
-    color: #173b6c;
-}
-.about .content ul {
-    list-style: none;
-    padding: 0;
-}
-.about .content ul li {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-.about .content ul strong {
-    margin-right: 10px;
-}
-.about .content ul i {
-    font-size: 16px;
-    margin-right: 5px;
-    color: #149ddd;
-    line-height: 0;
-}
-.about .content p:last-child {
-    margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# Facts
---------------------------------------------------------------*/
-.facts {
-    padding-bottom: 30px;
-}
-.facts .count-box {
-    padding: 30px;
-    width: 100%;
-}
-.facts .count-box i {
-    display: block;
-    font-size: 44px;
-    color: #149ddd;
-    float: left;
-    line-height: 0;
-}
-.facts .count-box span {
-    font-size: 48px;
-    line-height: 40px;
-    display: block;
-    font-weight: 700;
-    color: #050d18;
-    margin-left: 60px;
-}
-.facts .count-box p {
-    padding: 15px 0 0 0;
-    margin: 0 0 0 60px;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    color: #122f57;
-}
-.facts .count-box a {
-    font-weight: 600;
-    display: block;
-    margin-top: 20px;
-    color: #122f57;
-    font-size: 15px;
-    font-family: "Poppins", sans-serif;
-    transition: ease-in-out 0.3s;
-}
-.facts .count-box a:hover {
-    color: #1f5297;
-}
-
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-.skills .progress {
-    height: 60px;
-    display: block;
-    background: none;
-    border-radius: 0;
-}
-.skills .progress .skill {
-    padding: 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    color: #050d18;
-}
-.skills .progress .skill .val {
-    float: right;
-    font-style: normal;
-}
-.skills .progress-bar-wrap {
-    background: #dce8f8;
-    height: 10px;
-}
-.skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: 0.9s;
-    background-color: #149ddd;
-}
-
-/*--------------------------------------------------------------
-# Resume
---------------------------------------------------------------*/
-.resume .resume-title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #050d18;
-}
-.resume .resume-item {
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid #1f5297;
-    position: relative;
-}
-.resume .resume-item h4 {
-    line-height: 18px;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    color: #050d18;
-    margin-bottom: 10px;
-}
-.resume .resume-item h5 {
-    font-size: 16px;
-    background: #e4edf9;
-    padding: 5px 15px;
-    display: inline-block;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.resume .resume-item ul {
-    padding-left: 20px;
-}
-.resume .resume-item ul li {
-    padding-bottom: 10px;
-}
-.resume .resume-item:last-child {
-    padding-bottom: 0;
-}
-.resume .resume-item::before {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
-    left: -9px;
-    top: 0;
-    background: #fff;
-    border: 2px solid #1f5297;
-}
-
-
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-    margin-bottom: 20px;
-}
-.services .icon {
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    background: #149ddd;
-    border-radius: 50%;
-    transition: 0.5s;
-    border: 1px solid #149ddd;
-}
-.services .icon i {
-    color: #fff;
-    font-size: 24px;
-    line-height: 0;
-}
-.services .icon-box:hover .icon {
-    background: #fff;
-}
-.services .icon-box:hover .icon i {
-    color: #149ddd;
-}
-.services .title {
-    margin-left: 80px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-.services .title a {
-    color: #343a40;
-}
-.services .title a:hover {
-    color: #149ddd;
-}
-.services .description {
-    margin-left: 80px;
-    line-height: 24px;
-    font-size: 14px;
-}
-
-/*-------------
-# Testimonials
--------------*/
+/*--- About ---*/
+@import 'components/about.scss';
+/*--- Facts ---*/
+@import 'components/facts.scss';
+/*--- Skills ---*/
+@import 'components/skills.scss';
+/*--- Resume ---*/
+@import 'components/resume.scss';
+/*--- Services ---*/
+@import 'components/services.scss';
+/*--- Testimonials ---*/
 @import 'components/testimonials.scss';
-
-/*-----------
-# Breadcrumbs
-------------*/
+/*--- Breadcrumbs ---*/
 .breadcrumbs {
     padding: 20px 0;
     background: #f9f9f9;
@@ -417,57 +211,12 @@ section {
     color: #0e2442;
     content: "/";
 }
-@media (max-width: 768px) {
-    .breadcrumbs .d-flex {
-        display: block !important;
-    }
-    .breadcrumbs ol {
-        display: block;
-    }
-    .breadcrumbs ol li {
-        display: inline-block;
-    }
-}
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-    padding: 15px;
-    color: #f4f6fd;
-    font-size: 14px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 300px;
-    z-index: 9999;
-    background: #040b14;
-}
-#footer .copyright {
-    text-align: center;
-}
-#footer .credits {
-    padding-top: 5px;
-    text-align: center;
-    font-size: 13px;
-    color: #eaebf0;
-}
-@media (max-width: 1199px) {
-    #footer {
-        position: static;
-        width: auto;
-        padding-right: 20px 15px;
-    }
-}
 
-#footnav {
-    background: black;
-    color: #fff;
-}
+/*--- Footer ---*/
+@import 'components/footer.scss';
 
-/* ---------------------------------------------
------------ BLOG -------------------------------
---------------------------------------------- */
+/*--- BLOG ---*/
 
 #blogContent {
     text-align: justify;
