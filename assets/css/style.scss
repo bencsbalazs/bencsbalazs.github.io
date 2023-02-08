@@ -1,257 +1,30 @@
 /*--- Building the page ---*/
-@import 'variables.scss';
-@import 'general.scss';
-
-@import 'extensions/backtotop.scss';
-
+@import "variables.scss";
+@import "general.scss";
+@import "extensions/backtotop.scss";
 /*--- Header ---*/
-@import 'components/header.scss';
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
-.nav-menu {
-    padding: 30px 0 0 0;
-}
-.nav-menu * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.nav-menu > ul > li {
-    position: relative;
-    white-space: nowrap;
-}
-.nav-menu a,
-.nav-menu a:focus {
-    display: flex;
-    align-items: center;
-    color: #a8a9b4;
-    padding: 12px 15px;
-    margin-bottom: 8px;
-    transition: 0.3s;
-    font-size: 15px;
-}
-.nav-menu a i,
-.nav-menu a:focus i {
-    font-size: 24px;
-    padding-right: 8px;
-    color: #6f7180;
-}
-.nav-menu a:hover,
-.nav-menu .active,
-.nav-menu .active:focus,
-.nav-menu li:hover > a {
-    text-decoration: none;
-    color: #fff;
-}
-.nav-menu a:hover i,
-.nav-menu .active i,
-.nav-menu .active:focus i,
-.nav-menu li:hover > a i {
-    color: #149ddd;
-}
-
-/* Mobile Navigation */
-.mobile-nav-toggle {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 9998;
-    border: 0;
-    font-size: 24px;
-    transition: all 0.4s;
-    outline: none !important;
-    background-color: #149ddd;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.mobile-nav-active {
-    overflow: hidden;
-}
-.mobile-nav-active #header {
-    left: 0;
-}
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-#hero {
-    width: 100%;
-    height: 100vh;
-    background: url("../img/cartoonMee.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 90%;
-}
-#hero canvas {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-}
-#hero:before {
-    content: "";
-    background: rgba(5, 13, 24, 0.3);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
-#hero .hero-container {
-    position: relative;
-    z-index: 2;
-    min-width: 300px;
-}
-#hero h1 {
-    margin: 0 0 10px 0;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #fff;
-}
-#hero p {
-    color: #fff;
-    margin-bottom: 50px;
-    font-size: 26px;
-    font-family: "Poppins", sans-serif;
-}
-#hero p span {
-    color: #fff;
-    padding-bottom: 4px;
-    letter-spacing: 1px;
-    border-bottom: 3px solid #149ddd;
-}
-
-
-
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-section {
-    padding: 60px 0;
-    overflow: hidden;
-}
-
-.section-bg {
-    background: #f5f8fd;
-}
-
-.section-title {
-    padding-bottom: 30px;
-}
-.section-title h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    color: #173b6c;
-}
-.section-title h2::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #149ddd;
-    bottom: 0;
-    left: 0;
-}
-.section-title p {
-    margin-bottom: 0;
-}
-
+@import "components/header.scss";
+@import "components/navbar.scss";
+/*--- Hero Section ---*/
+@import "components/heroe.scss";
 /*--- About ---*/
-@import 'components/about.scss';
+@import "components/about.scss";
 /*--- Facts ---*/
-@import 'components/facts.scss';
+@import "components/facts.scss";
 /*--- Skills ---*/
-@import 'components/skills.scss';
+@import "components/skills.scss";
 /*--- Resume ---*/
-@import 'components/resume.scss';
+@import "components/resume.scss";
 /*--- Services ---*/
-@import 'components/services.scss';
+@import "components/services.scss";
 /*--- Testimonials ---*/
-@import 'components/testimonials.scss';
+@import "components/testimonials.scss";
 /*--- Breadcrumbs ---*/
-.breadcrumbs {
-    padding: 20px 0;
-    background: #f9f9f9;
-}
-.breadcrumbs h2 {
-    font-size: 26px;
-    font-weight: 300;
-}
-.breadcrumbs ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 15px;
-}
-.breadcrumbs ol li + li {
-    padding-left: 10px;
-}
-.breadcrumbs ol li + li::before {
-    display: inline-block;
-    padding-right: 10px;
-    color: #0e2442;
-    content: "/";
-}
-
-
-/*--- Footer ---*/
-@import 'components/footer.scss';
-
+@import "components/breadcrumbs.scss";
 /*--- BLOG ---*/
-
-#blogContent {
-    text-align: justify;
-}
-
-#blogContent .title {
-    font-weight: bold;
-    letter-spacing: 0.2em;
-}
-
-#blogContent .date {
-    font-style: italic;
-    margin: 1em;
-}
-
-#blogContent p:first-letter {
-    font-size: 2em;
-    font-family: ui-monospace;
-    -webkit-initial-letter: 4 1;
-    initial-letter: 4 1;
-}
-
-#tableOfContents {
-    a {
-        font-size: 1.4em;
-        float: left;
-        width: 100%;
-        margin: 0.5em 0;
-        border-bottom: #fff solid 0.2em;
-    }
-
-    .selected {
-        border-bottom: #173b6c solid 0.2em;
-    }
-}
+@import "components/blog.scss";
+/*--- Footer ---*/
+@import "components/footer.scss";
 
 #underDevelopment {
     position: fixed;

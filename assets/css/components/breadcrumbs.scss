@@ -1,0 +1,25 @@
+.breadcrumbs {
+    padding: 20px 0;
+    background: #f9f9f9;
+    h2 {
+        font-size: 26px;
+        font-weight: 300;
+    }
+    ol {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        li + li {
+            padding-left: 10px;
+        }
+    }
+    &::before {
+        display: inline-block;
+        padding-right: 10px;
+        color: #0e2442;
+        content: "/";
+    }
+}
