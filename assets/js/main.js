@@ -29,6 +29,15 @@
         el.addEventListener("scroll", listener);
     };
 
+    /*--- age calculation ---*/
+    const calculateAge = (birthday) => {
+        return Math.abs(
+            new Date(
+                Date.now() - new Date(Date.parse(birthday)).getTime()
+            ).getUTCFullYear() - 1970
+        );
+    };
+
     let navbarlinks = select("#navbar .scrollto", true);
     const navbarlinksActive = () => {
         let position = window.scrollY + 200;
@@ -248,6 +257,8 @@
             mirror: false,
         });
 
+        select("#myAge").textContent = calculateAge("07/06/1987");
+
         // --- Start matrix ---
         setInterval(matrix, 100);
     });
@@ -320,13 +331,23 @@
                                 "date",
                                 data[e.target.hash.substr(1)].date
                             );
-                            addElement(
-                                "article",
-                                "blogContent",
-                                false,
-                                data[e.target.hash.substr(1)].text,
-                                true
-                            );
+                            fetch(
+                                domain +
+                                    "assets/blog/posts/" +
+                                    e.target.hash.substr(1) +
+                                    ".md"
+                            )
+                                .then((post) => post.text())
+                                .then((text) => {
+                                    console.log(text);
+                                    addElement(
+                                        "article",
+                                        "blogContent",
+                                        false,
+                                        marked.parse(text),
+                                        true
+                                    );
+                                });
                         },
                         true
                     );

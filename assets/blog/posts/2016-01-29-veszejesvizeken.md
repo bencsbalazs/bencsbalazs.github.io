@@ -1,0 +1,13 @@
+Ahogy azt a cím is sugallja nem állnak jól a dolgok. Írtam néhány bejegyzéssel korábban hogy oda fogok figyelni a jó  és szép dolgokra és ezt teszem is azóta is. Csak közben felmerült az a probléma hogy bár látok sok szépet és jót ezeket nincs kivel megosztani, és bár mondjuk nekem jólesik végignézni egy szép napfelkeltét, ha ezt az élményt nincs kivel megosztani már nem is ér annyit.
+
+Korábban soha nem gondoltam volna hogy én valaha is magányos leszek pedig elért ez a helyzet. Persze itt rögtön beugrik hogy miért nem járok társaságba vagy keresem a társaságot... tele van a web társkeresőkkell, a város kocsmákkal. A válasz: a csalódások miatt. Sokáig több emberrel is ismerkedtünk barátkoztam. De a vége mindig az lett hogy vagy ő vagy én többet vártunk mint a mi lett.
+
+Tudom hogy a kapcsolatok építése nem megy egyik napról a másikra, több téren el is kezdtem az ismerkedést és a békülést, és bízom benne hogy továbbra is sikerülni fog szépen alakítani a dolgokat. Sajnos mivel elég labilis idegállapotban vagyok, néha nehéz. Kiszámíthatatlan a hangulatom, de a jó hír hogy a nyár közepére teljesen kiürül a gyógyszer a szervezetemből. Addig is próbálok minnél kiegyensúlyozottabb lenni, keresni azt ami örömet okoz és minnél többet emberek között lenni és beszélgetni.
+
+Társaságban próbálok lenni amennyit csak lehet. Meg is figyeltem hogy ahogy én keresem mások társaságát, úgy mások is keresik az enyémet. Persze csak ha éppen nem vagyok totál antiszociális. :) Az emberek csak azt várják hogy nyissak feléjük. Szó ami szó elég ilyesztő látványt nyújtok néha. Tudom ezt azóta hogy tükröt hordok magamnál és fényképezem magam hogy nyomon követhessem a változásokat. (ld. kép jobbra) Ezt a módszert egyébként nagyon tudom ajánlani mindenkinek aki hasonló problémákkal küzd. :) Ahogy azt is hogy vezessen naplót, hasonlót mint ez a blog, amiben lírhatja a gondolatait és később visszaolvashatja. Meglepő lesz. Régi bejegyzéseimet olvasva néha a hajam égnekáll :)
+
+Hasznos még a kellemes események naplója is. Ebbe a nap legkellemesebb élményét írjuk le, azzal együtt hogy milyen érzések kísérték az élményt, milyen fizikai érzést tapasztaltunk és milyen volt a közérzet közben és utána.
+
+Van továbbá egy [nagyon jó személyiségteszt](http://extremesilverblog.com/hu/erdekessegek/ez-a-vilag-egyik-legjobb-szemelyiseg-tesztje-vegezd-el-meg-fogsz-lepodni-az-eredmenytol "Személyiségteszt"), amiből nagyon sokat lehet tanulni önmagunkról. Érdemes megcsinálni. Meglepő lesz az eredmény.
+
+Visszanézve mindez nagyon sokat segít a fejlődésben.
