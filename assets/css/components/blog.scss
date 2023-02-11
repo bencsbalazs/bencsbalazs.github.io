@@ -1,0 +1,32 @@
+#blogContent {
+    text-align: justify;
+    .title {
+        font-weight: bold;
+        letter-spacing: 0.2em;
+    }
+    .date {
+        font-style: italic;
+        margin: 1em;
+    }
+    p {
+        &:first-letter {
+            font-size: 2em;
+            font-family: ui-monospace;
+            -webkit-initial-letter: 4 1;
+            initial-letter: 4 1;
+        }
+    }
+}
+
+#tableOfContents {
+    a {
+        font-size: 1.4em;
+        float: left;
+        width: 100%;
+        margin: 0.5em 0;
+        border-bottom: #fff solid 0.2em;
+    }
+    .selected {
+        border-bottom: #173b6c solid 0.2em;
+    }
+}
