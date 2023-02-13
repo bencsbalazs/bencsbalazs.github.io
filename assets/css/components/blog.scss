@@ -20,11 +20,13 @@
 
 #tableOfContents {
     a {
-        font-size: 1.4em;
+        font-size: 1.2em;
         float: left;
         width: 100%;
-        margin: 0.5em 0;
         border-bottom: #fff solid 0.2em;
+        &:hover {
+            color: #000;
+        }
     }
     .selected {
         border-bottom: #173b6c solid 0.2em;

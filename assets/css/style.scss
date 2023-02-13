@@ -27,16 +27,3 @@
 @import "components/blog.scss";
 /*--- Footer ---*/
 @import "components/footer.scss";
-
-#underDevelopment {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1001;
-    width: 10em;
-    height: 10em;
-    display: flex;
-    background: url("../../assets/img/uc.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
