@@ -759,11 +759,13 @@ section {
 }
 
 #tableOfContents a {
-  font-size: 1.4em;
+  font-size: 1.2em;
   float: left;
   width: 100%;
-  margin: 0.5em 0;
   border-bottom: #fff solid 0.2em;
+}
+#tableOfContents a:hover {
+  color: #000;
 }
 #tableOfContents .selected {
   border-bottom: #173b6c solid 0.2em;
