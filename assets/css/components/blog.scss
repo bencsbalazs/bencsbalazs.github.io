@@ -9,11 +9,17 @@
         margin: 1em;
     }
     p {
+        float: left;
         &:first-letter {
-            font-size: 2em;
+            font-size: 1.4em;
             font-family: ui-monospace;
-            -webkit-initial-letter: 4 1;
-            initial-letter: 4 1;
+            float: left;
+            padding: 0.3em 0.2em;
+            margin: 0.2em;
+            line-height: 1em;
+            background: #000;
+            color: #fff;
+            font-style: italic;
         }
     }
 }

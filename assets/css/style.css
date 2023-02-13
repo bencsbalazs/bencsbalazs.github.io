@@ -752,10 +752,15 @@ section {
   margin: 1em;
 }
 #blogContent p:first-letter {
-  font-size: 2em;
+  font-size: 1.4em;
   font-family: ui-monospace;
-  -webkit-initial-letter: 4 1;
-  initial-letter: 4 1;
+  float: left;
+  padding: 0.3em 0.2em;
+  margin: 0.2em;
+  line-height: 1em;
+  background: #000;
+  color: #fff;
+  font-style: italic;
 }
 
 #tableOfContents a {
@@ -798,17 +803,4 @@ section {
 #footnav {
   background: black;
   color: #fff;
-}
-
-#underDevelopment {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1001;
-  width: 10em;
-  height: 10em;
-  display: flex;
-  background: url("../../assets/img/uc.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
