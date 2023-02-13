@@ -751,6 +751,9 @@ section {
   font-style: italic;
   margin: 1em;
 }
+#blogContent p {
+  float: left;
+}
 #blogContent p:first-letter {
   font-size: 1.4em;
   font-family: ui-monospace;
