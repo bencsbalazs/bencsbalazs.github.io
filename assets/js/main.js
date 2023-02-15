@@ -352,7 +352,7 @@
                         true
                     );
                 });
-            [...document.querySelectorAll("a.blogLink")].pop().click();
+            $("#2019-03-21-Today-is-a-good-day-for-a-good-day").click();
         }
         buildBlog();
     });

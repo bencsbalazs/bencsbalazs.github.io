@@ -765,6 +765,9 @@ section {
   color: #fff;
   font-style: italic;
 }
+#blogContent ul {
+  clear: both;
+}
 
 #tableOfContents a {
   font-size: 1.2em;
