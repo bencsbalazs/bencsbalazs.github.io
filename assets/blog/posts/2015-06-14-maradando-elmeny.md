@@ -12,6 +12,6 @@ Felkísért a műtőbe, és közben elmondta hogy a vállizmomból fog mintát v
 
 Egy adag helyi érzéstelenítő után egy jó 3 centis vágást csinált, amíg leért az izomig. Láthatóan élvezi a munkáját mert közben heves beszélgetésbe kezdtünk az ápolónőkről. Nagyon érdekelte hogy nem akarom-e bemutatni és érdekel-e engem is valamelyik. Na persze közben dolgozott is, de annyira hogy 15 öltéssel kellett összevarrni. Fura érzés mikor a vért érzed hogy folyik, de a sebet nem.
 
-> Az a vágás megvan még 5 hónap után is... de szokott tetszeni az embereknek.
+> Az a vágás megvan még 5 hónap után is... és azóta is... de szokott tetszeni az embereknek.
 
 Kaptam pár értelmes tanácsot is, hogy ne edzek annyit mert túl jó a vérellátásom és kemények az izomrostok. Nehezítem az orvos munkáját... hát már ez is baj? :)
