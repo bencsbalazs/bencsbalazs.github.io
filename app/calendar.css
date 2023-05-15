@@ -16,15 +16,13 @@
 }
 .heart-loader__group {
   transform-origin: 0 90px;
-  -webkit-animation: group-anim 7s 1s infinite;
-          animation: group-anim 7s 1s infinite;
+  animation: group-anim 7s 1s infinite;
 }
 .heart-loader__square {
   stroke: grey;
   stroke-dasharray: 240, 240;
   stroke-dashoffset: 240;
-  -webkit-animation: square-anim 7s 1s infinite;
-          animation: square-anim 7s 1s infinite;
+  animation: square-anim 7s 1s infinite;
 }
 .heart-loader__circle {
   stroke: grey;
@@ -33,38 +31,17 @@
   transform-origin: 60px 30px;
 }
 .heart-loader__circle.m--left {
-  -webkit-animation: left-circle-anim 7s 1s infinite;
-          animation: left-circle-anim 7s 1s infinite;
+  animation: left-circle-anim 7s 1s infinite;
 }
 .heart-loader__circle.m--right {
-  -webkit-animation: right-circle-anim 7s 1s infinite;
-          animation: right-circle-anim 7s 1s infinite;
+  animation: right-circle-anim 7s 1s infinite;
 }
 .heart-loader__heartPath {
   stroke: #db3434;
   fill: transparent;
   stroke-dasharray: 308.522, 308.522;
   stroke-dashoffset: 308.522;
-  -webkit-animation: heart-anim 7s 1s infinite;
-          animation: heart-anim 7s 1s infinite;
-}
-
-@-webkit-keyframes square-anim {
-  12% {
-    stroke-dashoffset: 0;
-  }
-  43% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  85% {
-    stroke-dashoffset: 0;
-    opacity: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    opacity: 0;
-  }
+  animation: heart-anim 7s 1s infinite;
 }
 
 @keyframes square-anim {
@@ -81,34 +58,6 @@
   }
   100% {
     stroke-dashoffset: 0;
-    opacity: 0;
-  }
-}
-@-webkit-keyframes left-circle-anim {
-  12% {
-    stroke-dashoffset: 188.522;
-  }
-  31% {
-    stroke-dashoffset: 0;
-    transform: translateY(0);
-  }
-  41% {
-    stroke-dashoffset: 0;
-    transform: translateY(-30px);
-  }
-  43% {
-    stroke-dashoffset: 0;
-    transform: translateY(-30px);
-    opacity: 1;
-  }
-  85% {
-    stroke-dashoffset: 0;
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    transform: translateY(-30px);
     opacity: 0;
   }
 }
@@ -140,34 +89,6 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes right-circle-anim {
-  12% {
-    stroke-dashoffset: 188.522;
-  }
-  31% {
-    stroke-dashoffset: 0;
-    transform: translateX(0);
-  }
-  41% {
-    stroke-dashoffset: 0;
-    transform: translateX(30px);
-  }
-  43% {
-    stroke-dashoffset: 0;
-    transform: translateX(30px);
-    opacity: 1;
-  }
-  85% {
-    stroke-dashoffset: 0;
-    transform: translateX(30px);
-    opacity: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    transform: translateX(30px);
-    opacity: 0;
-  }
-}
 @keyframes right-circle-anim {
   12% {
     stroke-dashoffset: 188.522;
@@ -196,17 +117,6 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes fadeIn {
-  0% {
-    visibility: hidden;
-  }
-  99% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-}
 @keyframes fadeIn {
   0% {
     visibility: hidden;
@@ -216,26 +126,6 @@
   }
   100% {
     visibility: visible;
-  }
-}
-@-webkit-keyframes group-anim {
-  43% {
-    transform: rotate(0);
-  }
-  54% {
-    transform: rotate(-45deg);
-  }
-  90% {
-    transform: rotate(-45deg);
-    opacity: 1;
-  }
-  97% {
-    transform: rotate(-45deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotate(-45deg);
-    opacity: 0;
   }
 }
 @keyframes group-anim {
@@ -256,24 +146,6 @@
   100% {
     transform: rotate(-45deg);
     opacity: 0;
-  }
-}
-@-webkit-keyframes heart-anim {
-  55% {
-    stroke-dashoffset: 308.522;
-    fill: transparent;
-  }
-  70% {
-    stroke-dashoffset: 0;
-    fill: transparent;
-  }
-  87% {
-    stroke-dashoffset: 0;
-    fill: #db3434;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: #db3434;
   }
 }
 @keyframes heart-anim {
@@ -304,27 +176,6 @@
 .other__link {
   font-size: 1.3rem;
   margin: 0 1rem;
-}
-
-@-webkit-keyframes shake {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(-20deg);
-  }
-  40% {
-    transform: rotate(20deg);
-  }
-  60% {
-    transform: rotate(-10deg);
-  }
-  80% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 
 @keyframes shake {
@@ -373,8 +224,7 @@ main {
   margin: 0.3em;
   perspective: 850px;
   z-index: 666;
-  -webkit-animation: fadeIn 7.5s linear;
-          animation: fadeIn 7.5s linear;
+  animation: fadeIn 7.5s linear;
 }
 
 .present__pane,
@@ -423,15 +273,13 @@ main {
 }
 
 .present:hover .present__date, .present.opened .present__date {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .present:hover .present__bauble, .present.opened:hover .present__bauble {
   display: inline-block;
   transform-origin: 50% 0;
-  -webkit-animation: shake 0.7s;
-          animation: shake 0.7s;
+  animation: shake 0.7s;
 }
 
 .present__content {

@@ -19,14 +19,23 @@ $circleW: 60px;
   padding: 0;
 }
 
+position: absolute;
+    display: block;
+    left: 40%;
+    top: 0;
+    margin-top: 2%;
+    width: 50%;
+    height: 90vh;
+    overflow: visible;
+
 .heart-loader {
   position: absolute;
   display: block;
-  left: 50%;
-  top: 50%;
-  margin-top: $size/-2;
-  width: $size;
-  height: $size;
+  left: 40%;
+  top: 0;
+  margin-top: 2%;
+  width: 50%;
+  height: 90vh;
   overflow: visible;
 
   &__group {
