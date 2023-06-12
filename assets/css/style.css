@@ -291,6 +291,9 @@ section {
   color: #149ddd;
   line-height: 0;
 }
+.about img {
+  transform: scaleX(-1);
+}
 
 /*--- Facts ---*/
 .facts {
