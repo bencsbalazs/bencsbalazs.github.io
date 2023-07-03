@@ -743,6 +743,10 @@ section {
 }
 
 /*--- BLOG ---*/
+#myBlog {
+  height: 90vh;
+}
+
 #blogContent {
   text-align: justify;
 }
