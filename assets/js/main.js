@@ -29,15 +29,6 @@
         el.addEventListener("scroll", listener);
     };
 
-    /*--- age calculation ---*/
-    const calculateAge = (birthday) => {
-        return Math.abs(
-            new Date(
-                Date.now() - new Date(Date.parse(birthday)).getTime()
-            ).getUTCFullYear() - 1970
-        );
-    };
-
     let navbarlinks = select("#navbar .scrollto", true);
     const navbarlinksActive = () => {
         let position = window.scrollY + 200;
@@ -256,8 +247,6 @@
             once: true,
             mirror: false,
         });
-
-        select("#myAge").textContent = calculateAge("07/06/1987");
 
         // --- Start matrix ---
         setInterval(matrix, 100);
