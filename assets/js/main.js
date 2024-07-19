@@ -18,7 +18,7 @@
     let selectEl = select(el, all);
     if (selectEl) {
       if (all) {
-        selectEl.forEach((e) => e.addEventListener(type, listener));
+        selectEl.forEach(e => e.addEventListener(type, listener));
       } else {
         selectEl.addEventListener(type, listener);
       }
@@ -32,7 +32,7 @@
   let navbarlinks = select('#navbar .scrollto', true);
   const navbarlinksActive = () => {
     let position = window.scrollY + 200;
-    navbarlinks.forEach((navbarlink) => {
+    navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return;
       let section = select(navbarlink.hash);
       if (!section) return;
@@ -46,7 +46,7 @@
   window.addEventListener('load', navbarlinksActive);
   onscroll(document, navbarlinksActive);
 
-  const scrollto = (el) => {
+  const scrollto = el => {
     let elementPos = select(el).offsetTop;
     window.scrollTo({
       top: elementPos,
@@ -121,7 +121,7 @@
       offset: '80%',
       handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
+        progress.forEach(el => {
           el.style.width = el.getAttribute('aria-valuenow') + '%';
         });
       },
@@ -303,7 +303,7 @@
     return true;
   };
 
-  const getCookie = (cname) => {
+  const getCookie = cname => {
     let name = cname + '=';
     let ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
@@ -318,18 +318,15 @@
     return '';
   };
 
-  const checkCookie = (name) => {
+  const checkCookie = name => {
     return getCookie(name) != '';
   };
 
   async function buildBlog() {
-    domain =
-      window.location.protocol == 'http:'
-        ? 'http://127.0.0.1:5500/'
-        : 'https://bencsbalazs.github.io/';
+    domain = window.location.protocol == 'http:' ? 'http://127.0.0.1:5500/' : 'https://bencsbalazs.github.io/';
     blogData = await fetch(domain + 'assets/blog/personal.json')
-      .then((response) => response.json())
-      .then((data) => {
+      .then(response => response.json())
+      .then(data => {
         layout = 'tree';
         switch (layout) {
           case 'list':
@@ -341,7 +338,7 @@
         }
         return data;
       })
-      .then((data) => {
+      .then(data => {
         on(
           'click',
           '.blogLink',
@@ -353,8 +350,8 @@
             addElement('h3', 'blogContent', 'title', data[e.target.hash.substr(1)].title);
             addElement('div', 'blogContent', 'date', data[e.target.hash.substr(1)].date);
             fetch(domain + 'assets/blog/posts/' + e.target.hash.substr(1) + '.md')
-              .then((post) => post.text())
-              .then((text) => {
+              .then(post => post.text())
+              .then(text => {
                 addElement('article', 'blogContent', false, marked.parse(text), true);
               });
           },

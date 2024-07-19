@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -198,14 +200,15 @@
     transform: rotate(0deg);
   }
 }
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
 body {
   background-color: rgba(255, 255, 255, 0.15);
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
 }
@@ -265,18 +268,21 @@ main {
   z-index: 999;
 }
 
-.present:hover .present__pane, .present.opened .present__pane {
+.present:hover .present__pane,
+.present.opened .present__pane {
   background: linear-gradient(135deg, #9a9a9a 50%, #8d8d8d 50%);
   transform: rotateY(-97deg);
   perspective-origin: 0;
   transition: all 0.25s ease-in;
 }
 
-.present:hover .present__date, .present.opened .present__date {
+.present:hover .present__date,
+.present.opened .present__date {
   backface-visibility: hidden;
 }
 
-.present:hover .present__bauble, .present.opened:hover .present__bauble {
+.present:hover .present__bauble,
+.present.opened:hover .present__bauble {
   display: inline-block;
   transform-origin: 50% 0;
   animation: shake 0.7s;
@@ -303,7 +309,7 @@ main {
 }
 
 .present__bauble::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -5%;
   left: 50%;
@@ -314,7 +320,7 @@ main {
 }
 
 .present__bauble::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -15%;
   left: 50%;
@@ -324,4 +330,4 @@ main {
   border: 0.35rem solid goldenrod;
   border-radius: 50%;
   z-index: 0;
-}/*# sourceMappingURL=calendar.css.map */
+} /*# sourceMappingURL=calendar.css.map */
