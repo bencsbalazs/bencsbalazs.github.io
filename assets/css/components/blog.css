@@ -1,0 +1,75 @@
+@charset "UTF-8";
+#myBlog {
+  height: 90vh;
+}
+
+#blogContent {
+  text-align: justify;
+}
+#blogContent .title {
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+#blogContent .date {
+  font-style: italic;
+  margin: 1em;
+}
+#blogContent p {
+  float: left;
+}
+#blogContent p:first-letter {
+  font-size: 1.4em;
+  font-family: ui-monospace;
+  float: left;
+  padding: 0.3em 0.2em;
+  margin: 0.2em;
+  line-height: 1em;
+  background: #000;
+  color: #fff;
+  font-style: italic;
+}
+#blogContent ul {
+  clear: both;
+}
+
+#tableOfContents {
+  padding-top: 2rem;
+  border-top: solid;
+}
+#tableOfContents a {
+  font-size: 1.2em;
+  float: left;
+  width: 100%;
+  border-bottom: #fff solid 0.2em;
+}
+#tableOfContents a:hover {
+  color: #000;
+}
+#tableOfContents .selected {
+  border-bottom: #173b6c solid 0.2em;
+}
+#tableOfContents li {
+  list-style: none;
+}
+#tableOfContents .caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */ /* IE 10+ */
+  user-select: none;
+  font-size: 2rem;
+}
+#tableOfContents .caret::before {
+  content: "▶";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+#tableOfContents .caret-down::before { /* IE 9 */ /* Safari */
+  transform: rotate(90deg);
+}
+#tableOfContents .nested {
+  display: none;
+}
+#tableOfContents .active {
+  display: block;
+}/*# sourceMappingURL=blog.css.map */

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--- Building the page ---*/
 body {
   font-family: "Open Sans", sans-serif;
@@ -776,6 +777,11 @@ section {
   clear: both;
 }
 
+#tableOfContents {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: solid;
+}
 #tableOfContents a {
   font-size: 1.2em;
   float: left;
@@ -787,6 +793,31 @@ section {
 }
 #tableOfContents .selected {
   border-bottom: #173b6c solid 0.2em;
+}
+#tableOfContents li {
+  list-style: none;
+}
+#tableOfContents .caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */ /* IE 10+ */
+  user-select: none;
+  font-size: 2rem;
+}
+#tableOfContents .caret::before {
+  content: "▶";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+#tableOfContents .caret-down::before { /* IE 9 */ /* Safari */
+  transform: rotate(90deg);
+}
+#tableOfContents .nested {
+  display: none;
+}
+#tableOfContents .active {
+  display: block;
 }
 
 /*--- Footer ---*/
