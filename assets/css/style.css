@@ -117,7 +117,8 @@ section {
   text-align-last: center;
   font-family: "Poppins", sans-serif;
 }
-#header .profile h1 a, #header .profile h1 a:hover {
+#header .profile h1 a,
+#header .profile h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -139,6 +140,15 @@ section {
   background: #149ddd;
   color: #fff;
   text-decoration: none;
+}
+
+#forkMeOnGithub {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6em;
+  height: 6em;
+  z-index: 999;
 }
 
 .nav-menu {
@@ -779,7 +789,6 @@ section {
 
 #tableOfContents {
   padding-top: 2rem;
-  margin-top: 2rem;
   border-top: solid;
 }
 #tableOfContents a {

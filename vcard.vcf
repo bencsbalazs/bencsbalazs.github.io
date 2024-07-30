@@ -1,0 +1,16 @@
+BEGIN:VCARD
+N:Bencs;Balazs;
+TEL;TYPE=HOME,VOICE:+36306905610
+EMAIL;TYPE=HOME:bencsbalazs@gmail.com
+EMAIL;type=INTERNET;type=WORK;type=pref:balazs.bencs@ess.eu
+EMAIL;type=WORK;type=pref:balazs.bencs@evopro-group.com
+ORG:European Spallation Source
+TITLE:Software Engineer
+ADR;TYPE=HOME,PREF:;;Delej utca 51/14/fsz/6;Budapest;HU;1089;Hungary
+ADR;TYPE=WORK,PREF:;;Partikelgatan 2;Lund;SE;224 84;Sweden
+URL:https://bencsbalazs.github.io
+socialProfile;type=linkedin:https://www.linkedin.com/in/bal%C3%A1zs-bencs-499917102/
+socialProfile;type=github:https://github.com/bencsbalazs
+socialProfile;type=facebook:https://www.facebook.com/balazs.bencs.9
+VERSION:3.0
+END:VCARD
