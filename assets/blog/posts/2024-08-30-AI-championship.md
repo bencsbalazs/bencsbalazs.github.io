@@ -270,3 +270,5 @@ Fontosabb kérdés, hogy miért éppen ezeket a nemesfémeket és ilyen nagy men
 Ha megadod a pontos mennyiségeket, amelyeket a Bibliából kiolvastál, akkor pontosabb számításokat tudunk végezni.
 
 Ezen a ponton úgy éreztem, hogy felesleges tovább kérdeznem. Elmondhatjuk, hogy a győztes a ChatGPT.
+
+Azért meg kell jegyezni, hogy ha minden adott neki és kellő biztonsággal tud valamit állítani, akkor a gemini is elvégzi a feladatot, de nem bocsátkozik feltételezésekbe.

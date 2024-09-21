@@ -315,11 +315,12 @@
         return c.substring(name.length, c.length);
       }
     }
-    return '';
+    return false;
   };
 
   const checkCookie = name => {
-    return getCookie(name) != '';
+    console.log(getCookie(name));
+    return getCookie(name) != false;
   };
 
   async function buildBlog() {
@@ -358,12 +359,14 @@
           true
         );
       });
-    document.querySelector('#tableOfContents a').click();
+    [...document.querySelectorAll('#tableOfContents a')].at(-1).click()
   }
 
   window.addEventListener('DOMContentLoaded', function () {
     if (checkCookie('showBlog')) {
+      select('.blog').setAttribute('style', 'display: block;');
       select('#showBlog').checked = true;
+      buildBlog();
     } else {
       select('.blog').setAttribute('style', 'display: none;');
     }
@@ -372,6 +375,8 @@
       if (this.checked) {
         select('.blog').setAttribute('style', 'display: block;');
         buildBlog();
+        setCookie("showBlog", true)
+        scrollto("#blog");
       } else {
         select('.blog').setAttribute('style', 'display: none;');
       }

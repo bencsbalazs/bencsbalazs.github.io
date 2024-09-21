@@ -830,6 +830,8 @@ section {
 }
 
 #blogContent {
+  text-wrap: wrap;
+  background-color: rgba(190, 170, 145, .2);
   text-align: justify;
 }
 
@@ -843,26 +845,13 @@ section {
   margin: 1em;
 }
 
-#blogContent p {
-  float: left;
-}
-
-#blogContent p:first-letter {
-
-  font-style: italic;
-}
-
-#blogContent ul {
-  clear: both;
-}
-
 #tableOfContents {
   padding-top: 2rem;
   border-top: solid;
 }
 
 #tableOfContents a {
-  font-size: 1.2em;
+  font-size: 1em;
   float: left;
   width: 100%;
   border-bottom: #fff solid 0.2em;
@@ -888,7 +877,7 @@ section {
   /* Firefox 2+ */
   /* IE 10+ */
   user-select: none;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 #tableOfContents .caret::before {
