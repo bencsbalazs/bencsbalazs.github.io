@@ -1,0 +1,382 @@
+{
+  "events": [
+    {
+      "start_date": {
+        "year": 2003
+      },
+      "text": {
+        "headline": "Star Wars: Knights of the Old Republic",
+        "text": "<strong>Type: Game</strong><br><p>A role-playing game set 4,000 years before the rise of the Galactic Empire. Players take on the role of a Jedi and must decide the fate of the galaxy in an epic conflict between the Republic and the Sith.</p><a href='https://www.starwars.com/games-apps/star-wars-knights-of-the-old-republic' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/3/39/Kotorbox.jpg",
+        "caption": "Star Wars: Knights of the Old Republic"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 2011
+      },
+      "text": {
+        "headline": "Star Wars: The Old Republic",
+        "text": "<strong>Type: Game</strong><br><p>A massively multiplayer online role-playing game (MMORPG) set in the Star Wars universe, thousands of years before the rise of Darth Vader. Players can choose to be heroes of the Republic or champions of the Sith Empire.</p><a href='https://www.swtor.com/' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/8/8c/Star_Wars-_The_Old_Republic_cover.jpg",
+        "caption": "Star Wars: The Old Republic"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 1999
+      },
+      "text": {
+        "headline": "Star Wars: Episode I - The Phantom Menace",
+        "text": "<strong>Type: Movie</strong><br><p>Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long-dormant Sith resurface to reclaim their old glory.</p><a href='https://www.starwars.com/films/star-wars-episode-i-the-phantom-menace' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/4/4b/Star_Wars_Episode_I_The_Phantom_Menace.png",
+        "caption": "Star Wars: Episode I - The Phantom Menace"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 2002
+      },
+      "text": {
+        "headline": "Star Wars: Episode II - Attack of the Clones",
+        "text": "<strong>Type: Movie</strong><br><p>Ten years after initially meeting, Anakin Skywalker shares a forbidden romance with Padm\u00e9, while Obi-Wan investigates an assassination attempt on the Senator and discovers a secret clone army crafted for the Jedi.</p><a href='https://www.starwars.com/films/star-wars-episode-ii-attack-of-the-clones' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/8/87/Star_Wars_Episode_II_Attack_of_the_Clones_poster.png",
+        "caption": "Star Wars: Episode II - Attack of the Clones"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 2008
+      },
+      "text": {
+        "headline": "Star Wars: The Clone Wars",
+        "text": "<strong>Type: Series</strong><br><p>An animated series that follows the adventures of the Jedi Knights, including Anakin Skywalker, Obi-Wan Kenobi, and Yoda, as they battle the forces of the dark side and try to bring peace to the galaxy during the Clone Wars.</p><a href='https://www.starwars.com/series/star-wars-the-clone-wars' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/a/aa/The_Clone_Wars_poster.png",
+        "caption": "Star Wars: The Clone Wars"
+      },
+      "type": "series"
+    },
+    {
+      "start_date": {
+        "year": 2021
+      },
+      "text": {
+        "headline": "Star Wars: The Bad Batch",
+        "text": "<strong>Type: Series</strong><br><p>The 'Bad Batch' of elite and experimental clones make their way through a rapidly changing galaxy in the immediate aftermath of the Clone Wars.</p><a href='https://www.starwars.com/series/the-bad-batch' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/3/3d/Star_Wars_The_Bad_Batch_poster.jpg",
+        "caption": "Star Wars: The Bad Batch"
+      },
+      "type": "series"
+    },
+    {
+      "start_date": {
+        "year": 2005
+      },
+      "text": {
+        "headline": "Star Wars: Episode III - Revenge of the Sith",
+        "text": "<strong>Type: Movie</strong><br><p>Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.</p><a href='https://www.starwars.com/films/star-wars-episode-iii-revenge-of-the-sith' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/6/6c/Star_Wars_Episode_III_Revenge_of_the_Sith_poster.png",
+        "caption": "Star Wars: Episode III - Revenge of the Sith"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 2008
+      },
+      "text": {
+        "headline": "Star Wars: The Force Unleashed",
+        "text": "<strong>Type: Game</strong><br><p>An action game where players control Starkiller, Darth Vader's secret apprentice, as he hunts down the remaining Jedi and faces his own destiny. The game is set between Episodes III and IV.</p><a href='https://www.starwars.com/games-apps/star-wars-the-force-unleashed' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/9/9c/The_Force_Unleashed.jpg",
+        "caption": "Star Wars: The Force Unleashed"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 2022
+      },
+      "text": {
+        "headline": "Obi-Wan Kenobi",
+        "text": "<strong>Type: Series</strong><br><p>Set ten years after the events of Episode III, Obi-Wan Kenobi watches over young Luke Skywalker while avoiding the Empire's Jedi hunters, ultimately facing past demons.</p><a href='https://www.starwars.com/series/obi-wan-kenobi' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/c/c8/Obi-Wan_Kenobi_poster.jpg",
+        "caption": "Obi-Wan Kenobi"
+      },
+      "type": "series"
+    },
+    {
+      "start_date": {
+        "year": 2021
+      },
+      "text": {
+        "headline": "Star Wars: The Bad Batch",
+        "text": "<strong>Type: Series</strong><br><p>The 'Bad Batch' of elite and experimental clones make their way through a rapidly changing galaxy in the immediate aftermath of the Clone Wars.</p><a href='https://www.starwars.com/series/the-bad-batch' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/3/3d/Star_Wars_The_Bad_Batch_poster.jpg",
+        "caption": "Star Wars: The Bad Batch"
+      },
+      "type": "series"
+    },
+    {
+      "start_date": {
+        "year": 2019
+      },
+      "text": {
+        "headline": "Star Wars Jedi: Fallen Order",
+        "text": "<strong>Type: Game</strong><br><p>An action-adventure game following Cal Kestis, a young Jedi Padawan who survived Order 66. The story takes place between Episodes III and IV as Cal struggles to survive and rebuild the Jedi Order.</p><a href='https://www.ea.com/games/starwars/jedi-fallen-order' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/6/66/Star_Wars_Jedi_Fallen_Order.jpg",
+        "caption": "Star Wars Jedi: Fallen Order"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 1977
+      },
+      "text": {
+        "headline": "Star Wars: Episode IV - A New Hope",
+        "text": "<strong>Type: Movie</strong><br><p>Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.</p><a href='https://www.starwars.com/films/star-wars-episode-iv-a-new-hope' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg",
+        "caption": "Star Wars: Episode IV - A New Hope"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 1998
+      },
+      "text": {
+        "headline": "Star Wars: Rogue Squadron",
+        "text": "<strong>Type: Game</strong><br><p>A flight action game set during the early days of the Rebel Alliance. Players take control of Luke Skywalker and other pilots to complete missions against the Galactic Empire across various planets.</p><a href='https://www.starwars.com/games-apps/star-wars-rogue-squadron' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/8/83/Star_Wars_Rogue_Squadron.jpg",
+        "caption": "Star Wars: Rogue Squadron"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 1980
+      },
+      "text": {
+        "headline": "Star Wars: Episode V - The Empire Strikes Back",
+        "text": "<strong>Type: Movie</strong><br><p>After the rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.</p><a href='https://www.starwars.com/films/star-wars-episode-v-the-empire-strikes-back' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://musicart.xboxlive.com/7/7b325100-0000-0000-0000-000000000002/504/image.jpg",
+        "caption": "Star Wars: Episode V - The Empire Strikes Back"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 1983
+      },
+      "text": {
+        "headline": "Star Wars: Episode VI - Return of the Jedi",
+        "text": "<strong>Type: Movie</strong><br><p>After rescuing Han Solo from Jabba the Hutt, the Rebels attempt to destroy the second Death Star, while Luke struggles to make Vader return from the dark side of the Force.</p><a href='https://www.starwars.com/films/star-wars-episode-vi-return-of-the-jedi' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/b/b2/ReturnOfTheJediPoster1983.jpg",
+        "caption": "Star Wars: Episode VI - Return of the Jedi"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 2020
+      },
+      "text": {
+        "headline": "Star Wars: Squadrons",
+        "text": "<strong>Type: Game</strong><br><p>A space combat game set after the events of Episode VI. Players take on the roles of New Republic and Imperial pilots, engaging in intense dogfights and large fleet battles in iconic Star Wars starships.</p><a href='https://www.ea.com/games/starwars/squadrons' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/e/e3/Star_Wars_Squadrons.jpg",
+        "caption": "Star Wars: Squadrons"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 2019
+      },
+      "text": {
+        "headline": "The Mandalorian",
+        "text": "<strong>Type: Series</strong><br><p>Set after the fall of the Empire and before the rise of the First Order, this series follows the adventures of a lone bounty hunter in the outer reaches of the galaxy as he protects a mysterious child with strong connections to the Force.</p><a href='https://www.starwars.com/series/the-mandalorian' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/6/6d/The_Mandalorian_poster.jpg",
+        "caption": "The Mandalorian"
+      },
+      "type": "series"
+    },
+    {
+      "start_date": {
+        "year": 2021
+      },
+      "text": {
+        "headline": "The Book of Boba Fett",
+        "text": "<strong>Type: Series</strong><br><p>Legendary bounty hunter Boba Fett navigates the underworld of the galaxy, attempting to claim his place as the new crime lord of Tatooine alongside mercenary Fennec Shand.</p><a href='https://www.starwars.com/series/the-book-of-boba-fett' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/9/96/The_Book_of_Boba_Fett_poster.jpg",
+        "caption": "The Book of Boba Fett"
+      },
+      "type": "series"
+    },
+    {
+      "start_date": {
+        "year": 2018
+      },
+      "text": {
+        "headline": "Star Wars: Resistance",
+        "text": "<strong>Type: Series</strong><br><p>Kazuda Xiono, a young pilot for the Resistance, is tasked with a top-secret mission to investigate the growing threat of the First Order. Set just before the events of Episode VII.</p><a href='https://www.starwars.com/series/star-wars-resistance' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/8/88/Star_Wars_Resistance_poster.jpg",
+        "caption": "Star Wars: Resistance"
+      },
+      "type": "series"
+    },
+    {
+      "start_date": {
+        "year": 2015
+      },
+      "text": {
+        "headline": "Star Wars: Episode VII - The Force Awakens",
+        "text": "<strong>Type: Movie</strong><br><p>As a new threat to the galaxy rises, Rey, a desert scavenger, and Finn, an ex-stormtrooper, must join Han Solo and Chewbacca to search for the one hope of restoring peace.</p><a href='https://www.starwars.com/films/star-wars-episode-vii-the-force-awakens' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg",
+        "caption": "Star Wars: Episode VII - The Force Awakens"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 2017
+      },
+      "text": {
+        "headline": "Star Wars: Episode VIII - The Last Jedi",
+        "text": "<strong>Type: Movie</strong><br><p>The Resistance is in trouble. General Leia Organa sends Rey to find Luke Skywalker, who may be the galaxy's last hope. Rey seeks to learn the ways of the Force, but Luke is disillusioned with his past.</p><a href='https://www.starwars.com/films/star-wars-episode-viii-the-last-jedi' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Last_Jedi.jpg",
+        "caption": "Star Wars: Episode VIII - The Last Jedi"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 2019
+      },
+      "text": {
+        "headline": "Star Wars: Episode IX - The Rise of Skywalker",
+        "text": "<strong>Type: Movie</strong><br><p>The surviving members of the Resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its climax, bringing the Skywalker saga to its end.</p><a href='https://www.starwars.com/films/star-wars-episode-ix-the-rise-of-skywalker' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/d/d6/Star_Wars_The_Rise_of_Skywalker_poster.jpg",
+        "caption": "Star Wars: Episode IX - The Rise of Skywalker"
+      },
+      "type": "movie"
+    },
+    {
+      "start_date": {
+        "year": 2023
+      },
+      "text": {
+        "headline": "Star Wars Jedi: Survivor",
+        "text": "<strong>Type: Game</strong><br><p>The sequel to Jedi: Fallen Order, this action-adventure game continues Cal Kestis's journey as he grows stronger in the Force, facing new challenges and threats in the galaxy.</p><a href='https://www.ea.com/games/starwars/jedi-survivor' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/9/97/Star_Wars_Jedi_Survivor_cover_art.jpg",
+        "caption": "Star Wars Jedi: Survivor"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 2021
+      },
+      "text": {
+        "headline": "Star Wars: Visions",
+        "text": "<strong>Type: Series</strong><br><p>An anthology series that presents different original stories set in the Star Wars universe, each episode animated by a different Japanese animation studio, exploring diverse themes and styles.</p><a href='https://www.starwars.com/series/star-wars-visions' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/0/04/Star_Wars_Visions_poster.jpg",
+        "caption": "Star Wars: Visions"
+      },
+      "type": "series"
+    },
+    {
+      "start_date": {
+        "year": 2022
+      },
+      "text": {
+        "headline": "LEGO Star Wars: The Skywalker Saga",
+        "text": "<strong>Type: Game</strong><br><p>An action-adventure game that humorously retells all nine films of the Skywalker saga in LEGO style, allowing players to experience iconic moments in a fun, family-friendly way.</p><a href='https://www.starwars.com/games-apps/lego-star-wars-the-skywalker-saga' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/4/41/LEGO_Star_Wars_The_Skywalker_Saga.jpg",
+        "caption": "LEGO Star Wars: The Skywalker Saga"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 2017
+      },
+      "text": {
+        "headline": "Star Wars: Battlefront II",
+        "text": "<strong>Type: Game</strong><br><p>A first and third-person shooter game featuring large-scale battles across various iconic locations. Players can fight for the Rebellion, Empire, Republic, or Separatists and even play as heroes and villains from the Star Wars saga.</p><a href='https://www.ea.com/games/starwars/battlefront/battlefront-2' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/e/e9/Star_Wars_Battlefront_II.jpg",
+        "caption": "Star Wars: Battlefront II"
+      },
+      "type": "game"
+    },
+    {
+      "start_date": {
+        "year": 1995
+      },
+      "text": {
+        "headline": "Star Wars: Dark Forces",
+        "text": "<strong>Type: Game</strong><br><p>A first-person shooter game where players take on the role of Kyle Katarn, a mercenary hired by the Rebel Alliance to stop the Empire's plans to create the Dark Trooper soldiers.</p><a href='https://www.gog.com/game/star_wars_dark_forces' target='_blank'>Official Link</a>"
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/4/4f/Dark_Forces_box_cover.jpg",
+        "caption": "Star Wars: Dark Forces"
+      },
+      "type": "game"
+    }
+  ]
+}
