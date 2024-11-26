@@ -1,3 +1,39 @@
+const styleSheets = [
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+]
+const scripts = [
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js",
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+    "https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+]
+addElement = (element) => {
+    $("<script/>", {
+        src: element
+    }).appendTo("head")
+}
+
+function loadJQuery() {
+
+    const script = document.createElement('script');
+    script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js";
+    document.head.appendChild(script);
+
+    // Wait for jQuery to load before executing your code
+    script.onload = function () {
+        $(document).ready(function () {
+            $(styleSheets).each(function(){
+                console.log($(this))
+                $("<link/>", {
+                    rel: "stylesheet",
+                    type: "text/css",
+                    href: $(this)
+                }).appendTo("head")
+            })
+        });
+    };
+}
+
+loadJQuery(); // Call the function to load jQuery
 document.addEventListener('DOMContentLoaded', () => {
   // Create the GitHub link and image
   let githubLink = document.createElement('a');
@@ -20,6 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let paragraph = document.createElement('p');
   paragraph.innerHTML = `&copy; Balázs Bencs 2009-${currentYear}`;
   // Append the paragraph to the footer
-  footer.prepend(githubLink)
+  footer.prepend(githubLink);
   footer.appendChild(paragraph);
 });
