@@ -1,0 +1,56 @@
+{
+  "title": {
+    "media": {
+      "url": "/assets/img/portfolio/house.webp",
+      "caption": "The island of peace",
+      "credit": "Image by ChatGPT"
+    },
+    "text": {
+      "headline": "My projects and events",
+      "text": "<p>This timeline contains the main events of my life and projects I've been working on. It is a nice and kind way to share more about myself and what I've been up to.</p>"
+    }
+  },
+  "events": [
+    {
+      "start_date": {
+        "month": "7",
+        "day": "6",
+        "year": "1987"
+      },
+      "media": {
+        "url": "https://www.youtube.com/watch?v=some_youtube_video",
+        "caption": "A video about the Declaration of Independence",
+        "credit": "Uploaded by History Channel"
+      },
+      "text": {
+        "headline": "Declaration of Independence",
+        "text": "<p>The United States declares independence from Great Britain.</p>"
+      },
+      "background": {
+        "color": "#c0392b"
+      }
+    },
+    {
+      "start_date": {
+        "month": "1",
+        "day": "1",
+        "year": "1863"
+      },
+      "end_date": {
+        "month": "12",
+        "day": "31",
+        "year": "1865"
+      },
+      "media": {
+        "url": "https://example.com/civil_war_map.jpg",
+        "caption": "Map of the Civil War",
+        "credit": "Library of Congress"
+      },
+      "text": {
+        "headline": "American Civil War",
+        "text": "<p>The American Civil War takes place.</p>"
+      },
+      "group": "US History"
+    }
+  ]
+}
