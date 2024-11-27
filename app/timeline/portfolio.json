@@ -28,7 +28,8 @@
       },
       "background": {
         "color": "#c0392b"
-      }
+      },
+      "group": "Era of the University"
     },
     {
       "start_date": {
@@ -50,7 +51,29 @@
         "headline": "American Civil War",
         "text": "<p>The American Civil War takes place.</p>"
       },
-      "group": "US History"
+      "group": "IBM professional"
+    },
+    {
+      "start_date": {
+        "month": "1",
+        "day": "1",
+        "year": "1863"
+      },
+      "end_date": {
+        "month": "12",
+        "day": "31",
+        "year": "1865"
+      },
+      "media": {
+        "url": "https://example.com/civil_war_map.jpg",
+        "caption": "Map of the Civil War",
+        "credit": "Library of Congress"
+      },
+      "text": {
+        "headline": "American Civil War",
+        "text": "<p>The American Civil War takes place.</p>"
+      },
+      "group": "Among the Scientists"
     }
   ]
 }

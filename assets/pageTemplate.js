@@ -45,7 +45,7 @@ function loadJQuery() {
                                         )
                                     ),
                                     $('<li>').append(
-                                        $('<a href="/apps" class="nav-link text-white">').append(
+                                        $('<a href="/app" class="nav-link text-white">').append(
                                             '<i class="fa-solid fa-tablet-screen-button"></i>',
                                             '<span class="mx-1">Other apps</span>'
                                         )
