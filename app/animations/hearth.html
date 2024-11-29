@@ -1,65 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title></title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../pageTemplate.js" type="module"></script>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../pageTemplate.js" type="module"></script>
+    <title>3D Heart with Three.js</title>
+    <style>
+        body {
+            margin: 0;
+        }
 
-    .heart {
-      width: 20vmin;
-      height: 20vmin;
-      position: relative;
-      transform: rotate(45deg);
-      animation: roll 5s infinite linear;
-    }
-
-    .heart::before,
-    .heart::after {
-      content: "";
-      width: 20vmin;
-      height: 20vmin;
-      border-radius: 50%;
-      background-color: red;
-      position: absolute;
-    }
-
-    .heart::before {
-      top: -10vmin;
-      left: 0;
-    }
-
-    .heart::after {
-      left: 10vmin;
-      top: 0;
-    }
-
-    @keyframes roll {
-      0% {
-        transform: rotate(45deg) rotateX(0deg) rotateY(0deg);
-      }
-
-      100% {
-        transform: rotate(45deg) rotateX(360deg) rotateY(360deg);
-      }
-    }
-  </style>
+        canvas {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <main>
-        <div class="heart"></div>
-    </main>
+
+    <script type="module">
+        import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.170.0/three.module.min.js';
+
+
+        function main() {
+            const canvas = document.createElement('canvas');
+            document.body.appendChild(canvas);
+            const renderer = new THREE.WebGLRenderer({ canvas });
+
+
+            const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+            camera.position.z = 5;
+
+            const scene = new THREE.Scene();
+
+            const geometry = new THREE.HeartGeometry(1,
+                100, 100);
+            const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+            const heart = new THREE.Mesh(geometry, material);
+            scene.add(heart);
+
+            function render(time) {
+                time *= 0.001;  // convert time to seconds
+
+                heart.rotation.x = time * 0.5;
+                heart.rotation.y = time * 1.0;
+
+                renderer.render(scene, camera);
+
+                requestAnimationFrame(render);
+            }
+            requestAnimationFrame(render);
+        }
+
+        main();
+    </script>
+    <main></main>
 </body>
 
 </html>
