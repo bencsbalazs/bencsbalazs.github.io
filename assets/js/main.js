@@ -7,26 +7,21 @@ class CredlyBadgeList extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
     }
-
     connectedCallback() {
         const badgeIds = this.getAttribute("badge-ids")?.split(",") || [];
         const container = document.createElement("div");
         container.classList.add("col-lg-4","col-md-6","d-flex","align-items-stretch");
-
         badgeIds.forEach((badgeId) => {
             const badgeDiv = document.createElement("div");
             badgeDiv.setAttribute("data-iframe-width", "200");
             badgeDiv.setAttribute("data-iframe-height", "200");
             badgeDiv.setAttribute("data-share-badge-id", badgeId.trim());
             badgeDiv.setAttribute("data-share-badge-host", "https://www.credly.com");
-
             container.appendChild(badgeDiv);
         });
-
-        this.shadowRoot.appendChild(container);
         this.loadScript();
+        this.shadowRoot.appendChild(container);
     }
-
     loadScript() {
         if (!document.querySelector('script[src="https://cdn.credly.com/assets/utilities/embed.js"]')) {
             const script = document.createElement("script");
@@ -36,8 +31,6 @@ class CredlyBadgeList extends HTMLElement {
         }
     }
 }
-
-
 
 (function () {
     ('use strict');
@@ -122,6 +115,14 @@ class CredlyBadgeList extends HTMLElement {
                 scrollto(window.location.hash);
             }
         }
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+        });
+        // --- Start matrix ---
+        setInterval(matrix, 100);
     });
 
 
@@ -242,19 +243,6 @@ class CredlyBadgeList extends HTMLElement {
             else ypos[ind] = y + 14;
         });
     };
-
-    window.addEventListener('load', () => {
-        // --- Element rendering ---
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false,
-        });
-        // --- Start matrix ---
-        setInterval(matrix, 100);
-    });
-
     /* --- Init webcomponents --- */
     customElements.define("credly-badge-list", CredlyBadgeList);
 })();
