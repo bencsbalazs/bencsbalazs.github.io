@@ -5,7 +5,6 @@
 class CredlyBadgeList extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: "open" });
     }
     connectedCallback() {
         const badgeIds = this.getAttribute("badge-ids")?.split(",") || [];
@@ -20,7 +19,7 @@ class CredlyBadgeList extends HTMLElement {
             container.appendChild(badgeDiv);
         });
         this.loadScript();
-        this.shadowRoot.appendChild(container);
+        this.appendChild(container);
     }
     loadScript() {
         if (!document.querySelector('script[src="https://cdn.credly.com/assets/utilities/embed.js"]')) {
