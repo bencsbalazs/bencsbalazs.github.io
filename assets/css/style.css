@@ -22,10 +22,6 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-#main {
-  margin-left: 300px;
-}
-
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -89,11 +85,6 @@ section {
 
 /*--- Header ---*/
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 300px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
@@ -121,9 +112,21 @@ section {
   color: #fff;
   text-decoration: none;
 }
-#header .profile .social-links a {
+
+#forkMeOnGithub {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15em;
+  height: 15em;
+  z-index: 999;
+}
+
+.social-links {
+  min-width: 18rem;
+}
+.social-links a {
   font-size: 18px;
-  display: inline-block;
   background: #212431;
   color: #fff;
   line-height: 1;
@@ -135,93 +138,10 @@ section {
   height: 36px;
   transition: 0.3s;
 }
-#header .profile .social-links a:hover {
-  background: #149ddd;
+.social-links a:hover {
   color: #fff;
+  box-shadow: 0 0 10px 0 rgb(220, 140, 35);
   text-decoration: none;
-}
-
-#forkMeOnGithub {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 15em;
-  height: 15em;
-  z-index: 999;
-}
-
-.nav-menu {
-  padding: 30px 0 0 0;
-}
-.nav-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.nav-menu > ul > li {
-  position: relative;
-  white-space: nowrap;
-}
-.nav-menu a,
-.nav-menu a:focus {
-  display: flex;
-  align-items: center;
-  color: #a8a9b4;
-  padding: 12px 15px;
-  margin-bottom: 8px;
-  transition: 0.3s;
-  font-size: 15px;
-}
-
-.nav-menu a i,
-.nav-menu a:focus i {
-  font-size: 24px;
-  padding-right: 8px;
-  color: #6f7180;
-}
-
-.nav-menu a:hover,
-.nav-menu .active,
-.nav-menu .active:focus,
-.nav-menu li:hover > a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.nav-menu a:hover i,
-.nav-menu .active i,
-.nav-menu .active:focus i,
-.nav-menu li:hover > a i {
-  color: #149ddd;
-}
-
-/* Mobile Navigation */
-.mobile-nav-toggle {
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  z-index: 9998;
-  border: 0;
-  font-size: 24px;
-  transition: all 0.4s;
-  outline: none !important;
-  background-color: #149ddd;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.mobile-nav-active {
-  overflow: hidden;
-}
-.mobile-nav-active #header {
-  left: 0;
 }
 
 /*--- Hero Section ---*/
@@ -765,10 +685,7 @@ section {
   padding: 15px;
   color: #f4f6fd;
   font-size: 14px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 300px;
+  width: 100%;
   z-index: 9999;
   background: #040b14;
 }
@@ -802,9 +719,6 @@ section {
   }
 }
 @media (max-width: 1199px) {
-  #header {
-    left: -300px;
-  }
   #main {
     margin-left: 0;
   }
