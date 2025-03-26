@@ -122,10 +122,16 @@ section {
   z-index: 999;
 }
 
-.social-links {
+nav #navProfile {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: 0.2rem;
+}
+nav .social-links {
   min-width: 18rem;
 }
-.social-links a {
+nav .social-links a {
   font-size: 18px;
   background: #212431;
   color: #fff;
@@ -138,7 +144,7 @@ section {
   height: 36px;
   transition: 0.3s;
 }
-.social-links a:hover {
+nav .social-links a:hover {
   color: #fff;
   box-shadow: 0 0 10px 0 rgb(220, 140, 35);
   text-decoration: none;
