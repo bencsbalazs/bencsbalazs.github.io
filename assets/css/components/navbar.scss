@@ -1,9 +1,20 @@
+@font-face {
+    src: url("/assets/fonts/Tektur/static/Tektur-Regular.ttf") format('truetype');
+    font-family: "Tektur";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
 nav {
     #navProfile {
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
         margin: 0.2rem;
+    }
+    a{
+        font-family: "Tektur", sans-serif;
     }
 .social-links {
     min-width: 18rem;

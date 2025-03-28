@@ -5,15 +5,18 @@
     width: 100%;
     z-index: 9999;
     background: #040b14;
-}
-#footer .copyright {
-    text-align: center;
-}
-#footer .credits {
-    padding-top: 5px;
-    text-align: center;
-    font-size: 13px;
-    color: #eaebf0;
+
+    .copyright {
+        text-align: center;
+    }
+
+    .credits {
+        padding-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        color: #eaebf0;
+    }
+
 }
 
 #footnav {
