@@ -32,3 +32,26 @@
         transform: scaleX(-1);
     }
 }
+
+.feedback {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    margin: .5rem;
+    text-align: justify;
+
+    ::before {
+        content: '"';
+        font-size: 2rem;
+    }
+
+    .author {
+        font-size: 14px;
+        font-weight: 700;
+        color: #173b6c;
+        margin-top: 0.5rem;
+        letter-spacing: 2px;
+        text-align: right;
+        float: right;
+        font-style: inherit;
+    }
+}

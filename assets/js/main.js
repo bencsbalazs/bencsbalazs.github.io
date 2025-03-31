@@ -61,14 +61,17 @@ class CredlyBadgeList extends HTMLElement {
     connectedCallback() {
         const badgeIds = this.getAttribute("badge-ids")?.split(",") || [];
         const container = document.createElement("div");
-        container.classList.add("col-lg-4","col-md-6","d-flex","align-items-stretch");
+        container.classList.add("row");
         badgeIds.forEach((badgeId) => {
             const badgeDiv = document.createElement("div");
-            badgeDiv.setAttribute("data-iframe-width", "200");
-            badgeDiv.setAttribute("data-iframe-height", "200");
+            const badgeCol = document.createElement("div");
+            badgeCol.classList.add("col-lg-3", "col-md-4", "col-sm-6", "col-6", "mb-3");
+            badgeDiv.setAttribute("data-iframe-width", "250");
+            badgeDiv.setAttribute("data-iframe-height", "250");
             badgeDiv.setAttribute("data-share-badge-id", badgeId.trim());
             badgeDiv.setAttribute("data-share-badge-host", "https://www.credly.com");
-            container.appendChild(badgeDiv);
+            badgeCol.appendChild(badgeDiv);
+            container.appendChild(badgeCol);
         });
         this.loadScript();
         this.appendChild(container);
