@@ -1,22 +1,13 @@
-/*--- Building the page ---*/
+@import "fonts.scss";
 @import "variables.scss";
 @import "general.scss";
 @import "extensions/backtotop.scss";
-/*--- Navigation ---*/
 @import "components/navbar.scss";
-/*--- Hero Section ---*/
 @import "components/heroe.scss";
-/*--- About ---*/
 @import "components/about.scss";
-/*--- Facts ---*/
 @import "components/facts.scss";
-/*--- Skills ---*/
 @import "components/skills.scss";
-/*--- Resume ---*/
 @import "components/resume.scss";
-/*--- Services ---*/
 @import "components/services.scss";
-/*--- Footer ---*/
 @import "components/footer.scss";
-
 @import "responsive.scss";

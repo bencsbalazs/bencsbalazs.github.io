@@ -1,11 +1,3 @@
-@font-face {
-    src: url("/assets/fonts/Tektur/static/Tektur-Regular.ttf") format('truetype');
-    font-family: "Tektur";
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
-}
 nav {
     #navProfile {
         width: 3rem;
@@ -14,14 +6,13 @@ nav {
         margin: 0.2rem;
     }
     a{
-        font-family: "Tektur", sans-serif;
+        font-family: $font-family-highlight;
     }
 .social-links {
     min-width: 18rem;
     a {
         font-size: 18px;
-        background: #212431;
-        color: #fff;
+        color: $link-color-on-dark;
         line-height: 1;
         padding: 8px 0;
         margin-right: 4px;
@@ -33,8 +24,8 @@ nav {
     }
 
     a:hover {
-        color: #fff;
-        box-shadow: 0 0 10px 0 rgba(220, 140, 35, 1);
+        color: $link-hover-color-on-dark;
+        box-shadow: 0 0 10px 0 $shadow-color;
         text-decoration: none;
     }
 }

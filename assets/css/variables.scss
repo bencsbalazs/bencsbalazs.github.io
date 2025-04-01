@@ -1,2 +1,18 @@
+// Default font variables
+$font-size: 16px;
+$font-family: "Open Sans", sans-serif;
 $font-color: #272829;
-$link-color: #149ddd;
+$link-color: rgba(30, 80, 150, 1);
+$link-hover-color: rgba(240, 170, 55, 1);
+
+// Dark parts
+$background-dark: #212431;
+$font-color-on-dark: #f5f8fd;
+$link-color-on-dark: rgba(30, 80, 150, 1);
+$link-hover-color-on-dark: rgba(240, 170, 55, 1);
+
+// Highlight styles
+$font-family-highlight: "Tektur", sans-serif;
+
+// Decorations styles
+$shadow-color: rgba(60, 0, 255, 0.8);

@@ -6,7 +6,7 @@
         i {
             display: block;
             font-size: 44px;
-            color: #149ddd;
+            color: $link-color;
             float: left;
             line-height: 0;
         }
@@ -14,27 +14,25 @@
             font-size: 48px;
             line-height: 40px;
             display: block;
+            font-family: "Digital Numbers", sans-serif;
             font-weight: 700;
-            color: #050d18;
             margin-left: 60px;
         }
         p {
             padding: 15px 0 0 0;
             margin: 0 0 0 60px;
-            font-family: "Raleway", sans-serif;
             font-size: 14px;
-            color: #122f57;
         }
         a {
             font-weight: 600;
             display: block;
             margin-top: 20px;
-            color: #122f57;
+            color: $link-color;
             font-size: 15px;
-            font-family: "Poppins", sans-serif;
+            font-family: 'Textur', sans-serif;
             transition: ease-in-out 0.3s;
             &:hover {
-                color: #1f5297;
+                color: $link-hover-color;
             }
         }
     }

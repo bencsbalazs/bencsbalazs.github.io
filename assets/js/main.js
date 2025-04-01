@@ -28,21 +28,26 @@ class DigitalClock extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
             <style>
-            @import url('https://fonts.cdnfonts.com/css/digital-numbers');
-                .clock-container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 2em;
-                    font-family: 'Digital Numbers', sans-serif;
-                    background: black;
-                    color: white;
-                    border-radius: 10px;
-                    width: ${this.width};
-                    height: ${this.height};
-                }
+            @font-face {
+                font-family: 'Digital Numbers';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Digital Numbers'), url('https://fonts.cdnfonts.com/s/15953/DigitalNumbers-Regular.woff') format('woff');
+            }
+            #clock {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2em;
+                font-family: 'Digital Numbers', sans-serif;
+                background: black;
+                color: white;
+                border-radius: 10px;
+                width: ${this.width};
+                height: ${this.height};
+            }
             </style>
-            <div class="clock-container" id="clock">--:--:--</div>
+            <div id="clock">--:--:--</div>
         `;
     }
 }
