@@ -1,5 +1,5 @@
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: $font-family;
     color: $font-color;
 }
 
@@ -8,7 +8,7 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: #37b3ed;
+        color: $link-hover-color;
         text-decoration: none;
     }
 }
@@ -17,13 +17,17 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-    font-family: "Raleway", sans-serif;
+h5 {
+    font-weight: 500;
 }
 
-#main {
-    margin-left: 300px;
+#forkMeOnGithub {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15em;
+    height: 15em;
+    z-index: 999;
 }
 
 section {
@@ -43,17 +47,17 @@ section {
     h2 {
         font-size: 32px;
         font-weight: bold;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 2px $font-color;
+        font-family: $font-family-highlight;
         position: relative;
-        color: #173b6c;
         &::after {
             content: "";
             position: absolute;
             display: block;
             width: 50px;
             height: 3px;
-            background: #149ddd;
             bottom: 0;
             left: 0;
         }

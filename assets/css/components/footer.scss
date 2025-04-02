@@ -2,21 +2,14 @@
     padding: 15px;
     color: #f4f6fd;
     font-size: 14px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 300px;
+    width: 100%;
     z-index: 9999;
     background: #040b14;
-}
-#footer .copyright {
-    text-align: center;
-}
-#footer .credits {
-    padding-top: 5px;
-    text-align: center;
-    font-size: 13px;
-    color: #eaebf0;
+
+    .copyright {
+        text-align: center;
+    }
+
 }
 
 #footnav {
