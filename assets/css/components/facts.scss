@@ -14,7 +14,7 @@
             font-size: 48px;
             line-height: 40px;
             display: block;
-            font-family: "Digital Numbers", sans-serif;
+            font-family: $font-family-digital;
             font-weight: 700;
             margin-left: 60px;
         }
@@ -29,7 +29,7 @@
             margin-top: 20px;
             color: $link-color;
             font-size: 15px;
-            font-family: 'Textur', sans-serif;
+            font-family: $font-family-highlight;
             transition: ease-in-out 0.3s;
             &:hover {
                 color: $link-hover-color;

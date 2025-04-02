@@ -24,7 +24,7 @@
 }
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  color: rgb(40, 40, 40);
 }
 
 a {
@@ -32,7 +32,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: rgb(240, 170, 55);
+  color: rgb(240, 170, 50);
   text-decoration: none;
 }
 
@@ -71,8 +71,9 @@ section {
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px rgb(40, 40, 40);
   font-family: "Tektur", sans-serif;
   position: relative;
 }
@@ -138,7 +139,7 @@ nav .social-links a {
   transition: 0.3s;
 }
 nav .social-links a:hover {
-  color: rgb(240, 170, 55);
+  color: rgb(240, 170, 50);
   box-shadow: 0 0 10px 0 rgba(60, 0, 255, 0.8);
   text-decoration: none;
 }
@@ -183,7 +184,6 @@ nav .social-links a:hover {
   color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
 }
 #hero p span {
   color: #fff;
@@ -233,7 +233,7 @@ nav .social-links a:hover {
 .feedback .author {
   font-size: 14px;
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   letter-spacing: 2px;
   text-align: right;
   float: right;
@@ -273,11 +273,11 @@ nav .social-links a:hover {
   margin-top: 20px;
   color: rgb(30, 80, 150);
   font-size: 15px;
-  font-family: "Textur", sans-serif;
+  font-family: "Tektur", sans-serif;
   transition: ease-in-out 0.3s;
 }
 .facts .count-box a:hover {
-  color: rgb(240, 170, 55);
+  color: rgb(240, 170, 50);
 }
 
 .skills .progress {
@@ -292,7 +292,6 @@ nav .social-links a:hover {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
   color: #050d18;
 }
 .skills .progress .skill .val {
@@ -307,7 +306,7 @@ nav .social-links a:hover {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #149ddd;
+  background-color: rgb(30, 80, 150);
 }
 
 .resume .resume-title {
@@ -350,7 +349,6 @@ nav .social-links a:hover {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
   color: #050d18;
   margin-bottom: 10px;
 }
@@ -376,7 +374,7 @@ nav .social-links a:hover {
   background: #fff;
 }
 .services .icon-box:hover .icon i {
-  color: #149ddd;
+  color: rgb(30, 80, 150);
 }
 .services .icon {
   float: left;
@@ -385,10 +383,10 @@ nav .social-links a:hover {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #149ddd;
+  background: rgb(30, 80, 150);
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #149ddd;
+  border: 1px solid rgb(30, 80, 150);
 }
 .services .icon i {
   color: #fff;
@@ -401,11 +399,8 @@ nav .social-links a:hover {
   margin-bottom: 15px;
   font-size: 18px;
 }
-.services .title a {
-  color: #343a40;
-}
 .services .title a:hover {
-  color: #149ddd;
+  color: rgb(30, 80, 150);
 }
 .services .description {
   margin-left: 80px;
