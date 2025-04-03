@@ -432,6 +432,10 @@ nav .social-links a:hover {
   color: #fff;
 }
 
+.footer-social-links {
+  font-size: 1.5rem;
+}
+
 @media (max-width: 1199px) {
   #footer {
     position: static;

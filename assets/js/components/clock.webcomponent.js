@@ -28,17 +28,10 @@ class DigitalClock extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
             <style>
-            @font-face {
-                font-family: 'Digital Numbers';
-                font-style: normal;
-                font-weight: 400;
-                src: local('Digital Numbers'), url('https://fonts.cdnfonts.com/s/15953/DigitalNumbers-Regular.woff') format('woff');
-            }
             #clock {
                 width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                display: block;
+                margin: 0 auto;
                 font-size: 2em;
                 font-family: 'Digital Numbers', sans-serif;
                 background: black;
