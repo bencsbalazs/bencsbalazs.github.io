@@ -1,96 +1,3 @@
-class DigitalClock extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-        this.width = this.getAttribute('width') || '200px';
-        this.height = this.getAttribute('height') || '100px';
-        this.render();
-    }
-
-    connectedCallback() {
-        this.updateTime();
-        this.interval = setInterval(() => this.updateTime(), 1000);
-    }
-
-    disconnectedCallback() {
-        clearInterval(this.interval);
-    }
-
-    updateTime() {
-        const now = new Date();
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-        const seconds = String(now.getSeconds()).padStart(2, '0');
-
-        this.shadowRoot.querySelector('#clock').textContent = `${hours}:${minutes}:${seconds}`;
-    }
-
-    render() {
-        this.shadowRoot.innerHTML = `
-            <style>
-            @font-face {
-                font-family: 'Digital Numbers';
-                font-style: normal;
-                font-weight: 400;
-                src: local('Digital Numbers'), url('https://fonts.cdnfonts.com/s/15953/DigitalNumbers-Regular.woff') format('woff');
-            }
-            #clock {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2em;
-                font-family: 'Digital Numbers', sans-serif;
-                background: black;
-                color: white;
-                border-radius: 10px;
-                width: ${this.width};
-                height: ${this.height};
-            }
-            </style>
-            <div id="clock">--:--:--</div>
-        `;
-    }
-}
-
-customElements.define('digital-clock', DigitalClock);
-
-
-/* ---------------------------
-   --- Badges webcomponent ---
-   --------------------------- */
-
-class CredlyBadgeList extends HTMLElement {
-    constructor() {
-        super();
-    }
-    connectedCallback() {
-        const badgeIds = this.getAttribute("badge-ids")?.split(",") || [];
-        const container = document.createElement("div");
-        container.classList.add("row");
-        badgeIds.forEach((badgeId) => {
-            const badgeDiv = document.createElement("div");
-            const badgeCol = document.createElement("div");
-            badgeCol.classList.add("col-lg-3", "col-md-4", "col-sm-6", "col-6", "mb-3");
-            badgeDiv.setAttribute("data-iframe-width", "250");
-            badgeDiv.setAttribute("data-iframe-height", "250");
-            badgeDiv.setAttribute("data-share-badge-id", badgeId.trim());
-            badgeDiv.setAttribute("data-share-badge-host", "https://www.credly.com");
-            badgeCol.appendChild(badgeDiv);
-            container.appendChild(badgeCol);
-        });
-        this.loadScript();
-        this.appendChild(container);
-    }
-    loadScript() {
-        if (!document.querySelector('script[src="https://cdn.credly.com/assets/utilities/embed.js"]')) {
-            const script = document.createElement("script");
-            script.src = "https://cdn.credly.com/assets/utilities/embed.js";
-            script.async = true;
-            document.body.appendChild(script);
-        }
-    }
-}
-
 (function () {
     ('use strict');
     /* --- Helper functions --- */
@@ -180,8 +87,6 @@ class CredlyBadgeList extends HTMLElement {
             once: true,
             mirror: false,
         });
-        // --- Start matrix ---
-        setInterval(matrix, 100);
     });
 
 
@@ -226,42 +131,17 @@ class CredlyBadgeList extends HTMLElement {
             },
         });
     }
-
-    /* ------------------------
-       --- Matrix animation ---
-       ------------------------ */
-
-    const canvas = document.getElementById('canv');
-    const ctx = canvas.getContext('2d');
-    const w = canvas.width;
-    const h = canvas.height;
-
-    const cols = Math.floor(w / 14) + 1;
-    const ypos = Array(cols).fill(0);
-
-    const matrix = () => {
-        ctx.fillStyle = '#474747';
-        ctx.fillRect(0, 0, w, h);
-
-        // Set color to green and font to 15pt monospace in the drawing context
-        ctx.fillStyle = '#0f0';
-        ctx.font = '14pt monospace';
-
-        // for each column put a random character at the end
-        ypos.forEach((y, ind) => {
-            // generate a random character
-            const text = String.fromCharCode(Math.random() * 128);
-
-            // x coordinate of the column, y coordinate is already given
-            const x = ind * 14;
-            // render the character at (x, y)
-            ctx.fillText(text, x, y);
-
-            // randomly reset the end of the column if it's at least 100px high
-            if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-            else ypos[ind] = y + 14;
-        });
-    };
     /* --- Init webcomponents --- */
-    customElements.define("credly-badge-list", CredlyBadgeList);
+    import('./components/credly.webcomponent.js').then(module => {
+        const CredlyBadgeList = module.default;
+        customElements.define('credly-badge-list', CredlyBadgeList);
+    });
+    import('./components/clock.webcomponent.js').then(module => {
+        const DigitalClock = module.default;
+        customElements.define('digital-clock', DigitalClock);
+    });
+    import('./components/matrix.webcomponent.js').then(module => {
+        const MatrixCode = module.default;
+        customElements.define('matrix-code', MatrixCode);
+    });
 })();

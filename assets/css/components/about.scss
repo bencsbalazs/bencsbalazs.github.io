@@ -36,16 +36,14 @@
     padding: 1rem;
     margin: .5rem;
     text-align: justify;
-
-    &::before, &::after {
-        content: '"';
-        font-size: 1rem;
-    }
+    display: block;
 
     .author {
+        width: 100%;
         font-size: 14px;
         font-weight: 700;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
         letter-spacing: 2px;
         text-align: right;
         float: right;
