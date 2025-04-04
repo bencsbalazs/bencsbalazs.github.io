@@ -32,7 +32,3 @@ class CredlyBadgeList extends HTMLElement {
 }
 
 export default CredlyBadgeList;
-
-// Usage:
-// customElements.define('credly-badge-list', CredlyBadgeList);
-// <credly-badge-list badge-ids="123456,789012"></credly-badge-list>

@@ -144,4 +144,8 @@
         const MatrixCode = module.default;
         customElements.define('matrix-code', MatrixCode);
     });
+    import('./components/skillcloud.webcomponent.js').then(module => {
+        const skillCloud = module.default;
+        customElements.define('skill-cloud', skillCloud);
+    });
 })();
