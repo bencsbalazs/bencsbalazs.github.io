@@ -1,0 +1,27 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install -g @lhci/cli@0.13.x
+      - run: |
+          lhci autorun --collect.url=https://bencsbalazs.github.io \
+                       --upload.target=temporary-public-storage
+      - name: Upload badge
+        run: |
+          SCORE=$(curl -s https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/$(ls .lighthouseci | head -1) | jq '.categories.performance.score * 100' | xargs printf "%.0f")
+          echo "![Lighthouse](https://img.shields.io/badge/lighthouse-$SCORE%25-brightgreen)" > badge.md
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: 'badge.md'
+          message: 'chore: update Lighthouse badge'

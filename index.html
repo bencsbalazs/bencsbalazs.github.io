@@ -1,504 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      content="width=device-width, initial-scale=1.0"
-      name="viewport" />
-    <title>Balázs Bencs' portfolio</title>
-    <meta
-      content="The portfolio page of Balázs Bencs"
-      name="description" />
-    <meta
-      content="Balázs Bencs, developer, engineer"
-      name="keywords" />
-    <link
-      href="assets/img/favicon.png"
-      rel="icon" />
-    <link
-      href="assets/img/apple-touch-icon.png"
-      rel="apple-touch-icon" />
-    <link
-      href="assets/vendor/aos/aos.css"
-      rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link
-      href="assets/css/style.css"
-      rel="stylesheet" />
-  </head>
 
-  <body>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Balázs Bencs' portfolio</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Balázs Bencs — Senior Full-Stack Developer" />
+    <meta property="og:description" content="Portfolio, open-source work and services of Balázs Bencs." />
+    <meta property="og:image" content="https://bencsbalazs.github.io/og-cover.png" />
+    <meta property="og:url" content="https://bencsbalazs.github.io" />
+    <meta property="og:type" content="website" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta content="Balázs Bencs, developer, engineer" name="keywords" />
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
     <a href="https://github.com/bencsbalazs">
-      <img
-        decoding="async"
-        id="forkMeOnGithub"
-        src="assets/img/forkme.webp"
-        class="attachment-full size-full"
-        alt="Fork me on GitHub"
-        loading="lazy"
-        data-recalc-dims="1" />
+        <img decoding="async" id="forkMeOnGithub" src="assets/img/forkme.webp" class="attachment-full size-full"
+            alt="Fork me on GitHub" loading="lazy" data-recalc-dims="1" />
     </a>
     <i class="bi bi-list mobile-nav-toggle d-none"></i>
 
-    <section
-      id="hero"
-      class="d-flex flex-column justify-content-center align-items-center">
-      <matrix-code id="matrix" class="w-100 h-100"></matrix-code>
-      <div
-        class="hero-container"
-        data-aos="fade-in">
-        <h1>Balázs Bencs</h1>
-        <p>
-          <span
-            class="typed"
-            data-typed-items="Application developer, Extreme programmer, Teacher, Network engineer, Automation engineer"></span>
-        </p>
-      </div>
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <matrix-code id="matrix" class="w-100 h-100"></matrix-code>
+        <div class="hero-container" data-aos="fade-in">
+            <h1>Balázs Bencs</h1>
+            <p>
+                <span class="typed"
+                    data-typed-items="Application developer, Extreme programmer, Teacher, Network engineer, Automation engineer"></span>
+            </p>
+        </div>
     </section>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-      <a
-        class="navbar-brand ms-4"
-        href="#">
-        <img
-          src="assets/img/profile-img.jpg"
-          id="navProfile"
-          alt="Balazs' profile picture" />
-        <span class="ml-1">Balázs Bencs</span>
-      </a>
-      <button
-        class="navbar-toggler me-4"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <a class="navbar-brand ms-4" href="#">
+            <img src="assets/img/profile-img.jpg" id="navProfile" alt="Balazs' profile picture" />
+            <span class="ml-1">Balázs Bencs</span>
+        </a>
+        <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div
-        class="collapse navbar-collapse"
-        id="navbarSupportedContent">
-        <ul class="navbar-nav ms-4 me-auto">
-          <li class="nav-item">
-            <a
-              href="#hero"
-              class="nav-link scrollto active color-white"
-              ><i class="bx bx-home"></i><span>Home</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="#badges"
-              class="nav-link scrollto"
-              ><i class="bx bx-file-blank"></i><span>Badges earned</span></a>
-          </li>
-          <li class="nav-item">
-            <a
-              href="#services"
-              class="nav-link scrollto"
-              ><i class="bx bx-server"></i><span>Services</span></a
-            >
-          </li>
-        </ul>
-        <div class="navbar-nav navbar-right social-links d-xs-none">
-          <a
-            href="https://www.facebook.com/balazs.bencs.9"
-            class="nav-link col-sm-4 facebook"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a
-            href="https://github.com/bencsbalazs"
-            class="nav-link github"
-            ><i class="bi bi-github"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/bencsbalazs/"
-            class="nav-link instagram"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/bencsbalazs/"
-            class="nav-link linkedin"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-          <a
-            href="https://balazsbencs.blogspot.com/"
-            class="nav-link blogger"
-            ><i class="bi bi-journals"></i
-          ></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-4 me-auto">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link scrollto active color-white"><i
+                            class="bx bx-home"></i><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#badges" class="nav-link scrollto"><i class="bx bx-file-blank"></i><span>Badges
+                            earned</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i><span>Services</span></a>
+                </li>
+            </ul>
+            <div class="navbar-nav navbar-right social-links d-xs-none">
+                <a href="https://www.facebook.com/balazs.bencs.9" class="nav-link col-sm-4 facebook"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://github.com/bencsbalazs" class="nav-link github"><i class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/bencsbalazs/" class="nav-link instagram"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/bencsbalazs/" class="nav-link linkedin"><i
+                        class="bi bi-linkedin"></i></a>
+                <a href="https://balazsbencs.blogspot.com/" class="nav-link blogger"><i class="bi bi-journals"></i></a>
+            </div>
         </div>
-      </div>
     </nav>
     <main id="main">
 
-      <section
-        id="facts"
-        class="facts">
-        <div class="container">
-          <div class="section-title">
-            <h2>Facts</h2>
-            <p>
-              We can stare at the skill of others, but remember, with the same amount of time and energy, we could
-              significantly improve our own performance. Often experience is the only difference.
-            </p>
-          </div>
-          <div class="row no-gutters">
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up">
-              <div class="count-box">
-                <i class="bi bi-emoji-smile"></i
-                ><span
-                  data-purecounter-start="0"
-                  data-purecounter-end="16"
-                  data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p><strong>Companies</strong> who tusted me.</p>
-              </div>
+        <section id="facts" class="facts">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Facts</h2>
+                    <p>
+                        We can stare at the skill of others, but remember, with the same amount of time and energy, we
+                        could
+                        significantly improve our own performance. Often experience is the only difference.
+                    </p>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+                        <div class="count-box">
+                            <i class="bi bi-emoji-smile"></i><span data-purecounter-start="0" data-purecounter-end="16"
+                                data-purecounter-duration="1" class="purecounter"></span>
+                            <p><strong>Companies</strong> served.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="count-box">
+                            <i class="bi bi-journal-richtext"></i><span data-purecounter-start="0"
+                                data-purecounter-end="65" data-purecounter-duration="1" class="purecounter"></span>
+                            <p><strong>Projects</strong>, I took part in.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="count-box">
+                            <i class="bi bi-headset"></i><span data-purecounter-start="0" data-purecounter-end="650"
+                                data-purecounter-duration="1" class="purecounter"></span>
+                            <p><strong>Hours Of Teaching</strong> to improve others and myself.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="count-box">
+                            <i class="bi bi-people"></i><span data-purecounter-start="0" data-purecounter-end="28"
+                                data-purecounter-duration="1" class="purecounter"></span>
+                            <p>
+                                <strong>Certificates</strong> earned
+                                <br />
+                                <a href="https://www.credly.com/users/balazs-bencs/badges" target="_blank">Some of them
+                                    on Credly</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="100">
-              <div class="count-box">
-                <i class="bi bi-journal-richtext"></i
-                ><span
-                  data-purecounter-start="0"
-                  data-purecounter-end="65"
-                  data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p><strong>Projects</strong>, I took part in.</p>
-              </div>
+        </section>
+        <section id="skills" class="skills section-bg">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Skills</h2>
+                    <p>"Do, or do Not. There is no try!" - <i>Master Yoda</i></p>
+                </div>
+                <skill-cloud></skill-cloud>
             </div>
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="count-box">
-                <i class="bi bi-headset"></i
-                ><span
-                  data-purecounter-start="0"
-                  data-purecounter-end="650"
-                  data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p><strong>Hours Of Teaching</strong> to improve others and myself.</p>
-              </div>
+        </section>
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Services</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+                        <div class="icon">
+                            <i class="bi bi-robot"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>Node, TypeScript</a>
+                        </h4>
+                        <p class="description">
+                            I build modern, scalable web applications using TypeScript and Node.js. My expertise includes Angular, Express, Mocha,
+                            and Lerna—allowing me to deliver robust, well-structured backend and frontend solutions.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon">
+                            <i class="bi bi-card-checklist"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>Python</a>
+                        </h4>
+                        <p class="description">
+                            I use Python for backend development, automation, and data processing. Whether it's Django, Flask, or FastAPI, I create
+                            reliable and efficient systems tailored to business needs and performance goals.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon">
+                            <i class="bi bi-bar-chart"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>AI</a>
+                        </h4>
+                        <p class="description">
+                            I integrate AI solutions like ChatGPT and Google Gemini into software workflows. These tools help automate repetitive
+                            tasks, enhance user experiences, and unlock data-driven intelligence for applications.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon">
+                            <i class="bi bi-binoculars"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>Agile Methodologies</a>
+                        </h4>
+                        <p class="description">
+                            I work within Agile frameworks such as Scrum and Kanban, supporting both team efficiency and iterative delivery. I also
+                            mentor teams to adopt agile mindsets and improve their collaboration practices.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon">
+                            <i class="bi bi-brightness-high"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>Cloud Solutions</a>
+                        </h4>
+                        <p class="description">
+                            I design and deploy platform-independent applications using Docker and Kubernetes. I have hands-on experience with AWS,
+                            Google Cloud Platform, and on-premise environments to meet various scaling needs.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon">
+                            <i class="bi bi-calendar4-week"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>Extreme Programming (XP)</a>
+                        </h4>
+                        <p class="description">I apply XP techniques like Test-Driven Development (TDD), Behavior-Driven Development (BDD), and Domain-Driven Design
+                        (DDD) to ensure clean, maintainable, and production-ready code from day one.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon">
+                            <i class="bi bi-calendar4-week"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>Docker</a>
+                        </h4>
+                        <p class="description">I build containerized applications using Docker for fast deployment and seamless scaling. I also configure Docker
+                        Compose and Docker Swarm environments to streamline development and testing.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon">
+                            <i class="bi bi-calendar4-week"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>CI/CD Automation</a>
+                        </h4>
+                        <p class="description">I implement automated Continuous Integration and Continuous Delivery pipelines using tools like GitHub Actions and
+                        GitLab CI/CD. This reduces deployment time and improves software stability.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon">
+                            <i class="bi bi-calendar4-week"></i>
+                        </div>
+                        <h4 class="title">
+                            <a href>Quality</a>
+                        </h4>
+                        <p class="description">I prioritize code quality through automated tests and coverage analysis. My approach ensures that applications are
+                        reliable, maintainable, and meet high engineering standards in both development and production.</p>
+                    </div>
+                </div>
             </div>
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="300">
-              <div class="count-box">
-                <i class="bi bi-people"></i
-                ><span
-                  data-purecounter-start="0"
-                  data-purecounter-end="28"
-                  data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>
-                  <strong>Certificates</strong> earned
-                  <br />
-                  <a
-                    href="https://www.credly.com/users/balazs-bencs/badges"
-                    target="_blank"
-                    >Some of them on Credly</a
-                  >
-                </p>
-              </div>
+        </section>
+        <section id="badges" class="badges">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Badges</h2>
+                </div>
+                <credly-badge-list
+                    badge-ids="2e9d7b8c-5d79-4bdf-9df5-7349dafefed8,d0ea1870-8fe8-42d8-b00e-3c4b2dbcc941,f9156ce1-e53a-49d5-b4e0-b1794405520e"></credly-badge-list>
             </div>
-          </div>
-        </div>
-      </section>
-      <section
-        id="skills"
-        class="skills section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Skills</h2>
-            <p>"Do, or do Not. There is no try!" - <i>Master Yoda</i></p>
-          </div>
-          <skill-cloud></skill-cloud>
-        </div>
-      </section>
-      <section
-        id="services"
-        class="services">
-        <div class="container">
-          <div class="section-title">
-            <h2>Services</h2>
-          </div>
-          <div class="row">
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up">
-              <div class="icon">
-                <i class="bi bi-robot"></i>
-              </div>
-              <h4 class="title">
-                <a href>Node, TypeScript</a>
-              </h4>
-              <p class="description">
-                Application development with the technologie of the future. Useing Angular, Node, Typescript, Pure
-                JavaScript, Mocha, Travis, Lerna etc for professional development.
-              </p>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="100">
-              <div class="icon">
-                <i class="bi bi-card-checklist"></i>
-              </div>
-              <h4 class="title">
-                <a href>Python</a>
-              </h4>
-              <p class="description">
-                Python is a programming language that lets you work more quickly and integrate your systems more
-                effectively.
-              </p>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="icon">
-                <i class="bi bi-bar-chart"></i>
-              </div>
-              <h4 class="title">
-                <a href>AI</a>
-              </h4>
-              <p class="description">
-                Use AI for professional data handling and analysis. Google Gemini, ChatGPT language model..., I never
-                develop alone. The knowledge of the world helps me.
-              </p>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="300">
-              <div class="icon">
-                <i class="bi bi-binoculars"></i>
-              </div>
-              <h4 class="title">
-                <a href>Agile</a>
-              </h4>
-              <p class="description">
-                Working in an agile view, organise or coach this way of working. On the other hand, I can teach any of
-                the mentioned technologies in a professional level with agile skills.
-              </p>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="400">
-              <div class="icon">
-                <i class="bi bi-brightness-high"></i>
-              </div>
-              <h4 class="title">
-                <a href>Cloud</a>
-              </h4>
-              <p class="description">
-                Docker, Kubernetes are used for the platform undependency. I prefer the Amazon Web, Google Cloud or own
-                server for the mentioned works.
-              </p>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="500">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <h4 class="title">
-                <a href>Extreme programming</a>
-              </h4>
-              <p class="description">TDD, BDD, DDD techniques for the professional, safe code.</p>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="500">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <h4 class="title">
-                <a href>Docker</a>
-              </h4>
-              <p class="description"></p>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="500">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <h4 class="title">
-                <a href>CI/CD</a>
-              </h4>
-              <p class="description"></p>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="500">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <h4 class="title">
-                <a href>Quality</a>
-              </h4>
-              <p class="description"></p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        id="badges"
-        class="badges">
-        <div class="container">
-          <div class="section-title">
-            <h2>Badges</h2>
-          </div>
-            <credly-badge-list
-              badge-ids="2e9d7b8c-5d79-4bdf-9df5-7349dafefed8,d0ea1870-8fe8-42d8-b00e-3c4b2dbcc941,f9156ce1-e53a-49d5-b4e0-b1794405520e"></credly-badge-list>
-        </div>
-      </section>
-      <section
-        id="otherssaid"
-        class="otherssaid section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Others said</h2>
-          </div>
-          <div class="feedback">
-              Experienced web programmer with a demonstrated history of working in a multinational industry, highly
-              skilled in Artificial Intelligence, JavaScript variants, and Python. Learn and teach Extreme Programming
-              and develop fully qualified code. He offten presents in many kinds of IT topics at the same time he
-              investigates and shares the newest technologies with the community and his working teams.
-              <div class="author">Agile Coach at IBM CIO</div>
-          </div>
-          <div class="feedback">
-              Balázs is a very talented and skilled developer. He is always eager to learn new technologies and share
-              his knowledge with others. He is a great team player and a valuable asset to any team.
-              <div class="author">Group leader at the University of Dunaújváros</div>
-          </div>
-          <div class="feedback">
-            I had the chance to work together with Balazs when he was a software developer in my department. He is an
-            extremely detail and quality oriented person, an upcoming quintessential tech guru, the soldier you can
-            depend on and the one who always explores his area of expertise. On top of his functional responsibilities
-            he also participated as a mentor and coach for the junior software developers in our Hungarian CIO
-            organization. Throughout the years of our joint venture i could always depend on Balazs for delivering top
-            notch quality products. These were always aligned with the strategic platforms, reducing the need for
-            refactoring later in the products lifecycle. He wore multiple hats on top of his developer one over his
-            journey in my team. Being a DevOps engineer or a Linux expert, providing support as SME in new framework
-            trends, middleware and cloud component explorations, generative AI prototyping, he always was able to enrich
-            the programs he participated in. His approach, attitude and expertise <b>saved money</b>
-            for the company and ensured that our technical staff was working on the next thing required for our
-            deliverables. I can wholeheartedly recommend Balazs to any technical role because i am certain he will be
-            able to deliver significant value to his future organization!
-            <div class="author">Manager at IBM CIO</div>
-          </div>
+        </section>
+        <section id="otherssaid" class="otherssaid section-bg">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Others said</h2>
+                </div>
+                <div class="feedback">
+                    Experienced web programmer with a demonstrated history of working in a multinational industry,
+                    highly
+                    skilled in Artificial Intelligence, JavaScript variants, and Python. Learn and teach Extreme
+                    Programming
+                    and develop fully qualified code. He offten presents in many kinds of IT topics at the same time he
+                    investigates and shares the newest technologies with the community and his working teams.
+                    <div class="author">Agile Coach at IBM CIO</div>
+                </div>
+                <div class="feedback">
+                    Balázs is a very talented and skilled developer. He is always eager to learn new technologies and
+                    share
+                    his knowledge with others. He is a great team player and a valuable asset to any team.
+                    <div class="author">Group leader at the University of Dunaújváros</div>
+                </div>
+                <div class="feedback">
+                    I had the chance to work together with Balazs when he was a software developer in my department. He
+                    is an
+                    extremely detail and quality oriented person, an upcoming quintessential tech guru, the soldier you
+                    can
+                    depend on and the one who always explores his area of expertise. On top of his functional
+                    responsibilities
+                    he also participated as a mentor and coach for the junior software developers in our Hungarian CIO
+                    organization. Throughout the years of our joint venture i could always depend on Balazs for
+                    delivering top
+                    notch quality products. These were always aligned with the strategic platforms, reducing the need
+                    for
+                    refactoring later in the products lifecycle. He wore multiple hats on top of his developer one over
+                    his
+                    journey in my team. Being a DevOps engineer or a Linux expert, providing support as SME in new
+                    framework
+                    trends, middleware and cloud component explorations, generative AI prototyping, he always was able
+                    to enrich
+                    the programs he participated in. His approach, attitude and expertise <b>saved money</b>
+                    for the company and ensured that our technical staff was working on the next thing required for our
+                    deliverables. I can wholeheartedly recommend Balazs to any technical role because i am certain he
+                    will be
+                    able to deliver significant value to his future organization!
+                    <div class="author">Manager at IBM CIO</div>
+                </div>
 
-      </section>
-      <article id="footnav">
-        <div class="container">
-          <div class="row py-2">
-            <div class="col-md-4">
-              <h3>Good to know</h3>
-              <ul>
-                <li class="py-1">
-                  <a href="https://balazsbencs.blogspot.com/2024/09/ez-messze-van-mint-mako-jeruzsalemtol.html"
-                    >The distance of Makó and Jerusalem</a
-                  >
-                </li>
-                <li class="py-1">
-                  <a href="https://balazsbencs.blogspot.com/2024/09/a-pi-elso-5000-tizedesjegye-barmikor.html"
-                    >The first 5000 decimal of the PI</a
-                  >
-                </li>
-                <li class="py-1">
-                  <a href="https://balazsbencs.blogspot.com/2024/09/ai-championship.html">AI championship</a>
-                </li>
-              </ul>
+        </section>
+        <article id="footnav">
+            <div class="container">
+                <div class="row py-2">
+                    <div class="col-md-4">
+                        <h3>Good to know</h3>
+                        <ul>
+                            <li class="py-1">
+                                <a
+                                    href="https://balazsbencs.blogspot.com/2024/09/ez-messze-van-mint-mako-jeruzsalemtol.html">The
+                                    distance of Makó and Jerusalem</a>
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="https://balazsbencs.blogspot.com/2024/09/a-pi-elso-5000-tizedesjegye-barmikor.html">The
+                                    first 5000 decimal of the PI</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="https://balazsbencs.blogspot.com/2024/09/ai-championship.html">AI
+                                    championship</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <digital-clock></digital-clock>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Follow me</h3>
+                        <ul class="footer-social-links">
+                            <li>
+                                <a href="https://www.facebook.com/balazs.bencs.9" class="facebook"><i
+                                        class="bi bi-facebook"></i> Facebook</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/bencsbalazs" class="github"><i class="bi bi-github"></i>
+                                    Github</a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/bencsbalazs/" class="instagram"><i
+                                        class="bi bi-instagram"></i> Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/bencsbalazs/" class="linkedin"><i
+                                        class="bi bi-linkedin"></i> Linkedin</a>
+                            </li>
+                            <li>
+                                <a href="https://balazsbencs.blogspot.com/" class="blogger"><i
+                                        class="bi bi-journals"></i> Blogger</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-              <digital-clock></digital-clock>
-            </div>
-            <div class="col-md-4">
-              <h3>Follow me</h3>
-              <ul class="footer-social-links">
-                <li>
-                  <a
-                    href="https://www.facebook.com/balazs.bencs.9"
-                    class="facebook"
-                    ><i class="bi bi-facebook"></i> Facebook</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/bencsbalazs"
-                    class="github"
-                    ><i class="bi bi-github"></i> Github</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/bencsbalazs/"
-                    class="instagram"
-                    ><i class="bi bi-instagram"></i> Instagram</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/bencsbalazs/"
-                    class="linkedin"
-                    ><i class="bi bi-linkedin"></i> Linkedin</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://balazsbencs.blogspot.com/"
-                    class="blogger"
-                    ><i class="bi bi-journals"></i> Blogger</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </article>
+        </article>
     </main>
     <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Balázs Bencs 2009-2025</span></strong>
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Balázs Bencs 2009-2025</span></strong>
+            </div>
         </div>
-      </div>
     </footer>
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"> </i
-    ></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short">
+        </i></a>
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/typed.js/typed.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
-    <script
-      src="assets/js/main.js"
-      defer></script>
-  </body>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+
 </html>
