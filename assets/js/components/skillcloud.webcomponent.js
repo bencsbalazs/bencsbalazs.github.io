@@ -23,7 +23,7 @@ class skillCloud extends HTMLElement {
             { text: 'Jira' },
             { text: 'MongoDB' },
             { text: 'MySQL' },
-            { text: 'Node.js' },
+            { text: 'Node' },
             { text: 'PHP' },
             { text: 'Plotly' },
             { text: 'PostgreSQL' },
@@ -40,7 +40,7 @@ class skillCloud extends HTMLElement {
             const tagElement = document.createElement(`span`);
             tagElement.className = `badge rounded-pill bg-${types[(index % 5)]} m-3 p-4`;
             tagElement.innerHTML = `${tag.text}`;
-            tagElement.style.fontSize = `${index % 3 + 1}em`;
+            tagElement.style.fontSize = `${index % 3 + 0.5}em`;
             tagElement.style.transform = `rotate(${(Math.random() * 6) - 3}deg)`;
             tagCloud.appendChild(tagElement);
         });
