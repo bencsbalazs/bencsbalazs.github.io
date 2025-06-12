@@ -137,8 +137,12 @@
         customElements.define('credly-badge-list', CredlyBadgeList);
     });
     import('./components/clock.webcomponent.js').then(module => {
-        const DigitalClock = module.default;
+        const DigitalClock = module.DigitalClock;
         customElements.define('digital-clock', DigitalClock);
+    });
+    import('./components/clock.webcomponent.js').then(module => {
+        const AnalogClock = module.AnalogClock;
+        customElements.define('analog-clock', AnalogClock);
     });
     import('./components/matrix.webcomponent.js').then(module => {
         const MatrixCode = module.default;
@@ -147,5 +151,9 @@
     import('./components/skillcloud.webcomponent.js').then(module => {
         const skillCloud = module.default;
         customElements.define('skill-cloud', skillCloud);
+    });
+    import('./components/project.webcomponent.js').then(module => {
+        const MyProjects = module.default;
+        customElements.define('my-projects-portfolio', MyProjects);
     });
 })();

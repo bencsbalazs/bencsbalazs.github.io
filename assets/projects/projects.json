@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Project 1",
+        "description": "This is the first project.",
+        "image": "https://example.com/project1.jpg",
+        "link": "https://example.com/project1",
+        "date": "2023-01-01",
+        "tags": ["web", "design"]
+    },
+    {
+        "title": "Project 2",
+        "description": "This is the second project.",
+        "image": "https://example.com/project2.jpg",
+        "link": "https://example.com/project2",
+        "date": "2023-02-01",
+        "tags": ["mobile", "app"]
+    },
+    {
+        "title": "Project 3",
+        "description": "This is the third project.",
+        "image": "https://example.com/project3.jpg",
+        "link": "https://example.com/project3",
+        "date": "2023-03-01",
+        "tags": ["data", "analysis"]
+    },
+    {
+        "title": "Project 4",
+        "description": "This is the fourth project.",
+        "image": "https://example.com/project4.jpg",
+        "link": "https://example.com/project4",
+        "date": "2023-04-01",
+        "tags": ["AI", "machine learning"]
+    },
+    {
+        "title": "Project 5",
+        "description": "This is the fifth project.",
+        "image": "https://example.com/project5.jpg",
+        "link": "https://example.com/project5",
+        "date": "2023-05-01",
+        "tags": ["web", "development"]
+    }
+]
