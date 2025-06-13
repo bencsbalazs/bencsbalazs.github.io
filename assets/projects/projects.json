@@ -1,42 +1,42 @@
 [
-    {
-        "title": "Project 1",
-        "description": "This is the first project.",
-        "image": "https://example.com/project1.jpg",
-        "link": "https://example.com/project1",
-        "date": "2023-01-01",
-        "tags": ["web", "design"]
-    },
-    {
-        "title": "Project 2",
-        "description": "This is the second project.",
-        "image": "https://example.com/project2.jpg",
-        "link": "https://example.com/project2",
-        "date": "2023-02-01",
-        "tags": ["mobile", "app"]
-    },
-    {
-        "title": "Project 3",
-        "description": "This is the third project.",
-        "image": "https://example.com/project3.jpg",
-        "link": "https://example.com/project3",
-        "date": "2023-03-01",
-        "tags": ["data", "analysis"]
-    },
-    {
-        "title": "Project 4",
-        "description": "This is the fourth project.",
-        "image": "https://example.com/project4.jpg",
-        "link": "https://example.com/project4",
-        "date": "2023-04-01",
-        "tags": ["AI", "machine learning"]
-    },
-    {
-        "title": "Project 5",
-        "description": "This is the fifth project.",
-        "image": "https://example.com/project5.jpg",
-        "link": "https://example.com/project5",
-        "date": "2023-05-01",
-        "tags": ["web", "development"]
-    }
+  {
+    "title": "Fault Tracker",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut purus faucibus eros laoreet facilisis. Vivamus a mollis ipsum, sit amet faucibus enim. Ut eu porttitor tortor. Donec condimentum finibus egestas. In sagittis tellus magna, vitae tincidunt est scelerisque quis. Aliquam scelerisque leo eget ullamcorper sollicitudin. Sed quis lacinia magna. In eget mi ac ante posuere elementum a eu tellus. Nunc eu tortor ac ipsum ultricies porttitor. Vivamus vel pharetra sem. Integer bibendum lacus sed dui iaculis interdum. Sed sem elit, tristique id elementum quis, interdum in mauris. Curabitur mauris massa, aliquam a suscipit vitae, convallis nec mauris. Fusce lacinia velit eu est scelerisque, vel aliquet urna hendrerit. Duis a dictum felis. Pellentesque efficitur gravida leo, ac dapibus purus pharetra sit amet.",
+    "image": "/assets/projects/ph.png",
+    "link": "https://example.com/project1",
+    "date": "2023-01-01",
+    "tags": ["web", "design"]
+  },
+  {
+    "title": "Watson Cognitive Audit Tool",
+    "description": "This is the second project.",
+    "image": "/assets/projects/ph.png",
+    "link": "https://example.com/project2",
+    "date": "2023-02-01",
+    "tags": ["mobile", "app"]
+  },
+  {
+    "title": "Cognitive Contract",
+    "description": "This is the third project.",
+    "image": "/assets/projects/ph.png",
+    "link": "https://example.com/project3",
+    "date": "2023-03-01",
+    "tags": ["data", "analysis"]
+  },
+  {
+    "title": "Project 4",
+    "description": "This is the fourth project.",
+    "image": "https://via.placeholder.com/300x150",
+    "link": "https://example.com/project4",
+    "date": "2023-04-01",
+    "tags": ["AI", "machine learning"]
+  },
+  {
+    "title": "Project 5",
+    "description": "This is the fifth project.",
+    "image": "https://via.placeholder.com/300x150",
+    "link": "https://example.com/project5",
+    "date": "2023-05-01",
+    "tags": ["web", "development"]
+  }
 ]
