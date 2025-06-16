@@ -1,42 +1,50 @@
 [
   {
     "title": "Fault Tracker",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut purus faucibus eros laoreet facilisis. Vivamus a mollis ipsum, sit amet faucibus enim. Ut eu porttitor tortor. Donec condimentum finibus egestas. In sagittis tellus magna, vitae tincidunt est scelerisque quis. Aliquam scelerisque leo eget ullamcorper sollicitudin. Sed quis lacinia magna. In eget mi ac ante posuere elementum a eu tellus. Nunc eu tortor ac ipsum ultricies porttitor. Vivamus vel pharetra sem. Integer bibendum lacus sed dui iaculis interdum. Sed sem elit, tristique id elementum quis, interdum in mauris. Curabitur mauris massa, aliquam a suscipit vitae, convallis nec mauris. Fusce lacinia velit eu est scelerisque, vel aliquet urna hendrerit. Duis a dictum felis. Pellentesque efficitur gravida leo, ac dapibus purus pharetra sit amet.",
-    "image": "/assets/projects/ph.png",
+    "description": "FaultTracker is a Django-based web application designed to manage fault reports through a role-based workflow. It supports multiple user roles—User, System Owner (SO), Performance Working Group (PWG), and Admin—each with specific permissions. Users can submit faults with details like title, description, category, tags, and timestamps. The system tracks status changes, allows manual data entry and API imports, and ensures a structured, auditable resolution process.",
+    "image": "/assets/projects/faulttracker.png",
     "link": "https://example.com/project1",
-    "date": "2023-01-01",
-    "tags": ["web", "design"]
+    "date": "2025-07-01",
+    "tags": ["django", "postgres", "CICD"]
   },
   {
     "title": "Watson Cognitive Audit Tool",
-    "description": "This is the second project.",
-    "image": "/assets/projects/ph.png",
+    "description": "This project is a web application that leverages IBM Watson's AI capabilities to enhance audit processes. It integrates natural language processing and machine learning to analyze audit data, identify patterns, and provide insights. The tool aims to streamline audit workflows, improve accuracy, and reduce manual effort in data analysis.",
+    "image": "/assets/projects/wcat.png",
     "link": "https://example.com/project2",
     "date": "2023-02-01",
-    "tags": ["mobile", "app"]
+    "tags": ["AI", "Flask", "Python"]
   },
   {
     "title": "Cognitive Contract",
-    "description": "This is the third project.",
+    "description": "It’s a contract lifecycle management system enhanced by cognitive (AI-based) capabilities. The goal is to make contract handling smarter, faster, and less error-prone by integrating: - Natural Language Processing (NLP) to understand and extract terms, clauses, and obligations from contracts. - Machine Learning to identify risk, non-standard clauses, and suggest alternatives. - Automation of routine tasks such as approvals, renewals, and compliance checking.",
     "image": "/assets/projects/ph.png",
     "link": "https://example.com/project3",
     "date": "2023-03-01",
-    "tags": ["data", "analysis"]
+    "tags": ["AI", "Flask", "Python"]
   },
   {
-    "title": "Project 4",
-    "description": "This is the fourth project.",
-    "image": "https://via.placeholder.com/300x150",
+    "title": "Daily Colorful Game",
+    "description": "This is a game that helps the team members to know each other. They share an image or thought in a given topic and the others try to guess whos can share it. During the review, there will be much fun.",
+    "image": "/assets/projects/ph.png",
     "link": "https://example.com/project4",
     "date": "2023-04-01",
-    "tags": ["AI", "machine learning"]
+    "tags": ["Angular"]
   },
   {
-    "title": "Project 5",
-    "description": "This is the fifth project.",
-    "image": "https://via.placeholder.com/300x150",
+    "title": "You and IBM website",
+    "description": "The home page of the IBM internal services and applications. It provides a central hub for employees to access various tools and resources.",
+    "image": "/assets/projects/ph.png",
     "link": "https://example.com/project5",
     "date": "2023-05-01",
-    "tags": ["web", "development"]
-  }
+    "tags": ["Angular", "Node.js", "Cloudant"]
+  },
+    {
+        "title": "SCORM based Learning Materials",
+        "description": "This project involves the development of learning materials that are compliant with SCORM (Sharable Content Object Reference Model) standards. The materials are designed to be interactive and engaging, allowing for a seamless learning experience across different platforms.<li>Madonna élete</li>",
+        "image": "/assets/projects/ph.png",
+        "link": "https://example.com/project6",
+        "date": "2023-06-01",
+        "tags": ["JavaScript", "SCORM"]
+    }
 ]
