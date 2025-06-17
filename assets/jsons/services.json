@@ -1,0 +1,74 @@
+[
+  {
+    "icon": "bi bi-robot",
+    "title": "Node, TypeScript",
+    "link": "",
+    "description": "I build modern, scalable web applications using TypeScript and Node.js. My expertise includes Angular, Express, Mocha, and Lerna—allowing me to deliver robust, well-structured backend and frontend solutions."
+  },
+  {
+    "icon": "bi bi-card-checklist",
+    "title": "Python",
+    "link": "",
+    "description": "I use Python for backend development, automation, and data processing. Whether it's Django, Flask, or FastAPI, I create reliable and efficient systems tailored to business needs and performance goals."
+  },
+  {
+    "icon": "bi bi-bar-chart",
+    "title": "AI",
+    "link": "",
+    "description": "I integrate AI solutions like ChatGPT and Google Gemini into software workflows. These tools help automate repetitive tasks, enhance user experiences, and unlock data-driven intelligence for applications."
+  },
+  {
+    "icon": "bi bi-binoculars",
+    "title": "Agile Methodologies",
+    "link": "",
+    "description": "I work within Agile frameworks such as Scrum and Kanban, supporting both team efficiency and iterative delivery. I also mentor teams to adopt agile mindsets and improve their collaboration practices."
+  },
+  {
+    "icon": "bi bi-brightness-high",
+    "title": "Cloud Solutions",
+    "link": "",
+    "description": "I design and deploy platform-independent applications using Docker and Kubernetes. I have hands-on experience with AWS, Google Cloud Platform, and on-premise environments to meet various scaling needs."
+  },
+  {
+    "icon": "bi bi-calendar4-week",
+    "title": "Extreme Programming (XP)",
+    "link": "",
+    "description": "I apply XP techniques like Test-Driven Development (TDD), Behavior-Driven Development (BDD), and Domain-Driven Design (DDD) to ensure clean, maintainable, and production-ready code from day one."
+  },
+  {
+    "icon": "bi bi-calendar4-week",
+    "title": "Docker",
+    "link": "",
+    "description": "I build containerized applications using Docker for fast deployment and seamless scaling. I also configure Docker Compose and Docker Swarm environments to streamline development and testing."
+  },
+  {
+    "icon": "bi bi-calendar4-week",
+    "title": "CI/CD Automation",
+    "link": "",
+    "description": "I implement automated Continuous Integration and Continuous Delivery pipelines using tools like GitHub Actions and GitLab CI/CD. This reduces deployment time and improves software stability."
+  },
+  {
+    "icon": "bi bi-calendar4-week",
+    "title": "Quality",
+    "link": "",
+    "description": "I prioritize code quality through automated tests and coverage analysis. My approach ensures that applications are reliable, maintainable, and meet high engineering standards in both development and production."
+  },
+  {
+    "icon": "bi bi-calendar4-week",
+    "title": "Mentoring",
+    "link": "",
+    "description": "I mentor junior developers and teams, sharing best practices in software development, agile methodologies, and modern technologies. My goal is to foster a culture of continuous learning and improvement."
+  },
+  {
+    "icon": "bi bi-calendar4-week",
+    "title": "Community Engagement",
+    "link": "",
+    "description": "I actively participate in the tech community, sharing knowledge through talks, workshops, and open-source contributions. I believe in giving back to the community that has supported my growth as a developer."
+  },
+  {
+    "icon": "bi bi-calendar4-week",
+    "title": "Problem Solving",
+    "link": "",
+    "description": "I excel at analyzing complex problems and designing effective solutions. My approach combines technical expertise with a deep understanding of user needs to deliver impactful results."
+  }
+]

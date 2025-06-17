@@ -11,7 +11,7 @@ class MyProjects extends HTMLElement {
         try {
             await fetch((window.location.protocol === 'http:'
                 ? 'http://127.0.0.1:5500/'
-                : 'https://bencsbalazs.github.io/') + 'assets/projects/projects.json')
+                : 'https://bencsbalazs.github.io/') + 'assets/jsons/projects.json')
                 .then((response) => response.json())
                 .then((data) => { this.renderProjects(data); });
         } catch (error) {

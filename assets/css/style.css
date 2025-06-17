@@ -133,7 +133,7 @@ nav .social-links {
 }
 nav .social-links a {
   font-size: 18px;
-  color: rgb(30, 80, 150);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -144,8 +144,8 @@ nav .social-links a {
   transition: 0.3s;
 }
 nav .social-links a:hover {
-  color: rgb(240, 170, 50);
-  box-shadow: 0 0 10px 0 rgba(60, 0, 255, 0.8);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.55);
   text-decoration: none;
 }
 
@@ -417,7 +417,7 @@ nav .social-links a:hover {
 
 #footer {
   padding: 15px;
-  color: #f4f6fd;
+  color: rgba(255, 255, 255, 0.55);
   font-size: 14px;
   width: 100%;
   z-index: 9999;
@@ -428,12 +428,16 @@ nav .social-links a:hover {
 }
 
 #footnav {
-  background: black;
-  color: #fff;
-}
-
-.footer-social-links {
+  background: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.55);
   font-size: 1.5rem;
+}
+#footnav a {
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s ease;
+}
+#footnav a:hover {
+  color: #fff;
 }
 
 @media (max-width: 1199px) {

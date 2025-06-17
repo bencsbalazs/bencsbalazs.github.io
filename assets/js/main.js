@@ -156,4 +156,8 @@
         const MyProjects = module.default;
         customElements.define('my-projects-portfolio', MyProjects);
     });
+    import('./components/services.webcomponent.js').then(module => {
+        const Services = module.default;
+        customElements.define('services-list', Services);
+    });
 })();

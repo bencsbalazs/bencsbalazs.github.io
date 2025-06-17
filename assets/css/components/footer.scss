@@ -1,6 +1,6 @@
 #footer {
     padding: 15px;
-    color: #f4f6fd;
+    color: rgba(255, 255, 255, 0.55);
     font-size: 14px;
     width: 100%;
     z-index: 9999;
@@ -13,10 +13,16 @@
 }
 
 #footnav {
-    background: black;
-    color: #fff;
+    background: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.5rem;
+    a {
+        color: rgba(255, 255, 255, 0.55);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #fff;
+        }
+    }
 }
 
-.footer-social-links {
-    font-size: 1.5rem;
-}
