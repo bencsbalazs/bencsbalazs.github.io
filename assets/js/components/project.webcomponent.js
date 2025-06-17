@@ -231,7 +231,7 @@ class MyProjects extends HTMLElement {
         // Create all project cards
         projects.forEach((project, index) => {
             const card = document.createElement('div');
-            card.classList.add('card', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-3', 'px-2', 'my-2');
+            card.classList.add('card', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-3', 'px-2', 'py-1', 'my-2');
             card.innerHTML = `
         <img class="card-img-top" src="${project.image}" alt="${project.title}">
         <div class="card-body">

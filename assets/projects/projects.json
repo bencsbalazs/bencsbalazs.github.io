@@ -18,33 +18,16 @@
   {
     "title": "Cognitive Contract",
     "description": "It’s a contract lifecycle management system enhanced by cognitive (AI-based) capabilities. The goal is to make contract handling smarter, faster, and less error-prone by integrating: - Natural Language Processing (NLP) to understand and extract terms, clauses, and obligations from contracts. - Machine Learning to identify risk, non-standard clauses, and suggest alternatives. - Automation of routine tasks such as approvals, renewals, and compliance checking.",
-    "image": "/assets/projects/ph.png",
-    "link": "https://example.com/project3",
+    "image": "/assets/projects/coco.png",
     "date": "2023-03-01",
     "tags": ["AI", "Flask", "Python"]
   },
   {
     "title": "Daily Colorful Game",
     "description": "This is a game that helps the team members to know each other. They share an image or thought in a given topic and the others try to guess whos can share it. During the review, there will be much fun.",
-    "image": "/assets/projects/ph.png",
+    "image": "/assets/projects/dcf.png",
     "link": "https://example.com/project4",
     "date": "2023-04-01",
     "tags": ["Angular"]
-  },
-  {
-    "title": "You and IBM website",
-    "description": "The home page of the IBM internal services and applications. It provides a central hub for employees to access various tools and resources.",
-    "image": "/assets/projects/ph.png",
-    "link": "https://example.com/project5",
-    "date": "2023-05-01",
-    "tags": ["Angular", "Node.js", "Cloudant"]
-  },
-    {
-        "title": "SCORM based Learning Materials",
-        "description": "This project involves the development of learning materials that are compliant with SCORM (Sharable Content Object Reference Model) standards. The materials are designed to be interactive and engaging, allowing for a seamless learning experience across different platforms.<li>Madonna élete</li>",
-        "image": "/assets/projects/ph.png",
-        "link": "https://example.com/project6",
-        "date": "2023-06-01",
-        "tags": ["JavaScript", "SCORM"]
-    }
+  }
 ]
