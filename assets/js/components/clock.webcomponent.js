@@ -131,7 +131,7 @@ class AnalogClock extends HTMLElement {
     }
 
     connectedCallback() {
-        this.updateClock();
+        this.updateClock()
         this.interval = setInterval(() => this.updateClock(), 1000);
     }
 
@@ -148,10 +148,9 @@ class AnalogClock extends HTMLElement {
         const secondDeg = second * 6;
         const minuteDeg = minute * 6 + second * 0.1;
         const hourDeg = (hour % 12) * 30 + minute * 0.5;
-
-        this.shadowRoot.getElementById("hour").style.transform = `rotate(${hourDeg}deg)`;
-        this.shadowRoot.getElementById("minute").style.transform = `rotate(${minuteDeg}deg)`;
-        this.shadowRoot.getElementById("second").style.transform = `rotate(${secondDeg}deg)`;
+        this.shadowRoot.getElementById("hour").style.transform = `rotate(${hourDeg - 90}deg)`;
+        this.shadowRoot.getElementById("minute").style.transform = `rotate(${minuteDeg - 90}deg)`;
+        this.shadowRoot.getElementById("second").style.transform = `rotate(${secondDeg - 90}deg)`;
     }
 }
 

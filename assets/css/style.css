@@ -458,6 +458,9 @@ nav .social-links a:hover {
   }
 }
 @media (max-width: 768px) {
+  .floating-card.grow {
+    width: 80vw !important;
+  }
   #hero h1 {
     font-size: 28px;
     line-height: 36px;

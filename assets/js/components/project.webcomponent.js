@@ -106,6 +106,9 @@ class MyProjects extends HTMLElement {
         .arrow.right {
           right: 10px;
         }
+          @media (max-width: 800px) {
+            .floating-card.grow { width: 80vw !important;}
+          }
       </style>
 
       <div id="tag_filter"></div>
