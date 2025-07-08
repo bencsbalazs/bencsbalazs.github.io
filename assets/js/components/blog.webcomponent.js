@@ -3,19 +3,18 @@ class BlogComponent extends HTMLElement {
         super();
     }
 
+    markedJs = "https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+    mathJaxJs = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+
     connectedCallback() {
         this.buildBlogSystem();
     }
 
     async buildBlogSystem () {
-        const markdown = document.createElement('script')
-        markdown.src = "https://cdn.jsdelivr.net/npm/marked"
-        const mathExtension = document.createElement('script')
-        mathExtension.src = "https://cdn.jsdelivr.net/npm/marked-katex-extension/dist/index.umd.js"
-
         this.innerHTML = `<div class='row'>
             <div class='col-12'>
                 <h2>Dear Diary...</h2>
+                <hr class="mb-3">
             </div>
         </div>
         <div class='row'>
@@ -23,14 +22,12 @@ class BlogComponent extends HTMLElement {
             <div class='col-md-3 col-sm-12' id='tableOfContent'><h4>Table of Content</h4></div>
         </div>`
 
-        this.append(markdown)
-        this.append(mathExtension)
         try {
             await fetch((window.location.protocol === 'http:'
                 ? 'http://127.0.0.1:5500/'
                 : 'https://bencsbalazs.github.io/') + 'assets/jsons/blogposts.json')
                 .then((response) => response.json())
-                .then((data) => { this.renderBlog(data); });
+                .then((data) => { this.renderBlog(data); })
         } catch (error) {
             console.error('Error loading posts:', error);
         }
@@ -43,20 +40,56 @@ class BlogComponent extends HTMLElement {
             let listElement = document.createElement("li")
             postLink.href = "/assets/posts/" + post.link + ".md"
             postLink.setAttribute("data-mathExtension", post.mathExtension)
+            this.addListener(postLink)
             postLink.text = post.title
-            postLink.addEventListener("click", (e) => {
-                e.preventDefault()
-                fetch(postLink.href)
-                    .then(resp => resp.text())
-                    .then(md => marked.parse(md))
-                    .then(html => {
-                        document.getElementById('blogContainer').innerHTML = html;
-                    })
-                    .catch(console.error);
-            })
             listElement.append(postLink)
             document.querySelector("#tableOfContent > ul").append(listElement)
         });
+    }
+
+    addListener = (linkElement) => {
+        linkElement.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (!document.querySelector('script[src="'+this.mathJaxJs+'"]')) {
+                const mscript = document.createElement("script")
+                mscript.src = this.mathJaxJs
+                document.body.appendChild(mscript)
+            }
+            if (typeof marked === "undefined") {
+                const script = document.createElement("script");
+                script.src = this.markedJs;
+                script.async = true;
+                script.onload = () => {
+                    this.renderPost(linkElement.href);
+                };
+                document.body.appendChild(script);
+            } else {
+                this.renderPost(linkElement.href);
+            }
+        });
+    }
+
+    renderPost(url) {
+        fetch(url)
+            .then(resp => resp.text())
+            .then(md => {
+                const renderer = new marked.Renderer();
+                const targets = ['paragraph', 'code', 'blockquote'];
+                targets.forEach(type => {
+                    renderer[type] = function (text) {
+                        let content = typeof text === 'object' && text.text ? text.text : text;
+
+                        if (content.startsWith("[MATHJAX]")) {
+                            return `<p class="math-formula">${content.replace("[MATHJAX]", "")}</p>`;
+                        } else {
+                            return `<p>${content}</p>`;
+                        }
+                    };
+                });
+                document.getElementById('blogContainer').innerHTML = marked.parse(md, { renderer });
+                document.querySelectorAll(".math-formula").forEach((c) => MathJax.typesetPromise([c]))
+            })
+            .catch(console.error);
     }
 }
 
