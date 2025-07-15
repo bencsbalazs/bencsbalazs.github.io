@@ -38,13 +38,14 @@ class BlogComponent extends HTMLElement {
         data.forEach(post => {
             let postLink = document.createElement("a")
             let listElement = document.createElement("li")
-            postLink.href = "/assets/posts/" + post.link + ".md"
-            postLink.setAttribute("data-mathExtension", post.mathExtension)
+            postLink.href = "/assets/posts/" + post.link + ".html"
+            postLink.setAttribute("data-tags", post.tags)
             this.addListener(postLink)
             postLink.text = post.title
             listElement.append(postLink)
             document.querySelector("#tableOfContent > ul").append(listElement)
         });
+        this.querySelector("#tableOfContent a").click()
     }
 
     addListener = (linkElement) => {
@@ -55,17 +56,7 @@ class BlogComponent extends HTMLElement {
                 mscript.src = this.mathJaxJs
                 document.body.appendChild(mscript)
             }
-            if (typeof marked === "undefined") {
-                const script = document.createElement("script");
-                script.src = this.markedJs;
-                script.async = true;
-                script.onload = () => {
-                    this.renderPost(linkElement.href);
-                };
-                document.body.appendChild(script);
-            } else {
-                this.renderPost(linkElement.href);
-            }
+            this.renderPost(linkElement.href);
         });
     }
 
@@ -73,21 +64,12 @@ class BlogComponent extends HTMLElement {
         fetch(url)
             .then(resp => resp.text())
             .then(md => {
-                const renderer = new marked.Renderer();
-                const targets = ['paragraph', 'code', 'blockquote'];
-                targets.forEach(type => {
-                    renderer[type] = function (text) {
-                        let content = typeof text === 'object' && text.text ? text.text : text;
-
-                        if (content.startsWith("[MATHJAX]")) {
-                            return `<p class="math-formula">${content.replace("[MATHJAX]", "")}</p>`;
-                        } else {
-                            return `<p>${content}</p>`;
-                        }
-                    };
-                });
-                document.getElementById('blogContainer').innerHTML = marked.parse(md, { renderer });
-                document.querySelectorAll(".math-formula").forEach((c) => MathJax.typesetPromise([c]))
+                document.getElementById('blogContainer').innerHTML = md;
+                document.querySelectorAll("#blogContainer > p").forEach((c) => {
+                    if (c.classList.contains("mathjax")) {
+                        MathJax.typesetPromise([c])
+                    }
+                })
             })
             .catch(console.error);
     }

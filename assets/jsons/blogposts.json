@@ -1,7 +1,8 @@
 [
     {
-        "title": "Example post 1",
-        "link": "example1"
+        "title": "The first 5000 decimal of the PI",
+        "link": "pi_decimals",
+        "tags": "goodToKnow"
     },
     {
       "title": "Example post 2",
