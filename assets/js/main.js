@@ -160,6 +160,7 @@
         const Services = module.default;
         customElements.define('services-list', Services);
     });
+
     import('./components/blog.webcomponent.js').then(module => {
         const Blog = module.default;
         customElements.define('my-blog-system', Blog);

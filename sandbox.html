@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Menu Component</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #ccc;
+            z-index: 0;
+        }
+
+        .timeline-point {
+            position: relative;
+            z-index: 1;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .timeline-point:hover {
+            background: #2980b9;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .tile {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: black;
+        }
+
+        .tile:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="timeline">
+        <a class="timeline-point" href="#menu1">1</a>
+        <a class="timeline-point" href="#menu2">2</a>
+        <a class="timeline-point" href="#menu3">3</a>
+        <a class="timeline-point" href="#menu4">4</a>
+        <a class="timeline-point" href="#menu5">5</a>
+        <a class="timeline-point" href="#menu6">6</a>
+        <a class="timeline-point" href="#menu7">7</a>
+        <a class="timeline-point" href="#menu8">8</a>
+    </div>
+
+    <div class="grid-container">
+        <a class="tile" id="menu1" href="#">Menu 1</a>
+        <a class="tile" id="menu2" href="#">Menu 2</a>
+        <a class="tile" id="menu3" href="#">Menu 3</a>
+        <a class="tile" id="menu4" href="#">Menu 4</a>
+        <a class="tile" id="menu5" href="#">Menu 5</a>
+        <a class="tile" id="menu6" href="#">Menu 6</a>
+        <a class="tile" id="menu7" href="#">Menu 7</a>
+        <a class="tile" id="menu8" href="#">Menu 8</a>
+    </div>
+
+</body>
+
+</html>
