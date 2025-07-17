@@ -1,0 +1,24 @@
+.timeline-wrapper {
+    position: relative;
+}
+
+.timeline-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #dee2e6;
+    z-index: 0;
+}
+
+/* pontok egységes mérettel */
+.timeline-point {
+    z-index: 1;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
