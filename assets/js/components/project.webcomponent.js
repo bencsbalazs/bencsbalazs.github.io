@@ -234,7 +234,16 @@ class MyProjects extends HTMLElement {
         // Create all project cards
         projects.forEach((project, index) => {
             const card = document.createElement('div');
+            let action = ""
+            let text = ""
             card.classList.add('card', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-3', 'px-2', 'py-1', 'my-2');
+            if (!project.link) {
+                action = "disabled",
+                text="Internal project"
+            } else {
+                action = "href='"+project.link+"'",
+                text="Repository"
+            }
             card.innerHTML = `
         <img class="card-img-top" src="${project.image}" alt="${project.title}">
         <div class="card-body">
@@ -243,6 +252,7 @@ class MyProjects extends HTMLElement {
             <p class="card-text description">${project.description}</p>
         </div>
         <div class="card-footer">
+            <a class="btn btn-primary btn-small" ${action}>${text}</a><br>
             <small class="text-muted">Publication date: ${project.date}</small>
         </div>`;
 

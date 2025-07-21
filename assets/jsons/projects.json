@@ -3,7 +3,7 @@
     "title": "Fault Tracker",
     "description": "FaultTracker is a Django-based web application designed to manage fault reports through a role-based workflow. It supports multiple user roles—User, System Owner (SO), Performance Working Group (PWG), and Admin—each with specific permissions. Users can submit faults with details like title, description, category, tags, and timestamps. The system tracks status changes, allows manual data entry and API imports, and ensures a structured, auditable resolution process.",
     "image": "/assets/img/projects/faulttracker.png",
-    "link": "https://example.com/project1",
+    "link": "https://gitlab.esss.lu.se/ics-software/faulttracker",
     "date": "2025-07-01",
     "tags": ["django", "postgres", "CICD"]
   },
@@ -11,7 +11,6 @@
     "title": "Watson Cognitive Audit Tool",
     "description": "This project is a web application that leverages IBM Watson's AI capabilities to enhance audit processes. It integrates natural language processing and machine learning to analyze audit data, identify patterns, and provide insights. The tool aims to streamline audit workflows, improve accuracy, and reduce manual effort in data analysis.",
     "image": "/assets/img/projects/wcat.png",
-    "link": "https://example.com/project2",
     "date": "2023-02-01",
     "tags": ["AI", "Flask", "Python"]
   },
@@ -19,15 +18,30 @@
     "title": "Cognitive Contract",
     "description": "It’s a contract lifecycle management system enhanced by cognitive (AI-based) capabilities. The goal is to make contract handling smarter, faster, and less error-prone by integrating: - Natural Language Processing (NLP) to understand and extract terms, clauses, and obligations from contracts. - Machine Learning to identify risk, non-standard clauses, and suggest alternatives. - Automation of routine tasks such as approvals, renewals, and compliance checking.",
     "image": "/assets/img/projects/coco.png",
-    "date": "2023-03-01",
+    "date": "2022-02-01",
     "tags": ["AI", "Flask", "Python"]
   },
   {
     "title": "Daily Colorful Game",
     "description": "This is a game that helps the team members to know each other. They share an image or thought in a given topic and the others try to guess whos can share it. During the review, there will be much fun.",
     "image": "/assets/img/projects/dcf.png",
-    "link": "https://example.com/project4",
-    "date": "2023-04-01",
+    "link": "https://github.com/bencsbalazs/dailycolorful",
+    "date": "under d.",
     "tags": ["Angular"]
+  },
+  {
+    "title": "Hardware Asset Request Management Tool",
+    "description": "An application where IBMers can request hardware and software items like servers or configuration. The app is able to check the shortest and cheapest way to get the item, handle communication during the ordering process and handle complex permissions in every step of the process.",
+    "image": "/assets/img/projects/arm.png",
+    "date": "2024-04-01",
+    "tags": ["Flask", "CICD"]
+  },
+  {
+    "title": "Extreme Programming",
+    "description": "Mentored colleagues in TDD, BDD, DDD, event sourcing, and code refactoring. Improved code quality, time management, and system-level thinking across the team.",
+    "image": "/assets/img/projects/xp.png",
+    "link": "https://github.com/bencsbalazs/XPFarm-kataTemplateJumpStart/tree/main",
+    "date": "2023-09",
+    "tags": ["Angular", "Python", "CICD"]
   }
 ]
