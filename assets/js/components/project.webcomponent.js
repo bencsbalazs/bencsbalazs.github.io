@@ -106,6 +106,14 @@ class MyProjects extends HTMLElement {
         .arrow.right {
           right: 10px;
         }
+        .closeButton {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        font-size: 2em;
+        z-index: 999;
+        cursor: pointer;
+        }
           @media (max-width: 800px) {
             .floating-card.grow { width: 80vw !important;}
           }
@@ -161,12 +169,19 @@ class MyProjects extends HTMLElement {
         const openFloatingCard = (index) => {
             if (index < 0 || index >= cards.length) return;
 
+            const closeButton = document.createElement("div");
+            closeButton.classList.add('closeButton');
+            closeButton.textContent = "X"
+            closeButton.addEventListener('click', () => {
+                closeFloatingCard();
+            });
             const card = cards[index].element;
             const rect = card.getBoundingClientRect();
             const clone = card.cloneNode(true);
             card.classList.add('hidden');
             clone.classList.remove(...card.classList);
             clone.classList.add('floating-card');
+            clone.appendChild(closeButton);
             clone.style.top = `${rect.top}px`;
             clone.style.left = `${rect.left}px`;
             clone.style.width = `${rect.width}px`;
@@ -186,9 +201,7 @@ class MyProjects extends HTMLElement {
                 }, 400);
             });
 
-            clone.addEventListener('click', () => {
-                closeFloatingCard();
-            });
+
         };
 
         const closeFloatingCard = () => {
@@ -196,6 +209,7 @@ class MyProjects extends HTMLElement {
 
             const originalCard = cards[currentIndex].element;
             const clone = activeFloating;
+            document.querySelector('.closeButton').remove()
             clone.classList.remove('grow');
             setTimeout(() => {
                 clone.classList.remove('centered');
