@@ -42,7 +42,23 @@
         }
     }
     article {
-        max-width: 40vw;
-        font-size: 1.5rem;
+        max-width: 85vw;
+        font-size: 1.2rem;
+        background: rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 1rem white;
+    }
+    .sociallinks {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 999;
+
+        a {
+            float: left;
+            font-size: 1.5rem;
+        }
+        a:not(:first-child) {
+            margin-left: 0.5rem;
+        }
     }
 }

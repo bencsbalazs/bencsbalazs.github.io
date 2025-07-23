@@ -26,11 +26,11 @@
     "description": "This is a game that helps the team members to know each other. They share an image or thought in a given topic and the others try to guess whos can share it. During the review, there will be much fun.",
     "image": "/assets/img/projects/dcf.png",
     "link": "https://github.com/bencsbalazs/dailycolorful",
-    "date": "under d.",
+    "date": "under dev.",
     "tags": ["Angular"]
   },
   {
-    "title": "Hardware Asset Request Management Tool",
+    "title": "Asset Request Management Tool",
     "description": "An application where IBMers can request hardware and software items like servers or configuration. The app is able to check the shortest and cheapest way to get the item, handle communication during the ordering process and handle complex permissions in every step of the process.",
     "image": "/assets/img/projects/arm.png",
     "date": "2024-04-01",
