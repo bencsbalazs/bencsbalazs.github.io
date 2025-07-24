@@ -52,23 +52,5 @@
     "title": "Quality",
     "link": "",
     "description": "I prioritize code quality through automated tests and coverage analysis. My approach ensures that applications are reliable, maintainable, and meet high engineering standards in both development and production."
-  },
-  {
-    "icon": "bi bi-calendar4-week",
-    "title": "Mentoring",
-    "link": "",
-    "description": "I mentor junior developers and teams, sharing best practices in software development, agile methodologies, and modern technologies. My goal is to foster a culture of continuous learning and improvement."
-  },
-  {
-    "icon": "bi bi-calendar4-week",
-    "title": "Community Engagement",
-    "link": "",
-    "description": "I actively participate in the tech community, sharing knowledge through talks, workshops, and open-source contributions. I believe in giving back to the community that has supported my growth as a developer."
-  },
-  {
-    "icon": "bi bi-calendar4-week",
-    "title": "Problem Solving",
-    "link": "",
-    "description": "I excel at analyzing complex problems and designing effective solutions. My approach combines technical expertise with a deep understanding of user needs to deliver impactful results."
   }
 ]

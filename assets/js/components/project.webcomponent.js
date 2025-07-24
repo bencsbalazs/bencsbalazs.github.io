@@ -26,7 +26,7 @@ class MyProjects extends HTMLElement {
           text-align: center;
           margin-bottom: 1rem;
         }
-        #tag_filter button {
+        #tag_filter button, .tagList span {
           margin: 0.2rem;
           padding: 0.4rem 0.8rem;
           border: none;
@@ -36,7 +36,7 @@ class MyProjects extends HTMLElement {
           cursor: pointer;
           font-size: 0.9rem;
         }
-        #tag_filter button.active {
+        #tag_filter button.active, .tagList span: hover {
           background: #0056b3;
         }
         #portfolio_container {
@@ -44,10 +44,8 @@ class MyProjects extends HTMLElement {
           flex-wrap: wrap;
           justify-content: center;
           align-items: stretch;
-          gap: 1rem;
         }
         .card {
-          width: 18rem;
           transition: all 0.4s ease;
           cursor: pointer;
         }
@@ -83,6 +81,12 @@ class MyProjects extends HTMLElement {
         }
         .floating-card .card {
           width: 100%;
+        }
+        .floating-card img {
+            display: block;
+        }
+        .card img {
+            display: none;
         }
         .hidden {
           visibility: hidden;
@@ -250,7 +254,8 @@ class MyProjects extends HTMLElement {
             const card = document.createElement('div');
             let action = ""
             let text = ""
-            card.classList.add('card', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-3', 'px-2', 'py-1', 'my-2');
+            let tagList = ""
+            card.classList.add('card', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-4');
             if (!project.link) {
                 action = "disabled",
                 text="Internal project"
@@ -258,11 +263,14 @@ class MyProjects extends HTMLElement {
                 action = "href='"+project.link+"'",
                 text="Repository"
             }
+            project.tags.forEach((tag) => {
+                tagList += "<span>" + tag + "</span>"
+            })
             card.innerHTML = `
         <img class="card-img-top" src="${project.image}" alt="${project.title}">
         <div class="card-body">
             <h5 class="card-title">${project.title}</h5>
-            <p class="card-text text-muted">${project.tags.join(', ')}</p>
+            <div class="tagList py-1">${tagList}</div>
             <p class="card-text description">${project.description}</p>
         </div>
         <div class="card-footer">

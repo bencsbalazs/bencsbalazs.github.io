@@ -40,7 +40,7 @@ class skillCloud extends HTMLElement {
             const tagElement = document.createElement(`span`);
             tagElement.className = `badge rounded-pill bg-${types[(index % 5)]} m-3 p-4`;
             tagElement.innerHTML = `${tag.text}`;
-            tagElement.style.fontSize = `${index % 3 + 0.8}em`;
+            tagElement.style.fontSize = `1.5em`;
             tagElement.style.transform = `rotate(${(Math.random() * 6) - 3}deg)`;
             tagCloud.appendChild(tagElement);
         });
