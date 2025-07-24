@@ -10,18 +10,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install -g @lhci/cli@0.13.x
-      - run: |
-          lhci autorun --collect.url=https://bencsbalazs.github.io \
-                       --upload.target=temporary-public-storage
-      - name: Upload badge
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.13.x
+
+      - name: Wait for GitHub Pages to be live
         run: |
-          SCORE=$(curl -s https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/$(ls .lighthouseci | head -1) | jq '.categories.performance.score * 100' | xargs printf "%.0f")
+          echo "Waiting for GitHub Pages deployment..."
+          sleep 60  # vagy több, ha új deploymented van
+
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun \
+            --collect.url=https://bencsbalazs.github.io \
+            --upload.target=temporary-public-storage
+
+      - name: Download LHCI report & create badge
+        run: |
+          REPORT_URL=$(find .lighthouseci -name '*.json' | head -n 1)
+          SCORE=$(jq '.categories.performance.score * 100' "$REPORT_URL" | xargs printf "%.0f")
           echo "![Lighthouse](https://img.shields.io/badge/lighthouse-$SCORE%25-brightgreen)" > badge.md
-      - uses: EndBug/add-and-commit@v9
+
+      - name: Commit badge
+        uses: EndBug/add-and-commit@v9
         with:
           add: 'badge.md'
           message: 'chore: update Lighthouse badge'
