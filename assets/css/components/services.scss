@@ -1,8 +1,7 @@
 .services {
     .icon-box {
-        margin-bottom: 20px;
         &:hover .icon{
-            background: #fff;
+            background: transparent;
             i {
                 color: $link-color;
             }
@@ -10,16 +9,9 @@
 
     }
     .icon {
-        float: left;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 54px;
-        height: 54px;
+        width: 3rem;
+        height: 3rem;
         background: $link-color;
-        border-radius: 50%;
-        transition: 0.5s;
-        border: 1px solid $link-color;
         i {
             color: #fff;
             font-size: 24px;
@@ -27,20 +19,11 @@
         }
     }
     .title {
-        margin-left: 80px;
         font-weight: 700;
-        margin-bottom: 15px;
         font-size: 18px;
-        font-family: $font-family-highlight;
-        a {
-            &:hover {
-                color: $link-color;
-            }
-        }
+
     }
     .description {
-        margin-left: 80px;
-        line-height: 24px;
-        font-size: 14px;
+        line-height: 1.5rem;
     }
 }

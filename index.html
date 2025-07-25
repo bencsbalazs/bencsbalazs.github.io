@@ -35,8 +35,7 @@
                     class="bi bi-facebook"></i></a>
             <a href="https://github.com/bencsbalazs" title="Me on Github" target="_blank"><i
                     class="bi bi-github"></i></a>
-            <a href="https://www.instagram.com/bencsbalazs/" target="_blank"><i
-                    class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/bencsbalazs/" target="_blank"><i class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/in/bencsbalazs/" target="_blank" title="Me on Linkedin"><i
                     class="bi bi-linkedin"></i></a>
             <a href="https://balazsbencs.blogspot.com/" target="_blank" title="Me on Blogger"><i
@@ -79,7 +78,8 @@
                             class="bx bx-home"></i><span>Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#experience" class="nav-link scrollto"><i class="bx bx-server"></i><span>Experience</span></a>
+                    <a href="#experience" class="nav-link scrollto"><i
+                            class="bx bx-server"></i><span>Experience</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="#projects" class="nav-link scrollto"><i class="bx bx-server"></i><span>Projects</span></a>
@@ -92,7 +92,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#hireme" class="nav-link scrollto"><i class="bx bx-code-alt"></i><span>Hire Me</span></a>
-                    </li>
+                </li>
             </ul>
             <div class="navbar-nav navbar-right social-links d-flex flex-row justify-content-end">
                 <a href="https://www.facebook.com/balazs.bencs.9" target="_blank" title="Me on Facebook"
@@ -103,8 +103,8 @@
                         class="bi bi-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/bencsbalazs/" target="_blank" title="Me on Linkedin"
                     class="nav-link linkedin"><i class="bi bi-linkedin"></i></a>
-                <a href="https://balazsbencs.blogspot.com/" target="_blank" title="Me on Blogger" class="nav-link blogger"><i
-                        class="bi bi-journals"></i></a>
+                <a href="https://balazsbencs.blogspot.com/" target="_blank" title="Me on Blogger"
+                    class="nav-link blogger"><i class="bi bi-journals"></i></a>
             </div>
         </div>
     </nav>
@@ -216,73 +216,128 @@
         </section>
         <section id="services" class="services">
             <div class="container">
-                <div class="section-title">
-                    <h2>Services</h2>
+                <div class="row my-2">
+                    <div class="col h2 border-bottom">Services</div>
                 </div>
-                <services-list src="/assets/jsons/services.json" animation="fade-up" delay-step="50">
+                <services-list
+                    src="/assets/jsons/services.json"
+                    animation="fade-up"
+                    delay-step="50">
                 </services-list>
-                <section data-aos="fade-up" data-aos-delay="300" class="d-block mt-5" id="hireme">
-                    <a href="mailto:bencsbalazs@gmail.com" class="col-12 btn btn-outline-primary mt-4 py-3">Hire Me</a>
-                </section>
             </div>
         </section>
-        <section id="badges" class="badges">
+        <section id="badges">
             <div class="container">
-                <div class="section-title">
-                    <h2>Badges</h2>
+                <div class="row my-2">
+                    <div class="col h2 border-bottom">Badges</div>
                 </div>
                 <div class="row my-2">
-                    <div class="col d-flex">
-                        <img class="mx-auto" src='https://www.codewars.com/users/bencsbalazs/badges/large' alt="CodeWars">
+                    <div class="col text-center">
+                        <img
+                        class="mx-auto"
+                        src='https://www.codewars.com/users/bencsbalazs/badges/small'
+                        alt="CodeWars"
+                        title="Rank on CodeWars">
                     </div>
                 </div>
                 <credly-badge-list></credly-badge-list>
             </div>
         </section>
-        <section id="otherssaid" class="otherssaid section-bg">
+        <section id="otherssaid">
             <div class="container">
-                <div class="section-title">
-                    <h2>Others said</h2>
+                <div class="row my-2">
+                    <div class="col h2 border-bottom">Others said about Me</div>
                 </div>
-                <div class="feedback">
-                    Experienced web programmer with a demonstrated history of working in a multinational industry,
-                    highly
-                    skilled in Artificial Intelligence, JavaScript variants, and Python. Learn and teach Extreme
-                    Programming
-                    and develop fully qualified code. He offten presents in many kinds of IT topics at the same time he
-                    investigates and shares the newest technologies with the community and his working teams.
-                    <div class="author">Agile Coach at IBM CIO</div>
+
+                <div class="row">
+                    <div class="col">
+                        <figure class="text-monospace mb-1">
+                            <blockquote class="blockquote">
+                                <p>Experienced web programmer with a demonstrated history of working in a multinational
+                                    industry,
+                                    highly
+                                    skilled in Artificial Intelligence, JavaScript variants, and Python. Learn and teach
+                                    Extreme
+                                    Programming
+                                    and develop fully qualified code. He offten presents in many kinds of IT topics at
+                                    the
+                                    same time he
+                                    investigates and shares the newest technologies with the community and his working
+                                    teams.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Agile Coach at <cite title="IBM CIO">IBM CIO</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
-                <div class="feedback">
-                    Balázs is a very talented and skilled developer. He is always eager to learn new technologies and
-                    share
-                    his knowledge with others. He is a great team player and a valuable asset to any team.
-                    <div class="author">Group leader at the University of Dunaújváros</div>
+                <div class="row">
+                    <div class="col">
+                        <figure class="text-monospace mb-1">
+                            <blockquote class="blockquote">
+                                <p>Balázs is a very talented and skilled developer. He is always eager to learn new
+                                    technologies and
+                                    share
+                                    his knowledge with others. He is a great team player and a valuable asset to any
+                                    team.
+                                </p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Group leader at the <cite title="University of Dunaújváros">University of
+                                    Dunaújváros</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
-                <div class="feedback">
-                    I had the chance to work together with Balazs when he was a software developer in my department. He
-                    is an
-                    extremely detail and quality oriented person, an upcoming quintessential tech guru, the soldier you
-                    can
-                    depend on and the one who always explores his area of expertise. On top of his functional
-                    responsibilities
-                    he also participated as a mentor and coach for the junior software developers in our Hungarian CIO
-                    organization. Throughout the years of our joint venture i could always depend on Balazs for
-                    delivering top
-                    notch quality products. These were always aligned with the strategic platforms, reducing the need
-                    for
-                    refactoring later in the products lifecycle. He wore multiple hats on top of his developer one over
-                    his
-                    journey in my team. Being a DevOps engineer or a Linux expert, providing support as SME in new
-                    framework
-                    trends, middleware and cloud component explorations, generative AI prototyping, he always was able
-                    to enrich
-                    the programs he participated in. His approach, attitude and expertise <b>saved money</b>
-                    for the company and ensured that our technical staff was working on the next thing required for our
-                    deliverables. I can wholeheartedly recommend Balazs to any technical role because i am certain he
-                    will be
-                    able to deliver significant value to his future organization!
-                    <div class="author">Manager at IBM CIO</div>
+                <div class="row">
+                    <div class="col">
+                        <figure class="text-monospace mb-1">
+                            <blockquote class="blockquote">
+                                <p>I had the chance to work together with Balazs when he was a software developer in my
+                                    department. He
+                                    is an
+                                    extremely detail and quality oriented person, an upcoming quintessential tech guru,
+                                    the
+                                    soldier you
+                                    can
+                                    depend on and the one who always explores his area of expertise. On top of his
+                                    functional
+                                    responsibilities
+                                    he also participated as a mentor and coach for the junior software developers in our
+                                    Hungarian CIO
+                                    organization. Throughout the years of our joint venture i could always depend on
+                                    Balazs
+                                    for
+                                    delivering top
+                                    notch quality products. These were always aligned with the strategic platforms,
+                                    reducing
+                                    the need
+                                    for
+                                    refactoring later in the products lifecycle. He wore multiple hats on top of his
+                                    developer one over
+                                    his
+                                    journey in my team. Being a DevOps engineer or a Linux expert, providing support as
+                                    SME
+                                    in new
+                                    framework
+                                    trends, middleware and cloud component explorations, generative AI prototyping, he
+                                    always was able
+                                    to enrich
+                                    the programs he participated in. His approach, attitude and expertise <b>saved
+                                        money</b>
+                                    for the company and ensured that our technical staff was working on the next thing
+                                    required for our
+                                    deliverables. I can wholeheartedly recommend Balazs to any technical role because i
+                                    am
+                                    certain he
+                                    will be
+                                    able to deliver significant value to his future organization!</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Manager at <cite title="IBM CIO">IBM CIO</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
         </section>
         <!--<section id="blog">
@@ -323,7 +378,8 @@
                                         class="bi bi-facebook"></i> Facebook</a>
                             </li>
                             <li>
-                                <a href="https://github.com/bencsbalazs" target="_blank" class="github"><i class="bi bi-github"></i>
+                                <a href="https://github.com/bencsbalazs" target="_blank" class="github"><i
+                                        class="bi bi-github"></i>
                                     Github</a>
                             </li>
                             <li>

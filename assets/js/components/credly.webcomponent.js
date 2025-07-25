@@ -25,12 +25,11 @@ class CredlyBadgeList extends HTMLElement {
             "64b0817a-1b21-49d3-8d5b-f879d8aa6a6c", // Trustworthy AI and AI Ethics
         ].filter((badgeId) => badgeId.trim() !== "");
         const container = document.createElement("div");
-        container.classList.add("row");
+        container.classList.add("row", "raw-col-3");
         badgeIdsValid.forEach((badgeId) => {
             const badgeDiv = document.createElement("div");
             const badgeCol = document.createElement("div");
-            badgeCol.classList.add("col-lg-3", "col-md-4", "col-sm-6", "col-xs-6", "mb-3", "content-center");
-            badgeDiv.classList.add("d-block", "mx-auto");
+            badgeCol.classList.add("col", "m-1", "content-center");
             badgeDiv.setAttribute("data-iframe-width", "250");
             badgeDiv.setAttribute("data-iframe-height", "250");
             badgeDiv.setAttribute("data-share-badge-id", badgeId.trim());

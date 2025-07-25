@@ -23,12 +23,12 @@
   font-variation-settings: "wdth" 100;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Tektur", sans-serif;
   color: rgb(40, 40, 40);
 }
 
 a {
-  color: rgb(30, 80, 150);
+  color: rgba(240, 170, 50, 0.55);
   text-decoration: none;
 }
 a:hover {
@@ -79,7 +79,6 @@ section {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: solid 2px rgb(40, 40, 40);
-  font-family: "Tektur", sans-serif;
   position: relative;
 }
 .section-title h2::after {
@@ -125,15 +124,12 @@ nav #navProfile {
   border-radius: 50%;
   margin: 0.2rem;
 }
-nav a {
-  font-family: "Tektur", sans-serif;
-}
 nav .social-links {
   min-width: 18rem;
 }
 nav .social-links a {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(240, 170, 50, 0.55);
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -144,7 +140,7 @@ nav .social-links a {
   transition: 0.3s;
 }
 nav .social-links a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(240, 170, 50);
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.55);
   text-decoration: none;
 }
@@ -212,53 +208,6 @@ nav .social-links a:hover {
   margin-left: 0.5rem;
 }
 
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-}
-.about .content p:last-child {
-  margin-bottom: 0;
-}
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.about .content ul strong {
-  margin-right: 10px;
-}
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: rgb(30, 80, 150);
-  line-height: 0;
-}
-.about img {
-  transform: scaleX(-1);
-}
-
-.feedback {
-  padding: 1rem;
-  margin: 0.5rem;
-  text-align: justify;
-  display: block;
-}
-.feedback .author {
-  width: 100%;
-  font-size: 14px;
-  font-weight: 700;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 2px;
-  text-align: right;
-  float: right;
-  font-style: inherit;
-}
-
 .facts {
   padding-bottom: 30px;
 }
@@ -269,7 +218,7 @@ nav .social-links a:hover {
 .facts .count-box i {
   display: block;
   font-size: 44px;
-  color: rgb(30, 80, 150);
+  color: rgba(240, 170, 50, 0.55);
   float: left;
   line-height: 0;
 }
@@ -290,122 +239,24 @@ nav .social-links a:hover {
   font-weight: 600;
   display: block;
   margin-top: 20px;
-  color: rgb(30, 80, 150);
+  color: rgba(240, 170, 50, 0.55);
   font-size: 15px;
-  font-family: "Tektur", sans-serif;
   transition: ease-in-out 0.3s;
 }
 .facts .count-box a:hover {
   color: rgb(240, 170, 50);
 }
 
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  color: #050d18;
-}
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-.skills .progress-bar-wrap {
-  background: #dce8f8;
-  height: 10px;
-}
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: rgb(30, 80, 150);
-}
-
-.resume .resume-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #050d18;
-}
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid #1f5297;
-  position: relative;
-}
-.resume .resume-item > *:not(div):nth-child(-n+3) {
-  width: 90%;
-}
-.resume .resume-item > div {
-  width: 8%;
-  float: right;
-  height: 6em;
-}
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #1f5297;
-}
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #050d18;
-  margin-bottom: 10px;
-}
-.resume .resume-item h5 {
-  font-size: 16px;
-  background: #e4edf9;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.resume .resume-item ul {
-  padding-left: 20px;
-}
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
-
-.services .icon-box {
-  margin-bottom: 20px;
-}
 .services .icon-box:hover .icon {
-  background: #fff;
+  background: transparent;
 }
 .services .icon-box:hover .icon i {
-  color: rgb(30, 80, 150);
+  color: rgba(240, 170, 50, 0.55);
 }
 .services .icon {
-  float: left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  background: rgb(30, 80, 150);
-  border-radius: 50%;
-  transition: 0.5s;
-  border: 1px solid rgb(30, 80, 150);
+  width: 3rem;
+  height: 3rem;
+  background: rgba(240, 170, 50, 0.55);
 }
 .services .icon i {
   color: #fff;
@@ -413,19 +264,11 @@ nav .social-links a:hover {
   line-height: 0;
 }
 .services .title {
-  margin-left: 80px;
   font-weight: 700;
-  margin-bottom: 15px;
   font-size: 18px;
-  font-family: "Tektur", sans-serif;
-}
-.services .title a:hover {
-  color: rgb(30, 80, 150);
 }
 .services .description {
-  margin-left: 80px;
-  line-height: 24px;
-  font-size: 14px;
+  line-height: 1.5rem;
 }
 
 #footer {

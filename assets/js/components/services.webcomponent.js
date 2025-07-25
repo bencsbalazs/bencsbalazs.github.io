@@ -18,26 +18,30 @@ class ServicesSection extends HTMLElement {
         }
 
         const row = document.createElement('div');
-        row.className = 'row';
+        row.classList.add('row','row-cols-lg-3', 'row-cols-md-2');
 
         services.forEach((item, index) => {
             const col = document.createElement('div');
-            col.className = 'col-lg-4 col-md-6 icon-box';
+            col.classList.add('col', 'mb-2', 'icon-box');
             col.setAttribute('data-aos', animation);
             col.setAttribute('data-aos-delay', String(index * delayStep));
+
             const iconDiv = document.createElement('div');
-            iconDiv.className = 'icon';
-            iconDiv.innerHTML = `<i class="${item.icon}"></i>`;
+            iconDiv.className = 'icon d-flex justify-content-center align-items-center float-start rounded-circle border border-dark transition fs-6';
+            iconDiv.innerHTML = `<i class="${item.icon} text-white"></i>`;
             col.appendChild(iconDiv);
+
             const h4 = document.createElement('h4');
-            h4.className = 'title';
+            h4.className = 'title mb-1 ms-5 fs-5 text-primary fw-bold';
+
             const a = document.createElement('a');
             a.href = item.link || '#';
             a.textContent = item.title;
             h4.appendChild(a);
             col.appendChild(h4);
+
             const p = document.createElement('p');
-            p.className = 'description';
+            p.className = 'description ms-5';
             p.textContent = item.description;
             col.appendChild(p);
             row.appendChild(col);
