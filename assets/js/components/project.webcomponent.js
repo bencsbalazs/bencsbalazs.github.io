@@ -26,19 +26,6 @@ class MyProjects extends HTMLElement {
           text-align: center;
           margin-bottom: 1rem;
         }
-        #tag_filter button, .tagList span {
-          margin: 0.2rem;
-          padding: 0.4rem 0.8rem;
-          border: none;
-          border-radius: 20px;
-          background: #007bff;
-          color: white;
-          cursor: pointer;
-          font-size: 0.9rem;
-        }
-        #tag_filter button.active, .tagList span: hover {
-          background: #0056b3;
-        }
         #portfolio_container {
           display: flex;
           flex-wrap: wrap;
@@ -146,6 +133,7 @@ class MyProjects extends HTMLElement {
         const createTagButton = (tagName) => {
             const button = document.createElement('button');
             button.textContent = tagName;
+            button.classList.add("mx-1", "p-1", "btn-outline-primary")
             button.addEventListener('click', () => {
                 // Remove 'active' from all buttons
                 tagFilterContainer.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
@@ -249,13 +237,14 @@ class MyProjects extends HTMLElement {
             setTimeout(() => openFloatingCard(nextIndex), 500);
         });
 
+        projectList.classList.add("row-cols-3", "gx-2")
         // Create all project cards
         projects.forEach((project, index) => {
             const card = document.createElement('div');
             let action = ""
             let text = ""
             let tagList = ""
-            card.classList.add('card', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-4');
+            card.classList.add('card');
             if (!project.link) {
                 action = "disabled",
                 text="Internal project"
