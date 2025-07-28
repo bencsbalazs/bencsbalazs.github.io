@@ -15,6 +15,7 @@ nav {
         margin-right: 4px;
         border-radius: 50%;
         text-align: center;
+        transition: color ease-in-out 0.5s;
         width: 36px;
         height: 36px;
         transition: 0.3s;
@@ -22,8 +23,6 @@ nav {
 
     a:hover {
         color: $link-hover-color-on-dark;
-        box-shadow: 0 0 10px 0 $shadow-color;
-        text-decoration: none;
     }
 }
 }

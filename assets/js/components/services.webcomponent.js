@@ -28,11 +28,11 @@ class ServicesSection extends HTMLElement {
 
             const iconDiv = document.createElement('div');
             iconDiv.className = 'icon d-flex justify-content-center align-items-center float-start rounded-circle border border-dark transition fs-6';
-            iconDiv.innerHTML = `<i class="${item.icon} text-white"></i>`;
+            iconDiv.innerHTML = `<i class="${item.icon}"></i>`;
             col.appendChild(iconDiv);
 
             const h4 = document.createElement('h4');
-            h4.className = 'title mb-1 ms-5 fs-5 text-primary fw-bold';
+            h4.className = 'title mb-1 fs-5 text-primary fw-bold';
 
             const a = document.createElement('a');
             a.href = item.link || '#';
@@ -41,7 +41,7 @@ class ServicesSection extends HTMLElement {
             col.appendChild(h4);
 
             const p = document.createElement('p');
-            p.className = 'description ms-5';
+            p.className = 'description';
             p.textContent = item.description;
             col.appendChild(p);
             row.appendChild(col);
