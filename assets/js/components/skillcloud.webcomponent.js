@@ -2,7 +2,7 @@ class skillCloud extends HTMLElement {
     constructor() {
         super();
         this.tagCloud = document.createElement('div');
-        this.tagCloud.className = 'tag-cloud';
+        this.tagCloud.classList.add('tag-cloud', 'text-center');
         this.appendChild(this.tagCloud);
         this.render();
     }
@@ -34,7 +34,7 @@ class skillCloud extends HTMLElement {
 
         ];
         const types = ['primary', 'secondary', 'success', 'danger', 'warning'];
-        const tagCloud = this.querySelector('.tag-cloud text-center');
+        const tagCloud = this.querySelector('.tag-cloud');
         const shuffledTags = [...tags].sort(() => Math.random() - 0.5);
         shuffledTags.forEach((tag, index) => {
             const tagElement = document.createElement(`span`);
