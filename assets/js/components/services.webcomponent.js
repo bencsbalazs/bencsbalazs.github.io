@@ -18,7 +18,7 @@ class ServicesSection extends HTMLElement {
         }
 
         const row = document.createElement('div');
-        row.classList.add('row','row-cols-lg-3', 'row-cols-md-2');
+        row.classList.add('row', 'row-cols-lg-3', 'row-cols-md-1', 'row-cols-sm-1', 'row-cols-1');
 
         services.forEach((item, index) => {
             const col = document.createElement('div');

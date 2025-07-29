@@ -35,6 +35,11 @@ class MyProjects extends HTMLElement {
         .card {
           transition: all 0.4s ease;
           cursor: pointer;
+          width: calc((100% - 1em) / 3);
+        margin-right: 0.5em;
+        }
+        .card:nth-child(3n){
+            margin-right: 0;
         }
         .card .description {
         display: block;
@@ -112,8 +117,8 @@ class MyProjects extends HTMLElement {
 
       <div id="tag_filter"></div>
       <div class="row" id="portfolio_container"></div>
-      <div class="arrow left">&#8678;</div>
-      <div class="arrow right">&#8680;</div>
+      <div class="arrow left">&#11207;</div>
+      <div class="arrow right">&#11208;</div>
     `;
 
         const tagFilterContainer = this.querySelector('#tag_filter');
@@ -133,7 +138,7 @@ class MyProjects extends HTMLElement {
         const createTagButton = (tagName) => {
             const button = document.createElement('button');
             button.textContent = tagName;
-            button.classList.add("mx-1", "p-1", "btn-outline-primary")
+            button.classList.add("m-1", "p-1", "btn-outline-primary")
             button.addEventListener('click', () => {
                 // Remove 'active' from all buttons
                 tagFilterContainer.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
@@ -237,7 +242,7 @@ class MyProjects extends HTMLElement {
             setTimeout(() => openFloatingCard(nextIndex), 500);
         });
 
-        projectList.classList.add("row-cols-3", "gx-2")
+        projectList.classList.add("row-cols-md-3", "raw-cols-sm-2", "raw-cols-1")
         // Create all project cards
         projects.forEach((project, index) => {
             const card = document.createElement('div');
@@ -253,7 +258,7 @@ class MyProjects extends HTMLElement {
                 text="Repository"
             }
             project.tags.forEach((tag) => {
-                tagList += "<span>" + tag + "</span>"
+                tagList += "<span class='badge rounded-pill bg-primary mx-1'>" + tag + "</span>"
             })
             card.innerHTML = `
         <img class="card-img-top" src="${project.image}" alt="${project.title}">
