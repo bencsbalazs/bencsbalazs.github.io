@@ -91,6 +91,10 @@ section {
   left: 0;
 }
 
+.blockquote p:first-letter {
+  margin-left: 1rem;
+}
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
