@@ -111,7 +111,13 @@ class MyProjects extends HTMLElement {
         cursor: pointer;
         }
           @media (max-width: 800px) {
+            .card {
+            width: calc((100% - 2em) / 2);}
             .floating-card.grow { width: 80vw !important;}
+          }
+        @media (max-width: 500px) {
+            .card {
+            width: calc(100% - 2em);}
           }
       </style>
 
@@ -242,7 +248,6 @@ class MyProjects extends HTMLElement {
             setTimeout(() => openFloatingCard(nextIndex), 500);
         });
 
-        projectList.classList.add("row-cols-md-3", "raw-cols-sm-2", "raw-cols-1")
         // Create all project cards
         projects.forEach((project, index) => {
             const card = document.createElement('div');
