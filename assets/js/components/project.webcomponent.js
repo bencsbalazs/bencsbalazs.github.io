@@ -1,8 +1,4 @@
 class MyProjects extends HTMLElement {
-    constructor() {
-        super();
-    }
-
     connectedCallback() {
         this.loadProjects();
     }
@@ -256,10 +252,10 @@ class MyProjects extends HTMLElement {
             let tagList = ""
             card.classList.add('card');
             if (!project.link) {
-                action = "disabled",
+                action = "disabled"
                 text="Internal project"
             } else {
-                action = "href='"+project.link+"'",
+                action = "href='"+project.link+"'"
                 text="Repository"
             }
             project.tags.forEach((tag) => {
