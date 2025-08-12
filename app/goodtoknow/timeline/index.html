@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Balázs Bencs'</title>
+    <load-resources></load-resources>
+    <script
+      src="../frame.webcomponent.js"
+      defer></script>
+    <link
+      rel="stylesheet"
+      href="timeline.css" />
+  </head>
+  <body>
+    <frame-component
+      type="header"
+      home-text="Home">
+    </frame-component>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Swedish and Hungarian inventions</h2>
+        </div>
+      </div>
+      <div class="row">
+        <timeline-component></timeline-component>
+      </div>
+    </main>
+    <frame-component type="footer"> </frame-component>
+    <script src="../resources.webcomponent.js"></script>
+    <script src="timeline.js"></script>
+  </body>
+</html>

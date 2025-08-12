@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Balázs Bencs'</title>
+    <load-resources></load-resources>
+    <script
+      src="../frame.webcomponent.js"
+      defer></script>
+  </head>
+  <body>
+    <frame-component
+      type="header"
+      home-text="Home">
+    </frame-component>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Makó és Jeruzsálem távolsága</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <!-- Bal oldalt a rajz -->
+            <div class="col-md-6 text-center">
+              <canvas
+                id="mapCanvas"
+                width="500"
+                height="500"></canvas>
+            </div>
+
+            <!-- Jobb oldalt a számítás -->
+            <div
+              class="col-md-6"
+              id="steps">
+              <div class="highlight">
+                1. Adatok:<br />
+                Makó: λ₁ = 20°28′38″, φ₁ = 46°12′00″<br />
+                Jeruzsálem: λ₂ = 35°12′48″, φ₂ = 31°48′07″<br />
+                R = 6378 km
+              </div>
+              <div class="highlight">
+                2. Képlet:<br />
+                cos d° = sin φ₁ ⋅ sin φ₂ + cos φ₁ ⋅ cos φ₂ ⋅ cos(λ₂ − λ₁)
+              </div>
+              <div class="highlight">
+                3. Szögeltérés számítása:<br />
+                λ₂ − λ₁ = 14,7333°<br />
+                d° = 18,3293°
+              </div>
+              <div class="highlight">
+                4. Távolság:<br />
+                d = (2 ⋅ π ⋅ R ⋅ d°) / 360° = 2040,3645 km
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          // Canvas rajz
+          const canvas = document.getElementById('mapCanvas');
+          const ctx = canvas.getContext('2d');
+
+          // Középpont és sugár
+          const centerX = 250;
+          const centerY = 250;
+          const radius = 200;
+
+          // ----------------
+          // Gömb kirajzolása
+          // ----------------
+          ctx.beginPath();
+          ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+          ctx.stroke();
+
+          // Egyenlítő
+          ctx.beginPath();
+          ctx.ellipse(centerX, centerY, radius, radius / 3, 0, 0, Math.PI * 2);
+          ctx.stroke();
+
+          // Greenwich meridián
+          ctx.beginPath();
+          ctx.moveTo(centerX, centerY - radius);
+          ctx.lineTo(centerX, centerY + radius);
+          ctx.stroke();
+
+          // ----------------
+          // Pontok elhelyezése (egyszerűsített vetítés)
+          // ----------------
+          const makoX = centerX + 100;
+          const makoY = centerY - 80;
+          const jeruX = centerX + 60;
+          const jeruY = centerY + 60;
+
+          // Makó
+          ctx.fillStyle = 'red';
+          ctx.beginPath();
+          ctx.arc(makoX, makoY, 5, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillText('A (Makó)', makoX + 8, makoY - 5);
+
+          // Jeruzsálem
+          ctx.fillStyle = 'blue';
+          ctx.beginPath();
+          ctx.arc(jeruX, jeruY, 5, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillText('B (Jeruzsálem)', jeruX + 8, jeruY - 5);
+
+          // ----------------
+          // Föld sugara R berajzolása
+          // ----------------
+          ctx.strokeStyle = 'gray';
+          ctx.beginPath();
+          ctx.moveTo(centerX, centerY);
+          ctx.lineTo(makoX, makoY);
+          ctx.stroke();
+          ctx.fillText('R', (centerX + makoX) / 2 - 5, (centerY + makoY) / 2);
+
+          // Másik sugár
+          ctx.beginPath();
+          ctx.moveTo(centerX, centerY);
+          ctx.lineTo(jeruX, jeruY);
+          ctx.stroke();
+          ctx.fillText('R', (centerX + jeruX) / 2 + 5, (centerY + jeruY) / 2);
+
+          // ----------------
+          // "d" ív berajzolása (nagy kör szakasz a két pont között)
+          // ----------------
+          ctx.strokeStyle = 'green';
+          ctx.beginPath();
+          ctx.moveTo(makoX, makoY);
+          ctx.quadraticCurveTo(centerX + 120, centerY - 10, jeruX, jeruY);
+          ctx.stroke();
+          ctx.fillStyle = 'green';
+          ctx.fillText('d°', centerX + 110, centerY + 5);
+
+          // ----------------
+          // Szögek feliratozása
+          // ----------------
+          ctx.fillStyle = 'black';
+          ctx.fillText('φ₁', centerX - 40, centerY - 40);
+          ctx.fillText('φ₂', centerX - 30, centerY + 50);
+          ctx.fillText('λ₁', centerX + 20, centerY - 120);
+          ctx.fillText('λ₂', centerX + 80, centerY - 100);
+        </script>
+      </div>
+    </main>
+    <frame-component type="footer"> </frame-component>
+    <script src="../resources.webcomponent.js"></script>
+  </body>
+</html>
