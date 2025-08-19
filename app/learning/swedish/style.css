@@ -1,0 +1,128 @@
+:root {
+    --bg: #0f172a;
+    --card: #111827;
+    --muted: #1f2937;
+    --text: #e5e7eb;
+    --acc: #3b82f6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: solid 2px var(--text);
+    z-index: 2;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 20px;
+}
+
+h1 {
+    margin: 12px 0 6px;
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 10px 0 18px;
+}
+
+select,
+input,
+button {
+    background: var(--card);
+    border: 1px solid var(--muted);
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.icon {
+    padding: 8px 10px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--card);
+    border: 1px solid var(--muted);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--muted);
+    vertical-align: top;
+}
+
+th {
+    top: 64px;
+    background: var(--card);
+    text-align: left;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.badge {
+    display: inline-block;
+    background: #0b1220;
+    border: 1px solid var(--muted);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    opacity: .9;
+}
+
+.footer {
+    opacity: .7;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.ipa {
+    font-family: 'Noto Sans', 'Arial', system-ui;
+    opacity: .9;
+}
+
+.groupline {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.groupline label {
+    font-size: 12px;
+    opacity: .8;
+}

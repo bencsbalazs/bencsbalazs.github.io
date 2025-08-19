@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <title>Svéd szóslista hanggal – kategóriák + IPA</title>
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>Svéd szóslista – kattintható kiejtéssel + IPA</h1>
+        <div class="controls">
+          <div class="groupline">
+            <label for="group">Főkategória</label>
+            <select id="group"></select>
+          </div>
+          <div class="groupline">
+            <label for="category">Kategória</label>
+            <select id="category"></select>
+          </div>
+          <input
+            id="search"
+            type="search"
+            placeholder="Keresés (svéd / magyar / angol / kiejtés / IPA)" />
+          <button
+            id="playAll"
+            class="icon"
+            title="Összes lejátszása">
+            🔊 Összes
+          </button>
+          <button
+            id="stop"
+            class="icon"
+            title="Megállítás">
+            ⏹️ Stop
+          </button>
+          <span
+            class="badge"
+            id="count"
+            >0 kifejezés</span
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Svéd</th>
+              <th>Magyar kiejtés</th>
+              <th>IPA</th>
+              <th>Magyar jelentés</th>
+              <th>Angol jelentés</th>
+              <th>🔊</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        <p class="footer">
+          A kiejtést a böngésző <strong>svéd (sv-SE)</strong> hangja olvassa fel. A magyar kiejtés közelítő,
+          beszédközpontú segédlet. Az IPA-k megközelítőek, sztenderd köznyelvi ejtés alapján.
+        </p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

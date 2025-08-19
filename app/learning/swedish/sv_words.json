@@ -1,0 +1,538 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "id": "kommunikacio",
+      "name": "Kommunikáció",
+      "categories": [
+        {
+          "id": "koszonesek",
+          "name": "Köszönések",
+          "items": [
+            {"sv": "hej", "pronHu": "hej", "hu": "szia", "en": "hi", "ipa": "[hɛj]"},
+            {"sv": "hej hej", "pronHu": "hej hej", "hu": "szia-szia", "en": "hi there", "ipa": "[hɛj hɛj]"},
+            {"sv": "hallå", "pronHu": "halló", "hu": "helló", "en": "hello", "ipa": "[ha`lo:]"},
+            {"sv": "tjena", "pronHu": "csena", "hu": "szia (közvetlen)", "en": "hi", "ipa": "[ˈɕeːna]"},
+            {"sv": "tjenare", "pronHu": "csenáre", "hu": "szia (nagyon közvetlen)", "en": "hey", "ipa": "[ˈɕeːnarɛ]"},
+            {
+              "sv": "god morgon",
+              "pronHu": "gúd morron",
+              "hu": "jó reggelt",
+              "en": "good morning",
+              "ipa": "[ɡuːd ˈmɔrːɔn]"
+            },
+            {"sv": "god dag", "pronHu": "gúd dág", "hu": "jó napot", "en": "good day", "ipa": "[ɡuːd ˈdɑːg]"},
+            {"sv": "god kväll", "pronHu": "gúd kvell", "hu": "jó estét", "en": "good evening", "ipa": "[ɡuːd ˈkvɛlː]"},
+            {"sv": "god natt", "pronHu": "gúd natt", "hu": "jó éjt", "en": "good night", "ipa": "[ɡuːd ˈnatː]"},
+            {"sv": "hej då", "pronHu": "hej dó", "hu": "viszlát", "en": "bye", "ipa": "[hɛj ˈdoː]"},
+            {"sv": "vi ses", "pronHu": "ví szész", "hu": "találkozunk", "en": "see you", "ipa": "[viː ˈseːs]"},
+            {
+              "sv": "trevligt att träffas",
+              "pronHu": "trévlit át treffász",
+              "hu": "örülök, hogy találkozunk",
+              "en": "nice to meet you",
+              "ipa": "[ˈtreːvlɪkt a ˈtrɛfːas]"
+            },
+            {
+              "sv": "välkommen",
+              "pronHu": "vellkommen",
+              "hu": "üdvözlöm / isten hozta",
+              "en": "welcome",
+              "ipa": "[ˈvɛːlˌkɔmːɛn]"
+            }
+          ]
+        },
+        {
+          "id": "elnezes-keresek",
+          "name": "Elnézés kérések",
+          "items": [
+            {
+              "sv": "ursäkta",
+              "pronHu": "űrszekta",
+              "hu": "elnézést (figyelemfelkeltés)",
+              "en": "excuse me",
+              "ipa": "[ʉˈʂɛkta]"
+            },
+            {
+              "sv": "ursäkta mig",
+              "pronHu": "űrszekta mej",
+              "hu": "elnézést kérek",
+              "en": "excuse me",
+              "ipa": "[ʉˈʂɛkta mɛj]"
+            },
+            {"sv": "förlåt", "pronHu": "förlót", "hu": "bocsánat", "en": "sorry", "ipa": "[fœˈloːt]"},
+            {
+              "sv": "förlåt mig",
+              "pronHu": "förlót mej",
+              "hu": "bocsáss meg",
+              "en": "forgive me",
+              "ipa": "[fœˈloːt mɛj]"
+            },
+            {
+              "sv": "jag är ledsen",
+              "pronHu": "jág ér ledszen",
+              "hu": "sajnálom",
+              "en": "I'm sorry",
+              "ipa": "[jɑːɡ ɛːr ˈlɛdːsɛn]"
+            },
+            {
+              "sv": "det var inte meningen",
+              "pronHu": "dé vár inte ményingen",
+              "hu": "nem úgy értettem / nem szándékos volt",
+              "en": "I didn't mean it",
+              "ipa": "[deː vɑːr ˈɪntɛ ˈmeːnɪŋɛn]"
+            },
+            {
+              "sv": "inga problem",
+              "pronHu": "inga problém",
+              "hu": "semmi gond",
+              "en": "no problem",
+              "ipa": "[ˈɪŋa prʊˈbleːm]"
+            },
+            {
+              "sv": "det är okej",
+              "pronHu": "de é okéj",
+              "hu": "rendben van",
+              "en": "it's okay",
+              "ipa": "[deː ɛːr ʊˈkej]"
+            },
+            {
+              "sv": "tack för tålamodet",
+              "pronHu": "takk för tólamúdet",
+              "hu": "köszönöm a türelmet",
+              "en": "thanks for your patience",
+              "ipa": "[takː fœː ˈtoːlamuːdɛt]"
+            },
+            {
+              "sv": "tack för förståelsen",
+              "pronHu": "takk för förstóelszen",
+              "hu": "köszönöm a megértést",
+              "en": "thanks for understanding",
+              "ipa": "[takː fœː fœʂˈtoːɛlsɛn]"
+            }
+          ]
+        },
+        {
+          "id": "jokivansagok",
+          "name": "Jókívánságok",
+          "items": [
+            {
+              "sv": "lycka till",
+              "pronHu": "lükka till",
+              "hu": "sok szerencsét",
+              "en": "good luck",
+              "ipa": "[ˈlʏkːa ˈtɪlː]"
+            },
+            {"sv": "grattis", "pronHu": "grattis", "hu": "gratulálok", "en": "congratulations", "ipa": "[ˈɡratːɪs]"},
+            {
+              "sv": "krya på dig",
+              "pronHu": "krűja pó dej",
+              "hu": "jobbulást",
+              "en": "get well soon",
+              "ipa": "[ˈkrʏːa poː dɛj]"
+            },
+            {
+              "sv": "ha en bra dag",
+              "pronHu": "há en brá dág",
+              "hu": "legyen szép napod",
+              "en": "have a nice day",
+              "ipa": "[hɑː en brɑː dɑːg]"
+            },
+            {
+              "sv": "ha en trevlig helg",
+              "pronHu": "há en trévlij helj",
+              "hu": "jó hétvégét",
+              "en": "have a nice weekend",
+              "ipa": "[hɑː en ˈtreːvlɪg hɛlːj]"
+            },
+            {
+              "sv": "trevlig resa",
+              "pronHu": "trévlij résza",
+              "hu": "jó utat",
+              "en": "have a nice trip",
+              "ipa": "[ˈtreːvlɪg ˈreːsa]"
+            },
+            {
+              "sv": "ha det så bra",
+              "pronHu": "há det szó brá",
+              "hu": "minden jót",
+              "en": "take care",
+              "ipa": "[hɑː dɛ ˈsoː brɑː]"
+            },
+            {
+              "sv": "god jul",
+              "pronHu": "gúd jűl",
+              "hu": "boldog karácsonyt",
+              "en": "Merry Christmas",
+              "ipa": "[ɡuːd jʉːl]"
+            },
+            {
+              "sv": "gott nytt år",
+              "pronHu": "gott nytt ór",
+              "hu": "boldog új évet",
+              "en": "Happy New Year",
+              "ipa": "[ɡɔtː nʏtː oːr]"
+            },
+            {"sv": "tack", "pronHu": "takk", "hu": "köszönöm", "en": "thank you", "ipa": "[takː]"},
+            {
+              "sv": "tack så mycket",
+              "pronHu": "takk szó mikköt",
+              "hu": "nagyon köszönöm",
+              "en": "thank you very much",
+              "ipa": "[takː soː ˈmʏkːɛt]"
+            }
+          ]
+        },
+        {
+          "id": "hetkoznapi-interakciok",
+          "name": "Egyéb hétköznapi interakciók",
+          "items": [
+            {
+              "sv": "hur mår du?",
+              "pronHu": "hűr mór dü?",
+              "hu": "hogy vagy?",
+              "en": "how are you?",
+              "ipa": "[hʉːr moːr dʉː]"
+            },
+            {
+              "sv": "jag mår bra",
+              "pronHu": "jág mór brá",
+              "hu": "jól vagyok",
+              "en": "I'm fine",
+              "ipa": "[jɑːɡ moːr brɑː]"
+            },
+            {"sv": "så där", "pronHu": "szó dár", "hu": "megvagyok", "en": "so-so", "ipa": "[soː dɛːr]"},
+            {
+              "sv": "vad heter du?",
+              "pronHu": "vád héter dü?",
+              "hu": "mi a neved?",
+              "en": "what's your name?",
+              "ipa": "[vɑːd ˈheːtɛr dʉː]"
+            },
+            {
+              "sv": "jag heter …",
+              "pronHu": "jág héter …",
+              "hu": "a nevem …",
+              "en": "my name is …",
+              "ipa": "[jɑːɡ ˈheːtɛr]"
+            },
+            {
+              "sv": "varifrån kommer du?",
+              "pronHu": "várifron kommer dü?",
+              "hu": "honnan jössz?",
+              "en": "where are you from?",
+              "ipa": "[ˈvɑːrɪfrɔn ˈkɔmːɛr dʉː]"
+            },
+            {
+              "sv": "jag kommer från …",
+              "pronHu": "jág kommer frón …",
+              "hu": "…-ból jöttem",
+              "en": "I come from …",
+              "ipa": "[jɑːɡ ˈkɔmːɛr froːn]"
+            },
+            {
+              "sv": "pratar du engelska?",
+              "pronHu": "prátár dü engelszka?",
+              "hu": "beszélsz angolul?",
+              "en": "do you speak English?",
+              "ipa": "[ˈprɑːtar dʉ ˈɛŋɛlska]"
+            },
+            {
+              "sv": "kan du hjälpa mig?",
+              "pronHu": "kan dü jelpa mej?",
+              "hu": "tudsz segíteni?",
+              "en": "can you help me?",
+              "ipa": "[kan dʉ ˈjɛlpa mɛj]"
+            },
+            {
+              "sv": "jag förstår inte",
+              "pronHu": "jág förstór inte",
+              "hu": "nem értem",
+              "en": "I don't understand",
+              "ipa": "[jɑːɡ fœˈʂtoːr ˈɪntɛ]"
+            },
+            {
+              "sv": "kan du säga det igen?",
+              "pronHu": "kan dü széjá dé igenn?",
+              "hu": "meg tudod ismételni?",
+              "en": "can you say that again?",
+              "ipa": "[kan dʉ ˈsɛj(a) deːt ɪˈjɛn]"
+            },
+            {
+              "sv": "ursäkta, var är toaletten?",
+              "pronHu": "űrszekta, vár ér toaletten?",
+              "hu": "elnézést, hol a WC?",
+              "en": "excuse me, where is the toilet?",
+              "ipa": "[ʉˈʂɛkta vɑːr ɛːr tʊaˈlɛtːɛn]"
+            },
+            {
+              "sv": "vad kostar det?",
+              "pronHu": "vád kosztár dé?",
+              "hu": "mennyi az ára?",
+              "en": "how much is it?",
+              "ipa": "[vɑːd ˈkɔstar deːt]"
+            },
+            {
+              "sv": "jag skulle vilja …",
+              "pronHu": "jág szkulle vilja …",
+              "hu": "szeretnék …",
+              "en": "I would like …",
+              "ipa": "[jɑːɡ ˈskʉlːɛ ˈvɪlja]"
+            },
+            {
+              "sv": "kan jag få …?",
+              "pronHu": "kan jág fó …?",
+              "hu": "kaphatok …?",
+              "en": "may I have …?",
+              "ipa": "[kan jɑːɡ foː]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ido",
+      "name": "Idő",
+      "categories": [
+        {
+          "id": "napok",
+          "name": "Napok",
+          "items": [
+            {"sv": "måndag", "pronHu": "mondag", "hu": "hétfő", "en": "Monday", "ipa": "[ˈmɔnːdɑg]"},
+            {"sv": "tisdag", "pronHu": "tízdág", "hu": "kedd", "en": "Tuesday", "ipa": "[ˈtiːsˌdɑg]"},
+            {"sv": "onsdag", "pronHu": "unsdág", "hu": "szerda", "en": "Wednesday", "ipa": "[ˈʊnːsˌdɑg]"},
+            {"sv": "torsdag", "pronHu": "túrsdág", "hu": "csütörtök", "en": "Thursday", "ipa": "[ˈtuːʂˌdɑg]"},
+            {"sv": "fredag", "pronHu": "frédág", "hu": "péntek", "en": "Friday", "ipa": "[ˈfreːˌdɑg]"},
+            {"sv": "lördag", "pronHu": "lőrdág", "hu": "szombat", "en": "Saturday", "ipa": "[ˈløːˌdɑg]"},
+            {"sv": "söndag", "pronHu": "szöndág", "hu": "vasárnap", "en": "Sunday", "ipa": "[ˈsœnˌdɑg]"},
+            {"sv": "vardag", "pronHu": "vórdág", "hu": "hétköznap", "en": "weekday", "ipa": "[ˈvɑːˌdɑg]"},
+            {"sv": "helg", "pronHu": "helj", "hu": "hétvége", "en": "weekend", "ipa": "[hɛlːj]"},
+            {"sv": "idag", "pronHu": "idág", "hu": "ma", "en": "today", "ipa": "[ɪˈdɑːɡ]"}
+          ]
+        },
+        {
+          "id": "honapok",
+          "name": "Hónapok",
+          "items": [
+            {"sv": "januari", "pronHu": "jánuári", "hu": "január", "en": "January", "ipa": "[janʉˈɑːrɪ]"},
+            {"sv": "februari", "pronHu": "februári", "hu": "február", "en": "February", "ipa": "[fɛbrʉˈɑːrɪ]"},
+            {"sv": "mars", "pronHu": "más", "hu": "március", "en": "March", "ipa": "[marʂ]"},
+            {"sv": "april", "pronHu": "ápril", "hu": "április", "en": "April", "ipa": "[aˈprɪl]"},
+            {"sv": "maj", "pronHu": "máj", "hu": "május", "en": "May", "ipa": "[maj]"},
+            {"sv": "juni", "pronHu": "jűni", "hu": "június", "en": "June", "ipa": "[ˈjʉːnɪ]"},
+            {"sv": "juli", "pronHu": "jűli", "hu": "július", "en": "July", "ipa": "[ˈjʉːlɪ]"},
+            {"sv": "augusti", "pronHu": "auguszti", "hu": "augusztus", "en": "August", "ipa": "[aʊˈɡɵstɪ]"},
+            {"sv": "september", "pronHu": "szeptember", "hu": "szeptember", "en": "September", "ipa": "[sɛpˈtɛmːbɛr]"},
+            {"sv": "oktober", "pronHu": "október", "hu": "október", "en": "October", "ipa": "[ʊkˈtuːbɛr]"},
+            {"sv": "november", "pronHu": "november", "hu": "november", "en": "November", "ipa": "[nʊˈvɛmːbɛr]"},
+            {"sv": "december", "pronHu": "december", "hu": "december", "en": "December", "ipa": "[dɛˈsɛmːbɛr]"}
+          ]
+        },
+        {
+          "id": "szamok-1-50",
+          "name": "Számok 1–50",
+          "items": [
+            {"sv": "ett", "pronHu": "ett", "hu": "egy", "en": "one", "ipa": "[ɛtː]"},
+            {"sv": "två", "pronHu": "tvó", "hu": "kettő", "en": "two", "ipa": "[tvoː]"},
+            {"sv": "tre", "pronHu": "tré", "hu": "három", "en": "three", "ipa": "[treː]"},
+            {"sv": "fyra", "pronHu": "fűra", "hu": "négy", "en": "four", "ipa": "[ˈfyːra]"},
+            {"sv": "fem", "pronHu": "fem", "hu": "öt", "en": "five", "ipa": "[fɛm]"},
+            {"sv": "sex", "pronHu": "szex", "hu": "hat", "en": "six", "ipa": "[sɛks]"},
+            {"sv": "sju", "pronHu": "hű", "hu": "hét", "en": "seven", "ipa": "[ˈɧʉː]"},
+            {"sv": "åtta", "pronHu": "otta", "hu": "nyolc", "en": "eight", "ipa": "[ˈɔtːa]"},
+            {"sv": "nio", "pronHu": "níjó", "hu": "kilenc", "en": "nine", "ipa": "[ˈniːɔ]"},
+            {"sv": "tio", "pronHu": "tíjó", "hu": "tíz", "en": "ten", "ipa": "[ˈtiːɔ]"},
+            {"sv": "elva", "pronHu": "elva", "hu": "tizenegy", "en": "eleven", "ipa": "[ˈɛlva]"},
+            {"sv": "tolv", "pronHu": "tolv", "hu": "tizenkettő", "en": "twelve", "ipa": "[tɔlv]"},
+            {"sv": "tretton", "pronHu": "treton", "hu": "tizenhárom", "en": "thirteen", "ipa": "[ˈtrɛtːɔn]"},
+            {"sv": "fjorton", "pronHu": "fjurtón", "hu": "tizennégy", "en": "fourteen", "ipa": "[ˈfjʉːʈɔn]"},
+            {"sv": "femton", "pronHu": "femton", "hu": "tizenöt", "en": "fifteen", "ipa": "[ˈfɛmːtɔn]"},
+            {"sv": "sexton", "pronHu": "szexton", "hu": "tizenhat", "en": "sixteen", "ipa": "[ˈsɛkːstɔn]"},
+            {"sv": "sjutton", "pronHu": "hutton", "hu": "tizenhét", "en": "seventeen", "ipa": "[ˈɧʉtːɔn]"},
+            {"sv": "arton", "pronHu": "órton", "hu": "tizennyolc", "en": "eighteen", "ipa": "[ˈɑːʈɔn]"},
+            {"sv": "nitton", "pronHu": "niton", "hu": "tizenkilenc", "en": "nineteen", "ipa": "[ˈnɪtːɔn]"},
+            {"sv": "tjugo", "pronHu": "hűgó", "hu": "húsz", "en": "twenty", "ipa": "[ˈɕʉːɡʊ]"},
+            {"sv": "trettio", "pronHu": "trettió", "hu": "harminc", "en": "thirty", "ipa": "[ˈtrɛtːɪɔ]"},
+            {
+              "sv": "trettioett",
+              "pronHu": "trettio ett",
+              "hu": "harmincegy",
+              "en": "thirty-one",
+              "ipa": "[ˈtrɛtːɪɔ] [ɛtː]"
+            },
+            {
+              "sv": "trettiotvå",
+              "pronHu": "trettio två",
+              "hu": "harminckettő",
+              "en": "thirty-two",
+              "ipa": "[ˈtrɛtːɪɔ] [tvoː]"
+            },
+            {
+              "sv": "trettiotre",
+              "pronHu": "trettio tre",
+              "hu": "harminchárom",
+              "en": "thirty-three",
+              "ipa": "[ˈtrɛtːɪɔ] [treː]"
+            },
+            {
+              "sv": "trettiofyra",
+              "pronHu": "trettio fyra",
+              "hu": "harmincnégy",
+              "en": "thirty-four",
+              "ipa": "[ˈtrɛtːɪɔ] [ˈfyːra]"
+            },
+            {
+              "sv": "trettiofem",
+              "pronHu": "trettio fem",
+              "hu": "harmincöt",
+              "en": "thirty-five",
+              "ipa": "[ˈtrɛtːɪɔ] [fɛm]"
+            },
+            {
+              "sv": "trettiosex",
+              "pronHu": "trettio sex",
+              "hu": "harminchat",
+              "en": "thirty-six",
+              "ipa": "[ˈtrɛtːɪɔ] [sɛks]"
+            },
+            {
+              "sv": "trettiosju",
+              "pronHu": "trettio sju",
+              "hu": "harminchét",
+              "en": "thirty-seven",
+              "ipa": "[ˈtrɛtːɪɔ] [ˈɧʉː]"
+            },
+            {
+              "sv": "trettioåtta",
+              "pronHu": "trettio åtta",
+              "hu": "harmincnyolc",
+              "en": "thirty-eight",
+              "ipa": "[ˈtrɛtːɪɔ] [ˈɔtːa]"
+            },
+            {
+              "sv": "trettionio",
+              "pronHu": "trettio nio",
+              "hu": "harminckilenc",
+              "en": "thirty-nine",
+              "ipa": "[ˈtrɛtːɪɔ] [ˈniːɔ]"
+            },
+            {"sv": "fyrtio", "pronHu": "fürtió", "hu": "negyven", "en": "forty", "ipa": "[ˈfʏʈɪɔ]"},
+            {"sv": "fyrtioett", "pronHu": "fyrtio ett", "hu": "negyvenegy", "en": "forty-one", "ipa": "[ˈfʏʈɪɔ] [ɛtː]"},
+            {
+              "sv": "fyrtiotvå",
+              "pronHu": "fyrtio två",
+              "hu": "negyvenkettő",
+              "en": "forty-two",
+              "ipa": "[ˈfʏʈɪɔ] [tvoː]"
+            },
+            {
+              "sv": "fyrtiotre",
+              "pronHu": "fyrtio tre",
+              "hu": "negyvenhárom",
+              "en": "forty-three",
+              "ipa": "[ˈfʏʈɪɔ] [treː]"
+            },
+            {
+              "sv": "fyrtiofyra",
+              "pronHu": "fyrtio fyra",
+              "hu": "negyvennégy",
+              "en": "forty-four",
+              "ipa": "[ˈfʏʈɪɔ] [ˈfyːra]"
+            },
+            {"sv": "fyrtiofem", "pronHu": "fyrtio fem", "hu": "negyvenöt", "en": "forty-five", "ipa": "[ˈfʏʈɪɔ] [fɛm]"},
+            {
+              "sv": "fyrtiosex",
+              "pronHu": "fyrtio sex",
+              "hu": "negyvenhat",
+              "en": "forty-six",
+              "ipa": "[ˈfʏʈɪɔ] [sɛks]"
+            },
+            {
+              "sv": "fyrtiosju",
+              "pronHu": "fyrtio sju",
+              "hu": "negyvenhét",
+              "en": "forty-seven",
+              "ipa": "[ˈfʏʈɪɔ] [ˈɧʉː]"
+            },
+            {
+              "sv": "fyrtioåtta",
+              "pronHu": "fyrtio åtta",
+              "hu": "negyvennyolc",
+              "en": "forty-eight",
+              "ipa": "[ˈfʏʈɪɔ] [ˈɔtːa]"
+            },
+            {
+              "sv": "fyrtionio",
+              "pronHu": "fyrtio nio",
+              "hu": "negyvenkilenc",
+              "en": "forty-nine",
+              "ipa": "[ˈfʏʈɪɔ] [ˈniːɔ]"
+            },
+            {"sv": "femtio", "pronHu": "femció", "hu": "ötven", "en": "fifty", "ipa": "[ˈfɛmːtɪɔ]"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vilag",
+      "name": "Világ",
+      "categories": [
+        {
+          "id": "allatok",
+          "name": "Állatok",
+          "items": [
+            {"sv": "hund", "pronHu": "hund", "hu": "kutya", "en": "dog", "ipa": "[hɵnːd]"},
+            {"sv": "katt", "pronHu": "katt", "hu": "macska", "en": "cat", "ipa": "[katː]"},
+            {"sv": "fågel", "pronHu": "fógél", "hu": "madár", "en": "bird", "ipa": "[ˈfoːɡɛl]"},
+            {"sv": "fisk", "pronHu": "fiszk", "hu": "hal", "en": "fish", "ipa": "[fɪsk]"},
+            {"sv": "häst", "pronHu": "heszt", "hu": "ló", "en": "horse", "ipa": "[hɛst]"},
+            {"sv": "ko", "pronHu": "kú", "hu": "tehén", "en": "cow", "ipa": "[kuː]"},
+            {"sv": "gris", "pronHu": "grísz", "hu": "disznó", "en": "pig", "ipa": "[ɡriːs]"},
+            {"sv": "får", "pronHu": "fór", "hu": "juh", "en": "sheep", "ipa": "[foːr]"},
+            {"sv": "kanin", "pronHu": "kanín", "hu": "nyúl", "en": "rabbit", "ipa": "[kaˈniːn]"},
+            {"sv": "mus", "pronHu": "műsz", "hu": "egér", "en": "mouse", "ipa": "[mʉːs]"},
+            {"sv": "björn", "pronHu": "björn", "hu": "medve", "en": "bear", "ipa": "[bjœɳ]"},
+            {"sv": "varg", "pronHu": "várg", "hu": "farkas", "en": "wolf", "ipa": "[varɡ]"},
+            {"sv": "lejon", "pronHu": "lejjon", "hu": "oroszlán", "en": "lion", "ipa": "[ˈlɛɪjɔn]"},
+            {"sv": "elefant", "pronHu": "elefant", "hu": "elefánt", "en": "elephant", "ipa": "[ɛlɛˈfant]"},
+            {"sv": "orm", "pronHu": "orm", "hu": "kígyó", "en": "snake", "ipa": "[ɔrm]"}
+          ]
+        },
+        {
+          "id": "szinek",
+          "name": "Színek",
+          "items": [
+            {"sv": "röd", "pronHu": "rőd", "hu": "piros", "en": "red", "ipa": "[røːd]"},
+            {"sv": "blå", "pronHu": "bló", "hu": "kék", "en": "blue", "ipa": "[blɔː]"},
+            {"sv": "grön", "pronHu": "grőn", "hu": "zöld", "en": "green", "ipa": "[grøːn]"},
+            {"sv": "gul", "pronHu": "gűl", "hu": "sárga", "en": "yellow", "ipa": "[ɡʉːl]"},
+            {"sv": "svart", "pronHu": "szvárt", "hu": "fekete", "en": "black", "ipa": "[svart]"},
+            {"sv": "vit", "pronHu": "vít", "hu": "fehér", "en": "white", "ipa": "[viːt]"},
+            {"sv": "orange", "pronHu": "oránsz", "hu": "narancssárga", "en": "orange", "ipa": "[ʊˈranʂ]"},
+            {"sv": "rosa", "pronHu": "róssza", "hu": "rózsaszín", "en": "pink", "ipa": "[ˈruːsa]"},
+            {"sv": "lila", "pronHu": "líla", "hu": "lila", "en": "purple", "ipa": "[ˈliːla]"},
+            {"sv": "brun", "pronHu": "brűn", "hu": "barna", "en": "brown", "ipa": "[brʉːn]"},
+            {"sv": "grå", "pronHu": "gró", "hu": "szürke", "en": "grey", "ipa": "[ɡroː]"}
+          ]
+        },
+        {
+          "id": "erzesek",
+          "name": "Érzések",
+          "items": [
+            {"sv": "glad", "pronHu": "glád", "hu": "vidám", "en": "happy", "ipa": "[ɡlɑːd]"},
+            {"sv": "ledsen", "pronHu": "ledszen", "hu": "szomorú", "en": "sad", "ipa": "[ˈlɛdːsɛn]"},
+            {"sv": "arg", "pronHu": "árj", "hu": "mérges", "en": "angry", "ipa": "[arj]"},
+            {"sv": "trött", "pronHu": "trött", "hu": "fáradt", "en": "tired", "ipa": "[trœtː]"},
+            {"sv": "hungrig", "pronHu": "hungri", "hu": "éhes", "en": "hungry", "ipa": "[ˈhʊŋrɪg]"},
+            {"sv": "mätt", "pronHu": "mett", "hu": "jóllakott", "en": "full", "ipa": "[mɛtː]"},
+            {"sv": "rädd", "pronHu": "redd", "hu": "ijedt", "en": "scared", "ipa": "[rɛdː]"},
+            {"sv": "lugn", "pronHu": "lün", "hu": "nyugodt", "en": "calm", "ipa": "[lʉŋn]"},
+            {"sv": "stressad", "pronHu": "sztrészád", "hu": "stresszes", "en": "stressed", "ipa": "[ˈstrɛsːad]"},
+            {"sv": "kär", "pronHu": "sér", "hu": "szerelmes", "en": "in love", "ipa": "[ɕɛːr]"},
+            {"sv": "nervös", "pronHu": "nervősz", "hu": "ideges", "en": "nervous", "ipa": "[nɛrˈvøːs]"}
+          ]
+        }
+      ]
+    }
+  ]
+}
