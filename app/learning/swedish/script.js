@@ -100,8 +100,14 @@ const loadVoicesChromeSafe = () => {
             return false;
         };
         if (!tryLoad()) {
-            window.speechSynthesis.onvoiceschanged = () => { tryLoad(); };
-            const id = setInterval(() => { if (tryLoad()) { clearInterval(id); } }, 300);
+            window.speechSynthesis.onvoiceschanged = () => {
+                tryLoad();
+            };
+            const id = setInterval(() => {
+                if (tryLoad()) {
+                    clearInterval(id);
+                }
+            }, 300);
         }
     });
 };
@@ -138,8 +144,22 @@ stopBtn.addEventListener('click', () => {
     window.speechSynthesis.cancel();
 });
 
-groupSel.addEventListener('change', () => { fillCategorySelector(); render(); });
+groupSel.addEventListener('change', () => {
+    fillCategorySelector();
+    render();
+});
 categorySel.addEventListener('change', render);
 search.addEventListener('input', render);
+document.querySelectorAll('.flag').forEach(flag => {
+    flag.addEventListener('click', e => {
+        e.target.style.opacity = (e.target.style.opacity === '0.5') ? '1' : '0.5';
+        let colNumber = e.target.getAttribute('data-colnumber');
+        document
+            .querySelectorAll('table tr td:nth-child(' + colNumber + '), table tr th:nth-child(' + colNumber + ')')
+            .forEach(col => {
+                col.style.display = (col.style.display === 'none') ? 'table-cell' : 'none';
+            });
+    });
+});
 
 loadVoicesChromeSafe().then(loadData);

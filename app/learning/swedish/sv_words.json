@@ -2236,6 +2236,820 @@
               "ipa": "[ˈmoln]"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "helyek",
+      "name": "Helyek",
+      "categories": [
+        {
+          "id": "helyek-videk",
+          "name": "Helyek: vidék",
+          "items": [
+            {
+              "sv": "landsbygd",
+              "pronHu": "landsbűgd",
+              "hu": "vidék",
+              "en": "countryside",
+              "ipa": "[ˈlandsbygd]"
+            },
+            {
+              "sv": "by",
+              "pronHu": "bű",
+              "hu": "falu",
+              "en": "village",
+              "ipa": "[ˈby]"
+            },
+            {
+              "sv": "fält",
+              "pronHu": "felt",
+              "hu": "mező",
+              "en": "field",
+              "ipa": "[ˈfɛlt]"
+            },
+            {
+              "sv": "äng",
+              "pronHu": "eng",
+              "hu": "rét",
+              "en": "meadow",
+              "ipa": "[ˈɛŋ]"
+            },
+            {
+              "sv": "skog",
+              "pronHu": "szkog",
+              "hu": "erdő",
+              "en": "forest",
+              "ipa": "[ˈskog]"
+            },
+            {
+              "sv": "skog",
+              "pronHu": "szkog",
+              "hu": "erdő",
+              "en": "wood",
+              "ipa": "[ˈskog]"
+            },
+            {
+              "sv": "kulle",
+              "pronHu": "kule",
+              "hu": "domb",
+              "en": "hill",
+              "ipa": "[ˈkʉlle]"
+            },
+            {
+              "sv": "berg",
+              "pronHu": "berg",
+              "hu": "hegy",
+              "en": "mountain",
+              "ipa": "[ˈberg]"
+            },
+            {
+              "sv": "dal",
+              "pronHu": "dal",
+              "hu": "völgy",
+              "en": "valley",
+              "ipa": "[ˈdal]"
+            },
+            {
+              "sv": "flod",
+              "pronHu": "flod",
+              "hu": "folyó",
+              "en": "river",
+              "ipa": "[ˈflod]"
+            },
+            {
+              "sv": "bäck",
+              "pronHu": "bek",
+              "hu": "patak",
+              "en": "stream",
+              "ipa": "[ˈbɛkk]"
+            },
+            {
+              "sv": "sjö",
+              "pronHu": "hő",
+              "hu": "tó",
+              "en": "lake",
+              "ipa": "[ˈɧø]"
+            },
+            {
+              "sv": "damm",
+              "pronHu": "dam",
+              "hu": "tócs a/halastó",
+              "en": "pond",
+              "ipa": "[ˈdamm]"
+            },
+            {
+              "sv": "vattenfall",
+              "pronHu": "vatenfal",
+              "hu": "vízesés",
+              "en": "waterfall",
+              "ipa": "[ˈvattenfall]"
+            },
+            {
+              "sv": "gård",
+              "pronHu": "górd",
+              "hu": "tanya",
+              "en": "farm",
+              "ipa": "[ˈgord]"
+            },
+            {
+              "sv": "bondgård",
+              "pronHu": "bondgórd",
+              "hu": "tanyaház",
+              "en": "farmhouse",
+              "ipa": "[ˈbondgord]"
+            },
+            {
+              "sv": "lada",
+              "pronHu": "lada",
+              "hu": "pajta",
+              "en": "barn",
+              "ipa": "[ˈlada]"
+            },
+            {
+              "sv": "betesmark",
+              "pronHu": "betesmark",
+              "hu": "legelő",
+              "en": "pasture",
+              "ipa": "[ˈbetesmark]"
+            },
+            {
+              "sv": "fruktträdgård",
+              "pronHu": "fruktredgórd",
+              "hu": "gyümölcsös",
+              "en": "orchard",
+              "ipa": "[ˈfrʉkttrɛdgord]"
+            },
+            {
+              "sv": "vingård",
+              "pronHu": "vingórd",
+              "hu": "szőlőültetvény",
+              "en": "vineyard",
+              "ipa": "[ˈviŋord]"
+            },
+            {
+              "sv": "stuga",
+              "pronHu": "stuga",
+              "hu": "házikó",
+              "en": "cottage",
+              "ipa": "[ˈstʉga]"
+            },
+            {
+              "sv": "stig",
+              "pronHu": "stig",
+              "hu": "ösvény",
+              "en": "path",
+              "ipa": "[ˈstig]"
+            },
+            {
+              "sv": "led",
+              "pronHu": "led",
+              "hu": "túraútvonal",
+              "en": "trail",
+              "ipa": "[ˈled]"
+            },
+            {
+              "sv": "gångstig",
+              "pronHu": "góngstig",
+              "hu": "gyalogút",
+              "en": "footpath",
+              "ipa": "[ˈgoŋstig]"
+            },
+            {
+              "sv": "staket",
+              "pronHu": "staket",
+              "hu": "kerítés",
+              "en": "fence",
+              "ipa": "[ˈstaɕet]"
+            },
+            {
+              "sv": "häck",
+              "pronHu": "hek",
+              "hu": "sövény",
+              "en": "hedge",
+              "ipa": "[ˈhɛkk]"
+            },
+            {
+              "sv": "grind",
+              "pronHu": "grind",
+              "hu": "kapu",
+              "en": "gate",
+              "ipa": "[ˈgrind]"
+            },
+            {
+              "sv": "bro",
+              "pronHu": "bro",
+              "hu": "híd",
+              "en": "bridge",
+              "ipa": "[ˈbro]"
+            },
+            {
+              "sv": "kyrka",
+              "pronHu": "kűrka",
+              "hu": "templom",
+              "en": "church",
+              "ipa": "[ˈɕyrka]"
+            },
+            {
+              "sv": "kvarn",
+              "pronHu": "kvarn",
+              "hu": "malom",
+              "en": "mill",
+              "ipa": "[ˈkvarn]"
+            },
+            {
+              "sv": "småby",
+              "pronHu": "smóbű",
+              "hu": "kis falu",
+              "en": "hamlet",
+              "ipa": "[ˈsmoby]"
+            },
+            {
+              "sv": "hed",
+              "pronHu": "hed",
+              "hu": "mocsárvidék",
+              "en": "moor",
+              "ipa": "[ˈhed]"
+            },
+            {
+              "sv": "mosse",
+              "pronHu": "mosze",
+              "hu": "láp",
+              "en": "bog",
+              "ipa": "[ˈmosse]"
+            },
+            {
+              "sv": "kärr",
+              "pronHu": "ker",
+              "hu": "mocsár",
+              "en": "marsh",
+              "ipa": "[ˈɕɛrr]"
+            },
+            {
+              "sv": "djurliv",
+              "pronHu": "djurliv",
+              "hu": "vadvilág",
+              "en": "wildlife",
+              "ipa": "[ˈdjʉrliv]"
+            },
+            {
+              "sv": "landskap",
+              "pronHu": "landszkap",
+              "hu": "tájkép",
+              "en": "scenery",
+              "ipa": "[ˈlandskap]"
+            },
+            {
+              "sv": "landskap",
+              "pronHu": "landszkap",
+              "hu": "táj",
+              "en": "landscape",
+              "ipa": "[ˈlandskap]"
+            },
+            {
+              "sv": "horisont",
+              "pronHu": "horisont",
+              "hu": "horizont",
+              "en": "horizon",
+              "ipa": "[ˈhorisont]"
+            }
+          ]
+        },
+        {
+          "id": "helyek-varos",
+          "name": "Helyek: város",
+          "items": [
+            {
+              "sv": "stad",
+              "pronHu": "stad",
+              "hu": "város",
+              "en": "city",
+              "ipa": "[ˈstad]"
+            },
+            {
+              "sv": "stad",
+              "pronHu": "stad",
+              "hu": "kisváros",
+              "en": "town",
+              "ipa": "[ˈstad]"
+            },
+            {
+              "sv": "förort",
+              "pronHu": "főrort",
+              "hu": "külváros",
+              "en": "suburb",
+              "ipa": "[ˈførort]"
+            },
+            {
+              "sv": "centrum",
+              "pronHu": "kentrum",
+              "hu": "belváros",
+              "en": "downtown",
+              "ipa": "[ˈsentrʉm]"
+            },
+            {
+              "sv": "centrum",
+              "pronHu": "kentrum",
+              "hu": "központ",
+              "en": "centre",
+              "ipa": "[ˈsentrʉm]"
+            },
+            {
+              "sv": "torg",
+              "pronHu": "torg",
+              "hu": "tér",
+              "en": "square",
+              "ipa": "[ˈtorg]"
+            },
+            {
+              "sv": "gata",
+              "pronHu": "gata",
+              "hu": "utca",
+              "en": "street",
+              "ipa": "[ˈgata]"
+            },
+            {
+              "sv": "aveny",
+              "pronHu": "avenű",
+              "hu": "sugárút",
+              "en": "avenue",
+              "ipa": "[ˈaveny]"
+            },
+            {
+              "sv": "boulevard",
+              "pronHu": "boulevard",
+              "hu": "boulevard",
+              "en": "boulevard",
+              "ipa": "[ˈboʉlevard]"
+            },
+            {
+              "sv": "gränd",
+              "pronHu": "grend",
+              "hu": "köz",
+              "en": "lane",
+              "ipa": "[ˈgrɛnd]"
+            },
+            {
+              "sv": "gränd",
+              "pronHu": "grend",
+              "hu": "szűk utca",
+              "en": "alley",
+              "ipa": "[ˈgrɛnd]"
+            },
+            {
+              "sv": "korsning",
+              "pronHu": "korsning",
+              "hu": "kereszteződés",
+              "en": "crossroads",
+              "ipa": "[ˈkorsniŋ]"
+            },
+            {
+              "sv": "trafikljus",
+              "pronHu": "trafikljus",
+              "hu": "közlekedési lámpa",
+              "en": "traffic lights",
+              "ipa": "[ˈtrafikljʉs]"
+            },
+            {
+              "sv": "rondell",
+              "pronHu": "rondel",
+              "hu": "körforgalom",
+              "en": "roundabout",
+              "ipa": "[ˈrondell]"
+            },
+            {
+              "sv": "trottoar",
+              "pronHu": "trotoar",
+              "hu": "járda",
+              "en": "pavement",
+              "ipa": "[ˈtrottoar]"
+            },
+            {
+              "sv": "busshållplats",
+              "pronHu": "buszhólplats",
+              "hu": "buszmegálló",
+              "en": "bus stop",
+              "ipa": "[ˈbʉsshollplats]"
+            },
+            {
+              "sv": "station",
+              "pronHu": "station",
+              "hu": "állomás",
+              "en": "station",
+              "ipa": "[ˈstation]"
+            },
+            {
+              "sv": "tunnelbana",
+              "pronHu": "tunelbana",
+              "hu": "metró",
+              "en": "metro",
+              "ipa": "[ˈtʉnnelbana]"
+            },
+            {
+              "sv": "tunnelbana",
+              "pronHu": "tunelbana",
+              "hu": "aluljáró/metro",
+              "en": "subway",
+              "ipa": "[ˈtʉnnelbana]"
+            },
+            {
+              "sv": "spårvagn",
+              "pronHu": "spórvagn",
+              "hu": "villamos",
+              "en": "tram",
+              "ipa": "[ˈsporvagn]"
+            },
+            {
+              "sv": "taxi",
+              "pronHu": "taksi",
+              "hu": "taxi",
+              "en": "taxi",
+              "ipa": "[ˈtaksi]"
+            },
+            {
+              "sv": "butik",
+              "pronHu": "butik",
+              "hu": "bolt",
+              "en": "shop",
+              "ipa": "[ˈbʉtik]"
+            },
+            {
+              "sv": "marknad",
+              "pronHu": "marknad",
+              "hu": "piac",
+              "en": "market",
+              "ipa": "[ˈmarknad]"
+            },
+            {
+              "sv": "köpcentrum",
+              "pronHu": "kőpkentrum",
+              "hu": "bevásárlóközpont",
+              "en": "mall",
+              "ipa": "[ˈɕøpsentrʉm]"
+            },
+            {
+              "sv": "kontor",
+              "pronHu": "kontor",
+              "hu": "iroda",
+              "en": "office",
+              "ipa": "[ˈkontor]"
+            },
+            {
+              "sv": "kvarter",
+              "pronHu": "kvarter",
+              "hu": "tömb",
+              "en": "block",
+              "ipa": "[ˈkvarter]"
+            },
+            {
+              "sv": "skyskrapa",
+              "pronHu": "szkűszkrapa",
+              "hu": "felhőkarcoló",
+              "en": "skyscraper",
+              "ipa": "[ˈɧyskrapa]"
+            },
+            {
+              "sv": "park",
+              "pronHu": "park",
+              "hu": "park",
+              "en": "park",
+              "ipa": "[ˈpark]"
+            },
+            {
+              "sv": "lekplats",
+              "pronHu": "lekplats",
+              "hu": "játszótér",
+              "en": "playground",
+              "ipa": "[ˈlekplats]"
+            },
+            {
+              "sv": "parkeringsplats",
+              "pronHu": "parkeringsplats",
+              "hu": "parkoló",
+              "en": "car park",
+              "ipa": "[ˈparɕeriŋsplats]"
+            },
+            {
+              "sv": "apotek",
+              "pronHu": "apotek",
+              "hu": "gyógyszertár",
+              "en": "pharmacy",
+              "ipa": "[ˈapotek]"
+            },
+            {
+              "sv": "bank",
+              "pronHu": "bank",
+              "hu": "bank",
+              "en": "bank",
+              "ipa": "[ˈbank]"
+            },
+            {
+              "sv": "restaurang",
+              "pronHu": "restaurang",
+              "hu": "étterem",
+              "en": "restaurant",
+              "ipa": "[ˈrestaʉraŋ]"
+            },
+            {
+              "sv": "café",
+              "pronHu": "kafé",
+              "hu": "kávézó",
+              "en": "café",
+              "ipa": "[ˈkafé]"
+            },
+            {
+              "sv": "bar",
+              "pronHu": "bar",
+              "hu": "bár",
+              "en": "bar",
+              "ipa": "[ˈbar]"
+            },
+            {
+              "sv": "klubb",
+              "pronHu": "klubb",
+              "hu": "klub",
+              "en": "club",
+              "ipa": "[ˈklʉbb]"
+            },
+            {
+              "sv": "teater",
+              "pronHu": "teater",
+              "hu": "színház",
+              "en": "theatre",
+              "ipa": "[ˈteater]"
+            },
+            {
+              "sv": "biograf",
+              "pronHu": "biograf",
+              "hu": "mozi",
+              "en": "cinema",
+              "ipa": "[ˈbiograf]"
+            },
+            {
+              "sv": "museum",
+              "pronHu": "museum",
+              "hu": "múzeum",
+              "en": "museum",
+              "ipa": "[ˈmʉseʉm]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cselekvesek",
+      "name": "Cselekvések",
+      "categories": [
+        {
+          "id": "hobbi-es-szabadido",
+          "name": "Hobbi és szabadidő",
+          "items": [
+            {
+              "sv": "hobby",
+              "pronHu": "hobbű",
+              "hu": "hobbi",
+              "en": "hobby",
+              "ipa": "[ˈhobby]"
+            },
+            {
+              "sv": "fritid",
+              "pronHu": "fritid",
+              "hu": "szabadidő",
+              "en": "leisure",
+              "ipa": "[ˈfritid]"
+            },
+            {
+              "sv": "läsning",
+              "pronHu": "lesning",
+              "hu": "olvasás",
+              "en": "reading",
+              "ipa": "[ˈlɛsniŋ]"
+            },
+            {
+              "sv": "skrivande",
+              "pronHu": "szkrivande",
+              "hu": "írás",
+              "en": "writing",
+              "ipa": "[ˈskrivande]"
+            },
+            {
+              "sv": "teckning",
+              "pronHu": "tekning",
+              "hu": "rajz",
+              "en": "drawing",
+              "ipa": "[ˈtekkniŋ]"
+            },
+            {
+              "sv": "målning",
+              "pronHu": "mólning",
+              "hu": "festés",
+              "en": "painting",
+              "ipa": "[ˈmolniŋ]"
+            },
+            {
+              "sv": "fotografering",
+              "pronHu": "fotografering",
+              "hu": "fotózás",
+              "en": "photography",
+              "ipa": "[ˈfotograferiŋ]"
+            },
+            {
+              "sv": "trädgårdsarbete",
+              "pronHu": "tredgórdsarbete",
+              "hu": "kertészkedés",
+              "en": "gardening",
+              "ipa": "[ˈtrɛdgordsarbete]"
+            },
+            {
+              "sv": "matlagning",
+              "pronHu": "matlagning",
+              "hu": "főzés",
+              "en": "cooking",
+              "ipa": "[ˈmatlagniŋ]"
+            },
+            {
+              "sv": "bakning",
+              "pronHu": "bakning",
+              "hu": "sütés",
+              "en": "baking",
+              "ipa": "[ˈbakniŋ]"
+            },
+            {
+              "sv": "stickning",
+              "pronHu": "stikning",
+              "hu": "kötés",
+              "en": "knitting",
+              "ipa": "[ˈstikkniŋ]"
+            },
+            {
+              "sv": "sömnad",
+              "pronHu": "sőmnad",
+              "hu": "varrás",
+              "en": "sewing",
+              "ipa": "[ˈsømnad]"
+            },
+            {
+              "sv": "vandring",
+              "pronHu": "vandring",
+              "hu": "túrázás",
+              "en": "hiking",
+              "ipa": "[ˈvandriŋ]"
+            },
+            {
+              "sv": "camping",
+              "pronHu": "kamping",
+              "hu": "kempingezés",
+              "en": "camping",
+              "ipa": "[ˈkampiŋ]"
+            },
+            {
+              "sv": "fiske",
+              "pronHu": "fiszke",
+              "hu": "horgászat",
+              "en": "fishing",
+              "ipa": "[ˈfiɧe]"
+            },
+            {
+              "sv": "cykling",
+              "pronHu": "kűkling",
+              "hu": "kerékpározás",
+              "en": "cycling",
+              "ipa": "[ˈsykliŋ]"
+            },
+            {
+              "sv": "löpning",
+              "pronHu": "lőpning",
+              "hu": "futás",
+              "en": "running",
+              "ipa": "[ˈløpniŋ]"
+            },
+            {
+              "sv": "dans",
+              "pronHu": "dans",
+              "hu": "tánc",
+              "en": "dancing",
+              "ipa": "[ˈdans]"
+            },
+            {
+              "sv": "sång",
+              "pronHu": "sóng",
+              "hu": "éneklés",
+              "en": "singing",
+              "ipa": "[ˈsoŋ]"
+            },
+            {
+              "sv": "spelande",
+              "pronHu": "spelande",
+              "hu": "játszás",
+              "en": "playing",
+              "ipa": "[ˈspelande]"
+            },
+            {
+              "sv": "schack",
+              "pronHu": "sak",
+              "hu": "sakk",
+              "en": "chess",
+              "ipa": "[ˈɧakk]"
+            },
+            {
+              "sv": "brädspel",
+              "pronHu": "bredspel",
+              "hu": "társasjáték",
+              "en": "board game",
+              "ipa": "[ˈbrɛdspel]"
+            },
+            {
+              "sv": "tv-spel",
+              "pronHu": "tv-spel",
+              "hu": "videójáték",
+              "en": "video game",
+              "ipa": "[ˈtv-ˈspel]"
+            },
+            {
+              "sv": "samlande",
+              "pronHu": "samlande",
+              "hu": "gyűjtés",
+              "en": "collecting",
+              "ipa": "[ˈsamlande]"
+            },
+            {
+              "sv": "frimärken",
+              "pronHu": "frimerken",
+              "hu": "bélyegek",
+              "en": "stamps",
+              "ipa": "[ˈfrimɛrɕen]"
+            },
+            {
+              "sv": "mynt",
+              "pronHu": "műnt",
+              "hu": "érmék",
+              "en": "coins",
+              "ipa": "[ˈmynt]"
+            },
+            {
+              "sv": "gör-det-själv",
+              "pronHu": "gőr-det-helv",
+              "hu": "barkácsolás",
+              "en": "DIY",
+              "ipa": "[ˈjør-ˈdet-ˈɧɛlv]"
+            },
+            {
+              "sv": "träarbete",
+              "pronHu": "trearbete",
+              "hu": "asztalosság",
+              "en": "woodworking",
+              "ipa": "[ˈtrɛarbete]"
+            },
+            {
+              "sv": "keramik",
+              "pronHu": "keramik",
+              "hu": "kerámia",
+              "en": "pottery",
+              "ipa": "[ˈɕeramik]"
+            },
+            {
+              "sv": "yoga",
+              "pronHu": "űoga",
+              "hu": "jóga",
+              "en": "yoga",
+              "ipa": "[ˈyoga]"
+            },
+            {
+              "sv": "meditation",
+              "pronHu": "meditation",
+              "hu": "meditáció",
+              "en": "meditation",
+              "ipa": "[ˈmeditation]"
+            },
+            {
+              "sv": "fågelskådning",
+              "pronHu": "fógelszkódning",
+              "hu": "madármegfigyelés",
+              "en": "birdwatching",
+              "ipa": "[ˈfojelskodniŋ]"
+            },
+            {
+              "sv": "resande",
+              "pronHu": "resande",
+              "hu": "utazás",
+              "en": "travelling",
+              "ipa": "[ˈresande]"
+            },
+            {
+              "sv": "bloggande",
+              "pronHu": "bloggande",
+              "hu": "bloggolás",
+              "en": "blogging",
+              "ipa": "[ˈbloggande]"
+            },
+            {
+              "sv": "vloggande",
+              "pronHu": "vloggande",
+              "hu": "vloggolás",
+              "en": "vlogging",
+              "ipa": "[ˈvloggande]"
+            }
+          ]
         },
         {
           "id": "utazas-es-kozlekedes",
@@ -2453,265 +3267,6 @@
             }
           ]
         },
-        {
-          "id": "szemelyes-erzesek-velemenyek-es-tapasztalatok",
-          "name": "Személyes érzések, vélemények és tapasztalatok",
-          "items": [
-            {
-              "sv": "känsla",
-              "pronHu": "kensla",
-              "hu": "érzés",
-              "en": "feeling",
-              "ipa": "[ˈɕɛnsla]"
-            },
-            {
-              "sv": "emotion",
-              "pronHu": "emotion",
-              "hu": "érzelem",
-              "en": "emotion",
-              "ipa": "[ˈemotion]"
-            },
-            {
-              "sv": "glad",
-              "pronHu": "glad",
-              "hu": "boldog",
-              "en": "happy",
-              "ipa": "[ˈglad]"
-            },
-            {
-              "sv": "ledsen",
-              "pronHu": "ledsen",
-              "hu": "szomorú",
-              "en": "sad",
-              "ipa": "[ˈledsen]"
-            },
-            {
-              "sv": "arg",
-              "pronHu": "arg",
-              "hu": "dühös",
-              "en": "angry",
-              "ipa": "[ˈarg]"
-            },
-            {
-              "sv": "rädd",
-              "pronHu": "redd",
-              "hu": "félős",
-              "en": "afraid",
-              "ipa": "[ˈrɛdd]"
-            },
-            {
-              "sv": "orolig",
-              "pronHu": "orolig",
-              "hu": "aggódó",
-              "en": "worried",
-              "ipa": "[ˈorolig]"
-            },
-            {
-              "sv": "upprymd",
-              "pronHu": "uprűmd",
-              "hu": "izgatott",
-              "en": "excited",
-              "ipa": "[ˈʉpprymd]"
-            },
-            {
-              "sv": "förvånad",
-              "pronHu": "főrvónad",
-              "hu": "meglepett",
-              "en": "surprised",
-              "ipa": "[ˈførvonad]"
-            },
-            {
-              "sv": "uttråkad",
-              "pronHu": "utrókad",
-              "hu": "unott",
-              "en": "bored",
-              "ipa": "[ˈʉttrokad]"
-            },
-            {
-              "sv": "trött",
-              "pronHu": "trőt",
-              "hu": "fáradt",
-              "en": "tired",
-              "ipa": "[ˈtrøtt]"
-            },
-            {
-              "sv": "avslappnad",
-              "pronHu": "avslapnad",
-              "hu": "ellazult",
-              "en": "relaxed",
-              "ipa": "[ˈavslappnad]"
-            },
-            {
-              "sv": "lugn",
-              "pronHu": "lugn",
-              "hu": "nyugodt",
-              "en": "calm",
-              "ipa": "[ˈlʉgn]"
-            },
-            {
-              "sv": "stressad",
-              "pronHu": "streszad",
-              "hu": "stresszes",
-              "en": "stressed",
-              "ipa": "[ˈstressad]"
-            },
-            {
-              "sv": "självsäker",
-              "pronHu": "helvseker",
-              "hu": "magabiztos",
-              "en": "confident",
-              "ipa": "[ˈɧɛlvsɛɕer]"
-            },
-            {
-              "sv": "blyg",
-              "pronHu": "blűg",
-              "hu": "félénk",
-              "en": "shy",
-              "ipa": "[ˈblyg]"
-            },
-            {
-              "sv": "stolt",
-              "pronHu": "stolt",
-              "hu": "büszke",
-              "en": "proud",
-              "ipa": "[ˈstolt]"
-            },
-            {
-              "sv": "skamsen",
-              "pronHu": "szkamsen",
-              "hu": "szégyenkező",
-              "en": "ashamed",
-              "ipa": "[ˈskamsen]"
-            },
-            {
-              "sv": "skyldig",
-              "pronHu": "szkűldig",
-              "hu": "bűnös",
-              "en": "guilty",
-              "ipa": "[ˈɧyldig]"
-            },
-            {
-              "sv": "kärlek",
-              "pronHu": "kerlek",
-              "hu": "szeretet",
-              "en": "love",
-              "ipa": "[ˈɕɛrlek]"
-            },
-            {
-              "sv": "hat",
-              "pronHu": "hat",
-              "hu": "gyűlölet",
-              "en": "hate",
-              "ipa": "[ˈhat]"
-            },
-            {
-              "sv": "gilla",
-              "pronHu": "gila",
-              "hu": "kedvel",
-              "en": "like",
-              "ipa": "[ˈjilla]"
-            },
-            {
-              "sv": "ogilla",
-              "pronHu": "ogila",
-              "hu": "nem kedvel",
-              "en": "dislike",
-              "ipa": "[ˈojilla]"
-            },
-            {
-              "sv": "föredra",
-              "pronHu": "főredra",
-              "hu": "előnyben részesít",
-              "en": "prefer",
-              "ipa": "[ˈføredra]"
-            },
-            {
-              "sv": "åsikt",
-              "pronHu": "ósikt",
-              "hu": "vélemény",
-              "en": "opinion",
-              "ipa": "[ˈosikt]"
-            },
-            {
-              "sv": "tro",
-              "pronHu": "tro",
-              "hu": "hisz",
-              "en": "believe",
-              "ipa": "[ˈtro]"
-            },
-            {
-              "sv": "tänka",
-              "pronHu": "tenka",
-              "hu": "gondol",
-              "en": "think",
-              "ipa": "[ˈtɛnka]"
-            },
-            {
-              "sv": "gissa",
-              "pronHu": "gisza",
-              "hu": "tippel",
-              "en": "guess",
-              "ipa": "[ˈjissa]"
-            },
-            {
-              "sv": "komma ihåg",
-              "pronHu": "koma ihóg",
-              "hu": "emlékszik",
-              "en": "remember",
-              "ipa": "[ˈkomma ˈihog]"
-            },
-            {
-              "sv": "glömma",
-              "pronHu": "glőma",
-              "hu": "elfelejt",
-              "en": "forget",
-              "ipa": "[ˈglømma]"
-            },
-            {
-              "sv": "erfarenhet",
-              "pronHu": "erfarenhet",
-              "hu": "tapasztalat",
-              "en": "experience",
-              "ipa": "[ˈerfarenhet]"
-            },
-            {
-              "sv": "minne",
-              "pronHu": "mine",
-              "hu": "emlék",
-              "en": "memory",
-              "ipa": "[ˈminne]"
-            },
-            {
-              "sv": "hopp",
-              "pronHu": "hop",
-              "hu": "remény",
-              "en": "hope",
-              "ipa": "[ˈhopp]"
-            },
-            {
-              "sv": "önskan",
-              "pronHu": "őnszkan",
-              "hu": "kívánság",
-              "en": "wish",
-              "ipa": "[ˈønskan]"
-            },
-            {
-              "sv": "dröm",
-              "pronHu": "drőm",
-              "hu": "álom",
-              "en": "dream",
-              "ipa": "[ˈdrøm]"
-            },
-            {
-              "sv": "ånger",
-              "pronHu": "ónger",
-              "hu": "megbánás",
-              "en": "regret",
-              "ipa": "[ˈoŋer]"
-            }
-          ]
-        },
-
         {
           "id": "szolgaltatasok",
           "name": "Szolgáltatások",
@@ -3496,566 +4051,267 @@
       ]
     },
     {
-      "id": "helyek",
-      "name": "Helyek",
-      "categories": [
-        {
-          "id": "helyek-videk",
-          "name": "Helyek: vidék",
-          "items": [
-            {
-              "sv": "landsbygd",
-              "pronHu": "landsbűgd",
-              "hu": "vidék",
-              "en": "countryside",
-              "ipa": "[ˈlandsbygd]"
-            },
-            {
-              "sv": "by",
-              "pronHu": "bű",
-              "hu": "falu",
-              "en": "village",
-              "ipa": "[ˈby]"
-            },
-            {
-              "sv": "fält",
-              "pronHu": "felt",
-              "hu": "mező",
-              "en": "field",
-              "ipa": "[ˈfɛlt]"
-            },
-            {
-              "sv": "äng",
-              "pronHu": "eng",
-              "hu": "rét",
-              "en": "meadow",
-              "ipa": "[ˈɛŋ]"
-            },
-            {
-              "sv": "skog",
-              "pronHu": "szkog",
-              "hu": "erdő",
-              "en": "forest",
-              "ipa": "[ˈskog]"
-            },
-            {
-              "sv": "skog",
-              "pronHu": "szkog",
-              "hu": "erdő",
-              "en": "wood",
-              "ipa": "[ˈskog]"
-            },
-            {
-              "sv": "kulle",
-              "pronHu": "kule",
-              "hu": "domb",
-              "en": "hill",
-              "ipa": "[ˈkʉlle]"
-            },
-            {
-              "sv": "berg",
-              "pronHu": "berg",
-              "hu": "hegy",
-              "en": "mountain",
-              "ipa": "[ˈberg]"
-            },
-            {
-              "sv": "dal",
-              "pronHu": "dal",
-              "hu": "völgy",
-              "en": "valley",
-              "ipa": "[ˈdal]"
-            },
-            {
-              "sv": "flod",
-              "pronHu": "flod",
-              "hu": "folyó",
-              "en": "river",
-              "ipa": "[ˈflod]"
-            },
-            {
-              "sv": "bäck",
-              "pronHu": "bek",
-              "hu": "patak",
-              "en": "stream",
-              "ipa": "[ˈbɛkk]"
-            },
-            {
-              "sv": "sjö",
-              "pronHu": "hő",
-              "hu": "tó",
-              "en": "lake",
-              "ipa": "[ˈɧø]"
-            },
-            {
-              "sv": "damm",
-              "pronHu": "dam",
-              "hu": "tócs a/halastó",
-              "en": "pond",
-              "ipa": "[ˈdamm]"
-            },
-            {
-              "sv": "vattenfall",
-              "pronHu": "vatenfal",
-              "hu": "vízesés",
-              "en": "waterfall",
-              "ipa": "[ˈvattenfall]"
-            },
-            {
-              "sv": "gård",
-              "pronHu": "górd",
-              "hu": "tanya",
-              "en": "farm",
-              "ipa": "[ˈgord]"
-            },
-            {
-              "sv": "bondgård",
-              "pronHu": "bondgórd",
-              "hu": "tanyaház",
-              "en": "farmhouse",
-              "ipa": "[ˈbondgord]"
-            },
-            {
-              "sv": "lada",
-              "pronHu": "lada",
-              "hu": "pajta",
-              "en": "barn",
-              "ipa": "[ˈlada]"
-            },
-            {
-              "sv": "betesmark",
-              "pronHu": "betesmark",
-              "hu": "legelő",
-              "en": "pasture",
-              "ipa": "[ˈbetesmark]"
-            },
-            {
-              "sv": "fruktträdgård",
-              "pronHu": "fruktredgórd",
-              "hu": "gyümölcsös",
-              "en": "orchard",
-              "ipa": "[ˈfrʉkttrɛdgord]"
-            },
-            {
-              "sv": "vingård",
-              "pronHu": "vingórd",
-              "hu": "szőlőültetvény",
-              "en": "vineyard",
-              "ipa": "[ˈviŋord]"
-            },
-            {
-              "sv": "stuga",
-              "pronHu": "stuga",
-              "hu": "házikó",
-              "en": "cottage",
-              "ipa": "[ˈstʉga]"
-            },
-            {
-              "sv": "stig",
-              "pronHu": "stig",
-              "hu": "ösvény",
-              "en": "path",
-              "ipa": "[ˈstig]"
-            },
-            {
-              "sv": "led",
-              "pronHu": "led",
-              "hu": "túraútvonal",
-              "en": "trail",
-              "ipa": "[ˈled]"
-            },
-            {
-              "sv": "gångstig",
-              "pronHu": "góngstig",
-              "hu": "gyalogút",
-              "en": "footpath",
-              "ipa": "[ˈgoŋstig]"
-            },
-            {
-              "sv": "staket",
-              "pronHu": "staket",
-              "hu": "kerítés",
-              "en": "fence",
-              "ipa": "[ˈstaɕet]"
-            },
-            {
-              "sv": "häck",
-              "pronHu": "hek",
-              "hu": "sövény",
-              "en": "hedge",
-              "ipa": "[ˈhɛkk]"
-            },
-            {
-              "sv": "grind",
-              "pronHu": "grind",
-              "hu": "kapu",
-              "en": "gate",
-              "ipa": "[ˈgrind]"
-            },
-            {
-              "sv": "bro",
-              "pronHu": "bro",
-              "hu": "híd",
-              "en": "bridge",
-              "ipa": "[ˈbro]"
-            },
-            {
-              "sv": "kyrka",
-              "pronHu": "kűrka",
-              "hu": "templom",
-              "en": "church",
-              "ipa": "[ˈɕyrka]"
-            },
-            {
-              "sv": "kvarn",
-              "pronHu": "kvarn",
-              "hu": "malom",
-              "en": "mill",
-              "ipa": "[ˈkvarn]"
-            },
-            {
-              "sv": "småby",
-              "pronHu": "smóbű",
-              "hu": "kis falu",
-              "en": "hamlet",
-              "ipa": "[ˈsmoby]"
-            },
-            {
-              "sv": "hed",
-              "pronHu": "hed",
-              "hu": "mocsárvidék",
-              "en": "moor",
-              "ipa": "[ˈhed]"
-            },
-            {
-              "sv": "mosse",
-              "pronHu": "mosze",
-              "hu": "láp",
-              "en": "bog",
-              "ipa": "[ˈmosse]"
-            },
-            {
-              "sv": "kärr",
-              "pronHu": "ker",
-              "hu": "mocsár",
-              "en": "marsh",
-              "ipa": "[ˈɕɛrr]"
-            },
-            {
-              "sv": "djurliv",
-              "pronHu": "djurliv",
-              "hu": "vadvilág",
-              "en": "wildlife",
-              "ipa": "[ˈdjʉrliv]"
-            },
-            {
-              "sv": "landskap",
-              "pronHu": "landszkap",
-              "hu": "tájkép",
-              "en": "scenery",
-              "ipa": "[ˈlandskap]"
-            },
-            {
-              "sv": "landskap",
-              "pronHu": "landszkap",
-              "hu": "táj",
-              "en": "landscape",
-              "ipa": "[ˈlandskap]"
-            },
-            {
-              "sv": "horisont",
-              "pronHu": "horisont",
-              "hu": "horizont",
-              "en": "horizon",
-              "ipa": "[ˈhorisont]"
-            }
-          ]
-        },
-        {
-          "id": "helyek-varos",
-          "name": "Helyek: város",
-          "items": [
-            {
-              "sv": "stad",
-              "pronHu": "stad",
-              "hu": "város",
-              "en": "city",
-              "ipa": "[ˈstad]"
-            },
-            {
-              "sv": "stad",
-              "pronHu": "stad",
-              "hu": "kisváros",
-              "en": "town",
-              "ipa": "[ˈstad]"
-            },
-            {
-              "sv": "förort",
-              "pronHu": "főrort",
-              "hu": "külváros",
-              "en": "suburb",
-              "ipa": "[ˈførort]"
-            },
-            {
-              "sv": "centrum",
-              "pronHu": "kentrum",
-              "hu": "belváros",
-              "en": "downtown",
-              "ipa": "[ˈsentrʉm]"
-            },
-            {
-              "sv": "centrum",
-              "pronHu": "kentrum",
-              "hu": "központ",
-              "en": "centre",
-              "ipa": "[ˈsentrʉm]"
-            },
-            {
-              "sv": "torg",
-              "pronHu": "torg",
-              "hu": "tér",
-              "en": "square",
-              "ipa": "[ˈtorg]"
-            },
-            {
-              "sv": "gata",
-              "pronHu": "gata",
-              "hu": "utca",
-              "en": "street",
-              "ipa": "[ˈgata]"
-            },
-            {
-              "sv": "aveny",
-              "pronHu": "avenű",
-              "hu": "sugárút",
-              "en": "avenue",
-              "ipa": "[ˈaveny]"
-            },
-            {
-              "sv": "boulevard",
-              "pronHu": "boulevard",
-              "hu": "boulevard",
-              "en": "boulevard",
-              "ipa": "[ˈboʉlevard]"
-            },
-            {
-              "sv": "gränd",
-              "pronHu": "grend",
-              "hu": "köz",
-              "en": "lane",
-              "ipa": "[ˈgrɛnd]"
-            },
-            {
-              "sv": "gränd",
-              "pronHu": "grend",
-              "hu": "szűk utca",
-              "en": "alley",
-              "ipa": "[ˈgrɛnd]"
-            },
-            {
-              "sv": "korsning",
-              "pronHu": "korsning",
-              "hu": "kereszteződés",
-              "en": "crossroads",
-              "ipa": "[ˈkorsniŋ]"
-            },
-            {
-              "sv": "trafikljus",
-              "pronHu": "trafikljus",
-              "hu": "közlekedési lámpa",
-              "en": "traffic lights",
-              "ipa": "[ˈtrafikljʉs]"
-            },
-            {
-              "sv": "rondell",
-              "pronHu": "rondel",
-              "hu": "körforgalom",
-              "en": "roundabout",
-              "ipa": "[ˈrondell]"
-            },
-            {
-              "sv": "trottoar",
-              "pronHu": "trotoar",
-              "hu": "járda",
-              "en": "pavement",
-              "ipa": "[ˈtrottoar]"
-            },
-            {
-              "sv": "busshållplats",
-              "pronHu": "buszhólplats",
-              "hu": "buszmegálló",
-              "en": "bus stop",
-              "ipa": "[ˈbʉsshollplats]"
-            },
-            {
-              "sv": "station",
-              "pronHu": "station",
-              "hu": "állomás",
-              "en": "station",
-              "ipa": "[ˈstation]"
-            },
-            {
-              "sv": "tunnelbana",
-              "pronHu": "tunelbana",
-              "hu": "metró",
-              "en": "metro",
-              "ipa": "[ˈtʉnnelbana]"
-            },
-            {
-              "sv": "tunnelbana",
-              "pronHu": "tunelbana",
-              "hu": "aluljáró/metro",
-              "en": "subway",
-              "ipa": "[ˈtʉnnelbana]"
-            },
-            {
-              "sv": "spårvagn",
-              "pronHu": "spórvagn",
-              "hu": "villamos",
-              "en": "tram",
-              "ipa": "[ˈsporvagn]"
-            },
-            {
-              "sv": "taxi",
-              "pronHu": "taksi",
-              "hu": "taxi",
-              "en": "taxi",
-              "ipa": "[ˈtaksi]"
-            },
-            {
-              "sv": "butik",
-              "pronHu": "butik",
-              "hu": "bolt",
-              "en": "shop",
-              "ipa": "[ˈbʉtik]"
-            },
-            {
-              "sv": "marknad",
-              "pronHu": "marknad",
-              "hu": "piac",
-              "en": "market",
-              "ipa": "[ˈmarknad]"
-            },
-            {
-              "sv": "köpcentrum",
-              "pronHu": "kőpkentrum",
-              "hu": "bevásárlóközpont",
-              "en": "mall",
-              "ipa": "[ˈɕøpsentrʉm]"
-            },
-            {
-              "sv": "kontor",
-              "pronHu": "kontor",
-              "hu": "iroda",
-              "en": "office",
-              "ipa": "[ˈkontor]"
-            },
-            {
-              "sv": "kvarter",
-              "pronHu": "kvarter",
-              "hu": "tömb",
-              "en": "block",
-              "ipa": "[ˈkvarter]"
-            },
-            {
-              "sv": "skyskrapa",
-              "pronHu": "szkűszkrapa",
-              "hu": "felhőkarcoló",
-              "en": "skyscraper",
-              "ipa": "[ˈɧyskrapa]"
-            },
-            {
-              "sv": "park",
-              "pronHu": "park",
-              "hu": "park",
-              "en": "park",
-              "ipa": "[ˈpark]"
-            },
-            {
-              "sv": "lekplats",
-              "pronHu": "lekplats",
-              "hu": "játszótér",
-              "en": "playground",
-              "ipa": "[ˈlekplats]"
-            },
-            {
-              "sv": "parkeringsplats",
-              "pronHu": "parkeringsplats",
-              "hu": "parkoló",
-              "en": "car park",
-              "ipa": "[ˈparɕeriŋsplats]"
-            },
-            {
-              "sv": "apotek",
-              "pronHu": "apotek",
-              "hu": "gyógyszertár",
-              "en": "pharmacy",
-              "ipa": "[ˈapotek]"
-            },
-            {
-              "sv": "bank",
-              "pronHu": "bank",
-              "hu": "bank",
-              "en": "bank",
-              "ipa": "[ˈbank]"
-            },
-            {
-              "sv": "restaurang",
-              "pronHu": "restaurang",
-              "hu": "étterem",
-              "en": "restaurant",
-              "ipa": "[ˈrestaʉraŋ]"
-            },
-            {
-              "sv": "café",
-              "pronHu": "kafé",
-              "hu": "kávézó",
-              "en": "café",
-              "ipa": "[ˈkafé]"
-            },
-            {
-              "sv": "bar",
-              "pronHu": "bar",
-              "hu": "bár",
-              "en": "bar",
-              "ipa": "[ˈbar]"
-            },
-            {
-              "sv": "klubb",
-              "pronHu": "klubb",
-              "hu": "klub",
-              "en": "club",
-              "ipa": "[ˈklʉbb]"
-            },
-            {
-              "sv": "teater",
-              "pronHu": "teater",
-              "hu": "színház",
-              "en": "theatre",
-              "ipa": "[ˈteater]"
-            },
-            {
-              "sv": "biograf",
-              "pronHu": "biograf",
-              "hu": "mozi",
-              "en": "cinema",
-              "ipa": "[ˈbiograf]"
-            },
-            {
-              "sv": "museum",
-              "pronHu": "museum",
-              "hu": "múzeum",
-              "en": "museum",
-              "ipa": "[ˈmʉseʉm]"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "fogalmak",
       "name": "Fogalmak",
       "categories": [
+        {
+          "id": "szemelyes-erzesek-velemenyek-es-tapasztalatok",
+          "name": "Személyes érzések, vélemények és tapasztalatok",
+          "items": [
+            {
+              "sv": "känsla",
+              "pronHu": "kensla",
+              "hu": "érzés",
+              "en": "feeling",
+              "ipa": "[ˈɕɛnsla]"
+            },
+            {
+              "sv": "emotion",
+              "pronHu": "emotion",
+              "hu": "érzelem",
+              "en": "emotion",
+              "ipa": "[ˈemotion]"
+            },
+            {
+              "sv": "glad",
+              "pronHu": "glad",
+              "hu": "boldog",
+              "en": "happy",
+              "ipa": "[ˈglad]"
+            },
+            {
+              "sv": "ledsen",
+              "pronHu": "ledsen",
+              "hu": "szomorú",
+              "en": "sad",
+              "ipa": "[ˈledsen]"
+            },
+            {
+              "sv": "arg",
+              "pronHu": "arg",
+              "hu": "dühös",
+              "en": "angry",
+              "ipa": "[ˈarg]"
+            },
+            {
+              "sv": "rädd",
+              "pronHu": "redd",
+              "hu": "félős",
+              "en": "afraid",
+              "ipa": "[ˈrɛdd]"
+            },
+            {
+              "sv": "orolig",
+              "pronHu": "orolig",
+              "hu": "aggódó",
+              "en": "worried",
+              "ipa": "[ˈorolig]"
+            },
+            {
+              "sv": "upprymd",
+              "pronHu": "uprűmd",
+              "hu": "izgatott",
+              "en": "excited",
+              "ipa": "[ˈʉpprymd]"
+            },
+            {
+              "sv": "förvånad",
+              "pronHu": "főrvónad",
+              "hu": "meglepett",
+              "en": "surprised",
+              "ipa": "[ˈførvonad]"
+            },
+            {
+              "sv": "uttråkad",
+              "pronHu": "utrókad",
+              "hu": "unott",
+              "en": "bored",
+              "ipa": "[ˈʉttrokad]"
+            },
+            {
+              "sv": "trött",
+              "pronHu": "trőt",
+              "hu": "fáradt",
+              "en": "tired",
+              "ipa": "[ˈtrøtt]"
+            },
+            {
+              "sv": "avslappnad",
+              "pronHu": "avslapnad",
+              "hu": "ellazult",
+              "en": "relaxed",
+              "ipa": "[ˈavslappnad]"
+            },
+            {
+              "sv": "lugn",
+              "pronHu": "lugn",
+              "hu": "nyugodt",
+              "en": "calm",
+              "ipa": "[ˈlʉgn]"
+            },
+            {
+              "sv": "stressad",
+              "pronHu": "streszad",
+              "hu": "stresszes",
+              "en": "stressed",
+              "ipa": "[ˈstressad]"
+            },
+            {
+              "sv": "självsäker",
+              "pronHu": "helvseker",
+              "hu": "magabiztos",
+              "en": "confident",
+              "ipa": "[ˈɧɛlvsɛɕer]"
+            },
+            {
+              "sv": "blyg",
+              "pronHu": "blűg",
+              "hu": "félénk",
+              "en": "shy",
+              "ipa": "[ˈblyg]"
+            },
+            {
+              "sv": "stolt",
+              "pronHu": "stolt",
+              "hu": "büszke",
+              "en": "proud",
+              "ipa": "[ˈstolt]"
+            },
+            {
+              "sv": "skamsen",
+              "pronHu": "szkamsen",
+              "hu": "szégyenkező",
+              "en": "ashamed",
+              "ipa": "[ˈskamsen]"
+            },
+            {
+              "sv": "skyldig",
+              "pronHu": "szkűldig",
+              "hu": "bűnös",
+              "en": "guilty",
+              "ipa": "[ˈɧyldig]"
+            },
+            {
+              "sv": "kärlek",
+              "pronHu": "kerlek",
+              "hu": "szeretet",
+              "en": "love",
+              "ipa": "[ˈɕɛrlek]"
+            },
+            {
+              "sv": "hat",
+              "pronHu": "hat",
+              "hu": "gyűlölet",
+              "en": "hate",
+              "ipa": "[ˈhat]"
+            },
+            {
+              "sv": "gilla",
+              "pronHu": "gila",
+              "hu": "kedvel",
+              "en": "like",
+              "ipa": "[ˈjilla]"
+            },
+            {
+              "sv": "ogilla",
+              "pronHu": "ogila",
+              "hu": "nem kedvel",
+              "en": "dislike",
+              "ipa": "[ˈojilla]"
+            },
+            {
+              "sv": "föredra",
+              "pronHu": "főredra",
+              "hu": "előnyben részesít",
+              "en": "prefer",
+              "ipa": "[ˈføredra]"
+            },
+            {
+              "sv": "åsikt",
+              "pronHu": "ósikt",
+              "hu": "vélemény",
+              "en": "opinion",
+              "ipa": "[ˈosikt]"
+            },
+            {
+              "sv": "tro",
+              "pronHu": "tro",
+              "hu": "hisz",
+              "en": "believe",
+              "ipa": "[ˈtro]"
+            },
+            {
+              "sv": "tänka",
+              "pronHu": "tenka",
+              "hu": "gondol",
+              "en": "think",
+              "ipa": "[ˈtɛnka]"
+            },
+            {
+              "sv": "gissa",
+              "pronHu": "gisza",
+              "hu": "tippel",
+              "en": "guess",
+              "ipa": "[ˈjissa]"
+            },
+            {
+              "sv": "komma ihåg",
+              "pronHu": "koma ihóg",
+              "hu": "emlékszik",
+              "en": "remember",
+              "ipa": "[ˈkomma ˈihog]"
+            },
+            {
+              "sv": "glömma",
+              "pronHu": "glőma",
+              "hu": "elfelejt",
+              "en": "forget",
+              "ipa": "[ˈglømma]"
+            },
+            {
+              "sv": "erfarenhet",
+              "pronHu": "erfarenhet",
+              "hu": "tapasztalat",
+              "en": "experience",
+              "ipa": "[ˈerfarenhet]"
+            },
+            {
+              "sv": "minne",
+              "pronHu": "mine",
+              "hu": "emlék",
+              "en": "memory",
+              "ipa": "[ˈminne]"
+            },
+            {
+              "sv": "hopp",
+              "pronHu": "hop",
+              "hu": "remény",
+              "en": "hope",
+              "ipa": "[ˈhopp]"
+            },
+            {
+              "sv": "önskan",
+              "pronHu": "őnszkan",
+              "hu": "kívánság",
+              "en": "wish",
+              "ipa": "[ˈønskan]"
+            },
+            {
+              "sv": "dröm",
+              "pronHu": "drőm",
+              "hu": "álom",
+              "en": "dream",
+              "ipa": "[ˈdrøm]"
+            },
+            {
+              "sv": "ånger",
+              "pronHu": "ónger",
+              "hu": "megbánás",
+              "en": "regret",
+              "ipa": "[ˈoŋer]"
+            }
+          ]
+        },
         {
           "id": "munka-es-allasok",
           "name": "Munka és állások",
@@ -5245,257 +5501,6 @@
               "hu": "terápia",
               "en": "therapy",
               "ipa": "[ˈterapi]"
-            }
-          ]
-        },
-        {
-          "id": "hobbi-es-szabadido",
-          "name": "Hobbi és szabadidő",
-          "items": [
-            {
-              "sv": "hobby",
-              "pronHu": "hobbű",
-              "hu": "hobbi",
-              "en": "hobby",
-              "ipa": "[ˈhobby]"
-            },
-            {
-              "sv": "fritid",
-              "pronHu": "fritid",
-              "hu": "szabadidő",
-              "en": "leisure",
-              "ipa": "[ˈfritid]"
-            },
-            {
-              "sv": "läsning",
-              "pronHu": "lesning",
-              "hu": "olvasás",
-              "en": "reading",
-              "ipa": "[ˈlɛsniŋ]"
-            },
-            {
-              "sv": "skrivande",
-              "pronHu": "szkrivande",
-              "hu": "írás",
-              "en": "writing",
-              "ipa": "[ˈskrivande]"
-            },
-            {
-              "sv": "teckning",
-              "pronHu": "tekning",
-              "hu": "rajz",
-              "en": "drawing",
-              "ipa": "[ˈtekkniŋ]"
-            },
-            {
-              "sv": "målning",
-              "pronHu": "mólning",
-              "hu": "festés",
-              "en": "painting",
-              "ipa": "[ˈmolniŋ]"
-            },
-            {
-              "sv": "fotografering",
-              "pronHu": "fotografering",
-              "hu": "fotózás",
-              "en": "photography",
-              "ipa": "[ˈfotograferiŋ]"
-            },
-            {
-              "sv": "trädgårdsarbete",
-              "pronHu": "tredgórdsarbete",
-              "hu": "kertészkedés",
-              "en": "gardening",
-              "ipa": "[ˈtrɛdgordsarbete]"
-            },
-            {
-              "sv": "matlagning",
-              "pronHu": "matlagning",
-              "hu": "főzés",
-              "en": "cooking",
-              "ipa": "[ˈmatlagniŋ]"
-            },
-            {
-              "sv": "bakning",
-              "pronHu": "bakning",
-              "hu": "sütés",
-              "en": "baking",
-              "ipa": "[ˈbakniŋ]"
-            },
-            {
-              "sv": "stickning",
-              "pronHu": "stikning",
-              "hu": "kötés",
-              "en": "knitting",
-              "ipa": "[ˈstikkniŋ]"
-            },
-            {
-              "sv": "sömnad",
-              "pronHu": "sőmnad",
-              "hu": "varrás",
-              "en": "sewing",
-              "ipa": "[ˈsømnad]"
-            },
-            {
-              "sv": "vandring",
-              "pronHu": "vandring",
-              "hu": "túrázás",
-              "en": "hiking",
-              "ipa": "[ˈvandriŋ]"
-            },
-            {
-              "sv": "camping",
-              "pronHu": "kamping",
-              "hu": "kempingezés",
-              "en": "camping",
-              "ipa": "[ˈkampiŋ]"
-            },
-            {
-              "sv": "fiske",
-              "pronHu": "fiszke",
-              "hu": "horgászat",
-              "en": "fishing",
-              "ipa": "[ˈfiɧe]"
-            },
-            {
-              "sv": "cykling",
-              "pronHu": "kűkling",
-              "hu": "kerékpározás",
-              "en": "cycling",
-              "ipa": "[ˈsykliŋ]"
-            },
-            {
-              "sv": "löpning",
-              "pronHu": "lőpning",
-              "hu": "futás",
-              "en": "running",
-              "ipa": "[ˈløpniŋ]"
-            },
-            {
-              "sv": "dans",
-              "pronHu": "dans",
-              "hu": "tánc",
-              "en": "dancing",
-              "ipa": "[ˈdans]"
-            },
-            {
-              "sv": "sång",
-              "pronHu": "sóng",
-              "hu": "éneklés",
-              "en": "singing",
-              "ipa": "[ˈsoŋ]"
-            },
-            {
-              "sv": "spelande",
-              "pronHu": "spelande",
-              "hu": "játszás",
-              "en": "playing",
-              "ipa": "[ˈspelande]"
-            },
-            {
-              "sv": "schack",
-              "pronHu": "sak",
-              "hu": "sakk",
-              "en": "chess",
-              "ipa": "[ˈɧakk]"
-            },
-            {
-              "sv": "brädspel",
-              "pronHu": "bredspel",
-              "hu": "társasjáték",
-              "en": "board game",
-              "ipa": "[ˈbrɛdspel]"
-            },
-            {
-              "sv": "tv-spel",
-              "pronHu": "tv-spel",
-              "hu": "videójáték",
-              "en": "video game",
-              "ipa": "[ˈtv-ˈspel]"
-            },
-            {
-              "sv": "samlande",
-              "pronHu": "samlande",
-              "hu": "gyűjtés",
-              "en": "collecting",
-              "ipa": "[ˈsamlande]"
-            },
-            {
-              "sv": "frimärken",
-              "pronHu": "frimerken",
-              "hu": "bélyegek",
-              "en": "stamps",
-              "ipa": "[ˈfrimɛrɕen]"
-            },
-            {
-              "sv": "mynt",
-              "pronHu": "műnt",
-              "hu": "érmék",
-              "en": "coins",
-              "ipa": "[ˈmynt]"
-            },
-            {
-              "sv": "gör-det-själv",
-              "pronHu": "gőr-det-helv",
-              "hu": "barkácsolás",
-              "en": "DIY",
-              "ipa": "[ˈjør-ˈdet-ˈɧɛlv]"
-            },
-            {
-              "sv": "träarbete",
-              "pronHu": "trearbete",
-              "hu": "asztalosság",
-              "en": "woodworking",
-              "ipa": "[ˈtrɛarbete]"
-            },
-            {
-              "sv": "keramik",
-              "pronHu": "keramik",
-              "hu": "kerámia",
-              "en": "pottery",
-              "ipa": "[ˈɕeramik]"
-            },
-            {
-              "sv": "yoga",
-              "pronHu": "űoga",
-              "hu": "jóga",
-              "en": "yoga",
-              "ipa": "[ˈyoga]"
-            },
-            {
-              "sv": "meditation",
-              "pronHu": "meditation",
-              "hu": "meditáció",
-              "en": "meditation",
-              "ipa": "[ˈmeditation]"
-            },
-            {
-              "sv": "fågelskådning",
-              "pronHu": "fógelszkódning",
-              "hu": "madármegfigyelés",
-              "en": "birdwatching",
-              "ipa": "[ˈfojelskodniŋ]"
-            },
-            {
-              "sv": "resande",
-              "pronHu": "resande",
-              "hu": "utazás",
-              "en": "travelling",
-              "ipa": "[ˈresande]"
-            },
-            {
-              "sv": "bloggande",
-              "pronHu": "bloggande",
-              "hu": "bloggolás",
-              "en": "blogging",
-              "ipa": "[ˈbloggande]"
-            },
-            {
-              "sv": "vloggande",
-              "pronHu": "vloggande",
-              "hu": "vloggolás",
-              "en": "vlogging",
-              "ipa": "[ˈvloggande]"
             }
           ]
         },
