@@ -1,10 +1,226 @@
 {
-  "version": 1,
+  "version": 2,
   "groups": [
     {
-      "id": "kommunikacio",
-      "name": "Kommunikáció",
+      "id": "alap szavak",
+      "name": "Alap szavak",
       "categories": [
+        {
+          "id": "szinek",
+          "name": "Színek",
+          "items": [
+            {
+              "sv": "röd",
+              "pronHu": "rőd",
+              "hu": "piros",
+              "en": "red",
+              "ipa": "[røːd]"
+            },
+            {
+              "sv": "blå",
+              "pronHu": "bló",
+              "hu": "kék",
+              "en": "blue",
+              "ipa": "[blɔː]"
+            },
+            {
+              "sv": "grön",
+              "pronHu": "grőn",
+              "hu": "zöld",
+              "en": "green",
+              "ipa": "[grøːn]"
+            },
+            {
+              "sv": "gul",
+              "pronHu": "gűl",
+              "hu": "sárga",
+              "en": "yellow",
+              "ipa": "[ɡʉːl]"
+            },
+            {
+              "sv": "svart",
+              "pronHu": "szvárt",
+              "hu": "fekete",
+              "en": "black",
+              "ipa": "[svart]"
+            },
+            {
+              "sv": "vit",
+              "pronHu": "vít",
+              "hu": "fehér",
+              "en": "white",
+              "ipa": "[viːt]"
+            },
+            {
+              "sv": "orange",
+              "pronHu": "oránsz",
+              "hu": "narancssárga",
+              "en": "orange",
+              "ipa": "[ʊˈranʂ]"
+            },
+            {
+              "sv": "rosa",
+              "pronHu": "róssza",
+              "hu": "rózsaszín",
+              "en": "pink",
+              "ipa": "[ˈruːsa]"
+            },
+            {
+              "sv": "lila",
+              "pronHu": "líla",
+              "hu": "lila",
+              "en": "purple",
+              "ipa": "[ˈliːla]"
+            },
+            {
+              "sv": "brun",
+              "pronHu": "brűn",
+              "hu": "barna",
+              "en": "brown",
+              "ipa": "[brʉːn]"
+            },
+            {
+              "sv": "grå",
+              "pronHu": "gró",
+              "hu": "szürke",
+              "en": "grey",
+              "ipa": "[ɡroː]"
+            },
+            {
+              "sv": "beige",
+              "pronHu": "bézs",
+              "hu": "bézs",
+              "en": "beige",
+              "ipa": "[ˈbeije]"
+            },
+            {
+              "sv": "mörkblå",
+              "pronHu": "mörkbló",
+              "hu": "sötétkék",
+              "en": "navy",
+              "ipa": "[ˈmørkblo]"
+            },
+            {
+              "sv": "turkos",
+              "pronHu": "turkos",
+              "hu": "türkiz",
+              "en": "turquoise",
+              "ipa": "[ˈtʉrkos]"
+            },
+            {
+              "sv": "blågrön",
+              "pronHu": "blógrőn",
+              "hu": "pávakék/teal",
+              "en": "teal",
+              "ipa": "[ˈblogrøn]"
+            },
+            {
+              "sv": "mörkröd",
+              "pronHu": "mörkrőd",
+              "hu": "bordó",
+              "en": "maroon",
+              "ipa": "[ˈmørkrød]"
+            },
+            {
+              "sv": "karminröd",
+              "pronHu": "karminrőd",
+              "hu": "karmazsin",
+              "en": "crimson",
+              "ipa": "[ˈkarminrød]"
+            },
+            {
+              "sv": "magenta",
+              "pronHu": "magenta",
+              "hu": "magenta",
+              "en": "magenta",
+              "ipa": "[ˈmajenta]"
+            },
+            {
+              "sv": "cyan",
+              "pronHu": "cián",
+              "hu": "cián",
+              "en": "cyan",
+              "ipa": "[ˈsyan]"
+            },
+            {
+              "sv": "limegrön",
+              "pronHu": "lájmgrőn",
+              "hu": "limezöld",
+              "en": "lime",
+              "ipa": "[ˈlimegrøn]"
+            },
+            {
+              "sv": "olivgrön",
+              "pronHu": "olívgrőn",
+              "hu": "olívzöld",
+              "en": "olive",
+              "ipa": "[ˈolivgrøn]"
+            },
+            {
+              "sv": "violett",
+              "pronHu": "violett",
+              "hu": "ibolyalila",
+              "en": "violet",
+              "ipa": "[ˈviolett]"
+            },
+            {
+              "sv": "indigo",
+              "pronHu": "indigó",
+              "hu": "indigó",
+              "en": "indigo",
+              "ipa": "[ˈindigo]"
+            },
+            {
+              "sv": "guld",
+              "pronHu": "guld",
+              "hu": "arany",
+              "en": "gold",
+              "ipa": "[ˈgʉld]"
+            },
+            {
+              "sv": "silver",
+              "pronHu": "szilver",
+              "hu": "ezüst",
+              "en": "silver",
+              "ipa": "[ˈsilver]"
+            },
+            {
+              "sv": "brons",
+              "pronHu": "brons",
+              "hu": "bronz",
+              "en": "bronze",
+              "ipa": "[ˈbrons]"
+            },
+            {
+              "sv": "krämfärgad",
+              "pronHu": "krémfärgad",
+              "hu": "krémszín",
+              "en": "cream",
+              "ipa": "[ˈkrɛmfɛrgad]"
+            },
+            {
+              "sv": "elfenbensvit",
+              "pronHu": "elfenbensvit",
+              "hu": "elefántcsontszín",
+              "en": "ivory",
+              "ipa": "[ˈelfenbensvit]"
+            },
+            {
+              "sv": "lavendel",
+              "pronHu": "lavendel",
+              "hu": "levendula",
+              "en": "lavender",
+              "ipa": "[ˈlavendel]"
+            },
+            {
+              "sv": "persikofärgad",
+              "pronHu": "persikofärgad",
+              "hu": "barackszín",
+              "en": "peach",
+              "ipa": "[ˈpersikofɛrgad]"
+            }
+          ]
+        },
         {
           "id": "koszonesek",
           "name": "Köszönések",
@@ -182,354 +398,5356 @@
               "ipa": "[takː soː ˈmʏkːɛt]"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "elovilag",
+      "name": "Élővilág",
+      "categories": [
         {
-          "id": "hetkoznapi-interakciok",
-          "name": "Egyéb hétköznapi interakciók",
+          "id": "a-termeszeti-vilag",
+          "name": "A természeti világ",
           "items": [
             {
-              "sv": "hur mår du?",
-              "pronHu": "hűr mór dü?",
-              "hu": "hogy vagy?",
-              "en": "how are you?",
-              "ipa": "[hʉːr moːr dʉː]"
+              "sv": "natur",
+              "pronHu": "natur",
+              "hu": "természet",
+              "en": "nature",
+              "ipa": "[ˈnatʉr]"
             },
             {
-              "sv": "jag mår bra",
-              "pronHu": "jág mór brá",
-              "hu": "jól vagyok",
-              "en": "I'm fine",
-              "ipa": "[jɑːɡ moːr brɑː]"
-            },
-            {"sv": "så där", "pronHu": "szó dár", "hu": "megvagyok", "en": "so-so", "ipa": "[soː dɛːr]"},
-            {
-              "sv": "vad heter du?",
-              "pronHu": "vád héter dü?",
-              "hu": "mi a neved?",
-              "en": "what's your name?",
-              "ipa": "[vɑːd ˈheːtɛr dʉː]"
+              "sv": "djur",
+              "pronHu": "djur",
+              "hu": "állat",
+              "en": "animal",
+              "ipa": "[ˈdjʉr]"
             },
             {
-              "sv": "jag heter …",
-              "pronHu": "jág héter …",
-              "hu": "a nevem …",
-              "en": "my name is …",
-              "ipa": "[jɑːɡ ˈheːtɛr]"
+              "sv": "växt",
+              "pronHu": "vekst",
+              "hu": "növény",
+              "en": "plant",
+              "ipa": "[ˈvɛkst]"
             },
             {
-              "sv": "varifrån kommer du?",
-              "pronHu": "várifron kommer dü?",
-              "hu": "honnan jössz?",
-              "en": "where are you from?",
-              "ipa": "[ˈvɑːrɪfrɔn ˈkɔmːɛr dʉː]"
+              "sv": "träd",
+              "pronHu": "tred",
+              "hu": "fa",
+              "en": "tree",
+              "ipa": "[ˈtrɛd]"
             },
             {
-              "sv": "jag kommer från …",
-              "pronHu": "jág kommer frón …",
-              "hu": "…-ból jöttem",
-              "en": "I come from …",
-              "ipa": "[jɑːɡ ˈkɔmːɛr froːn]"
+              "sv": "blomma",
+              "pronHu": "bloma",
+              "hu": "virág",
+              "en": "flower",
+              "ipa": "[ˈblomma]"
             },
             {
-              "sv": "pratar du engelska?",
-              "pronHu": "prátár dü engelszka?",
-              "hu": "beszélsz angolul?",
-              "en": "do you speak English?",
-              "ipa": "[ˈprɑːtar dʉ ˈɛŋɛlska]"
+              "sv": "gräs",
+              "pronHu": "gres",
+              "hu": "fű",
+              "en": "grass",
+              "ipa": "[ˈgrɛs]"
             },
             {
-              "sv": "kan du hjälpa mig?",
-              "pronHu": "kan dü jelpa mej?",
-              "hu": "tudsz segíteni?",
-              "en": "can you help me?",
-              "ipa": "[kan dʉ ˈjɛlpa mɛj]"
+              "sv": "blad",
+              "pronHu": "blad",
+              "hu": "levél",
+              "en": "leaf",
+              "ipa": "[ˈblad]"
             },
             {
-              "sv": "jag förstår inte",
-              "pronHu": "jág förstór inte",
-              "hu": "nem értem",
-              "en": "I don't understand",
-              "ipa": "[jɑːɡ fœˈʂtoːr ˈɪntɛ]"
+              "sv": "rot",
+              "pronHu": "rot",
+              "hu": "gyökér",
+              "en": "root",
+              "ipa": "[ˈrot]"
             },
             {
-              "sv": "kan du säga det igen?",
-              "pronHu": "kan dü széjá dé igenn?",
-              "hu": "meg tudod ismételni?",
-              "en": "can you say that again?",
-              "ipa": "[kan dʉ ˈsɛj(a) deːt ɪˈjɛn]"
+              "sv": "gren",
+              "pronHu": "gren",
+              "hu": "ág",
+              "en": "branch",
+              "ipa": "[ˈgren]"
             },
             {
-              "sv": "ursäkta, var är toaletten?",
-              "pronHu": "űrszekta, vár ér toaletten?",
-              "hu": "elnézést, hol a WC?",
-              "en": "excuse me, where is the toilet?",
-              "ipa": "[ʉˈʂɛkta vɑːr ɛːr tʊaˈlɛtːɛn]"
+              "sv": "frö",
+              "pronHu": "frő",
+              "hu": "mag",
+              "en": "seed",
+              "ipa": "[ˈfrø]"
             },
             {
-              "sv": "vad kostar det?",
-              "pronHu": "vád kosztár dé?",
-              "hu": "mennyi az ára?",
-              "en": "how much is it?",
-              "ipa": "[vɑːd ˈkɔstar deːt]"
+              "sv": "jord",
+              "pronHu": "jord",
+              "hu": "talaj",
+              "en": "soil",
+              "ipa": "[ˈjord]"
             },
             {
-              "sv": "jag skulle vilja …",
-              "pronHu": "jág szkulle vilja …",
-              "hu": "szeretnék …",
-              "en": "I would like …",
-              "ipa": "[jɑːɡ ˈskʉlːɛ ˈvɪlja]"
+              "sv": "sten",
+              "pronHu": "sten",
+              "hu": "kő",
+              "en": "rock",
+              "ipa": "[ˈsten]"
             },
             {
-              "sv": "kan jag få …?",
-              "pronHu": "kan jág fó …?",
-              "hu": "kaphatok …?",
-              "en": "may I have …?",
-              "ipa": "[kan jɑːɡ foː]"
+              "sv": "sten",
+              "pronHu": "sten",
+              "hu": "kő",
+              "en": "stone",
+              "ipa": "[ˈsten]"
+            },
+            {
+              "sv": "berg",
+              "pronHu": "berg",
+              "hu": "hegy",
+              "en": "mountain",
+              "ipa": "[ˈberg]"
+            },
+            {
+              "sv": "flod",
+              "pronHu": "flod",
+              "hu": "folyó",
+              "en": "river",
+              "ipa": "[ˈflod]"
+            },
+            {
+              "sv": "sjö",
+              "pronHu": "hő",
+              "hu": "tó",
+              "en": "lake",
+              "ipa": "[ˈɧø]"
+            },
+            {
+              "sv": "ocean",
+              "pronHu": "okean",
+              "hu": "óceán",
+              "en": "ocean",
+              "ipa": "[ˈosean]"
+            },
+            {
+              "sv": "hav",
+              "pronHu": "hav",
+              "hu": "tenger",
+              "en": "sea",
+              "ipa": "[ˈhav]"
+            },
+            {
+              "sv": "strand",
+              "pronHu": "strand",
+              "hu": "strand",
+              "en": "beach",
+              "ipa": "[ˈstrand]"
+            },
+            {
+              "sv": "öken",
+              "pronHu": "őken",
+              "hu": "sivatag",
+              "en": "desert",
+              "ipa": "[ˈøɕen]"
+            },
+            {
+              "sv": "skog",
+              "pronHu": "szkog",
+              "hu": "erdő",
+              "en": "forest",
+              "ipa": "[ˈskog]"
+            },
+            {
+              "sv": "djungel",
+              "pronHu": "djungel",
+              "hu": "dzsungel",
+              "en": "jungle",
+              "ipa": "[ˈdjʉŋel]"
+            },
+            {
+              "sv": "regnskog",
+              "pronHu": "regnszkog",
+              "hu": "esőerdő",
+              "en": "rainforest",
+              "ipa": "[ˈregnskog]"
+            },
+            {
+              "sv": "ö",
+              "pronHu": "ő",
+              "hu": "sziget",
+              "en": "island",
+              "ipa": "[ˈø]"
+            },
+            {
+              "sv": "vulkan",
+              "pronHu": "vulkan",
+              "hu": "vulkán",
+              "en": "volcano",
+              "ipa": "[ˈvʉlkan]"
+            },
+            {
+              "sv": "jordbävning",
+              "pronHu": "jordbevning",
+              "hu": "földrengés",
+              "en": "earthquake",
+              "ipa": "[ˈjordbɛvniŋ]"
+            },
+            {
+              "sv": "storm",
+              "pronHu": "storm",
+              "hu": "vihar",
+              "en": "storm",
+              "ipa": "[ˈstorm]"
+            },
+            {
+              "sv": "vind",
+              "pronHu": "vind",
+              "hu": "szél",
+              "en": "wind",
+              "ipa": "[ˈvind]"
+            },
+            {
+              "sv": "regn",
+              "pronHu": "regn",
+              "hu": "eső",
+              "en": "rain",
+              "ipa": "[ˈregn]"
+            },
+            {
+              "sv": "snö",
+              "pronHu": "snő",
+              "hu": "hó",
+              "en": "snow",
+              "ipa": "[ˈsnø]"
+            },
+            {
+              "sv": "is",
+              "pronHu": "is",
+              "hu": "jég",
+              "en": "ice",
+              "ipa": "[ˈis]"
+            },
+            {
+              "sv": "åska",
+              "pronHu": "ószka",
+              "hu": "mennydörgés",
+              "en": "thunder",
+              "ipa": "[ˈoska]"
+            },
+            {
+              "sv": "blixt",
+              "pronHu": "blikst",
+              "hu": "villám",
+              "en": "lightning",
+              "ipa": "[ˈblikst]"
+            },
+            {
+              "sv": "regnbåge",
+              "pronHu": "regnbóge",
+              "hu": "szivárvány",
+              "en": "rainbow",
+              "ipa": "[ˈregnboje]"
+            },
+            {
+              "sv": "klimat",
+              "pronHu": "klimat",
+              "hu": "klíma",
+              "en": "climate",
+              "ipa": "[ˈklimat]"
+            },
+            {
+              "sv": "livsmiljö",
+              "pronHu": "livsmiljő",
+              "hu": "élőhely",
+              "en": "habitat",
+              "ipa": "[ˈlivsmiljø]"
+            },
+            {
+              "sv": "art",
+              "pronHu": "art",
+              "hu": "faj",
+              "en": "species",
+              "ipa": "[ˈart]"
+            }
+          ]
+        },
+        {
+          "id": "kornyezet",
+          "name": "Környezet",
+          "items": [
+            {
+              "sv": "natur",
+              "pronHu": "natur",
+              "hu": "természet",
+              "en": "nature",
+              "ipa": "[ˈnatʉr]"
+            },
+            {
+              "sv": "klimat",
+              "pronHu": "klimat",
+              "hu": "éghajlat",
+              "en": "climate",
+              "ipa": "[ˈklimat]"
+            },
+            {
+              "sv": "förorening",
+              "pronHu": "főrorening",
+              "hu": "szennyezés",
+              "en": "pollution",
+              "ipa": "[ˈføroreniŋ]"
+            },
+            {
+              "sv": "utsläpp",
+              "pronHu": "utslep",
+              "hu": "kibocsátás",
+              "en": "emissions",
+              "ipa": "[ˈʉtslɛpp]"
+            },
+            {
+              "sv": "växthus",
+              "pronHu": "veksthus",
+              "hu": "üvegház",
+              "en": "greenhouse",
+              "ipa": "[ˈvɛksthʉs]"
+            },
+            {
+              "sv": "kol",
+              "pronHu": "kol",
+              "hu": "szén",
+              "en": "carbon",
+              "ipa": "[ˈkol]"
+            },
+            {
+              "sv": "avtryck",
+              "pronHu": "avtrűk",
+              "hu": "lábnyom",
+              "en": "footprint",
+              "ipa": "[ˈavtrykk]"
+            },
+            {
+              "sv": "återvinning",
+              "pronHu": "ótervining",
+              "hu": "újrahasznosítás",
+              "en": "recycling",
+              "ipa": "[ˈotervinniŋ]"
+            },
+            {
+              "sv": "avfall",
+              "pronHu": "avfal",
+              "hu": "hulladék",
+              "en": "waste",
+              "ipa": "[ˈavfall]"
+            },
+            {
+              "sv": "skräp",
+              "pronHu": "szkrep",
+              "hu": "szemét",
+              "en": "rubbish",
+              "ipa": "[ˈskrɛp]"
+            },
+            {
+              "sv": "sopor",
+              "pronHu": "sopor",
+              "hu": "hulladék",
+              "en": "trash",
+              "ipa": "[ˈsopor]"
+            },
+            {
+              "sv": "nedskräpning",
+              "pronHu": "nedszkrepning",
+              "hu": "szemetelés",
+              "en": "litter",
+              "ipa": "[ˈnedskrɛpniŋ]"
+            },
+            {
+              "sv": "deponi",
+              "pronHu": "deponi",
+              "hu": "lerakó",
+              "en": "landfill",
+              "ipa": "[ˈdeponi]"
+            },
+            {
+              "sv": "kompost",
+              "pronHu": "kompost",
+              "hu": "komposzt",
+              "en": "compost",
+              "ipa": "[ˈkompost]"
+            },
+            {
+              "sv": "biologisk mångfald",
+              "pronHu": "biologiszk móngfald",
+              "hu": "biodiverzitás",
+              "en": "biodiversity",
+              "ipa": "[ˈbiolojisk ˈmoŋfald]"
+            },
+            {
+              "sv": "livsmiljö",
+              "pronHu": "livsmiljő",
+              "hu": "élőhely",
+              "en": "habitat",
+              "ipa": "[ˈlivsmiljø]"
+            },
+            {
+              "sv": "ekosystem",
+              "pronHu": "ekosűstem",
+              "hu": "ökoszisztéma",
+              "en": "ecosystem",
+              "ipa": "[ˈekosystem]"
+            },
+            {
+              "sv": "naturvård",
+              "pronHu": "naturvórd",
+              "hu": "természetvédelem",
+              "en": "conservation",
+              "ipa": "[ˈnatʉrvord]"
+            },
+            {
+              "sv": "förnybar",
+              "pronHu": "főrnűbar",
+              "hu": "megújuló",
+              "en": "renewable",
+              "ipa": "[ˈførnybar]"
+            },
+            {
+              "sv": "energi",
+              "pronHu": "energi",
+              "hu": "energia",
+              "en": "energy",
+              "ipa": "[ˈenerji]"
+            },
+            {
+              "sv": "solenergi",
+              "pronHu": "solenergi",
+              "hu": "napenergia",
+              "en": "solar",
+              "ipa": "[ˈsolenerji]"
+            },
+            {
+              "sv": "vindkraft",
+              "pronHu": "vindkraft",
+              "hu": "szélenergia",
+              "en": "wind",
+              "ipa": "[ˈvindkraft]"
+            },
+            {
+              "sv": "vattenkraft",
+              "pronHu": "vatenkraft",
+              "hu": "vízenergia",
+              "en": "hydro",
+              "ipa": "[ˈvattenkraft]"
+            },
+            {
+              "sv": "fossil",
+              "pronHu": "foszil",
+              "hu": "fosszilis",
+              "en": "fossil",
+              "ipa": "[ˈfossil]"
+            },
+            {
+              "sv": "bränsle",
+              "pronHu": "brensle",
+              "hu": "üzemanyag",
+              "en": "fuel",
+              "ipa": "[ˈbrɛnsle]"
+            },
+            {
+              "sv": "avskogning",
+              "pronHu": "avszkogning",
+              "hu": "erdőirtás",
+              "en": "deforestation",
+              "ipa": "[ˈavskogniŋ]"
+            },
+            {
+              "sv": "återbeskogning",
+              "pronHu": "óterbeszkogning",
+              "hu": "újraerdősítés",
+              "en": "reforestation",
+              "ipa": "[ˈoterbeskogniŋ]"
+            },
+            {
+              "sv": "utrotningshotad",
+              "pronHu": "utrotningshotad",
+              "hu": "veszélyeztetett",
+              "en": "endangered",
+              "ipa": "[ˈʉtrotniŋshotad]"
+            },
+            {
+              "sv": "art",
+              "pronHu": "art",
+              "hu": "faj",
+              "en": "species",
+              "ipa": "[ˈart]"
+            },
+            {
+              "sv": "hållbarhet",
+              "pronHu": "hólbarhet",
+              "hu": "fenntarthatóság",
+              "en": "sustainability",
+              "ipa": "[ˈhollbarhet]"
+            },
+            {
+              "sv": "ozon",
+              "pronHu": "oszon",
+              "hu": "ózon",
+              "en": "ozone",
+              "ipa": "[ˈoson]"
+            },
+            {
+              "sv": "torka",
+              "pronHu": "torka",
+              "hu": "aszály",
+              "en": "drought",
+              "ipa": "[ˈtorka]"
+            },
+            {
+              "sv": "översvämning",
+              "pronHu": "őversvemning",
+              "hu": "árvíz",
+              "en": "flood",
+              "ipa": "[ˈøversvɛmniŋ]"
+            },
+            {
+              "sv": "skogsbrand",
+              "pronHu": "szkogsbrand",
+              "hu": "erdőtűz",
+              "en": "wildfire",
+              "ipa": "[ˈskogsbrand]"
+            },
+            {
+              "sv": "jordbävning",
+              "pronHu": "jordbevning",
+              "hu": "földrengés",
+              "en": "earthquake",
+              "ipa": "[ˈjordbɛvniŋ]"
+            },
+            {
+              "sv": "tsunami",
+              "pronHu": "tsunami",
+              "hu": "cunami",
+              "en": "tsunami",
+              "ipa": "[ˈtsʉnami]"
+            },
+            {
+              "sv": "orkan",
+              "pronHu": "orkan",
+              "hu": "hurrikán",
+              "en": "hurricane",
+              "ipa": "[ˈorkan]"
             }
           ]
         }
       ]
     },
     {
-      "id": "ido",
-      "name": "Idő",
+      "id": "Tárgyak",
+      "name": "Tárgyak",
       "categories": [
         {
-          "id": "napok",
-          "name": "Napok",
+          "id": "haztartasi-gepek",
+          "name": "Háztartási gépek",
           "items": [
-            {"sv": "måndag", "pronHu": "mondag", "hu": "hétfő", "en": "Monday", "ipa": "[ˈmɔnːdɑg]"},
-            {"sv": "tisdag", "pronHu": "tízdág", "hu": "kedd", "en": "Tuesday", "ipa": "[ˈtiːsˌdɑg]"},
-            {"sv": "onsdag", "pronHu": "unsdág", "hu": "szerda", "en": "Wednesday", "ipa": "[ˈʊnːsˌdɑg]"},
-            {"sv": "torsdag", "pronHu": "túrsdág", "hu": "csütörtök", "en": "Thursday", "ipa": "[ˈtuːʂˌdɑg]"},
-            {"sv": "fredag", "pronHu": "frédág", "hu": "péntek", "en": "Friday", "ipa": "[ˈfreːˌdɑg]"},
-            {"sv": "lördag", "pronHu": "lőrdág", "hu": "szombat", "en": "Saturday", "ipa": "[ˈløːˌdɑg]"},
-            {"sv": "söndag", "pronHu": "szöndág", "hu": "vasárnap", "en": "Sunday", "ipa": "[ˈsœnˌdɑg]"},
-            {"sv": "vardag", "pronHu": "vórdág", "hu": "hétköznap", "en": "weekday", "ipa": "[ˈvɑːˌdɑg]"},
-            {"sv": "helg", "pronHu": "helj", "hu": "hétvége", "en": "weekend", "ipa": "[hɛlːj]"},
-            {"sv": "idag", "pronHu": "idág", "hu": "ma", "en": "today", "ipa": "[ɪˈdɑːɡ]"}
+            {
+              "sv": "kylskåp",
+              "pronHu": "kűlszkóp",
+              "hu": "hűtőszekrény",
+              "en": "fridge",
+              "ipa": "[ˈɕylskop]"
+            },
+            {
+              "sv": "frys",
+              "pronHu": "frűs",
+              "hu": "fagyasztó",
+              "en": "freezer",
+              "ipa": "[ˈfrys]"
+            },
+            {
+              "sv": "ugn",
+              "pronHu": "ugn",
+              "hu": "sütő",
+              "en": "oven",
+              "ipa": "[ˈʉgn]"
+            },
+            {
+              "sv": "spis",
+              "pronHu": "spis",
+              "hu": "tűzhely",
+              "en": "stove",
+              "ipa": "[ˈspis]"
+            },
+            {
+              "sv": "mikrovågsugn",
+              "pronHu": "mikrovógsugn",
+              "hu": "mikrohullámú sütő",
+              "en": "microwave",
+              "ipa": "[ˈmikrovogsʉgn]"
+            },
+            {
+              "sv": "brödrost",
+              "pronHu": "brődrost",
+              "hu": "kenyérpirító",
+              "en": "toaster",
+              "ipa": "[ˈbrødrost]"
+            },
+            {
+              "sv": "vattenkokare",
+              "pronHu": "vatenkokare",
+              "hu": "vízforraló",
+              "en": "kettle",
+              "ipa": "[ˈvattenkokare]"
+            },
+            {
+              "sv": "blender",
+              "pronHu": "blender",
+              "hu": "turmixgép",
+              "en": "blender",
+              "ipa": "[ˈblender]"
+            },
+            {
+              "sv": "elvisp",
+              "pronHu": "elvisp",
+              "hu": "kézi mixer",
+              "en": "mixer",
+              "ipa": "[ˈelvisp]"
+            },
+            {
+              "sv": "diskmaskin",
+              "pronHu": "diszkmaszkin",
+              "hu": "mosogatógép",
+              "en": "dishwasher",
+              "ipa": "[ˈdiskmaɧin]"
+            },
+            {
+              "sv": "tvättmaskin",
+              "pronHu": "tvetmaszkin",
+              "hu": "mosógép",
+              "en": "washing machine",
+              "ipa": "[ˈtvɛttmaɧin]"
+            },
+            {
+              "sv": "torktumlare",
+              "pronHu": "torktumlare",
+              "hu": "szárítógép",
+              "en": "dryer",
+              "ipa": "[ˈtorktʉmlare]"
+            },
+            {
+              "sv": "strykjärn",
+              "pronHu": "strűçern",
+              "hu": "vasaló",
+              "en": "iron",
+              "ipa": "[ˈstryɕɛrn]"
+            },
+            {
+              "sv": "dammsugare",
+              "pronHu": "damsugare",
+              "hu": "porszívó",
+              "en": "vacuum cleaner",
+              "ipa": "[ˈdammsʉgare]"
+            },
+            {
+              "sv": "fläkt",
+              "pronHu": "flekt",
+              "hu": "ventilátor",
+              "en": "fan",
+              "ipa": "[ˈflɛkt]"
+            },
+            {
+              "sv": "värmare",
+              "pronHu": "vermare",
+              "hu": "hősugárzó",
+              "en": "heater",
+              "ipa": "[ˈvɛrmare]"
+            },
+            {
+              "sv": "luftkonditionering",
+              "pronHu": "luftkonditionering",
+              "hu": "légkondicionáló",
+              "en": "air conditioner",
+              "ipa": "[ˈlʉftkonditioneriŋ]"
+            },
+            {
+              "sv": "element",
+              "pronHu": "element",
+              "hu": "radiátor",
+              "en": "radiator",
+              "ipa": "[ˈelement]"
+            },
+            {
+              "sv": "luftfuktare",
+              "pronHu": "luftfuktare",
+              "hu": "párásító",
+              "en": "humidifier",
+              "ipa": "[ˈlʉftfʉktare]"
+            },
+            {
+              "sv": "luftavfuktare",
+              "pronHu": "luftavfuktare",
+              "hu": "párátlanító",
+              "en": "dehumidifier",
+              "ipa": "[ˈlʉftavfʉktare]"
+            },
+            {
+              "sv": "kaffebryggare",
+              "pronHu": "kaffebrűggare",
+              "hu": "kávéfőző",
+              "en": "coffee maker",
+              "ipa": "[ˈkaffebryggare]"
+            },
+            {
+              "sv": "riskokare",
+              "pronHu": "riszkokare",
+              "hu": "rizsfőző",
+              "en": "rice cooker",
+              "ipa": "[ˈriskokare]"
+            },
+            {
+              "sv": "slowcooker",
+              "pronHu": "slovkooker",
+              "hu": "lassúfőző",
+              "en": "slow cooker",
+              "ipa": "[ˈslovkooɕer]"
+            },
+            {
+              "sv": "tryckkokare",
+              "pronHu": "trűkkokare",
+              "hu": "kukta",
+              "en": "pressure cooker",
+              "ipa": "[ˈtrykkkokare]"
+            },
+            {
+              "sv": "hårfön",
+              "pronHu": "hórfőn",
+              "hu": "hajszárító",
+              "en": "hairdryer",
+              "ipa": "[ˈhorføn]"
+            },
+            {
+              "sv": "eltandborste",
+              "pronHu": "eltandborste",
+              "hu": "elektromos fogkefe",
+              "en": "electric toothbrush",
+              "ipa": "[ˈeltandborste]"
+            },
+            {
+              "sv": "lampa",
+              "pronHu": "lampa",
+              "hu": "lámpa",
+              "en": "lamp",
+              "ipa": "[ˈlampa]"
+            },
+            {
+              "sv": "termostat",
+              "pronHu": "termostat",
+              "hu": "termosztát",
+              "en": "thermostat",
+              "ipa": "[ˈtermostat]"
+            },
+            {
+              "sv": "laddare",
+              "pronHu": "laddare",
+              "hu": "töltő",
+              "en": "charger",
+              "ipa": "[ˈladdare]"
+            },
+            {
+              "sv": "fjärrkontroll",
+              "pronHu": "fjerkontrol",
+              "hu": "távirányító",
+              "en": "remote control",
+              "ipa": "[ˈfjɛrrkontroll]"
+            }
           ]
         },
         {
-          "id": "honapok",
-          "name": "Hónapok",
+          "id": "epuletek",
+          "name": "Épületek",
           "items": [
-            {"sv": "januari", "pronHu": "jánuári", "hu": "január", "en": "January", "ipa": "[janʉˈɑːrɪ]"},
-            {"sv": "februari", "pronHu": "februári", "hu": "február", "en": "February", "ipa": "[fɛbrʉˈɑːrɪ]"},
-            {"sv": "mars", "pronHu": "más", "hu": "március", "en": "March", "ipa": "[marʂ]"},
-            {"sv": "april", "pronHu": "ápril", "hu": "április", "en": "April", "ipa": "[aˈprɪl]"},
-            {"sv": "maj", "pronHu": "máj", "hu": "május", "en": "May", "ipa": "[maj]"},
-            {"sv": "juni", "pronHu": "jűni", "hu": "június", "en": "June", "ipa": "[ˈjʉːnɪ]"},
-            {"sv": "juli", "pronHu": "jűli", "hu": "július", "en": "July", "ipa": "[ˈjʉːlɪ]"},
-            {"sv": "augusti", "pronHu": "auguszti", "hu": "augusztus", "en": "August", "ipa": "[aʊˈɡɵstɪ]"},
-            {"sv": "september", "pronHu": "szeptember", "hu": "szeptember", "en": "September", "ipa": "[sɛpˈtɛmːbɛr]"},
-            {"sv": "oktober", "pronHu": "október", "hu": "október", "en": "October", "ipa": "[ʊkˈtuːbɛr]"},
-            {"sv": "november", "pronHu": "november", "hu": "november", "en": "November", "ipa": "[nʊˈvɛmːbɛr]"},
-            {"sv": "december", "pronHu": "december", "hu": "december", "en": "December", "ipa": "[dɛˈsɛmːbɛr]"}
+            {
+              "sv": "hus",
+              "pronHu": "hus",
+              "hu": "ház",
+              "en": "house",
+              "ipa": "[ˈhʉs]"
+            },
+            {
+              "sv": "lägenhet",
+              "pronHu": "legenhet",
+              "hu": "lakás",
+              "en": "apartment",
+              "ipa": "[ˈlɛjenhet]"
+            },
+            {
+              "sv": "stuga",
+              "pronHu": "stuga",
+              "hu": "kunyhó",
+              "en": "cottage",
+              "ipa": "[ˈstʉga]"
+            },
+            {
+              "sv": "bungalow",
+              "pronHu": "bungalov",
+              "hu": "bungaló",
+              "en": "bungalow",
+              "ipa": "[ˈbʉŋalov]"
+            },
+            {
+              "sv": "villa",
+              "pronHu": "vila",
+              "hu": "villa",
+              "en": "villa",
+              "ipa": "[ˈvilla]"
+            },
+            {
+              "sv": "herrgård",
+              "pronHu": "hergórd",
+              "hu": "kúria",
+              "en": "mansion",
+              "ipa": "[ˈherrgord]"
+            },
+            {
+              "sv": "skyskrapa",
+              "pronHu": "szkűszkrapa",
+              "hu": "felhőkarcoló",
+              "en": "skyscraper",
+              "ipa": "[ˈɧyskrapa]"
+            },
+            {
+              "sv": "kontor",
+              "pronHu": "kontor",
+              "hu": "iroda",
+              "en": "office",
+              "ipa": "[ˈkontor]"
+            },
+            {
+              "sv": "fabrik",
+              "pronHu": "fabrik",
+              "hu": "gyár",
+              "en": "factory",
+              "ipa": "[ˈfabrik]"
+            },
+            {
+              "sv": "lager",
+              "pronHu": "lager",
+              "hu": "raktár",
+              "en": "warehouse",
+              "ipa": "[ˈlajer]"
+            },
+            {
+              "sv": "sjukhus",
+              "pronHu": "hukhus",
+              "hu": "kórház",
+              "en": "hospital",
+              "ipa": "[ˈɧʉkhʉs]"
+            },
+            {
+              "sv": "skola",
+              "pronHu": "szkola",
+              "hu": "iskola",
+              "en": "school",
+              "ipa": "[ˈskola]"
+            },
+            {
+              "sv": "universitet",
+              "pronHu": "universitet",
+              "hu": "egyetem",
+              "en": "university",
+              "ipa": "[ˈʉniversitet]"
+            },
+            {
+              "sv": "bibliotek",
+              "pronHu": "bibliotek",
+              "hu": "könyvtár",
+              "en": "library",
+              "ipa": "[ˈbibliotek]"
+            },
+            {
+              "sv": "kyrka",
+              "pronHu": "kűrka",
+              "hu": "templom",
+              "en": "church",
+              "ipa": "[ˈɕyrka]"
+            },
+            {
+              "sv": "moské",
+              "pronHu": "moszké",
+              "hu": "mecset",
+              "en": "mosque",
+              "ipa": "[ˈmoské]"
+            },
+            {
+              "sv": "tempel",
+              "pronHu": "tempel",
+              "hu": "templom",
+              "en": "temple",
+              "ipa": "[ˈtempel]"
+            },
+            {
+              "sv": "biograf",
+              "pronHu": "biograf",
+              "hu": "mozi",
+              "en": "cinema",
+              "ipa": "[ˈbiograf]"
+            },
+            {
+              "sv": "teater",
+              "pronHu": "teater",
+              "hu": "színház",
+              "en": "theatre",
+              "ipa": "[ˈteater]"
+            },
+            {
+              "sv": "museum",
+              "pronHu": "museum",
+              "hu": "múzeum",
+              "en": "museum",
+              "ipa": "[ˈmʉseʉm]"
+            },
+            {
+              "sv": "galleri",
+              "pronHu": "galeri",
+              "hu": "galéria",
+              "en": "gallery",
+              "ipa": "[ˈgalleri]"
+            },
+            {
+              "sv": "station",
+              "pronHu": "station",
+              "hu": "pályaudvar",
+              "en": "station",
+              "ipa": "[ˈstation]"
+            },
+            {
+              "sv": "flygplats",
+              "pronHu": "flűgplats",
+              "hu": "repülőtér",
+              "en": "airport",
+              "ipa": "[ˈflygplats]"
+            },
+            {
+              "sv": "stadion",
+              "pronHu": "stadion",
+              "hu": "stadion",
+              "en": "stadium",
+              "ipa": "[ˈstadion]"
+            },
+            {
+              "sv": "stormarknad",
+              "pronHu": "stormarknad",
+              "hu": "szupermarket",
+              "en": "supermarket",
+              "ipa": "[ˈstormarknad]"
+            },
+            {
+              "sv": "köpcentrum",
+              "pronHu": "kőpkentrum",
+              "hu": "bevásárlóközpont",
+              "en": "shopping mall",
+              "ipa": "[ˈɕøpsentrʉm]"
+            },
+            {
+              "sv": "hotell",
+              "pronHu": "hotel",
+              "hu": "szálloda",
+              "en": "hotel",
+              "ipa": "[ˈhotell]"
+            },
+            {
+              "sv": "vandrarhem",
+              "pronHu": "vandrarhem",
+              "hu": "hostel",
+              "en": "hostel",
+              "ipa": "[ˈvandrarhem]"
+            },
+            {
+              "sv": "postkontor",
+              "pronHu": "postkontor",
+              "hu": "posta",
+              "en": "post office",
+              "ipa": "[ˈpostkontor]"
+            },
+            {
+              "sv": "apotek",
+              "pronHu": "apotek",
+              "hu": "gyógyszertár",
+              "en": "pharmacy",
+              "ipa": "[ˈapotek]"
+            }
           ]
         },
         {
-          "id": "szamok-1-50",
-          "name": "Számok 1–50",
+          "id": "ruhazat",
+          "name": "Ruházat",
           "items": [
-            {"sv": "ett", "pronHu": "ett", "hu": "egy", "en": "one", "ipa": "[ɛtː]"},
-            {"sv": "två", "pronHu": "tvó", "hu": "kettő", "en": "two", "ipa": "[tvoː]"},
-            {"sv": "tre", "pronHu": "tré", "hu": "három", "en": "three", "ipa": "[treː]"},
-            {"sv": "fyra", "pronHu": "fűra", "hu": "négy", "en": "four", "ipa": "[ˈfyːra]"},
-            {"sv": "fem", "pronHu": "fem", "hu": "öt", "en": "five", "ipa": "[fɛm]"},
-            {"sv": "sex", "pronHu": "szex", "hu": "hat", "en": "six", "ipa": "[sɛks]"},
-            {"sv": "sju", "pronHu": "hű", "hu": "hét", "en": "seven", "ipa": "[ˈɧʉː]"},
-            {"sv": "åtta", "pronHu": "otta", "hu": "nyolc", "en": "eight", "ipa": "[ˈɔtːa]"},
-            {"sv": "nio", "pronHu": "níjó", "hu": "kilenc", "en": "nine", "ipa": "[ˈniːɔ]"},
-            {"sv": "tio", "pronHu": "tíjó", "hu": "tíz", "en": "ten", "ipa": "[ˈtiːɔ]"},
-            {"sv": "elva", "pronHu": "elva", "hu": "tizenegy", "en": "eleven", "ipa": "[ˈɛlva]"},
-            {"sv": "tolv", "pronHu": "tolv", "hu": "tizenkettő", "en": "twelve", "ipa": "[tɔlv]"},
-            {"sv": "tretton", "pronHu": "treton", "hu": "tizenhárom", "en": "thirteen", "ipa": "[ˈtrɛtːɔn]"},
-            {"sv": "fjorton", "pronHu": "fjurtón", "hu": "tizennégy", "en": "fourteen", "ipa": "[ˈfjʉːʈɔn]"},
-            {"sv": "femton", "pronHu": "femton", "hu": "tizenöt", "en": "fifteen", "ipa": "[ˈfɛmːtɔn]"},
-            {"sv": "sexton", "pronHu": "szexton", "hu": "tizenhat", "en": "sixteen", "ipa": "[ˈsɛkːstɔn]"},
-            {"sv": "sjutton", "pronHu": "hutton", "hu": "tizenhét", "en": "seventeen", "ipa": "[ˈɧʉtːɔn]"},
-            {"sv": "arton", "pronHu": "órton", "hu": "tizennyolc", "en": "eighteen", "ipa": "[ˈɑːʈɔn]"},
-            {"sv": "nitton", "pronHu": "niton", "hu": "tizenkilenc", "en": "nineteen", "ipa": "[ˈnɪtːɔn]"},
-            {"sv": "tjugo", "pronHu": "hűgó", "hu": "húsz", "en": "twenty", "ipa": "[ˈɕʉːɡʊ]"},
-            {"sv": "trettio", "pronHu": "trettió", "hu": "harminc", "en": "thirty", "ipa": "[ˈtrɛtːɪɔ]"},
             {
-              "sv": "trettioett",
-              "pronHu": "trettio ett",
-              "hu": "harmincegy",
-              "en": "thirty-one",
-              "ipa": "[ˈtrɛtːɪɔ] [ɛtː]"
+              "sv": "skjorta",
+              "pronHu": "horta",
+              "hu": "ing",
+              "en": "shirt",
+              "ipa": "[ˈɧorta]"
             },
             {
-              "sv": "trettiotvå",
-              "pronHu": "trettio två",
-              "hu": "harminckettő",
-              "en": "thirty-two",
-              "ipa": "[ˈtrɛtːɪɔ] [tvoː]"
+              "sv": "t-tröja",
+              "pronHu": "t-trőja",
+              "hu": "póló",
+              "en": "T-shirt",
+              "ipa": "[ˈt-ˈtrøja]"
             },
             {
-              "sv": "trettiotre",
-              "pronHu": "trettio tre",
-              "hu": "harminchárom",
-              "en": "thirty-three",
-              "ipa": "[ˈtrɛtːɪɔ] [treː]"
+              "sv": "blus",
+              "pronHu": "blus",
+              "hu": "blúz",
+              "en": "blouse",
+              "ipa": "[ˈblʉs]"
             },
             {
-              "sv": "trettiofyra",
-              "pronHu": "trettio fyra",
-              "hu": "harmincnégy",
-              "en": "thirty-four",
-              "ipa": "[ˈtrɛtːɪɔ] [ˈfyːra]"
+              "sv": "tröja",
+              "pronHu": "trőja",
+              "hu": "pulóver",
+              "en": "sweater",
+              "ipa": "[ˈtrøja]"
             },
             {
-              "sv": "trettiofem",
-              "pronHu": "trettio fem",
-              "hu": "harmincöt",
-              "en": "thirty-five",
-              "ipa": "[ˈtrɛtːɪɔ] [fɛm]"
+              "sv": "kofta",
+              "pronHu": "kofta",
+              "hu": "kardigán",
+              "en": "cardigan",
+              "ipa": "[ˈkofta]"
             },
             {
-              "sv": "trettiosex",
-              "pronHu": "trettio sex",
-              "hu": "harminchat",
-              "en": "thirty-six",
-              "ipa": "[ˈtrɛtːɪɔ] [sɛks]"
+              "sv": "jacka",
+              "pronHu": "jaka",
+              "hu": "dzseki",
+              "en": "jacket",
+              "ipa": "[ˈjakka]"
             },
             {
-              "sv": "trettiosju",
-              "pronHu": "trettio sju",
-              "hu": "harminchét",
-              "en": "thirty-seven",
-              "ipa": "[ˈtrɛtːɪɔ] [ˈɧʉː]"
+              "sv": "kappa",
+              "pronHu": "kapa",
+              "hu": "kabát",
+              "en": "coat",
+              "ipa": "[ˈkappa]"
             },
             {
-              "sv": "trettioåtta",
-              "pronHu": "trettio åtta",
-              "hu": "harmincnyolc",
-              "en": "thirty-eight",
-              "ipa": "[ˈtrɛtːɪɔ] [ˈɔtːa]"
+              "sv": "jeans",
+              "pronHu": "jeans",
+              "hu": "farmer",
+              "en": "jeans",
+              "ipa": "[ˈjeans]"
             },
             {
-              "sv": "trettionio",
-              "pronHu": "trettio nio",
-              "hu": "harminckilenc",
-              "en": "thirty-nine",
-              "ipa": "[ˈtrɛtːɪɔ] [ˈniːɔ]"
-            },
-            {"sv": "fyrtio", "pronHu": "fürtió", "hu": "negyven", "en": "forty", "ipa": "[ˈfʏʈɪɔ]"},
-            {"sv": "fyrtioett", "pronHu": "fyrtio ett", "hu": "negyvenegy", "en": "forty-one", "ipa": "[ˈfʏʈɪɔ] [ɛtː]"},
-            {
-              "sv": "fyrtiotvå",
-              "pronHu": "fyrtio två",
-              "hu": "negyvenkettő",
-              "en": "forty-two",
-              "ipa": "[ˈfʏʈɪɔ] [tvoː]"
+              "sv": "byxor",
+              "pronHu": "bűksor",
+              "hu": "nadrág",
+              "en": "trousers",
+              "ipa": "[ˈbyksor]"
             },
             {
-              "sv": "fyrtiotre",
-              "pronHu": "fyrtio tre",
-              "hu": "negyvenhárom",
-              "en": "forty-three",
-              "ipa": "[ˈfʏʈɪɔ] [treː]"
+              "sv": "shorts",
+              "pronHu": "shorts",
+              "hu": "rövidnadrág",
+              "en": "shorts",
+              "ipa": "[ˈshorts]"
             },
             {
-              "sv": "fyrtiofyra",
-              "pronHu": "fyrtio fyra",
-              "hu": "negyvennégy",
-              "en": "forty-four",
-              "ipa": "[ˈfʏʈɪɔ] [ˈfyːra]"
-            },
-            {"sv": "fyrtiofem", "pronHu": "fyrtio fem", "hu": "negyvenöt", "en": "forty-five", "ipa": "[ˈfʏʈɪɔ] [fɛm]"},
-            {
-              "sv": "fyrtiosex",
-              "pronHu": "fyrtio sex",
-              "hu": "negyvenhat",
-              "en": "forty-six",
-              "ipa": "[ˈfʏʈɪɔ] [sɛks]"
+              "sv": "kjol",
+              "pronHu": "çol",
+              "hu": "szoknya",
+              "en": "skirt",
+              "ipa": "[ˈɕol]"
             },
             {
-              "sv": "fyrtiosju",
-              "pronHu": "fyrtio sju",
-              "hu": "negyvenhét",
-              "en": "forty-seven",
-              "ipa": "[ˈfʏʈɪɔ] [ˈɧʉː]"
+              "sv": "klänning",
+              "pronHu": "klening",
+              "hu": "ruha",
+              "en": "dress",
+              "ipa": "[ˈklɛnniŋ]"
             },
             {
-              "sv": "fyrtioåtta",
-              "pronHu": "fyrtio åtta",
-              "hu": "negyvennyolc",
-              "en": "forty-eight",
-              "ipa": "[ˈfʏʈɪɔ] [ˈɔtːa]"
+              "sv": "kostym",
+              "pronHu": "kostűm",
+              "hu": "öltöny",
+              "en": "suit",
+              "ipa": "[ˈkostym]"
             },
             {
-              "sv": "fyrtionio",
-              "pronHu": "fyrtio nio",
-              "hu": "negyvenkilenc",
-              "en": "forty-nine",
-              "ipa": "[ˈfʏʈɪɔ] [ˈniːɔ]"
+              "sv": "slips",
+              "pronHu": "slips",
+              "hu": "nyakkendő",
+              "en": "tie",
+              "ipa": "[ˈslips]"
             },
-            {"sv": "femtio", "pronHu": "femció", "hu": "ötven", "en": "fifty", "ipa": "[ˈfɛmːtɪɔ]"}
+            {
+              "sv": "bälte",
+              "pronHu": "belte",
+              "hu": "öv",
+              "en": "belt",
+              "ipa": "[ˈbɛlte]"
+            },
+            {
+              "sv": "halsduk",
+              "pronHu": "halsduk",
+              "hu": "sál",
+              "en": "scarf",
+              "ipa": "[ˈhalsdʉk]"
+            },
+            {
+              "sv": "hatt",
+              "pronHu": "hat",
+              "hu": "kalap",
+              "en": "hat",
+              "ipa": "[ˈhatt]"
+            },
+            {
+              "sv": "keps",
+              "pronHu": "keps",
+              "hu": "sapka",
+              "en": "cap",
+              "ipa": "[ˈɕeps]"
+            },
+            {
+              "sv": "handskar",
+              "pronHu": "handszkar",
+              "hu": "kesztyű",
+              "en": "gloves",
+              "ipa": "[ˈhandskar]"
+            },
+            {
+              "sv": "strumpor",
+              "pronHu": "strumpor",
+              "hu": "zokni",
+              "en": "socks",
+              "ipa": "[ˈstrʉmpor]"
+            },
+            {
+              "sv": "skor",
+              "pronHu": "szkor",
+              "hu": "cipő",
+              "en": "shoes",
+              "ipa": "[ˈskor]"
+            },
+            {
+              "sv": "sneakers",
+              "pronHu": "sneakers",
+              "hu": "edzőcipő",
+              "en": "sneakers",
+              "ipa": "[ˈsneaɕers]"
+            },
+            {
+              "sv": "kängor",
+              "pronHu": "kengor",
+              "hu": "bakancs",
+              "en": "boots",
+              "ipa": "[ˈɕɛŋor]"
+            },
+            {
+              "sv": "sandaler",
+              "pronHu": "sandaler",
+              "hu": "szandál",
+              "en": "sandals",
+              "ipa": "[ˈsandaler]"
+            },
+            {
+              "sv": "klackar",
+              "pronHu": "klakar",
+              "hu": "magassarkú",
+              "en": "heels",
+              "ipa": "[ˈklakkar]"
+            },
+            {
+              "sv": "underkläder",
+              "pronHu": "underkleder",
+              "hu": "fehérnemű",
+              "en": "underwear",
+              "ipa": "[ˈʉnderklɛder]"
+            },
+            {
+              "sv": "bh",
+              "pronHu": "bh",
+              "hu": "melltartó",
+              "en": "bra",
+              "ipa": "[ˈbh]"
+            },
+            {
+              "sv": "kalsonger/trosor",
+              "pronHu": "kalsonger/trosor",
+              "hu": "alsónadrág/bugyi",
+              "en": "underpants",
+              "ipa": "[ˈkalsoŋer/trosor]"
+            },
+            {
+              "sv": "baddräkt",
+              "pronHu": "baddrekt",
+              "hu": "fürdőruha",
+              "en": "swimsuit",
+              "ipa": "[ˈbaddrɛkt]"
+            },
+            {
+              "sv": "pyjamas",
+              "pronHu": "pűjamas",
+              "hu": "pizsama",
+              "en": "pyjamas",
+              "ipa": "[ˈpyjamas]"
+            }
+          ]
+        },
+        {
+          "id": "etelek-es-italok",
+          "name": "Ételek és italok",
+          "items": [
+            {
+              "sv": "bröd",
+              "pronHu": "brőd",
+              "hu": "kenyér",
+              "en": "bread",
+              "ipa": "[ˈbrød]"
+            },
+            {
+              "sv": "smör",
+              "pronHu": "smőr",
+              "hu": "vaj",
+              "en": "butter",
+              "ipa": "[ˈsmør]"
+            },
+            {
+              "sv": "ost",
+              "pronHu": "ost",
+              "hu": "sajt",
+              "en": "cheese",
+              "ipa": "[ˈost]"
+            },
+            {
+              "sv": "mjölk",
+              "pronHu": "mjőlk",
+              "hu": "tej",
+              "en": "milk",
+              "ipa": "[ˈmjølk]"
+            },
+            {
+              "sv": "yoghurt",
+              "pronHu": "űoghurt",
+              "hu": "joghurt",
+              "en": "yoghurt",
+              "ipa": "[ˈyoghʉrt]"
+            },
+            {
+              "sv": "ägg",
+              "pronHu": "egg",
+              "hu": "tojás",
+              "en": "egg",
+              "ipa": "[ˈɛgg]"
+            },
+            {
+              "sv": "kött",
+              "pronHu": "kőt",
+              "hu": "hús",
+              "en": "meat",
+              "ipa": "[ˈɕøtt]"
+            },
+            {
+              "sv": "nötkött",
+              "pronHu": "nőtkőt",
+              "hu": "marhahús",
+              "en": "beef",
+              "ipa": "[ˈnøtɕøtt]"
+            },
+            {
+              "sv": "fläskkött",
+              "pronHu": "fleszkőt",
+              "hu": "sertéshús",
+              "en": "pork",
+              "ipa": "[ˈflɛskɕøtt]"
+            },
+            {
+              "sv": "kyckling",
+              "pronHu": "kűkling",
+              "hu": "csirke",
+              "en": "chicken",
+              "ipa": "[ˈɕykkliŋ]"
+            },
+            {
+              "sv": "fisk",
+              "pronHu": "fiszk",
+              "hu": "hal",
+              "en": "fish",
+              "ipa": "[ˈfisk]"
+            },
+            {
+              "sv": "ris",
+              "pronHu": "ris",
+              "hu": "rizs",
+              "en": "rice",
+              "ipa": "[ˈris]"
+            },
+            {
+              "sv": "pasta",
+              "pronHu": "pasta",
+              "hu": "tészta",
+              "en": "pasta",
+              "ipa": "[ˈpasta]"
+            },
+            {
+              "sv": "soppa",
+              "pronHu": "sopa",
+              "hu": "leves",
+              "en": "soup",
+              "ipa": "[ˈsoppa]"
+            },
+            {
+              "sv": "sallad",
+              "pronHu": "salad",
+              "hu": "saláta",
+              "en": "salad",
+              "ipa": "[ˈsallad]"
+            },
+            {
+              "sv": "frukt",
+              "pronHu": "frukt",
+              "hu": "gyümölcs",
+              "en": "fruit",
+              "ipa": "[ˈfrʉkt]"
+            },
+            {
+              "sv": "grönsak",
+              "pronHu": "grőnsak",
+              "hu": "zöldség",
+              "en": "vegetable",
+              "ipa": "[ˈgrønsak]"
+            },
+            {
+              "sv": "äpple",
+              "pronHu": "eple",
+              "hu": "alma",
+              "en": "apple",
+              "ipa": "[ˈɛpple]"
+            },
+            {
+              "sv": "banan",
+              "pronHu": "banan",
+              "hu": "banán",
+              "en": "banana",
+              "ipa": "[ˈbanan]"
+            },
+            {
+              "sv": "apelsin",
+              "pronHu": "apelsin",
+              "hu": "narancs",
+              "en": "orange",
+              "ipa": "[ˈapelsin]"
+            },
+            {
+              "sv": "tomat",
+              "pronHu": "tomat",
+              "hu": "paradicsom",
+              "en": "tomato",
+              "ipa": "[ˈtomat]"
+            },
+            {
+              "sv": "potatis",
+              "pronHu": "potatis",
+              "hu": "krumpli",
+              "en": "potato",
+              "ipa": "[ˈpotatis]"
+            },
+            {
+              "sv": "lök",
+              "pronHu": "lők",
+              "hu": "hagyma",
+              "en": "onion",
+              "ipa": "[ˈløk]"
+            },
+            {
+              "sv": "vitlök",
+              "pronHu": "vitlők",
+              "hu": "fokhagyma",
+              "en": "garlic",
+              "ipa": "[ˈvitløk]"
+            },
+            {
+              "sv": "paprika",
+              "pronHu": "paprika",
+              "hu": "paprika",
+              "en": "pepper",
+              "ipa": "[ˈpaprika]"
+            },
+            {
+              "sv": "morot",
+              "pronHu": "morot",
+              "hu": "répa",
+              "en": "carrot",
+              "ipa": "[ˈmorot]"
+            },
+            {
+              "sv": "gurka",
+              "pronHu": "gurka",
+              "hu": "uborka",
+              "en": "cucumber",
+              "ipa": "[ˈgʉrka]"
+            },
+            {
+              "sv": "kaffe",
+              "pronHu": "kaffe",
+              "hu": "kávé",
+              "en": "coffee",
+              "ipa": "[ˈkaffe]"
+            },
+            {
+              "sv": "te",
+              "pronHu": "te",
+              "hu": "tea",
+              "en": "tea",
+              "ipa": "[ˈte]"
+            },
+            {
+              "sv": "vatten",
+              "pronHu": "vaten",
+              "hu": "víz",
+              "en": "water",
+              "ipa": "[ˈvatten]"
+            }
+          ]
+        },
+        {
+          "id": "haz-es-otthon",
+          "name": "Ház és otthon",
+          "items": [
+            {
+              "sv": "hem",
+              "pronHu": "hem",
+              "hu": "otthon",
+              "en": "home",
+              "ipa": "[ˈhem]"
+            },
+            {
+              "sv": "hus",
+              "pronHu": "hus",
+              "hu": "ház",
+              "en": "house",
+              "ipa": "[ˈhʉs]"
+            },
+            {
+              "sv": "lägenhet",
+              "pronHu": "legenhet",
+              "hu": "lakás",
+              "en": "apartment",
+              "ipa": "[ˈlɛjenhet]"
+            },
+            {
+              "sv": "vardagsrum",
+              "pronHu": "vardagsrum",
+              "hu": "nappali",
+              "en": "living room",
+              "ipa": "[ˈvardagsrʉm]"
+            },
+            {
+              "sv": "sovrum",
+              "pronHu": "sovrum",
+              "hu": "hálószoba",
+              "en": "bedroom",
+              "ipa": "[ˈsovrʉm]"
+            },
+            {
+              "sv": "kök",
+              "pronHu": "kők",
+              "hu": "konyha",
+              "en": "kitchen",
+              "ipa": "[ˈɕøk]"
+            },
+            {
+              "sv": "badrum",
+              "pronHu": "badrum",
+              "hu": "fürdőszoba",
+              "en": "bathroom",
+              "ipa": "[ˈbadrʉm]"
+            },
+            {
+              "sv": "hall",
+              "pronHu": "hal",
+              "hu": "előszoba",
+              "en": "hallway",
+              "ipa": "[ˈhall]"
+            },
+            {
+              "sv": "balkong",
+              "pronHu": "balkong",
+              "hu": "erkély",
+              "en": "balcony",
+              "ipa": "[ˈbalkoŋ]"
+            },
+            {
+              "sv": "trädgård",
+              "pronHu": "tredgórd",
+              "hu": "kert",
+              "en": "garden",
+              "ipa": "[ˈtrɛdgord]"
+            },
+            {
+              "sv": "garage",
+              "pronHu": "garage",
+              "hu": "garázs",
+              "en": "garage",
+              "ipa": "[ˈgaraje]"
+            },
+            {
+              "sv": "vind",
+              "pronHu": "vind",
+              "hu": "padlás",
+              "en": "attic",
+              "ipa": "[ˈvind]"
+            },
+            {
+              "sv": "källare",
+              "pronHu": "kelare",
+              "hu": "pince",
+              "en": "basement",
+              "ipa": "[ˈɕɛllare]"
+            },
+            {
+              "sv": "soffa",
+              "pronHu": "soffa",
+              "hu": "kanapé",
+              "en": "sofa",
+              "ipa": "[ˈsoffa]"
+            },
+            {
+              "sv": "fåtölj",
+              "pronHu": "fótőlj",
+              "hu": "fotel",
+              "en": "armchair",
+              "ipa": "[ˈfotølj]"
+            },
+            {
+              "sv": "bord",
+              "pronHu": "bord",
+              "hu": "asztal",
+              "en": "table",
+              "ipa": "[ˈbord]"
+            },
+            {
+              "sv": "skrivbord",
+              "pronHu": "szkrivbord",
+              "hu": "íróasztal",
+              "en": "desk",
+              "ipa": "[ˈskrivbord]"
+            },
+            {
+              "sv": "stol",
+              "pronHu": "stol",
+              "hu": "szék",
+              "en": "chair",
+              "ipa": "[ˈstol]"
+            },
+            {
+              "sv": "garderob",
+              "pronHu": "garderob",
+              "hu": "gardrób",
+              "en": "wardrobe",
+              "ipa": "[ˈgarderob]"
+            },
+            {
+              "sv": "skåp",
+              "pronHu": "szkóp",
+              "hu": "szekrény",
+              "en": "cupboard",
+              "ipa": "[ˈskop]"
+            },
+            {
+              "sv": "hylla",
+              "pronHu": "hűla",
+              "hu": "polc",
+              "en": "shelf",
+              "ipa": "[ˈhylla]"
+            },
+            {
+              "sv": "låda",
+              "pronHu": "lóda",
+              "hu": "fiók",
+              "en": "drawer",
+              "ipa": "[ˈloda]"
+            },
+            {
+              "sv": "säng",
+              "pronHu": "seng",
+              "hu": "ágy",
+              "en": "bed",
+              "ipa": "[ˈsɛŋ]"
+            },
+            {
+              "sv": "kudde",
+              "pronHu": "kudde",
+              "hu": "párna",
+              "en": "pillow",
+              "ipa": "[ˈkʉdde]"
+            },
+            {
+              "sv": "filt",
+              "pronHu": "filt",
+              "hu": "takaró",
+              "en": "blanket",
+              "ipa": "[ˈfilt]"
+            },
+            {
+              "sv": "täcke",
+              "pronHu": "teke",
+              "hu": "paplan",
+              "en": "duvet",
+              "ipa": "[ˈtɛkɕe]"
+            },
+            {
+              "sv": "gardin",
+              "pronHu": "gardin",
+              "hu": "függöny",
+              "en": "curtain",
+              "ipa": "[ˈgardin]"
+            },
+            {
+              "sv": "matta",
+              "pronHu": "mata",
+              "hu": "szőnyeg",
+              "en": "carpet",
+              "ipa": "[ˈmatta]"
+            },
+            {
+              "sv": "dörr",
+              "pronHu": "dőr",
+              "hu": "ajtó",
+              "en": "door",
+              "ipa": "[ˈdørr]"
+            },
+            {
+              "sv": "fönster",
+              "pronHu": "főnster",
+              "hu": "ablak",
+              "en": "window",
+              "ipa": "[ˈfønster]"
+            }
+          ]
+        },
+        {
+          "id": "technologia-es-kommunikacio",
+          "name": "Technológia és kommunikáció",
+          "items": [
+            {
+              "sv": "dator",
+              "pronHu": "dator",
+              "hu": "számítógép",
+              "en": "computer",
+              "ipa": "[ˈdator]"
+            },
+            {
+              "sv": "laptop",
+              "pronHu": "laptop",
+              "hu": "laptop",
+              "en": "laptop",
+              "ipa": "[ˈlaptop]"
+            },
+            {
+              "sv": "surfplatta",
+              "pronHu": "surfplata",
+              "hu": "táblagép",
+              "en": "tablet",
+              "ipa": "[ˈsʉrfplatta]"
+            },
+            {
+              "sv": "smartphone",
+              "pronHu": "smartphone",
+              "hu": "okostelefon",
+              "en": "smartphone",
+              "ipa": "[ˈsmartphone]"
+            },
+            {
+              "sv": "skärm",
+              "pronHu": "szkerm",
+              "hu": "képernyő",
+              "en": "screen",
+              "ipa": "[ˈɧɛrm]"
+            },
+            {
+              "sv": "tangentbord",
+              "pronHu": "tangentbord",
+              "hu": "billentyűzet",
+              "en": "keyboard",
+              "ipa": "[ˈtaŋentbord]"
+            },
+            {
+              "sv": "mus",
+              "pronHu": "mus",
+              "hu": "egér",
+              "en": "mouse",
+              "ipa": "[ˈmʉs]"
+            },
+            {
+              "sv": "laddare",
+              "pronHu": "laddare",
+              "hu": "töltő",
+              "en": "charger",
+              "ipa": "[ˈladdare]"
+            },
+            {
+              "sv": "batteri",
+              "pronHu": "bateri",
+              "hu": "akkumulátor",
+              "en": "battery",
+              "ipa": "[ˈbatteri]"
+            },
+            {
+              "sv": "programvara",
+              "pronHu": "programvara",
+              "hu": "szoftver",
+              "en": "software",
+              "ipa": "[ˈprogramvara]"
+            },
+            {
+              "sv": "hårdvara",
+              "pronHu": "hórdvara",
+              "hu": "hardver",
+              "en": "hardware",
+              "ipa": "[ˈhordvara]"
+            },
+            {
+              "sv": "app",
+              "pronHu": "ap",
+              "hu": "alkalmazás",
+              "en": "app",
+              "ipa": "[ˈapp]"
+            },
+            {
+              "sv": "program",
+              "pronHu": "program",
+              "hu": "program",
+              "en": "program",
+              "ipa": "[ˈprogram]"
+            },
+            {
+              "sv": "fil",
+              "pronHu": "fil",
+              "hu": "fájl",
+              "en": "file",
+              "ipa": "[ˈfil]"
+            },
+            {
+              "sv": "mapp",
+              "pronHu": "map",
+              "hu": "mappa",
+              "en": "folder",
+              "ipa": "[ˈmapp]"
+            },
+            {
+              "sv": "nedladdning",
+              "pronHu": "nedladdning",
+              "hu": "letöltés",
+              "en": "download",
+              "ipa": "[ˈnedladdniŋ]"
+            },
+            {
+              "sv": "uppladdning",
+              "pronHu": "upladdning",
+              "hu": "feltöltés",
+              "en": "upload",
+              "ipa": "[ˈʉppladdniŋ]"
+            },
+            {
+              "sv": "installera",
+              "pronHu": "instalera",
+              "hu": "telepít",
+              "en": "install",
+              "ipa": "[ˈinstallera]"
+            },
+            {
+              "sv": "uppdatering",
+              "pronHu": "updatering",
+              "hu": "frissítés",
+              "en": "update",
+              "ipa": "[ˈʉppdateriŋ]"
+            },
+            {
+              "sv": "nätverk",
+              "pronHu": "netverk",
+              "hu": "hálózat",
+              "en": "network",
+              "ipa": "[ˈnɛtverk]"
+            },
+            {
+              "sv": "internet",
+              "pronHu": "internet",
+              "hu": "internet",
+              "en": "internet",
+              "ipa": "[ˈinternet]"
+            },
+            {
+              "sv": "wifi",
+              "pronHu": "vifi",
+              "hu": "wifi",
+              "en": "Wi-Fi",
+              "ipa": "[ˈvifi]"
+            },
+            {
+              "sv": "hemsida",
+              "pronHu": "hemsida",
+              "hu": "weboldal",
+              "en": "website",
+              "ipa": "[ˈhemsida]"
+            },
+            {
+              "sv": "webbläsare",
+              "pronHu": "vebblesare",
+              "hu": "böngésző",
+              "en": "browser",
+              "ipa": "[ˈvebblɛsare]"
+            },
+            {
+              "sv": "e-post",
+              "pronHu": "e-post",
+              "hu": "e-mail",
+              "en": "email",
+              "ipa": "[ˈe-ˈpost]"
+            },
+            {
+              "sv": "meddelande",
+              "pronHu": "meddelande",
+              "hu": "üzenet",
+              "en": "message",
+              "ipa": "[ˈmeddelande]"
+            },
+            {
+              "sv": "chatt",
+              "pronHu": "khat",
+              "hu": "csevegés",
+              "en": "chat",
+              "ipa": "[ˈɧatt]"
+            },
+            {
+              "sv": "samtal",
+              "pronHu": "samtal",
+              "hu": "hívás",
+              "en": "call",
+              "ipa": "[ˈsamtal]"
+            },
+            {
+              "sv": "video",
+              "pronHu": "video",
+              "hu": "videó",
+              "en": "video",
+              "ipa": "[ˈvideo]"
+            },
+            {
+              "sv": "moln",
+              "pronHu": "moln",
+              "hu": "felhő",
+              "en": "cloud",
+              "ipa": "[ˈmoln]"
+            }
+          ]
+        },
+        {
+          "id": "utazas-es-kozlekedes",
+          "name": "Utazás és közlekedés",
+          "items": [
+            {
+              "sv": "resa",
+              "pronHu": "resa",
+              "hu": "utazás",
+              "en": "travel",
+              "ipa": "[ˈresa]"
+            },
+            {
+              "sv": "utflykt",
+              "pronHu": "utflűkt",
+              "hu": "kirándulás",
+              "en": "trip",
+              "ipa": "[ˈʉtflykt]"
+            },
+            {
+              "sv": "resa",
+              "pronHu": "resa",
+              "hu": "utazás",
+              "en": "journey",
+              "ipa": "[ˈresa]"
+            },
+            {
+              "sv": "tur",
+              "pronHu": "tur",
+              "hu": "túra",
+              "en": "tour",
+              "ipa": "[ˈtʉr]"
+            },
+            {
+              "sv": "semester",
+              "pronHu": "semester",
+              "hu": "nyaralás",
+              "en": "holiday",
+              "ipa": "[ˈsemester]"
+            },
+            {
+              "sv": "biljett",
+              "pronHu": "biljet",
+              "hu": "jegy",
+              "en": "ticket",
+              "ipa": "[ˈbiljett]"
+            },
+            {
+              "sv": "bokning",
+              "pronHu": "bokning",
+              "hu": "foglalás",
+              "en": "booking",
+              "ipa": "[ˈbokniŋ]"
+            },
+            {
+              "sv": "pass",
+              "pronHu": "pasz",
+              "hu": "útlevél",
+              "en": "passport",
+              "ipa": "[ˈpass]"
+            },
+            {
+              "sv": "visum",
+              "pronHu": "visum",
+              "hu": "vízum",
+              "en": "visa",
+              "ipa": "[ˈvisʉm]"
+            },
+            {
+              "sv": "bagage",
+              "pronHu": "bagage",
+              "hu": "poggyász",
+              "en": "luggage",
+              "ipa": "[ˈbagaje]"
+            },
+            {
+              "sv": "resväska",
+              "pronHu": "resveszka",
+              "hu": "bőrönd",
+              "en": "suitcase",
+              "ipa": "[ˈresvɛska]"
+            },
+            {
+              "sv": "ryggsäck",
+              "pronHu": "rűggsek",
+              "hu": "hátizsák",
+              "en": "backpack",
+              "ipa": "[ˈryggsɛkk]"
+            },
+            {
+              "sv": "karta",
+              "pronHu": "karta",
+              "hu": "térkép",
+              "en": "map",
+              "ipa": "[ˈkarta]"
+            },
+            {
+              "sv": "guide",
+              "pronHu": "guide",
+              "hu": "idegenvezető/útikönyv",
+              "en": "guide",
+              "ipa": "[ˈgʉide]"
+            },
+            {
+              "sv": "reseplan",
+              "pronHu": "reseplan",
+              "hu": "útiterv",
+              "en": "itinerary",
+              "ipa": "[ˈreseplan]"
+            },
+            {
+              "sv": "hotell",
+              "pronHu": "hotel",
+              "hu": "szálloda",
+              "en": "hotel",
+              "ipa": "[ˈhotell]"
+            },
+            {
+              "sv": "vandrarhem",
+              "pronHu": "vandrarhem",
+              "hu": "hostel",
+              "en": "hostel",
+              "ipa": "[ˈvandrarhem]"
+            },
+            {
+              "sv": "flygplats",
+              "pronHu": "flűgplats",
+              "hu": "repülőtér",
+              "en": "airport",
+              "ipa": "[ˈflygplats]"
+            },
+            {
+              "sv": "station",
+              "pronHu": "station",
+              "hu": "állomás",
+              "en": "station",
+              "ipa": "[ˈstation]"
+            },
+            {
+              "sv": "plattform",
+              "pronHu": "platform",
+              "hu": "peron",
+              "en": "platform",
+              "ipa": "[ˈplattform]"
+            },
+            {
+              "sv": "terminal",
+              "pronHu": "terminal",
+              "hu": "terminál",
+              "en": "terminal",
+              "ipa": "[ˈterminal]"
+            },
+            {
+              "sv": "flyg",
+              "pronHu": "flűg",
+              "hu": "repülőjárat",
+              "en": "flight",
+              "ipa": "[ˈflyg]"
+            },
+            {
+              "sv": "ombordstigning",
+              "pronHu": "ombordstigning",
+              "hu": "beszállás",
+              "en": "boarding",
+              "ipa": "[ˈombordstigniŋ]"
+            },
+            {
+              "sv": "avgång",
+              "pronHu": "avgóng",
+              "hu": "indulás",
+              "en": "departure",
+              "ipa": "[ˈavgoŋ]"
+            },
+            {
+              "sv": "ankomst",
+              "pronHu": "ankomst",
+              "hu": "érkezés",
+              "en": "arrival",
+              "ipa": "[ˈankomst]"
+            },
+            {
+              "sv": "försening",
+              "pronHu": "főrsening",
+              "hu": "késés",
+              "en": "delay",
+              "ipa": "[ˈførseniŋ]"
+            },
+            {
+              "sv": "tull",
+              "pronHu": "tul",
+              "hu": "vám",
+              "en": "customs",
+              "ipa": "[ˈtʉll]"
+            },
+            {
+              "sv": "taxi",
+              "pronHu": "taksi",
+              "hu": "taxi",
+              "en": "taxi",
+              "ipa": "[ˈtaksi]"
+            },
+            {
+              "sv": "buss",
+              "pronHu": "busz",
+              "hu": "busz",
+              "en": "bus",
+              "ipa": "[ˈbʉss]"
+            },
+            {
+              "sv": "tåg",
+              "pronHu": "tóg",
+              "hu": "vonat",
+              "en": "train",
+              "ipa": "[ˈtog]"
+            }
+          ]
+        },
+        {
+          "id": "szemelyes-erzesek-velemenyek-es-tapasztalatok",
+          "name": "Személyes érzések, vélemények és tapasztalatok",
+          "items": [
+            {
+              "sv": "känsla",
+              "pronHu": "kensla",
+              "hu": "érzés",
+              "en": "feeling",
+              "ipa": "[ˈɕɛnsla]"
+            },
+            {
+              "sv": "emotion",
+              "pronHu": "emotion",
+              "hu": "érzelem",
+              "en": "emotion",
+              "ipa": "[ˈemotion]"
+            },
+            {
+              "sv": "glad",
+              "pronHu": "glad",
+              "hu": "boldog",
+              "en": "happy",
+              "ipa": "[ˈglad]"
+            },
+            {
+              "sv": "ledsen",
+              "pronHu": "ledsen",
+              "hu": "szomorú",
+              "en": "sad",
+              "ipa": "[ˈledsen]"
+            },
+            {
+              "sv": "arg",
+              "pronHu": "arg",
+              "hu": "dühös",
+              "en": "angry",
+              "ipa": "[ˈarg]"
+            },
+            {
+              "sv": "rädd",
+              "pronHu": "redd",
+              "hu": "félős",
+              "en": "afraid",
+              "ipa": "[ˈrɛdd]"
+            },
+            {
+              "sv": "orolig",
+              "pronHu": "orolig",
+              "hu": "aggódó",
+              "en": "worried",
+              "ipa": "[ˈorolig]"
+            },
+            {
+              "sv": "upprymd",
+              "pronHu": "uprűmd",
+              "hu": "izgatott",
+              "en": "excited",
+              "ipa": "[ˈʉpprymd]"
+            },
+            {
+              "sv": "förvånad",
+              "pronHu": "főrvónad",
+              "hu": "meglepett",
+              "en": "surprised",
+              "ipa": "[ˈførvonad]"
+            },
+            {
+              "sv": "uttråkad",
+              "pronHu": "utrókad",
+              "hu": "unott",
+              "en": "bored",
+              "ipa": "[ˈʉttrokad]"
+            },
+            {
+              "sv": "trött",
+              "pronHu": "trőt",
+              "hu": "fáradt",
+              "en": "tired",
+              "ipa": "[ˈtrøtt]"
+            },
+            {
+              "sv": "avslappnad",
+              "pronHu": "avslapnad",
+              "hu": "ellazult",
+              "en": "relaxed",
+              "ipa": "[ˈavslappnad]"
+            },
+            {
+              "sv": "lugn",
+              "pronHu": "lugn",
+              "hu": "nyugodt",
+              "en": "calm",
+              "ipa": "[ˈlʉgn]"
+            },
+            {
+              "sv": "stressad",
+              "pronHu": "streszad",
+              "hu": "stresszes",
+              "en": "stressed",
+              "ipa": "[ˈstressad]"
+            },
+            {
+              "sv": "självsäker",
+              "pronHu": "helvseker",
+              "hu": "magabiztos",
+              "en": "confident",
+              "ipa": "[ˈɧɛlvsɛɕer]"
+            },
+            {
+              "sv": "blyg",
+              "pronHu": "blűg",
+              "hu": "félénk",
+              "en": "shy",
+              "ipa": "[ˈblyg]"
+            },
+            {
+              "sv": "stolt",
+              "pronHu": "stolt",
+              "hu": "büszke",
+              "en": "proud",
+              "ipa": "[ˈstolt]"
+            },
+            {
+              "sv": "skamsen",
+              "pronHu": "szkamsen",
+              "hu": "szégyenkező",
+              "en": "ashamed",
+              "ipa": "[ˈskamsen]"
+            },
+            {
+              "sv": "skyldig",
+              "pronHu": "szkűldig",
+              "hu": "bűnös",
+              "en": "guilty",
+              "ipa": "[ˈɧyldig]"
+            },
+            {
+              "sv": "kärlek",
+              "pronHu": "kerlek",
+              "hu": "szeretet",
+              "en": "love",
+              "ipa": "[ˈɕɛrlek]"
+            },
+            {
+              "sv": "hat",
+              "pronHu": "hat",
+              "hu": "gyűlölet",
+              "en": "hate",
+              "ipa": "[ˈhat]"
+            },
+            {
+              "sv": "gilla",
+              "pronHu": "gila",
+              "hu": "kedvel",
+              "en": "like",
+              "ipa": "[ˈjilla]"
+            },
+            {
+              "sv": "ogilla",
+              "pronHu": "ogila",
+              "hu": "nem kedvel",
+              "en": "dislike",
+              "ipa": "[ˈojilla]"
+            },
+            {
+              "sv": "föredra",
+              "pronHu": "főredra",
+              "hu": "előnyben részesít",
+              "en": "prefer",
+              "ipa": "[ˈføredra]"
+            },
+            {
+              "sv": "åsikt",
+              "pronHu": "ósikt",
+              "hu": "vélemény",
+              "en": "opinion",
+              "ipa": "[ˈosikt]"
+            },
+            {
+              "sv": "tro",
+              "pronHu": "tro",
+              "hu": "hisz",
+              "en": "believe",
+              "ipa": "[ˈtro]"
+            },
+            {
+              "sv": "tänka",
+              "pronHu": "tenka",
+              "hu": "gondol",
+              "en": "think",
+              "ipa": "[ˈtɛnka]"
+            },
+            {
+              "sv": "gissa",
+              "pronHu": "gisza",
+              "hu": "tippel",
+              "en": "guess",
+              "ipa": "[ˈjissa]"
+            },
+            {
+              "sv": "komma ihåg",
+              "pronHu": "koma ihóg",
+              "hu": "emlékszik",
+              "en": "remember",
+              "ipa": "[ˈkomma ˈihog]"
+            },
+            {
+              "sv": "glömma",
+              "pronHu": "glőma",
+              "hu": "elfelejt",
+              "en": "forget",
+              "ipa": "[ˈglømma]"
+            },
+            {
+              "sv": "erfarenhet",
+              "pronHu": "erfarenhet",
+              "hu": "tapasztalat",
+              "en": "experience",
+              "ipa": "[ˈerfarenhet]"
+            },
+            {
+              "sv": "minne",
+              "pronHu": "mine",
+              "hu": "emlék",
+              "en": "memory",
+              "ipa": "[ˈminne]"
+            },
+            {
+              "sv": "hopp",
+              "pronHu": "hop",
+              "hu": "remény",
+              "en": "hope",
+              "ipa": "[ˈhopp]"
+            },
+            {
+              "sv": "önskan",
+              "pronHu": "őnszkan",
+              "hu": "kívánság",
+              "en": "wish",
+              "ipa": "[ˈønskan]"
+            },
+            {
+              "sv": "dröm",
+              "pronHu": "drőm",
+              "hu": "álom",
+              "en": "dream",
+              "ipa": "[ˈdrøm]"
+            },
+            {
+              "sv": "ånger",
+              "pronHu": "ónger",
+              "hu": "megbánás",
+              "en": "regret",
+              "ipa": "[ˈoŋer]"
+            }
+          ]
+        },
+
+        {
+          "id": "szolgaltatasok",
+          "name": "Szolgáltatások",
+          "items": [
+            {
+              "sv": "tjänst",
+              "pronHu": "çenst",
+              "hu": "szolgáltatás",
+              "en": "service",
+              "ipa": "[ˈɕɛnst]"
+            },
+            {
+              "sv": "kund",
+              "pronHu": "kund",
+              "hu": "ügyfél",
+              "en": "customer",
+              "ipa": "[ˈkʉnd]"
+            },
+            {
+              "sv": "support",
+              "pronHu": "suport",
+              "hu": "támogatás",
+              "en": "support",
+              "ipa": "[ˈsʉpport]"
+            },
+            {
+              "sv": "kundtjänst",
+              "pronHu": "kundçenst",
+              "hu": "ügyfélszolgálat",
+              "en": "helpdesk",
+              "ipa": "[ˈkʉndɕɛnst]"
+            },
+            {
+              "sv": "leverans",
+              "pronHu": "leverans",
+              "hu": "kiszállítás",
+              "en": "delivery",
+              "ipa": "[ˈleverans]"
+            },
+            {
+              "sv": "reparation",
+              "pronHu": "reparation",
+              "hu": "javítás",
+              "en": "repair",
+              "ipa": "[ˈreparation]"
+            },
+            {
+              "sv": "underhåll",
+              "pronHu": "underhól",
+              "hu": "karbantartás",
+              "en": "maintenance",
+              "ipa": "[ˈʉnderholl]"
+            },
+            {
+              "sv": "städning",
+              "pronHu": "stedning",
+              "hu": "takarítás",
+              "en": "cleaning",
+              "ipa": "[ˈstɛdniŋ]"
+            },
+            {
+              "sv": "catering",
+              "pronHu": "katering",
+              "hu": "vendéglátás",
+              "en": "catering",
+              "ipa": "[ˈkateriŋ]"
+            },
+            {
+              "sv": "tvättservice",
+              "pronHu": "tvetservike",
+              "hu": "mosoda",
+              "en": "laundry",
+              "ipa": "[ˈtvɛttservise]"
+            },
+            {
+              "sv": "frisör",
+              "pronHu": "frisőr",
+              "hu": "fodrász",
+              "en": "hairdresser",
+              "ipa": "[ˈfrisør]"
+            },
+            {
+              "sv": "barberare",
+              "pronHu": "barberare",
+              "hu": "borbély",
+              "en": "barber",
+              "ipa": "[ˈbarberare]"
+            },
+            {
+              "sv": "skönhetssalong",
+              "pronHu": "hőnhetszalong",
+              "hu": "szépségszalon",
+              "en": "beauty salon",
+              "ipa": "[ˈɧønhetssaloŋ]"
+            },
+            {
+              "sv": "spa",
+              "pronHu": "spa",
+              "hu": "fürdő/spa",
+              "en": "spa",
+              "ipa": "[ˈspa]"
+            },
+            {
+              "sv": "barnomsorg",
+              "pronHu": "barnomsorg",
+              "hu": "gyermekgondozás",
+              "en": "childcare",
+              "ipa": "[ˈbarnomsorg]"
+            },
+            {
+              "sv": "läxhjälp",
+              "pronHu": "lekshjelp",
+              "hu": "korrepetálás",
+              "en": "tutoring",
+              "ipa": "[ˈlɛkshjɛlp]"
+            },
+            {
+              "sv": "konsulttjänst",
+              "pronHu": "konsultçenst",
+              "hu": "tanácsadás",
+              "en": "consulting",
+              "ipa": "[ˈkonsʉltɕɛnst]"
+            },
+            {
+              "sv": "banktjänster",
+              "pronHu": "bankçenster",
+              "hu": "banki szolgáltatások",
+              "en": "banking",
+              "ipa": "[ˈbankɕɛnster]"
+            },
+            {
+              "sv": "försäkring",
+              "pronHu": "főrsekring",
+              "hu": "biztosítás",
+              "en": "insurance",
+              "ipa": "[ˈførsɛkriŋ]"
+            },
+            {
+              "sv": "posttjänster",
+              "pronHu": "postçenster",
+              "hu": "postai szolgáltatás",
+              "en": "postal",
+              "ipa": "[ˈpostɕɛnster]"
+            },
+            {
+              "sv": "bud",
+              "pronHu": "bud",
+              "hu": "futár",
+              "en": "courier",
+              "ipa": "[ˈbʉd]"
+            },
+            {
+              "sv": "nödsituation",
+              "pronHu": "nődsituation",
+              "hu": "vészhelyzet",
+              "en": "emergency",
+              "ipa": "[ˈnødsitʉation]"
+            },
+            {
+              "sv": "ambulans",
+              "pronHu": "ambulans",
+              "hu": "mentő",
+              "en": "ambulance",
+              "ipa": "[ˈambʉlans]"
+            },
+            {
+              "sv": "polis",
+              "pronHu": "polis",
+              "hu": "rendőrség",
+              "en": "police",
+              "ipa": "[ˈpolis]"
+            },
+            {
+              "sv": "brandkår",
+              "pronHu": "brandkór",
+              "hu": "tűzoltóság",
+              "en": "fire service",
+              "ipa": "[ˈbrandkor]"
+            },
+            {
+              "sv": "sophämtning",
+              "pronHu": "sophemtning",
+              "hu": "szemétszállítás",
+              "en": "waste collection",
+              "ipa": "[ˈsophɛmtniŋ]"
+            },
+            {
+              "sv": "återvinning",
+              "pronHu": "ótervining",
+              "hu": "újrahasznosítás",
+              "en": "recycling",
+              "ipa": "[ˈotervinniŋ]"
+            },
+            {
+              "sv": "internet",
+              "pronHu": "internet",
+              "hu": "internet",
+              "en": "internet",
+              "ipa": "[ˈinternet]"
+            },
+            {
+              "sv": "mobil",
+              "pronHu": "mobil",
+              "hu": "mobil",
+              "en": "mobile",
+              "ipa": "[ˈmobil]"
+            },
+            {
+              "sv": "el",
+              "pronHu": "el",
+              "hu": "áram",
+              "en": "electricity",
+              "ipa": "[ˈel]"
+            },
+            {
+              "sv": "vatten",
+              "pronHu": "vaten",
+              "hu": "víz",
+              "en": "water",
+              "ipa": "[ˈvatten]"
+            },
+            {
+              "sv": "gas",
+              "pronHu": "gas",
+              "hu": "gáz",
+              "en": "gas",
+              "ipa": "[ˈgas]"
+            },
+            {
+              "sv": "abonnemang",
+              "pronHu": "abonemang",
+              "hu": "előfizetés",
+              "en": "subscription",
+              "ipa": "[ˈabonnemaŋ]"
+            },
+            {
+              "sv": "bokning",
+              "pronHu": "bokning",
+              "hu": "foglalás",
+              "en": "booking",
+              "ipa": "[ˈbokniŋ]"
+            },
+            {
+              "sv": "reservation",
+              "pronHu": "reservation",
+              "hu": "rezerváció",
+              "en": "reservation",
+              "ipa": "[ˈreservation]"
+            }
+          ]
+        },
+        {
+          "id": "vasarlas",
+          "name": "Vásárlás",
+          "items": [
+            {
+              "sv": "butik",
+              "pronHu": "butik",
+              "hu": "bolt",
+              "en": "shop",
+              "ipa": "[ˈbʉtik]"
+            },
+            {
+              "sv": "affär",
+              "pronHu": "affer",
+              "hu": "üzlet",
+              "en": "store",
+              "ipa": "[ˈaffɛr]"
+            },
+            {
+              "sv": "stormarknad",
+              "pronHu": "stormarknad",
+              "hu": "szupermarket",
+              "en": "supermarket",
+              "ipa": "[ˈstormarknad]"
+            },
+            {
+              "sv": "köpcentrum",
+              "pronHu": "kőpkentrum",
+              "hu": "bevásárlóközpont",
+              "en": "mall",
+              "ipa": "[ˈɕøpsentrʉm]"
+            },
+            {
+              "sv": "marknad",
+              "pronHu": "marknad",
+              "hu": "piac",
+              "en": "market",
+              "ipa": "[ˈmarknad]"
+            },
+            {
+              "sv": "gång",
+              "pronHu": "góng",
+              "hu": "folyosó",
+              "en": "aisle",
+              "ipa": "[ˈgoŋ]"
+            },
+            {
+              "sv": "hylla",
+              "pronHu": "hűla",
+              "hu": "polc",
+              "en": "shelf",
+              "ipa": "[ˈhylla]"
+            },
+            {
+              "sv": "korg",
+              "pronHu": "korg",
+              "hu": "kosár",
+              "en": "basket",
+              "ipa": "[ˈkorg]"
+            },
+            {
+              "sv": "kundvagn",
+              "pronHu": "kundvagn",
+              "hu": "bevásárlókocsi",
+              "en": "trolley",
+              "ipa": "[ˈkʉndvagn]"
+            },
+            {
+              "sv": "kassa",
+              "pronHu": "kasza",
+              "hu": "pénztár",
+              "en": "checkout",
+              "ipa": "[ˈkassa]"
+            },
+            {
+              "sv": "kassör",
+              "pronHu": "kaszőr",
+              "hu": "pénztáros",
+              "en": "cashier",
+              "ipa": "[ˈkassør]"
+            },
+            {
+              "sv": "kvitto",
+              "pronHu": "kvito",
+              "hu": "nyugta",
+              "en": "receipt",
+              "ipa": "[ˈkvitto]"
+            },
+            {
+              "sv": "pris",
+              "pronHu": "pris",
+              "hu": "ár",
+              "en": "price",
+              "ipa": "[ˈpris]"
+            },
+            {
+              "sv": "rabatt",
+              "pronHu": "rabat",
+              "hu": "kedvezmény",
+              "en": "discount",
+              "ipa": "[ˈrabatt]"
+            },
+            {
+              "sv": "rea",
+              "pronHu": "rea",
+              "hu": "leárazás",
+              "en": "sale",
+              "ipa": "[ˈrea]"
+            },
+            {
+              "sv": "erbjudande",
+              "pronHu": "erbjudande",
+              "hu": "ajánlat",
+              "en": "offer",
+              "ipa": "[ˈerbjʉdande]"
+            },
+            {
+              "sv": "kap",
+              "pronHu": "kap",
+              "hu": "alku/jó vétel",
+              "en": "bargain",
+              "ipa": "[ˈkap]"
+            },
+            {
+              "sv": "återbetalning",
+              "pronHu": "óterbetalning",
+              "hu": "visszatérítés",
+              "en": "refund",
+              "ipa": "[ˈoterbetalniŋ]"
+            },
+            {
+              "sv": "byte",
+              "pronHu": "bűte",
+              "hu": "csere",
+              "en": "exchange",
+              "ipa": "[ˈbyte]"
+            },
+            {
+              "sv": "garanti",
+              "pronHu": "garanti",
+              "hu": "garancia",
+              "en": "warranty",
+              "ipa": "[ˈgaranti]"
+            },
+            {
+              "sv": "märke",
+              "pronHu": "merke",
+              "hu": "márka",
+              "en": "brand",
+              "ipa": "[ˈmɛrɕe]"
+            },
+            {
+              "sv": "storlek",
+              "pronHu": "storlek",
+              "hu": "méret",
+              "en": "size",
+              "ipa": "[ˈstorlek]"
+            },
+            {
+              "sv": "färg",
+              "pronHu": "ferg",
+              "hu": "szín",
+              "en": "colour",
+              "ipa": "[ˈfɛrg]"
+            },
+            {
+              "sv": "stil",
+              "pronHu": "stil",
+              "hu": "stílus",
+              "en": "style",
+              "ipa": "[ˈstil]"
+            },
+            {
+              "sv": "prova",
+              "pronHu": "prova",
+              "hu": "felpróbál",
+              "en": "try on",
+              "ipa": "[ˈprova]"
+            },
+            {
+              "sv": "provrum",
+              "pronHu": "provrum",
+              "hu": "próbafülke",
+              "en": "fitting room",
+              "ipa": "[ˈprovrʉm]"
+            },
+            {
+              "sv": "kund",
+              "pronHu": "kund",
+              "hu": "vevő",
+              "en": "customer",
+              "ipa": "[ˈkʉnd]"
+            },
+            {
+              "sv": "kö",
+              "pronHu": "kő",
+              "hu": "sor",
+              "en": "queue",
+              "ipa": "[ˈɕø]"
+            },
+            {
+              "sv": "online",
+              "pronHu": "online",
+              "hu": "online",
+              "en": "online",
+              "ipa": "[ˈonline]"
+            },
+            {
+              "sv": "leverans",
+              "pronHu": "leverans",
+              "hu": "szállítás",
+              "en": "delivery",
+              "ipa": "[ˈleverans]"
+            },
+            {
+              "sv": "retur",
+              "pronHu": "retur",
+              "hu": "visszaküldés",
+              "en": "return",
+              "ipa": "[ˈretʉr]"
+            },
+            {
+              "sv": "paket",
+              "pronHu": "paket",
+              "hu": "csomag",
+              "en": "package",
+              "ipa": "[ˈpaɕet]"
+            },
+            {
+              "sv": "beställning",
+              "pronHu": "bestelning",
+              "hu": "rendelés",
+              "en": "order",
+              "ipa": "[ˈbestɛllniŋ]"
+            },
+            {
+              "sv": "betalning",
+              "pronHu": "betalning",
+              "hu": "fizetés",
+              "en": "payment",
+              "ipa": "[ˈbetalniŋ]"
+            },
+            {
+              "sv": "kreditkort",
+              "pronHu": "kreditkort",
+              "hu": "hitelkártya",
+              "en": "credit card",
+              "ipa": "[ˈkreditkort]"
+            },
+            {
+              "sv": "kontanter",
+              "pronHu": "kontanter",
+              "hu": "készpénz",
+              "en": "cash",
+              "ipa": "[ˈkontanter]"
+            }
+          ]
+        },
+        {
+          "id": "sport",
+          "name": "Sport",
+          "items": [
+            {
+              "sv": "sport",
+              "pronHu": "sport",
+              "hu": "sport",
+              "en": "sport",
+              "ipa": "[ˈsport]"
+            },
+            {
+              "sv": "spel",
+              "pronHu": "spel",
+              "hu": "játék",
+              "en": "game",
+              "ipa": "[ˈspel]"
+            },
+            {
+              "sv": "match",
+              "pronHu": "matkh",
+              "hu": "mérkőzés",
+              "en": "match",
+              "ipa": "[ˈmatɧ]"
+            },
+            {
+              "sv": "poäng",
+              "pronHu": "poeng",
+              "hu": "pont",
+              "en": "score",
+              "ipa": "[ˈpoɛŋ]"
+            },
+            {
+              "sv": "lag",
+              "pronHu": "lag",
+              "hu": "csapat",
+              "en": "team",
+              "ipa": "[ˈlag]"
+            },
+            {
+              "sv": "spelare",
+              "pronHu": "spelare",
+              "hu": "játékos",
+              "en": "player",
+              "ipa": "[ˈspelare]"
+            },
+            {
+              "sv": "tränare",
+              "pronHu": "trenare",
+              "hu": "edző",
+              "en": "coach",
+              "ipa": "[ˈtrɛnare]"
+            },
+            {
+              "sv": "domare",
+              "pronHu": "domare",
+              "hu": "bíró",
+              "en": "referee",
+              "ipa": "[ˈdomare]"
+            },
+            {
+              "sv": "mål",
+              "pronHu": "mól",
+              "hu": "gól",
+              "en": "goal",
+              "ipa": "[ˈmol]"
+            },
+            {
+              "sv": "poäng",
+              "pronHu": "poeng",
+              "hu": "pont",
+              "en": "point",
+              "ipa": "[ˈpoɛŋ]"
+            },
+            {
+              "sv": "seger",
+              "pronHu": "seger",
+              "hu": "győzelem",
+              "en": "win",
+              "ipa": "[ˈsejer]"
+            },
+            {
+              "sv": "förlust",
+              "pronHu": "főrlust",
+              "hu": "vereség",
+              "en": "lose",
+              "ipa": "[ˈførlʉst]"
+            },
+            {
+              "sv": "oavgjort",
+              "pronHu": "oavgjort",
+              "hu": "döntetlen",
+              "en": "draw",
+              "ipa": "[ˈoavgjort]"
+            },
+            {
+              "sv": "liga",
+              "pronHu": "liga",
+              "hu": "liga",
+              "en": "league",
+              "ipa": "[ˈliga]"
+            },
+            {
+              "sv": "turnering",
+              "pronHu": "turnering",
+              "hu": "torna",
+              "en": "tournament",
+              "ipa": "[ˈtʉrneriŋ]"
+            },
+            {
+              "sv": "tävling",
+              "pronHu": "tevling",
+              "hu": "verseny",
+              "en": "competition",
+              "ipa": "[ˈtɛvliŋ]"
+            },
+            {
+              "sv": "träning",
+              "pronHu": "trening",
+              "hu": "edzés",
+              "en": "training",
+              "ipa": "[ˈtrɛniŋ]"
+            },
+            {
+              "sv": "övning",
+              "pronHu": "ővning",
+              "hu": "gyakorlás",
+              "en": "practice",
+              "ipa": "[ˈøvniŋ]"
+            },
+            {
+              "sv": "stadion",
+              "pronHu": "stadion",
+              "hu": "stadion",
+              "en": "stadium",
+              "ipa": "[ˈstadion]"
+            },
+            {
+              "sv": "plan",
+              "pronHu": "plan",
+              "hu": "pálya",
+              "en": "pitch",
+              "ipa": "[ˈplan]"
+            },
+            {
+              "sv": "fält",
+              "pronHu": "felt",
+              "hu": "mező",
+              "en": "field",
+              "ipa": "[ˈfɛlt]"
+            },
+            {
+              "sv": "bana",
+              "pronHu": "bana",
+              "hu": "pálya",
+              "en": "court",
+              "ipa": "[ˈbana]"
+            },
+            {
+              "sv": "gym",
+              "pronHu": "gűm",
+              "hu": "edzőterem",
+              "en": "gym",
+              "ipa": "[ˈjym]"
+            },
+            {
+              "sv": "simning",
+              "pronHu": "simning",
+              "hu": "úszás",
+              "en": "swimming",
+              "ipa": "[ˈsimniŋ]"
+            },
+            {
+              "sv": "löpning",
+              "pronHu": "lőpning",
+              "hu": "futás",
+              "en": "running",
+              "ipa": "[ˈløpniŋ]"
+            },
+            {
+              "sv": "hopp",
+              "pronHu": "hop",
+              "hu": "ugrás",
+              "en": "jump",
+              "ipa": "[ˈhopp]"
+            },
+            {
+              "sv": "kast",
+              "pronHu": "kast",
+              "hu": "dobás",
+              "en": "throw",
+              "ipa": "[ˈkast]"
+            },
+            {
+              "sv": "fånga",
+              "pronHu": "fónga",
+              "hu": "elkapás",
+              "en": "catch",
+              "ipa": "[ˈfoŋa]"
+            },
+            {
+              "sv": "spark",
+              "pronHu": "spark",
+              "hu": "rúgás",
+              "en": "kick",
+              "ipa": "[ˈspark]"
+            },
+            {
+              "sv": "passning",
+              "pronHu": "paszning",
+              "hu": "passz",
+              "en": "pass",
+              "ipa": "[ˈpassniŋ]"
+            },
+            {
+              "sv": "skott",
+              "pronHu": "szkot",
+              "hu": "lövés",
+              "en": "shoot",
+              "ipa": "[ˈskott]"
+            },
+            {
+              "sv": "cykel",
+              "pronHu": "kűkel",
+              "hu": "kerékpár",
+              "en": "bicycle",
+              "ipa": "[ˈsyɕel]"
+            },
+            {
+              "sv": "skridskoåkning",
+              "pronHu": "szkridszkoókning",
+              "hu": "korcsolyázás",
+              "en": "skate",
+              "ipa": "[ˈskridskookniŋ]"
+            },
+            {
+              "sv": "skidåkning",
+              "pronHu": "szkidókning",
+              "hu": "síelés",
+              "en": "ski",
+              "ipa": "[ˈɧidokniŋ]"
+            },
+            {
+              "sv": "idrottare",
+              "pronHu": "idrotare",
+              "hu": "sportoló",
+              "en": "athlete",
+              "ipa": "[ˈidrottare]"
+            },
+            {
+              "sv": "medalj",
+              "pronHu": "medalj",
+              "hu": "érem",
+              "en": "medal",
+              "ipa": "[ˈmedalj]"
+            },
+            {
+              "sv": "resultattavla",
+              "pronHu": "resultatavla",
+              "hu": "eredményjelző",
+              "en": "scoreboard",
+              "ipa": "[ˈresʉltattavla]"
+            },
+            {
+              "sv": "domare",
+              "pronHu": "domare",
+              "hu": "bíró",
+              "en": "umpire",
+              "ipa": "[ˈdomare]"
+            }
           ]
         }
       ]
     },
     {
-      "id": "vilag",
-      "name": "Világ",
+      "id": "helyek",
+      "name": "Helyek",
       "categories": [
         {
-          "id": "allatok",
-          "name": "Állatok",
+          "id": "helyek-videk",
+          "name": "Helyek: vidék",
           "items": [
-            {"sv": "hund", "pronHu": "hund", "hu": "kutya", "en": "dog", "ipa": "[hɵnːd]"},
-            {"sv": "katt", "pronHu": "katt", "hu": "macska", "en": "cat", "ipa": "[katː]"},
-            {"sv": "fågel", "pronHu": "fógél", "hu": "madár", "en": "bird", "ipa": "[ˈfoːɡɛl]"},
-            {"sv": "fisk", "pronHu": "fiszk", "hu": "hal", "en": "fish", "ipa": "[fɪsk]"},
-            {"sv": "häst", "pronHu": "heszt", "hu": "ló", "en": "horse", "ipa": "[hɛst]"},
-            {"sv": "ko", "pronHu": "kú", "hu": "tehén", "en": "cow", "ipa": "[kuː]"},
-            {"sv": "gris", "pronHu": "grísz", "hu": "disznó", "en": "pig", "ipa": "[ɡriːs]"},
-            {"sv": "får", "pronHu": "fór", "hu": "juh", "en": "sheep", "ipa": "[foːr]"},
-            {"sv": "kanin", "pronHu": "kanín", "hu": "nyúl", "en": "rabbit", "ipa": "[kaˈniːn]"},
-            {"sv": "mus", "pronHu": "műsz", "hu": "egér", "en": "mouse", "ipa": "[mʉːs]"},
-            {"sv": "björn", "pronHu": "björn", "hu": "medve", "en": "bear", "ipa": "[bjœɳ]"},
-            {"sv": "varg", "pronHu": "várg", "hu": "farkas", "en": "wolf", "ipa": "[varɡ]"},
-            {"sv": "lejon", "pronHu": "lejjon", "hu": "oroszlán", "en": "lion", "ipa": "[ˈlɛɪjɔn]"},
-            {"sv": "elefant", "pronHu": "elefant", "hu": "elefánt", "en": "elephant", "ipa": "[ɛlɛˈfant]"},
-            {"sv": "orm", "pronHu": "orm", "hu": "kígyó", "en": "snake", "ipa": "[ɔrm]"}
+            {
+              "sv": "landsbygd",
+              "pronHu": "landsbűgd",
+              "hu": "vidék",
+              "en": "countryside",
+              "ipa": "[ˈlandsbygd]"
+            },
+            {
+              "sv": "by",
+              "pronHu": "bű",
+              "hu": "falu",
+              "en": "village",
+              "ipa": "[ˈby]"
+            },
+            {
+              "sv": "fält",
+              "pronHu": "felt",
+              "hu": "mező",
+              "en": "field",
+              "ipa": "[ˈfɛlt]"
+            },
+            {
+              "sv": "äng",
+              "pronHu": "eng",
+              "hu": "rét",
+              "en": "meadow",
+              "ipa": "[ˈɛŋ]"
+            },
+            {
+              "sv": "skog",
+              "pronHu": "szkog",
+              "hu": "erdő",
+              "en": "forest",
+              "ipa": "[ˈskog]"
+            },
+            {
+              "sv": "skog",
+              "pronHu": "szkog",
+              "hu": "erdő",
+              "en": "wood",
+              "ipa": "[ˈskog]"
+            },
+            {
+              "sv": "kulle",
+              "pronHu": "kule",
+              "hu": "domb",
+              "en": "hill",
+              "ipa": "[ˈkʉlle]"
+            },
+            {
+              "sv": "berg",
+              "pronHu": "berg",
+              "hu": "hegy",
+              "en": "mountain",
+              "ipa": "[ˈberg]"
+            },
+            {
+              "sv": "dal",
+              "pronHu": "dal",
+              "hu": "völgy",
+              "en": "valley",
+              "ipa": "[ˈdal]"
+            },
+            {
+              "sv": "flod",
+              "pronHu": "flod",
+              "hu": "folyó",
+              "en": "river",
+              "ipa": "[ˈflod]"
+            },
+            {
+              "sv": "bäck",
+              "pronHu": "bek",
+              "hu": "patak",
+              "en": "stream",
+              "ipa": "[ˈbɛkk]"
+            },
+            {
+              "sv": "sjö",
+              "pronHu": "hő",
+              "hu": "tó",
+              "en": "lake",
+              "ipa": "[ˈɧø]"
+            },
+            {
+              "sv": "damm",
+              "pronHu": "dam",
+              "hu": "tócs a/halastó",
+              "en": "pond",
+              "ipa": "[ˈdamm]"
+            },
+            {
+              "sv": "vattenfall",
+              "pronHu": "vatenfal",
+              "hu": "vízesés",
+              "en": "waterfall",
+              "ipa": "[ˈvattenfall]"
+            },
+            {
+              "sv": "gård",
+              "pronHu": "górd",
+              "hu": "tanya",
+              "en": "farm",
+              "ipa": "[ˈgord]"
+            },
+            {
+              "sv": "bondgård",
+              "pronHu": "bondgórd",
+              "hu": "tanyaház",
+              "en": "farmhouse",
+              "ipa": "[ˈbondgord]"
+            },
+            {
+              "sv": "lada",
+              "pronHu": "lada",
+              "hu": "pajta",
+              "en": "barn",
+              "ipa": "[ˈlada]"
+            },
+            {
+              "sv": "betesmark",
+              "pronHu": "betesmark",
+              "hu": "legelő",
+              "en": "pasture",
+              "ipa": "[ˈbetesmark]"
+            },
+            {
+              "sv": "fruktträdgård",
+              "pronHu": "fruktredgórd",
+              "hu": "gyümölcsös",
+              "en": "orchard",
+              "ipa": "[ˈfrʉkttrɛdgord]"
+            },
+            {
+              "sv": "vingård",
+              "pronHu": "vingórd",
+              "hu": "szőlőültetvény",
+              "en": "vineyard",
+              "ipa": "[ˈviŋord]"
+            },
+            {
+              "sv": "stuga",
+              "pronHu": "stuga",
+              "hu": "házikó",
+              "en": "cottage",
+              "ipa": "[ˈstʉga]"
+            },
+            {
+              "sv": "stig",
+              "pronHu": "stig",
+              "hu": "ösvény",
+              "en": "path",
+              "ipa": "[ˈstig]"
+            },
+            {
+              "sv": "led",
+              "pronHu": "led",
+              "hu": "túraútvonal",
+              "en": "trail",
+              "ipa": "[ˈled]"
+            },
+            {
+              "sv": "gångstig",
+              "pronHu": "góngstig",
+              "hu": "gyalogút",
+              "en": "footpath",
+              "ipa": "[ˈgoŋstig]"
+            },
+            {
+              "sv": "staket",
+              "pronHu": "staket",
+              "hu": "kerítés",
+              "en": "fence",
+              "ipa": "[ˈstaɕet]"
+            },
+            {
+              "sv": "häck",
+              "pronHu": "hek",
+              "hu": "sövény",
+              "en": "hedge",
+              "ipa": "[ˈhɛkk]"
+            },
+            {
+              "sv": "grind",
+              "pronHu": "grind",
+              "hu": "kapu",
+              "en": "gate",
+              "ipa": "[ˈgrind]"
+            },
+            {
+              "sv": "bro",
+              "pronHu": "bro",
+              "hu": "híd",
+              "en": "bridge",
+              "ipa": "[ˈbro]"
+            },
+            {
+              "sv": "kyrka",
+              "pronHu": "kűrka",
+              "hu": "templom",
+              "en": "church",
+              "ipa": "[ˈɕyrka]"
+            },
+            {
+              "sv": "kvarn",
+              "pronHu": "kvarn",
+              "hu": "malom",
+              "en": "mill",
+              "ipa": "[ˈkvarn]"
+            },
+            {
+              "sv": "småby",
+              "pronHu": "smóbű",
+              "hu": "kis falu",
+              "en": "hamlet",
+              "ipa": "[ˈsmoby]"
+            },
+            {
+              "sv": "hed",
+              "pronHu": "hed",
+              "hu": "mocsárvidék",
+              "en": "moor",
+              "ipa": "[ˈhed]"
+            },
+            {
+              "sv": "mosse",
+              "pronHu": "mosze",
+              "hu": "láp",
+              "en": "bog",
+              "ipa": "[ˈmosse]"
+            },
+            {
+              "sv": "kärr",
+              "pronHu": "ker",
+              "hu": "mocsár",
+              "en": "marsh",
+              "ipa": "[ˈɕɛrr]"
+            },
+            {
+              "sv": "djurliv",
+              "pronHu": "djurliv",
+              "hu": "vadvilág",
+              "en": "wildlife",
+              "ipa": "[ˈdjʉrliv]"
+            },
+            {
+              "sv": "landskap",
+              "pronHu": "landszkap",
+              "hu": "tájkép",
+              "en": "scenery",
+              "ipa": "[ˈlandskap]"
+            },
+            {
+              "sv": "landskap",
+              "pronHu": "landszkap",
+              "hu": "táj",
+              "en": "landscape",
+              "ipa": "[ˈlandskap]"
+            },
+            {
+              "sv": "horisont",
+              "pronHu": "horisont",
+              "hu": "horizont",
+              "en": "horizon",
+              "ipa": "[ˈhorisont]"
+            }
           ]
         },
         {
-          "id": "szinek",
-          "name": "Színek",
+          "id": "helyek-varos",
+          "name": "Helyek: város",
           "items": [
-            {"sv": "röd", "pronHu": "rőd", "hu": "piros", "en": "red", "ipa": "[røːd]"},
-            {"sv": "blå", "pronHu": "bló", "hu": "kék", "en": "blue", "ipa": "[blɔː]"},
-            {"sv": "grön", "pronHu": "grőn", "hu": "zöld", "en": "green", "ipa": "[grøːn]"},
-            {"sv": "gul", "pronHu": "gűl", "hu": "sárga", "en": "yellow", "ipa": "[ɡʉːl]"},
-            {"sv": "svart", "pronHu": "szvárt", "hu": "fekete", "en": "black", "ipa": "[svart]"},
-            {"sv": "vit", "pronHu": "vít", "hu": "fehér", "en": "white", "ipa": "[viːt]"},
-            {"sv": "orange", "pronHu": "oránsz", "hu": "narancssárga", "en": "orange", "ipa": "[ʊˈranʂ]"},
-            {"sv": "rosa", "pronHu": "róssza", "hu": "rózsaszín", "en": "pink", "ipa": "[ˈruːsa]"},
-            {"sv": "lila", "pronHu": "líla", "hu": "lila", "en": "purple", "ipa": "[ˈliːla]"},
-            {"sv": "brun", "pronHu": "brűn", "hu": "barna", "en": "brown", "ipa": "[brʉːn]"},
-            {"sv": "grå", "pronHu": "gró", "hu": "szürke", "en": "grey", "ipa": "[ɡroː]"}
+            {
+              "sv": "stad",
+              "pronHu": "stad",
+              "hu": "város",
+              "en": "city",
+              "ipa": "[ˈstad]"
+            },
+            {
+              "sv": "stad",
+              "pronHu": "stad",
+              "hu": "kisváros",
+              "en": "town",
+              "ipa": "[ˈstad]"
+            },
+            {
+              "sv": "förort",
+              "pronHu": "főrort",
+              "hu": "külváros",
+              "en": "suburb",
+              "ipa": "[ˈførort]"
+            },
+            {
+              "sv": "centrum",
+              "pronHu": "kentrum",
+              "hu": "belváros",
+              "en": "downtown",
+              "ipa": "[ˈsentrʉm]"
+            },
+            {
+              "sv": "centrum",
+              "pronHu": "kentrum",
+              "hu": "központ",
+              "en": "centre",
+              "ipa": "[ˈsentrʉm]"
+            },
+            {
+              "sv": "torg",
+              "pronHu": "torg",
+              "hu": "tér",
+              "en": "square",
+              "ipa": "[ˈtorg]"
+            },
+            {
+              "sv": "gata",
+              "pronHu": "gata",
+              "hu": "utca",
+              "en": "street",
+              "ipa": "[ˈgata]"
+            },
+            {
+              "sv": "aveny",
+              "pronHu": "avenű",
+              "hu": "sugárút",
+              "en": "avenue",
+              "ipa": "[ˈaveny]"
+            },
+            {
+              "sv": "boulevard",
+              "pronHu": "boulevard",
+              "hu": "boulevard",
+              "en": "boulevard",
+              "ipa": "[ˈboʉlevard]"
+            },
+            {
+              "sv": "gränd",
+              "pronHu": "grend",
+              "hu": "köz",
+              "en": "lane",
+              "ipa": "[ˈgrɛnd]"
+            },
+            {
+              "sv": "gränd",
+              "pronHu": "grend",
+              "hu": "szűk utca",
+              "en": "alley",
+              "ipa": "[ˈgrɛnd]"
+            },
+            {
+              "sv": "korsning",
+              "pronHu": "korsning",
+              "hu": "kereszteződés",
+              "en": "crossroads",
+              "ipa": "[ˈkorsniŋ]"
+            },
+            {
+              "sv": "trafikljus",
+              "pronHu": "trafikljus",
+              "hu": "közlekedési lámpa",
+              "en": "traffic lights",
+              "ipa": "[ˈtrafikljʉs]"
+            },
+            {
+              "sv": "rondell",
+              "pronHu": "rondel",
+              "hu": "körforgalom",
+              "en": "roundabout",
+              "ipa": "[ˈrondell]"
+            },
+            {
+              "sv": "trottoar",
+              "pronHu": "trotoar",
+              "hu": "járda",
+              "en": "pavement",
+              "ipa": "[ˈtrottoar]"
+            },
+            {
+              "sv": "busshållplats",
+              "pronHu": "buszhólplats",
+              "hu": "buszmegálló",
+              "en": "bus stop",
+              "ipa": "[ˈbʉsshollplats]"
+            },
+            {
+              "sv": "station",
+              "pronHu": "station",
+              "hu": "állomás",
+              "en": "station",
+              "ipa": "[ˈstation]"
+            },
+            {
+              "sv": "tunnelbana",
+              "pronHu": "tunelbana",
+              "hu": "metró",
+              "en": "metro",
+              "ipa": "[ˈtʉnnelbana]"
+            },
+            {
+              "sv": "tunnelbana",
+              "pronHu": "tunelbana",
+              "hu": "aluljáró/metro",
+              "en": "subway",
+              "ipa": "[ˈtʉnnelbana]"
+            },
+            {
+              "sv": "spårvagn",
+              "pronHu": "spórvagn",
+              "hu": "villamos",
+              "en": "tram",
+              "ipa": "[ˈsporvagn]"
+            },
+            {
+              "sv": "taxi",
+              "pronHu": "taksi",
+              "hu": "taxi",
+              "en": "taxi",
+              "ipa": "[ˈtaksi]"
+            },
+            {
+              "sv": "butik",
+              "pronHu": "butik",
+              "hu": "bolt",
+              "en": "shop",
+              "ipa": "[ˈbʉtik]"
+            },
+            {
+              "sv": "marknad",
+              "pronHu": "marknad",
+              "hu": "piac",
+              "en": "market",
+              "ipa": "[ˈmarknad]"
+            },
+            {
+              "sv": "köpcentrum",
+              "pronHu": "kőpkentrum",
+              "hu": "bevásárlóközpont",
+              "en": "mall",
+              "ipa": "[ˈɕøpsentrʉm]"
+            },
+            {
+              "sv": "kontor",
+              "pronHu": "kontor",
+              "hu": "iroda",
+              "en": "office",
+              "ipa": "[ˈkontor]"
+            },
+            {
+              "sv": "kvarter",
+              "pronHu": "kvarter",
+              "hu": "tömb",
+              "en": "block",
+              "ipa": "[ˈkvarter]"
+            },
+            {
+              "sv": "skyskrapa",
+              "pronHu": "szkűszkrapa",
+              "hu": "felhőkarcoló",
+              "en": "skyscraper",
+              "ipa": "[ˈɧyskrapa]"
+            },
+            {
+              "sv": "park",
+              "pronHu": "park",
+              "hu": "park",
+              "en": "park",
+              "ipa": "[ˈpark]"
+            },
+            {
+              "sv": "lekplats",
+              "pronHu": "lekplats",
+              "hu": "játszótér",
+              "en": "playground",
+              "ipa": "[ˈlekplats]"
+            },
+            {
+              "sv": "parkeringsplats",
+              "pronHu": "parkeringsplats",
+              "hu": "parkoló",
+              "en": "car park",
+              "ipa": "[ˈparɕeriŋsplats]"
+            },
+            {
+              "sv": "apotek",
+              "pronHu": "apotek",
+              "hu": "gyógyszertár",
+              "en": "pharmacy",
+              "ipa": "[ˈapotek]"
+            },
+            {
+              "sv": "bank",
+              "pronHu": "bank",
+              "hu": "bank",
+              "en": "bank",
+              "ipa": "[ˈbank]"
+            },
+            {
+              "sv": "restaurang",
+              "pronHu": "restaurang",
+              "hu": "étterem",
+              "en": "restaurant",
+              "ipa": "[ˈrestaʉraŋ]"
+            },
+            {
+              "sv": "café",
+              "pronHu": "kafé",
+              "hu": "kávézó",
+              "en": "café",
+              "ipa": "[ˈkafé]"
+            },
+            {
+              "sv": "bar",
+              "pronHu": "bar",
+              "hu": "bár",
+              "en": "bar",
+              "ipa": "[ˈbar]"
+            },
+            {
+              "sv": "klubb",
+              "pronHu": "klubb",
+              "hu": "klub",
+              "en": "club",
+              "ipa": "[ˈklʉbb]"
+            },
+            {
+              "sv": "teater",
+              "pronHu": "teater",
+              "hu": "színház",
+              "en": "theatre",
+              "ipa": "[ˈteater]"
+            },
+            {
+              "sv": "biograf",
+              "pronHu": "biograf",
+              "hu": "mozi",
+              "en": "cinema",
+              "ipa": "[ˈbiograf]"
+            },
+            {
+              "sv": "museum",
+              "pronHu": "museum",
+              "hu": "múzeum",
+              "en": "museum",
+              "ipa": "[ˈmʉseʉm]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fogalmak",
+      "name": "Fogalmak",
+      "categories": [
+        {
+          "id": "munka-es-allasok",
+          "name": "Munka és állások",
+          "items": [
+            {
+              "sv": "arbete",
+              "pronHu": "arbete",
+              "hu": "munka",
+              "en": "work",
+              "ipa": "[ˈarbete]"
+            },
+            {
+              "sv": "jobb",
+              "pronHu": "jobb",
+              "hu": "állás",
+              "en": "job",
+              "ipa": "[ˈjobb]"
+            },
+            {
+              "sv": "karriär",
+              "pronHu": "karier",
+              "hu": "karrier",
+              "en": "career",
+              "ipa": "[ˈkarriɛr]"
+            },
+            {
+              "sv": "yrke",
+              "pronHu": "űrke",
+              "hu": "szakma",
+              "en": "profession",
+              "ipa": "[ˈyrɕe]"
+            },
+            {
+              "sv": "anställd",
+              "pronHu": "ansteld",
+              "hu": "alkalmazott",
+              "en": "employee",
+              "ipa": "[ˈanstɛlld]"
+            },
+            {
+              "sv": "arbetsgivare",
+              "pronHu": "arbetsgivare",
+              "hu": "munkaadó",
+              "en": "employer",
+              "ipa": "[ˈarbetsjivare]"
+            },
+            {
+              "sv": "kollega",
+              "pronHu": "kolega",
+              "hu": "kolléga",
+              "en": "colleague",
+              "ipa": "[ˈkollega]"
+            },
+            {
+              "sv": "chef",
+              "pronHu": "khef",
+              "hu": "főnök",
+              "en": "boss",
+              "ipa": "[ˈɧef]"
+            },
+            {
+              "sv": "manager",
+              "pronHu": "manager",
+              "hu": "menedzser",
+              "en": "manager",
+              "ipa": "[ˈmanajer]"
+            },
+            {
+              "sv": "team",
+              "pronHu": "team",
+              "hu": "csapat",
+              "en": "team",
+              "ipa": "[ˈteam]"
+            },
+            {
+              "sv": "möte",
+              "pronHu": "mőte",
+              "hu": "megbeszélés",
+              "en": "meeting",
+              "ipa": "[ˈmøte]"
+            },
+            {
+              "sv": "intervju",
+              "pronHu": "intervju",
+              "hu": "interjú",
+              "en": "interview",
+              "ipa": "[ˈintervjʉ]"
+            },
+            {
+              "sv": "CV",
+              "pronHu": "kv",
+              "hu": "önéletrajz",
+              "en": "CV",
+              "ipa": "[ˈkv]"
+            },
+            {
+              "sv": "lön",
+              "pronHu": "lőn",
+              "hu": "fizetés",
+              "en": "salary",
+              "ipa": "[ˈløn]"
+            },
+            {
+              "sv": "löneökning",
+              "pronHu": "lőneőkning",
+              "hu": "fizetésemelés",
+              "en": "raise",
+              "ipa": "[ˈløneøkniŋ]"
+            },
+            {
+              "sv": "befordran",
+              "pronHu": "befordran",
+              "hu": "előléptetés",
+              "en": "promotion",
+              "ipa": "[ˈbefordran]"
+            },
+            {
+              "sv": "kontrakt",
+              "pronHu": "kontrakt",
+              "hu": "szerződés",
+              "en": "contract",
+              "ipa": "[ˈkontrakt]"
+            },
+            {
+              "sv": "heltid",
+              "pronHu": "heltid",
+              "hu": "teljes munkaidő",
+              "en": "full-time",
+              "ipa": "[ˈheltid]"
+            },
+            {
+              "sv": "deltid",
+              "pronHu": "deltid",
+              "hu": "részmunkaidő",
+              "en": "part-time",
+              "ipa": "[ˈdeltid]"
+            },
+            {
+              "sv": "skift",
+              "pronHu": "szkift",
+              "hu": "műszak",
+              "en": "shift",
+              "ipa": "[ˈɧift]"
+            },
+            {
+              "sv": "schema",
+              "pronHu": "sema",
+              "hu": "beosztás",
+              "en": "schedule",
+              "ipa": "[ˈɧema]"
+            },
+            {
+              "sv": "övertid",
+              "pronHu": "ővertid",
+              "hu": "túlóra",
+              "en": "overtime",
+              "ipa": "[ˈøvertid]"
+            },
+            {
+              "sv": "deadline",
+              "pronHu": "deadline",
+              "hu": "határidő",
+              "en": "deadline",
+              "ipa": "[ˈdeadline]"
+            },
+            {
+              "sv": "uppgift",
+              "pronHu": "upgift",
+              "hu": "feladat",
+              "en": "task",
+              "ipa": "[ˈʉppjift]"
+            },
+            {
+              "sv": "projekt",
+              "pronHu": "projekt",
+              "hu": "projekt",
+              "en": "project",
+              "ipa": "[ˈprojekt]"
+            },
+            {
+              "sv": "rapport",
+              "pronHu": "raport",
+              "hu": "jelentés",
+              "en": "report",
+              "ipa": "[ˈrapport]"
+            },
+            {
+              "sv": "kontor",
+              "pronHu": "kontor",
+              "hu": "iroda",
+              "en": "office",
+              "ipa": "[ˈkontor]"
+            },
+            {
+              "sv": "distansarbete",
+              "pronHu": "distansarbete",
+              "hu": "távmunka",
+              "en": "remote",
+              "ipa": "[ˈdistansarbete]"
+            },
+            {
+              "sv": "pendla",
+              "pronHu": "pendla",
+              "hu": "ingázni",
+              "en": "commute",
+              "ipa": "[ˈpendla]"
+            },
+            {
+              "sv": "färdigheter",
+              "pronHu": "ferdigheter",
+              "hu": "készségek",
+              "en": "skills",
+              "ipa": "[ˈfɛrdigheter]"
+            }
           ]
         },
         {
-          "id": "erzesek",
-          "name": "Érzések",
+          "id": "idojaras",
+          "name": "Időjárás",
           "items": [
-            {"sv": "glad", "pronHu": "glád", "hu": "vidám", "en": "happy", "ipa": "[ɡlɑːd]"},
-            {"sv": "ledsen", "pronHu": "ledszen", "hu": "szomorú", "en": "sad", "ipa": "[ˈlɛdːsɛn]"},
-            {"sv": "arg", "pronHu": "árj", "hu": "mérges", "en": "angry", "ipa": "[arj]"},
-            {"sv": "trött", "pronHu": "trött", "hu": "fáradt", "en": "tired", "ipa": "[trœtː]"},
-            {"sv": "hungrig", "pronHu": "hungri", "hu": "éhes", "en": "hungry", "ipa": "[ˈhʊŋrɪg]"},
-            {"sv": "mätt", "pronHu": "mett", "hu": "jóllakott", "en": "full", "ipa": "[mɛtː]"},
-            {"sv": "rädd", "pronHu": "redd", "hu": "ijedt", "en": "scared", "ipa": "[rɛdː]"},
-            {"sv": "lugn", "pronHu": "lün", "hu": "nyugodt", "en": "calm", "ipa": "[lʉŋn]"},
-            {"sv": "stressad", "pronHu": "sztrészád", "hu": "stresszes", "en": "stressed", "ipa": "[ˈstrɛsːad]"},
-            {"sv": "kär", "pronHu": "sér", "hu": "szerelmes", "en": "in love", "ipa": "[ɕɛːr]"},
-            {"sv": "nervös", "pronHu": "nervősz", "hu": "ideges", "en": "nervous", "ipa": "[nɛrˈvøːs]"}
+            {
+              "sv": "väder",
+              "pronHu": "veder",
+              "hu": "időjárás",
+              "en": "weather",
+              "ipa": "[ˈvɛder]"
+            },
+            {
+              "sv": "prognos",
+              "pronHu": "prognos",
+              "hu": "előrejelzés",
+              "en": "forecast",
+              "ipa": "[ˈprognos]"
+            },
+            {
+              "sv": "temperatur",
+              "pronHu": "temperatur",
+              "hu": "hőmérséklet",
+              "en": "temperature",
+              "ipa": "[ˈtemperatʉr]"
+            },
+            {
+              "sv": "hetta",
+              "pronHu": "heta",
+              "hu": "hőség",
+              "en": "heat",
+              "ipa": "[ˈhetta]"
+            },
+            {
+              "sv": "kyla",
+              "pronHu": "kűla",
+              "hu": "hideg",
+              "en": "cold",
+              "ipa": "[ˈɕyla]"
+            },
+            {
+              "sv": "varm",
+              "pronHu": "varm",
+              "hu": "meleg",
+              "en": "warm",
+              "ipa": "[ˈvarm]"
+            },
+            {
+              "sv": "kylig",
+              "pronHu": "kűlig",
+              "hu": "hűvös",
+              "en": "cool",
+              "ipa": "[ˈɕylig]"
+            },
+            {
+              "sv": "fuktig",
+              "pronHu": "fuktig",
+              "hu": "párás",
+              "en": "humid",
+              "ipa": "[ˈfʉktig]"
+            },
+            {
+              "sv": "torr",
+              "pronHu": "tor",
+              "hu": "száraz",
+              "en": "dry",
+              "ipa": "[ˈtorr]"
+            },
+            {
+              "sv": "blåsigt",
+              "pronHu": "blósigt",
+              "hu": "szeles",
+              "en": "windy",
+              "ipa": "[ˈblosigt]"
+            },
+            {
+              "sv": "lätt blåst",
+              "pronHu": "let blóst",
+              "hu": "szellős",
+              "en": "breezy",
+              "ipa": "[ˈlɛtt ˈblost]"
+            },
+            {
+              "sv": "molnigt",
+              "pronHu": "molnigt",
+              "hu": "felhős",
+              "en": "cloudy",
+              "ipa": "[ˈmolnigt]"
+            },
+            {
+              "sv": "mulet",
+              "pronHu": "mulet",
+              "hu": "borús",
+              "en": "overcast",
+              "ipa": "[ˈmʉlet]"
+            },
+            {
+              "sv": "dimma",
+              "pronHu": "dima",
+              "hu": "köd",
+              "en": "fog",
+              "ipa": "[ˈdimma]"
+            },
+            {
+              "sv": "dis",
+              "pronHu": "dis",
+              "hu": "pára",
+              "en": "mist",
+              "ipa": "[ˈdis]"
+            },
+            {
+              "sv": "regn",
+              "pronHu": "regn",
+              "hu": "eső",
+              "en": "rain",
+              "ipa": "[ˈregn]"
+            },
+            {
+              "sv": "duggregn",
+              "pronHu": "duggregn",
+              "hu": "szitálás",
+              "en": "drizzle",
+              "ipa": "[ˈdʉggregn]"
+            },
+            {
+              "sv": "skur",
+              "pronHu": "szkur",
+              "hu": "zápor",
+              "en": "shower",
+              "ipa": "[ˈskʉr]"
+            },
+            {
+              "sv": "störtregn",
+              "pronHu": "stőrtregn",
+              "hu": "felhőszakadás",
+              "en": "downpour",
+              "ipa": "[ˈstørtregn]"
+            },
+            {
+              "sv": "storm",
+              "pronHu": "storm",
+              "hu": "vihar",
+              "en": "storm",
+              "ipa": "[ˈstorm]"
+            },
+            {
+              "sv": "åska",
+              "pronHu": "ószka",
+              "hu": "mennydörgés",
+              "en": "thunder",
+              "ipa": "[ˈoska]"
+            },
+            {
+              "sv": "blixt",
+              "pronHu": "blikst",
+              "hu": "villám",
+              "en": "lightning",
+              "ipa": "[ˈblikst]"
+            },
+            {
+              "sv": "hagel",
+              "pronHu": "hagel",
+              "hu": "jégeső",
+              "en": "hail",
+              "ipa": "[ˈhajel]"
+            },
+            {
+              "sv": "snö",
+              "pronHu": "snő",
+              "hu": "hó",
+              "en": "snow",
+              "ipa": "[ˈsnø]"
+            },
+            {
+              "sv": "snöblandat regn",
+              "pronHu": "snőblandat regn",
+              "hu": "ónos eső/havas eső",
+              "en": "sleet",
+              "ipa": "[ˈsnøblandat ˈregn]"
+            },
+            {
+              "sv": "frost",
+              "pronHu": "frost",
+              "hu": "fagy",
+              "en": "frost",
+              "ipa": "[ˈfrost]"
+            },
+            {
+              "sv": "regnbåge",
+              "pronHu": "regnbóge",
+              "hu": "szivárvány",
+              "en": "rainbow",
+              "ipa": "[ˈregnboje]"
+            },
+            {
+              "sv": "torka",
+              "pronHu": "torka",
+              "hu": "aszály",
+              "en": "drought",
+              "ipa": "[ˈtorka]"
+            },
+            {
+              "sv": "snöstorm",
+              "pronHu": "snőstorm",
+              "hu": "hóvihar",
+              "en": "blizzard",
+              "ipa": "[ˈsnøstorm]"
+            },
+            {
+              "sv": "by",
+              "pronHu": "bű",
+              "hu": "széllökés",
+              "en": "gust",
+              "ipa": "[ˈby]"
+            }
+          ]
+        },
+        {
+          "id": "oktatas",
+          "name": "Oktatás",
+          "items": [
+            {
+              "sv": "skola",
+              "pronHu": "szkola",
+              "hu": "iskola",
+              "en": "school",
+              "ipa": "[ˈskola]"
+            },
+            {
+              "sv": "lektion",
+              "pronHu": "lektion",
+              "hu": "lecke/óra",
+              "en": "lesson",
+              "ipa": "[ˈlektion]"
+            },
+            {
+              "sv": "ämne",
+              "pronHu": "emne",
+              "hu": "tantárgy",
+              "en": "subject",
+              "ipa": "[ˈɛmne]"
+            },
+            {
+              "sv": "läxa",
+              "pronHu": "leksa",
+              "hu": "házi feladat",
+              "en": "homework",
+              "ipa": "[ˈlɛksa]"
+            },
+            {
+              "sv": "inlämningsuppgift",
+              "pronHu": "inlemningsupgift",
+              "hu": "beadandó feladat",
+              "en": "assignment",
+              "ipa": "[ˈinlɛmniŋsʉppjift]"
+            },
+            {
+              "sv": "examensprov",
+              "pronHu": "eksamensprov",
+              "hu": "vizsga",
+              "en": "exam",
+              "ipa": "[ˈeksamensprov]"
+            },
+            {
+              "sv": "prov",
+              "pronHu": "prov",
+              "hu": "teszt/dolgozat",
+              "en": "test",
+              "ipa": "[ˈprov]"
+            },
+            {
+              "sv": "betyg",
+              "pronHu": "betűg",
+              "hu": "osztályzat",
+              "en": "grade",
+              "ipa": "[ˈbetyg]"
+            },
+            {
+              "sv": "poäng",
+              "pronHu": "poeng",
+              "hu": "pont",
+              "en": "mark",
+              "ipa": "[ˈpoɛŋ]"
+            },
+            {
+              "sv": "lärare",
+              "pronHu": "lerare",
+              "hu": "tanár",
+              "en": "teacher",
+              "ipa": "[ˈlɛrare]"
+            },
+            {
+              "sv": "elev/student",
+              "pronHu": "elev/student",
+              "hu": "diák/hallgató",
+              "en": "student",
+              "ipa": "[ˈelev/stʉdent]"
+            },
+            {
+              "sv": "klasskamrat",
+              "pronHu": "klaszzkamrat",
+              "hu": "osztálytárs",
+              "en": "classmate",
+              "ipa": "[ˈklasskamrat]"
+            },
+            {
+              "sv": "klassrum",
+              "pronHu": "klaszrum",
+              "hu": "osztályterem",
+              "en": "classroom",
+              "ipa": "[ˈklassrʉm]"
+            },
+            {
+              "sv": "schema",
+              "pronHu": "sema",
+              "hu": "órarend",
+              "en": "timetable",
+              "ipa": "[ˈɧema]"
+            },
+            {
+              "sv": "lärobok",
+              "pronHu": "lerobok",
+              "hu": "tankönyv",
+              "en": "textbook",
+              "ipa": "[ˈlɛrobok]"
+            },
+            {
+              "sv": "anteckningsbok",
+              "pronHu": "antekningsbok",
+              "hu": "füzet",
+              "en": "notebook",
+              "ipa": "[ˈantekkniŋsbok]"
+            },
+            {
+              "sv": "föreläsning",
+              "pronHu": "főrelesning",
+              "hu": "előadás",
+              "en": "lecture",
+              "ipa": "[ˈførelɛsniŋ]"
+            },
+            {
+              "sv": "seminarium",
+              "pronHu": "seminarium",
+              "hu": "szeminárium",
+              "en": "seminar",
+              "ipa": "[ˈseminariʉm]"
+            },
+            {
+              "sv": "handledning",
+              "pronHu": "handledning",
+              "hu": "gyakorlat/konzultáció",
+              "en": "tutorial",
+              "ipa": "[ˈhandledniŋ]"
+            },
+            {
+              "sv": "kurs",
+              "pronHu": "kurs",
+              "hu": "kurzus",
+              "en": "course",
+              "ipa": "[ˈkʉrs]"
+            },
+            {
+              "sv": "läroplan",
+              "pronHu": "leroplan",
+              "hu": "tanterv",
+              "en": "curriculum",
+              "ipa": "[ˈlɛroplan]"
+            },
+            {
+              "sv": "kursplan",
+              "pronHu": "kursplan",
+              "hu": "tantárgyi program",
+              "en": "syllabus",
+              "ipa": "[ˈkʉrsplan]"
+            },
+            {
+              "sv": "certifikat",
+              "pronHu": "kertifikat",
+              "hu": "tanúsítvány",
+              "en": "certificate",
+              "ipa": "[ˈsertifikat]"
+            },
+            {
+              "sv": "diplom",
+              "pronHu": "diplom",
+              "hu": "diploma",
+              "en": "diploma",
+              "ipa": "[ˈdiplom]"
+            },
+            {
+              "sv": "examen",
+              "pronHu": "eksamen",
+              "hu": "fokozat",
+              "en": "degree",
+              "ipa": "[ˈeksamen]"
+            },
+            {
+              "sv": "stipendium",
+              "pronHu": "stipendium",
+              "hu": "ösztöndíj",
+              "en": "scholarship",
+              "ipa": "[ˈstipendiʉm]"
+            },
+            {
+              "sv": "praktik",
+              "pronHu": "praktik",
+              "hu": "gyakorlat",
+              "en": "internship",
+              "ipa": "[ˈpraktik]"
+            },
+            {
+              "sv": "terminsavgift",
+              "pronHu": "terminsavgift",
+              "hu": "tandíj",
+              "en": "tuition",
+              "ipa": "[ˈterminsavjift]"
+            },
+            {
+              "sv": "inskrivning",
+              "pronHu": "inszkrivning",
+              "hu": "beiratkozás",
+              "en": "enrolment",
+              "ipa": "[ˈinskrivniŋ]"
+            },
+            {
+              "sv": "närvaro",
+              "pronHu": "nervaro",
+              "hu": "jelenlét",
+              "en": "attendance",
+              "ipa": "[ˈnɛrvaro]"
+            },
+            {
+              "sv": "rast",
+              "pronHu": "rast",
+              "hu": "szünet",
+              "en": "break",
+              "ipa": "[ˈrast]"
+            }
+          ]
+        },
+        {
+          "id": "szorakozas-es-media",
+          "name": "Szórakozás és média",
+          "items": [
+            {
+              "sv": "film",
+              "pronHu": "film",
+              "hu": "film",
+              "en": "film",
+              "ipa": "[ˈfilm]"
+            },
+            {
+              "sv": "film",
+              "pronHu": "film",
+              "hu": "mozi(film)",
+              "en": "movie",
+              "ipa": "[ˈfilm]"
+            },
+            {
+              "sv": "serie",
+              "pronHu": "serie",
+              "hu": "sorozat",
+              "en": "series",
+              "ipa": "[ˈserie]"
+            },
+            {
+              "sv": "avsnitt",
+              "pronHu": "avsnit",
+              "hu": "epizód",
+              "en": "episode",
+              "ipa": "[ˈavsnitt]"
+            },
+            {
+              "sv": "show",
+              "pronHu": "shov",
+              "hu": "műsor",
+              "en": "show",
+              "ipa": "[ˈshov]"
+            },
+            {
+              "sv": "teater",
+              "pronHu": "teater",
+              "hu": "színház",
+              "en": "theatre",
+              "ipa": "[ˈteater]"
+            },
+            {
+              "sv": "konsert",
+              "pronHu": "konsert",
+              "hu": "koncert",
+              "en": "concert",
+              "ipa": "[ˈkonsert]"
+            },
+            {
+              "sv": "festival",
+              "pronHu": "festival",
+              "hu": "fesztivál",
+              "en": "festival",
+              "ipa": "[ˈfestival]"
+            },
+            {
+              "sv": "musik",
+              "pronHu": "musik",
+              "hu": "zene",
+              "en": "music",
+              "ipa": "[ˈmʉsik]"
+            },
+            {
+              "sv": "låt",
+              "pronHu": "lót",
+              "hu": "dal",
+              "en": "song",
+              "ipa": "[ˈlot]"
+            },
+            {
+              "sv": "album",
+              "pronHu": "album",
+              "hu": "album",
+              "en": "album",
+              "ipa": "[ˈalbʉm]"
+            },
+            {
+              "sv": "band",
+              "pronHu": "band",
+              "hu": "zenekar",
+              "en": "band",
+              "ipa": "[ˈband]"
+            },
+            {
+              "sv": "sångare",
+              "pronHu": "sóngare",
+              "hu": "énekes",
+              "en": "singer",
+              "ipa": "[ˈsoŋare]"
+            },
+            {
+              "sv": "skådespelare",
+              "pronHu": "szkódespelare",
+              "hu": "színész",
+              "en": "actor",
+              "ipa": "[ˈskodespelare]"
+            },
+            {
+              "sv": "regissör",
+              "pronHu": "regiszőr",
+              "hu": "rendező",
+              "en": "director",
+              "ipa": "[ˈrejissør]"
+            },
+            {
+              "sv": "tecknad film",
+              "pronHu": "teknad film",
+              "hu": "rajzfilm",
+              "en": "cartoon",
+              "ipa": "[ˈtekknad ˈfilm]"
+            },
+            {
+              "sv": "serietidning",
+              "pronHu": "serietidning",
+              "hu": "képregény",
+              "en": "comic",
+              "ipa": "[ˈserietidniŋ]"
+            },
+            {
+              "sv": "spel",
+              "pronHu": "spel",
+              "hu": "játék",
+              "en": "game",
+              "ipa": "[ˈspel]"
+            },
+            {
+              "sv": "konsol",
+              "pronHu": "konsol",
+              "hu": "konzol",
+              "en": "console",
+              "ipa": "[ˈkonsol]"
+            },
+            {
+              "sv": "streaming",
+              "pronHu": "streaming",
+              "hu": "streaming",
+              "en": "streaming",
+              "ipa": "[ˈstreamiŋ]"
+            },
+            {
+              "sv": "kanal",
+              "pronHu": "kanal",
+              "hu": "csatorna",
+              "en": "channel",
+              "ipa": "[ˈkanal]"
+            },
+            {
+              "sv": "podd",
+              "pronHu": "podd",
+              "hu": "podcast",
+              "en": "podcast",
+              "ipa": "[ˈpodd]"
+            },
+            {
+              "sv": "radio",
+              "pronHu": "radio",
+              "hu": "rádió",
+              "en": "radio",
+              "ipa": "[ˈradio]"
+            },
+            {
+              "sv": "tidning",
+              "pronHu": "tidning",
+              "hu": "újság",
+              "en": "newspaper",
+              "ipa": "[ˈtidniŋ]"
+            },
+            {
+              "sv": "tidskrift",
+              "pronHu": "tidszkrift",
+              "hu": "folyóirat",
+              "en": "magazine",
+              "ipa": "[ˈtidskrift]"
+            },
+            {
+              "sv": "artikel",
+              "pronHu": "artikel",
+              "hu": "cikk",
+              "en": "article",
+              "ipa": "[ˈartiɕel]"
+            },
+            {
+              "sv": "rubrik",
+              "pronHu": "rubrik",
+              "hu": "főcím",
+              "en": "headline",
+              "ipa": "[ˈrʉbrik]"
+            },
+            {
+              "sv": "annons",
+              "pronHu": "anons",
+              "hu": "hirdetés",
+              "en": "advertisement",
+              "ipa": "[ˈannons]"
+            },
+            {
+              "sv": "trailer",
+              "pronHu": "trailer",
+              "hu": "előzetes",
+              "en": "trailer",
+              "ipa": "[ˈtrailer]"
+            },
+            {
+              "sv": "recension",
+              "pronHu": "rekension",
+              "hu": "kritika",
+              "en": "review",
+              "ipa": "[ˈresension]"
+            },
+            {
+              "sv": "biljett",
+              "pronHu": "biljet",
+              "hu": "jegy",
+              "en": "ticket",
+              "ipa": "[ˈbiljett]"
+            },
+            {
+              "sv": "publik",
+              "pronHu": "publik",
+              "hu": "közönség",
+              "en": "audience",
+              "ipa": "[ˈpʉblik]"
+            },
+            {
+              "sv": "scen",
+              "pronHu": "szken",
+              "hu": "színpad",
+              "en": "stage",
+              "ipa": "[ˈssen]"
+            },
+            {
+              "sv": "skärm",
+              "pronHu": "szkerm",
+              "hu": "képernyő",
+              "en": "screen",
+              "ipa": "[ˈɧɛrm]"
+            },
+            {
+              "sv": "spoiler",
+              "pronHu": "spoiler",
+              "hu": "spoiler",
+              "en": "spoiler",
+              "ipa": "[ˈspoiler]"
+            }
+          ]
+        },
+        {
+          "id": "egeszseg-orvoslas-es-testmozgas",
+          "name": "Egészség, orvoslás és testmozgás",
+          "items": [
+            {
+              "sv": "hälsa",
+              "pronHu": "helsa",
+              "hu": "egészség",
+              "en": "health",
+              "ipa": "[ˈhɛlsa]"
+            },
+            {
+              "sv": "sjukdom",
+              "pronHu": "hukdom",
+              "hu": "betegség",
+              "en": "illness",
+              "ipa": "[ˈɧʉkdom]"
+            },
+            {
+              "sv": "sjukdom",
+              "pronHu": "hukdom",
+              "hu": "kór",
+              "en": "disease",
+              "ipa": "[ˈɧʉkdom]"
+            },
+            {
+              "sv": "skada",
+              "pronHu": "szkada",
+              "hu": "sérülés",
+              "en": "injury",
+              "ipa": "[ˈskada]"
+            },
+            {
+              "sv": "smärta",
+              "pronHu": "smerta",
+              "hu": "fájdalom",
+              "en": "pain",
+              "ipa": "[ˈsmɛrta]"
+            },
+            {
+              "sv": "feber",
+              "pronHu": "feber",
+              "hu": "láz",
+              "en": "fever",
+              "ipa": "[ˈfeber]"
+            },
+            {
+              "sv": "hosta",
+              "pronHu": "hosta",
+              "hu": "köhögés",
+              "en": "cough",
+              "ipa": "[ˈhosta]"
+            },
+            {
+              "sv": "förkylning",
+              "pronHu": "főrkűlning",
+              "hu": "megfázás",
+              "en": "cold",
+              "ipa": "[ˈførɕylniŋ]"
+            },
+            {
+              "sv": "influensa",
+              "pronHu": "influensa",
+              "hu": "influenza",
+              "en": "flu",
+              "ipa": "[ˈinflʉensa]"
+            },
+            {
+              "sv": "huvudvärk",
+              "pronHu": "huvudverk",
+              "hu": "fejfájás",
+              "en": "headache",
+              "ipa": "[ˈhʉvʉdvɛrk]"
+            },
+            {
+              "sv": "medicin",
+              "pronHu": "medikin",
+              "hu": "gyógyszer",
+              "en": "medicine",
+              "ipa": "[ˈmedisin]"
+            },
+            {
+              "sv": "piller",
+              "pronHu": "piler",
+              "hu": "pirula",
+              "en": "pill",
+              "ipa": "[ˈpiller]"
+            },
+            {
+              "sv": "tablett",
+              "pronHu": "tablet",
+              "hu": "tabletta",
+              "en": "tablet",
+              "ipa": "[ˈtablett]"
+            },
+            {
+              "sv": "medicinsirap",
+              "pronHu": "medikinsirap",
+              "hu": "orvosi szirup",
+              "en": "syrup",
+              "ipa": "[ˈmedisinsirap]"
+            },
+            {
+              "sv": "recept",
+              "pronHu": "rekept",
+              "hu": "recept",
+              "en": "prescription",
+              "ipa": "[ˈresept]"
+            },
+            {
+              "sv": "läkare",
+              "pronHu": "lekare",
+              "hu": "orvos",
+              "en": "doctor",
+              "ipa": "[ˈlɛkare]"
+            },
+            {
+              "sv": "sjuksköterska",
+              "pronHu": "hukhőterszka",
+              "hu": "ápoló",
+              "en": "nurse",
+              "ipa": "[ˈɧʉkɧøterska]"
+            },
+            {
+              "sv": "tandläkare",
+              "pronHu": "tandlekare",
+              "hu": "fogorvos",
+              "en": "dentist",
+              "ipa": "[ˈtandlɛkare]"
+            },
+            {
+              "sv": "bokad tid",
+              "pronHu": "bokad tid",
+              "hu": "időpont",
+              "en": "appointment",
+              "ipa": "[ˈbokad ˈtid]"
+            },
+            {
+              "sv": "klinik",
+              "pronHu": "klinik",
+              "hu": "klinika",
+              "en": "clinic",
+              "ipa": "[ˈklinik]"
+            },
+            {
+              "sv": "sjukhus",
+              "pronHu": "hukhus",
+              "hu": "kórház",
+              "en": "hospital",
+              "ipa": "[ˈɧʉkhʉs]"
+            },
+            {
+              "sv": "akut",
+              "pronHu": "akut",
+              "hu": "sürgősségi eset",
+              "en": "emergency",
+              "ipa": "[ˈakʉt]"
+            },
+            {
+              "sv": "första hjälpen",
+              "pronHu": "főrsta hjelpen",
+              "hu": "elsősegély",
+              "en": "first aid",
+              "ipa": "[ˈførsta ˈhjɛlpen]"
+            },
+            {
+              "sv": "träning",
+              "pronHu": "trening",
+              "hu": "testmozgás",
+              "en": "exercise",
+              "ipa": "[ˈtrɛniŋ]"
+            },
+            {
+              "sv": "träningspass",
+              "pronHu": "treningspasz",
+              "hu": "edzés",
+              "en": "workout",
+              "ipa": "[ˈtrɛniŋspass]"
+            },
+            {
+              "sv": "träning",
+              "pronHu": "trening",
+              "hu": "tréning",
+              "en": "training",
+              "ipa": "[ˈtrɛniŋ]"
+            },
+            {
+              "sv": "gym",
+              "pronHu": "gűm",
+              "hu": "edzőterem",
+              "en": "gym",
+              "ipa": "[ˈjym]"
+            },
+            {
+              "sv": "yoga",
+              "pronHu": "űoga",
+              "hu": "jóga",
+              "en": "yoga",
+              "ipa": "[ˈyoga]"
+            },
+            {
+              "sv": "stretching",
+              "pronHu": "stretkhing",
+              "hu": "nyújtás",
+              "en": "stretching",
+              "ipa": "[ˈstretɧiŋ]"
+            },
+            {
+              "sv": "löpning",
+              "pronHu": "lőpning",
+              "hu": "futás",
+              "en": "running",
+              "ipa": "[ˈløpniŋ]"
+            },
+            {
+              "sv": "jogging",
+              "pronHu": "jogging",
+              "hu": "kocogás",
+              "en": "jogging",
+              "ipa": "[ˈjogjiŋ]"
+            },
+            {
+              "sv": "simning",
+              "pronHu": "simning",
+              "hu": "úszás",
+              "en": "swimming",
+              "ipa": "[ˈsimniŋ]"
+            },
+            {
+              "sv": "cykling",
+              "pronHu": "kűkling",
+              "hu": "kerékpározás",
+              "en": "cycling",
+              "ipa": "[ˈsykliŋ]"
+            },
+            {
+              "sv": "tyngdlyftning",
+              "pronHu": "tűngdlűftning",
+              "hu": "súlyemelés",
+              "en": "weightlifting",
+              "ipa": "[ˈtyŋdlyftniŋ]"
+            },
+            {
+              "sv": "näring",
+              "pronHu": "nering",
+              "hu": "táplálkozás",
+              "en": "nutrition",
+              "ipa": "[ˈnɛriŋ]"
+            },
+            {
+              "sv": "diet",
+              "pronHu": "diet",
+              "hu": "diéta",
+              "en": "diet",
+              "ipa": "[ˈdiet]"
+            },
+            {
+              "sv": "kalorier",
+              "pronHu": "kalorier",
+              "hu": "kalória",
+              "en": "calories",
+              "ipa": "[ˈkalorier]"
+            },
+            {
+              "sv": "sömn",
+              "pronHu": "sőmn",
+              "hu": "alvás",
+              "en": "sleep",
+              "ipa": "[ˈsømn]"
+            },
+            {
+              "sv": "stress",
+              "pronHu": "stresz",
+              "hu": "stressz",
+              "en": "stress",
+              "ipa": "[ˈstress]"
+            },
+            {
+              "sv": "terapi",
+              "pronHu": "terapi",
+              "hu": "terápia",
+              "en": "therapy",
+              "ipa": "[ˈterapi]"
+            }
+          ]
+        },
+        {
+          "id": "hobbi-es-szabadido",
+          "name": "Hobbi és szabadidő",
+          "items": [
+            {
+              "sv": "hobby",
+              "pronHu": "hobbű",
+              "hu": "hobbi",
+              "en": "hobby",
+              "ipa": "[ˈhobby]"
+            },
+            {
+              "sv": "fritid",
+              "pronHu": "fritid",
+              "hu": "szabadidő",
+              "en": "leisure",
+              "ipa": "[ˈfritid]"
+            },
+            {
+              "sv": "läsning",
+              "pronHu": "lesning",
+              "hu": "olvasás",
+              "en": "reading",
+              "ipa": "[ˈlɛsniŋ]"
+            },
+            {
+              "sv": "skrivande",
+              "pronHu": "szkrivande",
+              "hu": "írás",
+              "en": "writing",
+              "ipa": "[ˈskrivande]"
+            },
+            {
+              "sv": "teckning",
+              "pronHu": "tekning",
+              "hu": "rajz",
+              "en": "drawing",
+              "ipa": "[ˈtekkniŋ]"
+            },
+            {
+              "sv": "målning",
+              "pronHu": "mólning",
+              "hu": "festés",
+              "en": "painting",
+              "ipa": "[ˈmolniŋ]"
+            },
+            {
+              "sv": "fotografering",
+              "pronHu": "fotografering",
+              "hu": "fotózás",
+              "en": "photography",
+              "ipa": "[ˈfotograferiŋ]"
+            },
+            {
+              "sv": "trädgårdsarbete",
+              "pronHu": "tredgórdsarbete",
+              "hu": "kertészkedés",
+              "en": "gardening",
+              "ipa": "[ˈtrɛdgordsarbete]"
+            },
+            {
+              "sv": "matlagning",
+              "pronHu": "matlagning",
+              "hu": "főzés",
+              "en": "cooking",
+              "ipa": "[ˈmatlagniŋ]"
+            },
+            {
+              "sv": "bakning",
+              "pronHu": "bakning",
+              "hu": "sütés",
+              "en": "baking",
+              "ipa": "[ˈbakniŋ]"
+            },
+            {
+              "sv": "stickning",
+              "pronHu": "stikning",
+              "hu": "kötés",
+              "en": "knitting",
+              "ipa": "[ˈstikkniŋ]"
+            },
+            {
+              "sv": "sömnad",
+              "pronHu": "sőmnad",
+              "hu": "varrás",
+              "en": "sewing",
+              "ipa": "[ˈsømnad]"
+            },
+            {
+              "sv": "vandring",
+              "pronHu": "vandring",
+              "hu": "túrázás",
+              "en": "hiking",
+              "ipa": "[ˈvandriŋ]"
+            },
+            {
+              "sv": "camping",
+              "pronHu": "kamping",
+              "hu": "kempingezés",
+              "en": "camping",
+              "ipa": "[ˈkampiŋ]"
+            },
+            {
+              "sv": "fiske",
+              "pronHu": "fiszke",
+              "hu": "horgászat",
+              "en": "fishing",
+              "ipa": "[ˈfiɧe]"
+            },
+            {
+              "sv": "cykling",
+              "pronHu": "kűkling",
+              "hu": "kerékpározás",
+              "en": "cycling",
+              "ipa": "[ˈsykliŋ]"
+            },
+            {
+              "sv": "löpning",
+              "pronHu": "lőpning",
+              "hu": "futás",
+              "en": "running",
+              "ipa": "[ˈløpniŋ]"
+            },
+            {
+              "sv": "dans",
+              "pronHu": "dans",
+              "hu": "tánc",
+              "en": "dancing",
+              "ipa": "[ˈdans]"
+            },
+            {
+              "sv": "sång",
+              "pronHu": "sóng",
+              "hu": "éneklés",
+              "en": "singing",
+              "ipa": "[ˈsoŋ]"
+            },
+            {
+              "sv": "spelande",
+              "pronHu": "spelande",
+              "hu": "játszás",
+              "en": "playing",
+              "ipa": "[ˈspelande]"
+            },
+            {
+              "sv": "schack",
+              "pronHu": "sak",
+              "hu": "sakk",
+              "en": "chess",
+              "ipa": "[ˈɧakk]"
+            },
+            {
+              "sv": "brädspel",
+              "pronHu": "bredspel",
+              "hu": "társasjáték",
+              "en": "board game",
+              "ipa": "[ˈbrɛdspel]"
+            },
+            {
+              "sv": "tv-spel",
+              "pronHu": "tv-spel",
+              "hu": "videójáték",
+              "en": "video game",
+              "ipa": "[ˈtv-ˈspel]"
+            },
+            {
+              "sv": "samlande",
+              "pronHu": "samlande",
+              "hu": "gyűjtés",
+              "en": "collecting",
+              "ipa": "[ˈsamlande]"
+            },
+            {
+              "sv": "frimärken",
+              "pronHu": "frimerken",
+              "hu": "bélyegek",
+              "en": "stamps",
+              "ipa": "[ˈfrimɛrɕen]"
+            },
+            {
+              "sv": "mynt",
+              "pronHu": "műnt",
+              "hu": "érmék",
+              "en": "coins",
+              "ipa": "[ˈmynt]"
+            },
+            {
+              "sv": "gör-det-själv",
+              "pronHu": "gőr-det-helv",
+              "hu": "barkácsolás",
+              "en": "DIY",
+              "ipa": "[ˈjør-ˈdet-ˈɧɛlv]"
+            },
+            {
+              "sv": "träarbete",
+              "pronHu": "trearbete",
+              "hu": "asztalosság",
+              "en": "woodworking",
+              "ipa": "[ˈtrɛarbete]"
+            },
+            {
+              "sv": "keramik",
+              "pronHu": "keramik",
+              "hu": "kerámia",
+              "en": "pottery",
+              "ipa": "[ˈɕeramik]"
+            },
+            {
+              "sv": "yoga",
+              "pronHu": "űoga",
+              "hu": "jóga",
+              "en": "yoga",
+              "ipa": "[ˈyoga]"
+            },
+            {
+              "sv": "meditation",
+              "pronHu": "meditation",
+              "hu": "meditáció",
+              "en": "meditation",
+              "ipa": "[ˈmeditation]"
+            },
+            {
+              "sv": "fågelskådning",
+              "pronHu": "fógelszkódning",
+              "hu": "madármegfigyelés",
+              "en": "birdwatching",
+              "ipa": "[ˈfojelskodniŋ]"
+            },
+            {
+              "sv": "resande",
+              "pronHu": "resande",
+              "hu": "utazás",
+              "en": "travelling",
+              "ipa": "[ˈresande]"
+            },
+            {
+              "sv": "bloggande",
+              "pronHu": "bloggande",
+              "hu": "bloggolás",
+              "en": "blogging",
+              "ipa": "[ˈbloggande]"
+            },
+            {
+              "sv": "vloggande",
+              "pronHu": "vloggande",
+              "hu": "vloggolás",
+              "en": "vlogging",
+              "ipa": "[ˈvloggande]"
+            }
+          ]
+        },
+        {
+          "id": "nyelv",
+          "name": "Nyelv",
+          "items": [
+            {
+              "sv": "språk",
+              "pronHu": "sprók",
+              "hu": "nyelv",
+              "en": "language",
+              "ipa": "[ˈsprok]"
+            },
+            {
+              "sv": "ord",
+              "pronHu": "ord",
+              "hu": "szó",
+              "en": "word",
+              "ipa": "[ˈord]"
+            },
+            {
+              "sv": "fras",
+              "pronHu": "fras",
+              "hu": "kifejezés",
+              "en": "phrase",
+              "ipa": "[ˈfras]"
+            },
+            {
+              "sv": "mening",
+              "pronHu": "mening",
+              "hu": "mondat",
+              "en": "sentence",
+              "ipa": "[ˈmeniŋ]"
+            },
+            {
+              "sv": "grammatik",
+              "pronHu": "gramatik",
+              "hu": "nyelvtan",
+              "en": "grammar",
+              "ipa": "[ˈgrammatik]"
+            },
+            {
+              "sv": "ordförråd",
+              "pronHu": "ordfőród",
+              "hu": "szókincs",
+              "en": "vocabulary",
+              "ipa": "[ˈordførrod]"
+            },
+            {
+              "sv": "uttal",
+              "pronHu": "utal",
+              "hu": "kiejtés",
+              "en": "pronunciation",
+              "ipa": "[ˈʉttal]"
+            },
+            {
+              "sv": "accent",
+              "pronHu": "akent",
+              "hu": "akcentus",
+              "en": "accent",
+              "ipa": "[ˈaksent]"
+            },
+            {
+              "sv": "flyt",
+              "pronHu": "flűt",
+              "hu": "folyékonyság",
+              "en": "fluency",
+              "ipa": "[ˈflyt]"
+            },
+            {
+              "sv": "översättning",
+              "pronHu": "őversetning",
+              "hu": "fordítás",
+              "en": "translation",
+              "ipa": "[ˈøversɛttniŋ]"
+            },
+            {
+              "sv": "ordbok",
+              "pronHu": "ordbok",
+              "hu": "szótár",
+              "en": "dictionary",
+              "ipa": "[ˈordbok]"
+            },
+            {
+              "sv": "alfabet",
+              "pronHu": "alfabet",
+              "hu": "ábécé",
+              "en": "alphabet",
+              "ipa": "[ˈalfabet]"
+            },
+            {
+              "sv": "bokstav",
+              "pronHu": "bokstav",
+              "hu": "betű",
+              "en": "letter",
+              "ipa": "[ˈbokstav]"
+            },
+            {
+              "sv": "ljud",
+              "pronHu": "ljud",
+              "hu": "hang",
+              "en": "sound",
+              "ipa": "[ˈljʉd]"
+            },
+            {
+              "sv": "betydelse",
+              "pronHu": "betűdelse",
+              "hu": "jelentés",
+              "en": "meaning",
+              "ipa": "[ˈbetydelse]"
+            },
+            {
+              "sv": "definition",
+              "pronHu": "definition",
+              "hu": "definíció",
+              "en": "definition",
+              "ipa": "[ˈdefinition]"
+            },
+            {
+              "sv": "synonym",
+              "pronHu": "sűnonűm",
+              "hu": "szinonima",
+              "en": "synonym",
+              "ipa": "[ˈsynonym]"
+            },
+            {
+              "sv": "antonym",
+              "pronHu": "antonűm",
+              "hu": "antonima",
+              "en": "antonym",
+              "ipa": "[ˈantonym]"
+            },
+            {
+              "sv": "verb",
+              "pronHu": "verb",
+              "hu": "ige",
+              "en": "verb",
+              "ipa": "[ˈverb]"
+            },
+            {
+              "sv": "substantiv",
+              "pronHu": "substantiv",
+              "hu": "főnév",
+              "en": "noun",
+              "ipa": "[ˈsʉbstantiv]"
+            },
+            {
+              "sv": "adjektiv",
+              "pronHu": "adjektiv",
+              "hu": "melléknév",
+              "en": "adjective",
+              "ipa": "[ˈadjektiv]"
+            },
+            {
+              "sv": "adverb",
+              "pronHu": "adverb",
+              "hu": "határozószó",
+              "en": "adverb",
+              "ipa": "[ˈadverb]"
+            },
+            {
+              "sv": "preposition",
+              "pronHu": "preposition",
+              "hu": "elöljáró",
+              "en": "preposition",
+              "ipa": "[ˈpreposition]"
+            },
+            {
+              "sv": "konjunktion",
+              "pronHu": "konjunktion",
+              "hu": "kötőszó",
+              "en": "conjunction",
+              "ipa": "[ˈkonjʉnktion]"
+            },
+            {
+              "sv": "tempus",
+              "pronHu": "tempus",
+              "hu": "igeidő",
+              "en": "tense",
+              "ipa": "[ˈtempʉs]"
+            },
+            {
+              "sv": "presens",
+              "pronHu": "presens",
+              "hu": "jelen idő",
+              "en": "present",
+              "ipa": "[ˈpresens]"
+            },
+            {
+              "sv": "preteritum",
+              "pronHu": "preteritum",
+              "hu": "múlt idő",
+              "en": "past",
+              "ipa": "[ˈpreteritʉm]"
+            },
+            {
+              "sv": "futurum",
+              "pronHu": "futurum",
+              "hu": "jövő idő",
+              "en": "future",
+              "ipa": "[ˈfʉtʉrʉm]"
+            },
+            {
+              "sv": "plural",
+              "pronHu": "plural",
+              "hu": "többes szám",
+              "en": "plural",
+              "ipa": "[ˈplʉral]"
+            },
+            {
+              "sv": "singular",
+              "pronHu": "singular",
+              "hu": "egyes szám",
+              "en": "singular",
+              "ipa": "[ˈsiŋʉlar]"
+            },
+            {
+              "sv": "fråga",
+              "pronHu": "fróga",
+              "hu": "kérdés",
+              "en": "question",
+              "ipa": "[ˈfroga]"
+            },
+            {
+              "sv": "svar",
+              "pronHu": "svar",
+              "hu": "válasz",
+              "en": "answer",
+              "ipa": "[ˈsvar]"
+            },
+            {
+              "sv": "samtal",
+              "pronHu": "samtal",
+              "hu": "beszélgetés",
+              "en": "conversation",
+              "ipa": "[ˈsamtal]"
+            },
+            {
+              "sv": "dialog",
+              "pronHu": "dialog",
+              "hu": "párbeszéd",
+              "en": "dialogue",
+              "ipa": "[ˈdialog]"
+            },
+            {
+              "sv": "tal",
+              "pronHu": "tal",
+              "hu": "beszéd",
+              "en": "speech",
+              "ipa": "[ˈtal]"
+            }
           ]
         }
       ]
