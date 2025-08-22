@@ -83,6 +83,7 @@ td {
     padding: 10px 12px;
     border-bottom: 1px solid var(--muted);
     vertical-align: top;
+    transition: display 1s;
 }
 
 th {
