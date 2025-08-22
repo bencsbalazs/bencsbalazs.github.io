@@ -1,13 +1,21 @@
 {
-  "version": 2,
+  "version": 2.1,
   "groups": [
     {
       "id": "alap szavak",
-      "name": "Alap szavak",
+      "name": {
+        "en": "Basic words",
+        "sv": "Grundläggande ord",
+        "hu": "Alap szavak"
+      },
       "categories": [
         {
           "id": "szinek",
-          "name": "Színek",
+          "name": {
+            "en": "Colors",
+            "sv": "Färger",
+            "hu": "Színek"
+          },
           "items": [
             {
               "sv": "röd",
@@ -223,7 +231,11 @@
         },
         {
           "id": "koszonesek",
-          "name": "Köszönések",
+          "name": {
+            "en": "Greetings",
+            "sv": "Hälsningar",
+            "hu": "Üdvözlések"
+          },
           "items": [
             {"sv": "hej", "pronHu": "hej", "hu": "szia", "en": "hi", "ipa": "[hɛj]"},
             {"sv": "hej hej", "pronHu": "hej hej", "hu": "szia-szia", "en": "hi there", "ipa": "[hɛj hɛj]"},
@@ -260,7 +272,11 @@
         },
         {
           "id": "elnezes-keresek",
-          "name": "Elnézés kérések",
+          "name": {
+            "en": "Apologies",
+            "sv": "Ursäkta",
+            "hu": "Elnézés kérések"
+          },
           "items": [
             {
               "sv": "ursäkta",
@@ -330,7 +346,11 @@
         },
         {
           "id": "jokivansagok",
-          "name": "Jókívánságok",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Jókívánságok"
+          },
           "items": [
             {
               "sv": "lycka till",
@@ -403,11 +423,19 @@
     },
     {
       "id": "elovilag",
-      "name": "Élővilág",
+      "name": {
+        "en": "",
+        "sv": "",
+        "hu": "Élővilág"
+      },
       "categories": [
         {
           "id": "a-termeszeti-vilag",
-          "name": "A természeti világ",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "A természeti világ"
+          },
           "items": [
             {
               "sv": "natur",
@@ -672,7 +700,11 @@
         },
         {
           "id": "kornyezet",
-          "name": "Környezet",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Környezet"
+          },
           "items": [
             {
               "sv": "natur",
@@ -939,11 +971,19 @@
     },
     {
       "id": "Tárgyak",
-      "name": "Tárgyak",
+      "name": {
+        "en": "",
+        "sv": "",
+        "hu": "Tárgyak"
+      },
       "categories": [
         {
           "id": "haztartasi-gepek",
-          "name": "Háztartási gépek",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Háztartási gépek"
+          },
           "items": [
             {
               "sv": "kylskåp",
@@ -1159,7 +1199,11 @@
         },
         {
           "id": "epuletek",
-          "name": "Épületek",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Épületek"
+          },
           "items": [
             {
               "sv": "hus",
@@ -1375,7 +1419,11 @@
         },
         {
           "id": "ruhazat",
-          "name": "Ruházat",
+          "name": {
+            "en": "Clothes",
+            "sv": "",
+            "hu": "Ruházat"
+          },
           "items": [
             {
               "sv": "skjorta",
@@ -1591,7 +1639,11 @@
         },
         {
           "id": "etelek-es-italok",
-          "name": "Ételek és italok",
+          "name": {
+            "en": "Food and Drinks",
+            "sv": "",
+            "hu": "Ételek és italok"
+          },
           "items": [
             {
               "sv": "bröd",
@@ -1806,8 +1858,12 @@
           ]
         },
         {
-          "id": "haz-es-otthon",
-          "name": "Ház és otthon",
+          "id": "otthon",
+          "name": {
+            "en": "Home",
+            "sv": "",
+            "hu": "Otthon"
+          },
           "items": [
             {
               "sv": "hem",
@@ -2023,7 +2079,11 @@
         },
         {
           "id": "technologia-es-kommunikacio",
-          "name": "Technológia és kommunikáció",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Technológia és kommunikáció"
+          },
           "items": [
             {
               "sv": "dator",
@@ -2241,11 +2301,19 @@
     },
     {
       "id": "helyek",
-      "name": "Helyek",
+      "name": {
+        "en": "Places",
+        "sv": "",
+        "hu": "Helyek"
+      },
       "categories": [
         {
           "id": "helyek-videk",
-          "name": "Helyek: vidék",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Helyek: vidék"
+          },
           "items": [
             {
               "sv": "landsbygd",
@@ -2517,7 +2585,11 @@
         },
         {
           "id": "helyek-varos",
-          "name": "Helyek: város",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Helyek: város"
+          },
           "items": [
             {
               "sv": "stad",
@@ -2798,11 +2870,19 @@
     },
     {
       "id": "cselekvesek",
-      "name": "Cselekvések",
+      "name": {
+        "en": "",
+        "sv": "",
+        "hu": "Cselekvések"
+      },
       "categories": [
         {
           "id": "hobbi-es-szabadido",
-          "name": "Hobbi és szabadidő",
+          "name": {
+            "en": "Hobby and Freetime",
+            "sv": "",
+            "hu": "Hobbi és szabadidő"
+          },
           "items": [
             {
               "sv": "hobby",
@@ -3053,7 +3133,11 @@
         },
         {
           "id": "utazas-es-kozlekedes",
-          "name": "Utazás és közlekedés",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Utazás és közlekedés"
+          },
           "items": [
             {
               "sv": "resa",
@@ -3269,7 +3353,11 @@
         },
         {
           "id": "szolgaltatasok",
-          "name": "Szolgáltatások",
+          "name": {
+            "en": "Services",
+            "sv": "",
+            "hu": "Szolgáltatások"
+          },
           "items": [
             {
               "sv": "tjänst",
@@ -3520,7 +3608,11 @@
         },
         {
           "id": "vasarlas",
-          "name": "Vásárlás",
+          "name": {
+            "en": "Shopping",
+            "sv": "",
+            "hu": "Vásárlás"
+          },
           "items": [
             {
               "sv": "butik",
@@ -3778,7 +3870,11 @@
         },
         {
           "id": "sport",
-          "name": "Sport",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Sport"
+          },
           "items": [
             {
               "sv": "sport",
@@ -4052,11 +4148,19 @@
     },
     {
       "id": "fogalmak",
-      "name": "Fogalmak",
+      "name": {
+        "en": "",
+        "sv": "",
+        "hu": "Fogalmak"
+      },
       "categories": [
         {
           "id": "szemelyes-erzesek-velemenyek-es-tapasztalatok",
-          "name": "Személyes érzések, vélemények és tapasztalatok",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Személyes érzések, vélemények és tapasztalatok"
+          },
           "items": [
             {
               "sv": "känsla",
@@ -4314,7 +4418,11 @@
         },
         {
           "id": "munka-es-allasok",
-          "name": "Munka és állások",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Munka és állások"
+          },
           "items": [
             {
               "sv": "arbete",
@@ -4530,7 +4638,11 @@
         },
         {
           "id": "idojaras",
-          "name": "Időjárás",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Időjárás"
+          },
           "items": [
             {
               "sv": "väder",
@@ -4746,7 +4858,11 @@
         },
         {
           "id": "oktatas",
-          "name": "Oktatás",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Oktatás"
+          },
           "items": [
             {
               "sv": "skola",
@@ -4969,7 +5085,11 @@
         },
         {
           "id": "szorakozas-es-media",
-          "name": "Szórakozás és média",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Szórakozás és média"
+          },
           "items": [
             {
               "sv": "film",
@@ -5220,7 +5340,11 @@
         },
         {
           "id": "egeszseg-orvoslas-es-testmozgas",
-          "name": "Egészség, orvoslás és testmozgás",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Egészség, orvoslás és testmozgás"
+          },
           "items": [
             {
               "sv": "hälsa",
@@ -5506,7 +5630,11 @@
         },
         {
           "id": "nyelv",
-          "name": "Nyelv",
+          "name": {
+            "en": "",
+            "sv": "",
+            "hu": "Nyelv"
+          },
           "items": [
             {
               "sv": "språk",

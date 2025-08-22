@@ -1,3 +1,5 @@
+import { currentLanguage } from '../../../assets/js/helpers.js';
+
 const state = { data: null };
 const tbody = document.getElementById('tbody');
 const groupSel = document.getElementById('group');
@@ -7,9 +9,11 @@ const countEl = document.getElementById('count');
 const playAllBtn = document.getElementById('playAll');
 const stopBtn = document.getElementById('stop');
 
+const lang = currentLanguage();
+
 async function loadData() {
     const res = await fetch('./sv_words.json');
-    if (!res.ok) throw new Error('Nem sikerült betölteni a szótár fájlt.');
+    if (!res.ok) throw new Error('Don\'t find the dictionary.');
     state.data = await res.json();
     fillSelectors();
     render();
@@ -17,11 +21,11 @@ async function loadData() {
 
 function fillSelectors() {
     groupSel.innerHTML = '';
-    state.data.groups.forEach((g, i) => {
+    state.data.groups.forEach((group, index) => {
         const opt = document.createElement('option');
-        opt.value = g.id;
-        opt.textContent = `${g.name}`;
-        if (i === 0) opt.selected = true;
+        opt.value = group.id;
+        opt.textContent = `${group.name[lang]}`;
+        if (index === 0) opt.selected = true;
         groupSel.appendChild(opt);
     });
     fillCategorySelector();
@@ -44,7 +48,7 @@ function fillCategorySelector() {
         const count = c.items.length;
         const opt = document.createElement('option');
         opt.value = c.id;
-        opt.textContent = `${c.name} (${count})`;
+        opt.textContent = `${c.name[lang]} (${count})`;
         if (i === 0) opt.selected = true;
         categorySel.appendChild(opt);
     });
@@ -74,14 +78,14 @@ function render() {
         const tdBtn = document.createElement('td');
         const btn = document.createElement('button');
         btn.className = 'icon';
-        btn.setAttribute('aria-label', 'Felolvasás');
+        btn.setAttribute('aria-label', 'Reading');
         btn.textContent = '🔊';
         btn.addEventListener('click', () => speak(sv));
         tdBtn.appendChild(btn);
         tr.append(tdSv, tdPron, tdIpa, tdHu, tdEn, tdBtn);
         tbody.appendChild(tr);
     });
-    countEl.textContent = `${rows.length} kifejezés`;
+    countEl.textContent = `${rows.length} expression`;
 }
 
 let svVoice = null;

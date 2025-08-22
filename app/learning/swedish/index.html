@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1" />
-    <title>Svéd szóslista hanggal – kategóriák + IPA</title>
+    <title>Swedish word list</title>
     <link
       rel="stylesheet"
       href="style.css" />
@@ -22,7 +22,7 @@
           ads: {},
         },
         language: {
-          default: 'hu',
+          default: 'en',
           translations: {
             hu: {
               consentModal: {
@@ -45,6 +45,27 @@
                 ],
               },
             },
+            en: {
+              consentModal: {
+                title: 'Cookies',
+                description:
+                  'I use cookies as usual to give personal experience.',
+                acceptAllBtn: 'Accept all',
+                acceptNecessaryBtn: 'Deny all',
+                showPreferencesBtn: 'Settings',
+              },
+              preferencesModal: {
+                title: 'Cookie settings',
+                acceptAllBtn: 'Accept all',
+                acceptNecessaryBtn: 'Deny all',
+                savePreferencesBtn: 'Save',
+                sections: [
+                  {title: 'Necessary', linkedCategory: 'necessary'},
+                  {title: 'Analytics', linkedCategory: 'analytics'},
+                  {title: 'Marketing', linkedCategory: 'ads'},
+                ],
+              },
+            },
           },
         },
       });
@@ -53,7 +74,7 @@
   <body>
     <header>
       <div class="wrap">
-        <h1 style="float: left">Svéd szóslista</h1>
+        <h1 style="float: left">Swedish word list</h1>
         <div style="float: right">
           <img src="/assets/img/flags/ipa.png" class="flag" data-colnumber="3" alt="IPA" height="30">
           <img src="/assets/img/flags/en.png" class="flag" data-colnumber="5" alt="EN" height="30">
@@ -63,17 +84,17 @@
           style="clear: both"
           class="controls">
           <div class="groupline">
-            <label for="group">Main category</label>
+            <label for="group">Category</label>
             <select id="group"></select>
           </div>
           <div class="groupline">
-            <label for="category">Kategória</label>
+            <label for="category">Subcategory</label>
             <select id="category"></select>
           </div>
           <input
             id="search"
             type="search"
-            placeholder="Search (svenska / magyar / english / kiejtés / IPA)" />
+            placeholder="Search (swedish / magyar / english / kiejtés / IPA)" />
           <button
             id="playAll"
             class="icon"
@@ -99,8 +120,8 @@
         <table>
           <thead>
             <tr>
-              <th>Svedish</th>
-              <th>Magyar kiejtés</th>
+              <th>Swedish</th>
+              <th>Kiejtés</th>
               <th>IPA</th>
               <th>Magyar</th>
               <th>English</th>
@@ -111,16 +132,15 @@
         </table>
         <p class="footer">
           <ul>
-            <li>A kiejtést a böngésző <strong>svéd (sv-SE)</strong> hangja olvassa fel.</li>
-            <li>A magyar kiejtés közelítő,
-          beszédközpontú segédlet.</li>
-            <li>A nyelveknek telepítve kell lenni az operációs rendszerben, mert ha nem akkor az alap angol kiejtést használja a felolvasás.</li>
-            <li>Az <a href="https://hu.wikipedia.org/wiki/Nemzetk%C3%B6zi_fonetikai_%C3%A1b%C3%A9c%C3%A9">IPA-k</a> megközelítőek, sztenderd köznyelvi ejtés alapján.</li>
-              <li><a href="/" title="Back to home">Back to home</a></li>
+            <li>The pronunciation is read by the browser's <strong>Swedish (sv-SE)</strong> voice...</li>
+            <li></li>
+            <li>A magyar kiejtés közelítő, beszédközpontú segédlet a magyar anyanyelvűeknek.</li>
+            <li>IPAs are approximations, based on standard colloquial pronunciation.</li>
+            <li><a href="/">Home page</a></li>
           </ul>
         </p>
       </div>
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
