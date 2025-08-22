@@ -89,9 +89,9 @@ const loadVoicesChromeSafe = () => {
     return new Promise(resolve => {
         const tryLoad = () => {
             const voices = window.speechSynthesis.getVoices();
-            if (voices && voices.length) {
+            if (voices?.length) {
                 svVoice =
-                    voices.find(v => v.lang && v.lang.toLowerCase().startsWith('sv')) ||
+                    voices.find(v => v?.lang.toLowerCase().startsWith('sv')) ||
                     voices.find(v => /swedish|svenska/i.test(v.name || '')) ||
                     null;
                 resolve(voices);
@@ -152,12 +152,12 @@ categorySel.addEventListener('change', render);
 search.addEventListener('input', render);
 document.querySelectorAll('.flag').forEach(flag => {
     flag.addEventListener('click', e => {
-        e.target.style.opacity = (e.target.style.opacity === '0.5') ? '1' : '0.5';
+        e.target.style.opacity = e.target.style.opacity === '0.5' ? '1' : '0.5';
         let colNumber = e.target.getAttribute('data-colnumber');
         document
             .querySelectorAll('table tr td:nth-child(' + colNumber + '), table tr th:nth-child(' + colNumber + ')')
             .forEach(col => {
-                col.style.display = (col.style.display === 'none') ? 'table-cell' : 'none';
+                col.style.display = col.style.display === 'none' ? 'table-cell' : 'none';
             });
     });
 });
