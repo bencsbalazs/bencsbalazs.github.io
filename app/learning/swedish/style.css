@@ -126,3 +126,7 @@ tr:last-child td {
     font-size: 12px;
     opacity: .8;
 }
+
+.flag {
+    transition: opacity 1s;
+}
