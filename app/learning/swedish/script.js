@@ -1,21 +1,44 @@
-import { currentLanguage } from '../../../assets/js/helpers.js';
+import { select, currentLanguage, setCookie } from '../../../assets/js/helpers.js';
 
 const state = { data: null };
-const tbody = document.getElementById('tbody');
-const groupSel = document.getElementById('group');
-const categorySel = document.getElementById('category');
-const search = document.getElementById('search');
-const countEl = document.getElementById('count');
-const playAllBtn = document.getElementById('playAll');
-const stopBtn = document.getElementById('stop');
+const tbody = select('#tbody');
+const groupSel = select('#group');
+const categorySel = select('#category');
+const search = select('#search');
+const countEl = select('#count');
+const playAllBtn = select('#playAll');
+const stopBtn = select('#stop');
+const langSel = select('#languageSelector');
+const currentTopic = select('#currentTopic');
+let selectedLanguage = currentLanguage();
+const usableLanguages = ['en', 'hu', 'sv']
 
-const lang = currentLanguage();
+const fillLanguageMenu = () => {
+    langSel.innerHTML = '';
+    usableLanguages.forEach(lang => {
+        const opt = document.createElement('option');
+        opt.value = lang;
+        if (lang === selectedLanguage) opt.selected = true;
+        opt.textContent = lang.toUpperCase();
+        langSel.appendChild(opt);
+    });
+}
+
+const showCurrentTopic = () => {
+    let selectedCategory = currentCategory();
+    let selectedGroup = currentGroup();
+    currentTopic.innerHTML = selectedGroup.name[selectedLanguage] + ": "
+    usableLanguages.forEach(lang => {
+        currentTopic.innerHTML += selectedCategory["name"][lang] + "/";
+    })
+}
 
 async function loadData() {
     const res = await fetch('./sv_words.json');
     if (!res.ok) throw new Error('Don\'t find the dictionary.');
     state.data = await res.json();
     fillSelectors();
+    fillLanguageMenu();
     render();
 }
 
@@ -24,7 +47,7 @@ function fillSelectors() {
     state.data.groups.forEach((group, index) => {
         const opt = document.createElement('option');
         opt.value = group.id;
-        opt.textContent = `${group.name[lang]}`;
+        opt.textContent = `${group.name[selectedLanguage]}`;
         if (index === 0) opt.selected = true;
         groupSel.appendChild(opt);
     });
@@ -48,7 +71,7 @@ function fillCategorySelector() {
         const count = c.items.length;
         const opt = document.createElement('option');
         opt.value = c.id;
-        opt.textContent = `${c.name[lang]} (${count})`;
+        opt.textContent = `${c.name[selectedLanguage]} (${count})`;
         if (i === 0) opt.selected = true;
         categorySel.appendChild(opt);
     });
@@ -150,9 +173,14 @@ stopBtn.addEventListener('click', () => {
 
 groupSel.addEventListener('change', () => {
     fillCategorySelector();
+    showCurrentTopic();
     render();
 });
-categorySel.addEventListener('change', render);
+categorySel.addEventListener('change', () => {
+    showCurrentTopic();
+    render();
+});
+search.addEventListener('input', render);
 search.addEventListener('input', render);
 document.querySelectorAll('.flag').forEach(flag => {
     flag.addEventListener('click', e => {
@@ -165,5 +193,14 @@ document.querySelectorAll('.flag').forEach(flag => {
             });
     });
 });
+langSel.addEventListener('change', () => {
+    selectedLanguage = langSel.value;
+    setCookie('language', langSel.value);
+    fillSelectors();
+    fillLanguageMenu();
+    fillCategorySelector();
+    render();
+});
+
 
 loadVoicesChromeSafe().then(loadData);

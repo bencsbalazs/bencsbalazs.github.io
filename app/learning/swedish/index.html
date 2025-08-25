@@ -76,6 +76,7 @@
       <div class="wrap">
         <h1 style="float: left">Swedish word list</h1>
         <div style="float: right">
+          <span>Toggle columns: </span>
           <img src="/assets/img/flags/ipa.png" class="flag" data-colnumber="3" alt="IPA" height="30">
           <img src="/assets/img/flags/en.png" class="flag" data-colnumber="5" alt="EN" height="30">
           <img src="/assets/img/flags/sv.png" class="flag" data-colnumber="1" alt="SV" height="30">
@@ -112,11 +113,16 @@
             id="count"
             >0 words</span
           >
+          <div class="groupline">
+            <label for="category">Menu language</label>
+            <select id="languageSelector"></select>
+          </div>
         </div>
       </div>
     </header>
     <main>
       <div class="wrap">
+        <div id="currentTopic"></div>
         <table>
           <thead>
             <tr>

@@ -131,3 +131,7 @@ tr:last-child td {
 .flag {
     transition: opacity 1s;
 }
+
+#currentTopic {
+    margin-bottom: .5rem;
+}

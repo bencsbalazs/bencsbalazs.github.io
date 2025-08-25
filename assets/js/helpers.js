@@ -35,7 +35,7 @@ const getCookie = (name) => {
 
 
 const currentLanguage = () => {
-    return getCookie('language') || 'en';
+    return getCookie('language') || 'hu';
 }
 
 export { on, select, setCookie, getCookie, currentLanguage };
