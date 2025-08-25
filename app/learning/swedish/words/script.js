@@ -1,4 +1,4 @@
-import { select, currentLanguage, setCookie } from '../../../assets/js/helpers.js';
+import { select, currentLanguage, setCookie } from '../../../../assets/js/helpers.js';
 
 const state = { data: null };
 const tbody = select('#tbody');

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="SCORM-Player-Package" version="1.0"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 ims_xml.xsd
+          http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>SCORM Tartalomlejátszó – Több DIA külön SCO-ként</title>
+
+      <!-- Each item is a SCO pointing to the same index.html with a slide parameter -->
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true" adlcp:parameters="?slide=1">
+        <title>Dia 1 – Címdia</title>
+      </item>
+      <item identifier="ITEM-2" identifierref="RES-1" isvisible="true" adlcp:parameters="?slide=2">
+        <title>Dia 2 – Bevezetés</title>
+      </item>
+      <item identifier="ITEM-3" identifierref="RES-1" isvisible="true" adlcp:parameters="?slide=3">
+        <title>Dia 3 – Kép példa</title>
+      </item>
+      <item identifier="ITEM-4" identifierref="RES-1" isvisible="true" adlcp:parameters="?slide=4">
+        <title>Dia 4 – Kód</title>
+      </item>
+      <item identifier="ITEM-5" identifierref="RES-1" isvisible="true" adlcp:parameters="?slide=5">
+        <title>Dia 5 – Záró</title>
+      </item>
+    </organization>
+  </organizations>
+
+  <resources>
+    <!-- One resource; LMS will append the parameters for each SCO -->
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html" />
+      <file href="styles.css" />
+      <file href="player.js" />
+      <file href="slides.md" />
+    </resource>
+  </resources>
+</manifest>

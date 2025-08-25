@@ -1,0 +1,3 @@
+[submodule "app/contentframe"]
+	path = app/contentframe
+	url = https://github.com/bencsbalazs/contentframework.git
