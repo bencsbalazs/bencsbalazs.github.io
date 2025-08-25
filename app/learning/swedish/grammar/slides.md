@@ -1,51 +1,57 @@
-# A Svéd Szórend Mesterfogásai
+# A Svéd Szórend
 
-> A szabály egyszerű, a helyes használat a tudás.
+> A V2 szabály és a mellékmondatok logikája.
 
-- **Az alap:** Egyenes szórend (Rakt ordföljd)
-- **A kihívás:** Fordított szórend (V2 szabály)
-- **A mélyvíz:** Mellékmondatok (BIFF-szabály)
-- **Összefoglaló:** A legfontosabb minták
+---SLIDE---
 
----
+## A Névmások (Pronomen)
 
-## Az Alap: Egyenes Szórend (Rakt Ordföljd)
+A svéd mondatok helyes felépítéséhez elengedhetetlen a névmások három fő alakjának ismerete.
 
-Minden svéd főmondat alapja az egyenes szórend, amikor a mondat alannyal kezdődik.
+| Jelentés      | Alanyeset (Subjekt) | Tárgyeset (Objekt) | Birtokos (Possessiva) |
+| :------------ | :------------------ | :----------------- | :-------------------- |
+| **én**        | `jag`               | `mig` (mig)        | `min / mitt / mina`   |
+| **te**        | `du`                | `dig` (dig)        | `din / ditt / dina`   |
+| **ő** (hímn.) | `han`               | `honom`            | `hans`                |
+| **ő** (nőn.)  | `hon`               | `henne`            | `hennes`              |
+| **mi**        | `vi`                | `oss`              | `vår / vårt / våra`   |
+| **ti**        | `ni`                | `er`               | `er / ert / era`      |
+| **ők**        | `de`                | `dem`              | `deras`               |
 
-- **A képlet:** `ALANY (S)` + `IGE (V)` + `TÁRGY/TÖBBI MONDATRÉSZ (O/X)`
-<p data-animate="animate__fadeInUp">Ez a kiindulási pont. Minden más erre épül.</p>
-<p data-animate="animate__fadeInUp">Például:</p>
-<p data-animate="animate__fadeInRight"><code>Jag läser en bok.</code> (Én olvasok egy könyvet.)</p>
-<p data-animate="animate__fadeInRight"><code>Studenten skriver ett brev.</code> (A diák ír egy levelet.)</p>
+<p data-animate="animate__fadeInUp">Figyelj a kiejtésre! A **de** (ők) és a **dem** (őket) szavak kiejtése a beszélt nyelvben legtöbbször **dom**.</p>
 
----
+---SLIDE---
 
-## A Kihívás: Fordított Szórend (V2 Szabály)
+## A Főmondat Alapszabálya: V2
 
-A svéd nyelvtan legfontosabb szabálya: a ragozott ige a főmondatban **mindig** a második helyen áll.
+Az ige **MINDIG** a 2. mondatrész.
 
-<p data-animate="animate__fadeIn">Ha a mondat nem az alannyal kezdődik (pl. egy idő- vagy helyhatározóval), az alany és az ige helyet cserél.</p>
-<p data-animate="animate__fadeInUp">Nézzük a változást:</p>
-<p data-animate="animate__fadeInLeft">Egyenes szórend: <code>**Jag läser** en bok idag.</code></p>
-<p data-animate__fadeInRight">Fordított szórend: <code>Idag **läser jag** en bok.</code></p>
+- **1. minta: Egyenes szórend**
+  `ALANY` → `IGE` → `TÖBBI`
 
-> Tipp: Ha idő- vagy helyhatározóval kezdesz, azonnal tedd utána az igét, és csak utána az alanyt!
+  > Jag läser en bok.
 
----
+- **2. minta: Fordított szórend**
+  `BÁRMI MÁS` → `IGE` → `ALANY`
+  > Idag läser jag en bok.
 
-## A Mélyvíz: Mellékmondatok (BIFF-szabály)
+---SLIDE---
 
-A mellékmondatok (`att`, `om`, `när`, `eftersom` után) más szabályt követnek, főleg a mondathatározók (pl. _inte, alltid_) helyét tekintve.
+## A Kivétel: Mellékmondatok (BIFF)
 
-- **A szabály:** A mondathatározók az ige **ELÉ** kerülnek.
-- **Emlékeztető:** **B**isats-**I**nte-**F**öre-**F**init verb (Mellékmondatban a "nem" az ige előtt van.)
-<p data-animate="animate__fadeInUp">Lássuk a különbséget:</p>
-<p data-animate="animate__fadeIn">**Főmondat:** Han kommer **inte** idag. (Ő ma nem jön.)</p>
-<p data-animate="animate__fadeIn">**Mellékmondat:** Jag tror att han **inte** kommer idag. (Azt hiszem, hogy ő ma nem jön.)</p>
-![Kép Svédországról](https://picsum.photos/640/480?random=2)
+A kötőszavak (`att, om, när...`) után a mondathatározók (pl. _inte, alltid_) az ige **ELÉ** kerülnek.
 
----
+<p data-animate="animate__fadeIn">
+**Főmondat:**
+> Han kommer **inte** idag.
+</p>
+
+<p data-animate="animate__fadeInUp">
+**Mellékmondat:**
+> Jag tror att han **inte** kommer idag.
+</p>
+
+---SLIDE---
 
 ## Összefoglaló Táblázat
 
@@ -58,12 +64,3 @@ Ez a táblázat segít átlátni a legfontosabb mondattípusokat.
 | **Mellékmondat**         | (BIFF)    | `...att jag inte köper en glass.` |
 
 <p data-animate="animate__fadeIn">Mentsd el ezt a diát, ez a svéd mondattan alapja!</p>
-
----
-
-## Záródia
-
-A szórend a svéd nyelvtan ritmusa.
-
-<p data-animate="animate__fadeInUp">Gyakorlással ráérzel!</p>
-<p data-animate="animate__zoomIn">A haladásod mentve.</p>
