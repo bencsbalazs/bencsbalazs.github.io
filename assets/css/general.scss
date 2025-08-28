@@ -30,8 +30,8 @@ iframe {
     position: absolute;
     top: 0;
     right: 0;
-    width: 15em;
-    height: 15em;
+    width: 10em;
+    height: 10em;
     z-index: 999;
 }
 
@@ -46,9 +46,11 @@ section {
 
 .section-title {
     padding-bottom: 30px;
+
     p {
         margin-bottom: 0;
     }
+
     h2 {
         font-size: 32px;
         font-weight: bold;
@@ -56,6 +58,7 @@ section {
         padding-bottom: 10px;
         border-bottom: solid 2px $font-color;
         position: relative;
+
         &::after {
             content: "";
             position: absolute;

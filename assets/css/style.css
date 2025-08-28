@@ -23,7 +23,7 @@
   font-variation-settings: "wdth" 100;
 }
 body {
-  font-family: "Tektur", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: rgb(40, 40, 40);
 }
 
@@ -53,8 +53,8 @@ iframe {
   position: absolute;
   top: 0;
   right: 0;
-  width: 15em;
-  height: 15em;
+  width: 10em;
+  height: 10em;
   z-index: 999;
 }
 
@@ -142,7 +142,6 @@ nav .social-links a {
   transition: color ease-in-out 0.5s;
   width: 36px;
   height: 36px;
-  transition: 0.3s;
 }
 nav .social-links a:hover {
   color: rgba(250, 250, 250, 0.55);
@@ -156,20 +155,6 @@ nav .social-links a:hover {
   background-repeat: no-repeat;
   background-position: 90% 100%;
 }
-#hero:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-#hero .hero-container {
-  position: relative;
-  z-index: 2;
-  min-width: 300px;
-}
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
@@ -182,6 +167,7 @@ nav .social-links a:hover {
   color: rgb(40, 40, 40);
   margin-bottom: 50px;
   font-size: 26px;
+  text-shadow: 0 0 4px rgb(255, 255, 255);
 }
 #hero p span {
   color: rgb(40, 40, 40);

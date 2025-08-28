@@ -62,67 +62,46 @@
     </a>
     <i class="bi bi-list mobile-nav-toggle d-none"></i>
 
+    <!-- ======= Hero Section ======= -->
     <section
       id="hero"
-      class="d-flex flex-column justify-content-center p-5">
-      <div class="sociallinks">
-        <a
-          href="https://www.facebook.com/balazs.bencs.9"
-          target="_blank"
-          title="Me on Facebook"
-          ><i class="bi bi-facebook"></i
-        ></a>
-        <a
-          href="https://github.com/bencsbalazs"
-          title="Me on Github"
-          target="_blank"
-          ><i class="bi bi-github"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/bencsbalazs/"
-          target="_blank"
-          ><i class="bi bi-instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/bencsbalazs/"
-          target="_blank"
-          title="Me on Linkedin"
-          ><i class="bi bi-linkedin"></i
-        ></a>
-        <a
-          href="https://balazsbencs.blogspot.com/"
-          target="_blank"
-          title="Me on Blogger"
-          ><i class="bi bi-journals"></i
-        ></a>
+      class="d-flex vh-100 align-items-center text-center">
+      <div class="container">
+        <div class="row content-start">
+          <div class="col-lg-8">
+            <h1 class="display-3 fw-bold">Balázs Bencs</h1>
+            <p class="lead">Full-Stack Developer</p>
+            <p class="mb-4">
+              ...with a passion for building elegant, efficient web applications. I specialize in Python, Django, React,
+              and cloud-based deployments with Docker. I enjoy turning complex problems into clean, maintainable code
+              that delivers real-world impact.
+            </p>
+            <div class="d-flex justify-content-center gap-3 mb-4">
+              <span class="badge bg-dark text-light rounded-pill p-2"
+                ><i class="bi bi-geo-alt-fill me-1"></i> Willing to relocate</span
+              >
+              <span class="badge bg-dark text-light rounded-pill p-2"
+                ><i class="bi bi-building-fill me-1"></i> Love to work onsite</span
+              >
+              <span class="badge bg-dark text-light rounded-pill p-2"
+                ><i class="bi bi-people-fill me-1"></i> Strong teamplayer</span
+              >
+            </div>
+            <div>
+              <a
+                href="#experience"
+                class="btn btn-primary btn-lg rounded-pill mx-2 scrollto"
+                >Experience</a
+              >
+              <a
+                href="#projects"
+                class="btn btn-primary btn-lg rounded-pill mx-2 scrollto"
+                >Projects</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hero-container">
-        <h1>Balázs Bencs</h1>
-        <p>Full-Stack developer</p>
-      </div>
-      <article>
-        ...with a passion for building elegant, efficient web applications. I specialize in Python, Django, React, and
-        cloud-based deployments with Docker. I enjoy turning complex problems into clean, maintainable code that
-        delivers real-world impact.
-      </article>
-      <article>
-        <ul>
-          <li>...willingness to relocate.</li>
-          <li>...love to work onsite.</li>
-          <li>...strong teamplayer.</li>
-          <li>...no family.</li>
-        </ul>
-        <a
-          href="#experience"
-          class="scrollto"
-          ><i class="bi bi-hammer"></i><span> Experience </span></a
-        >
-        <a
-          href="#projects"
-          class="scrollto"
-          ><i class="bi bi-kanban"></i><span> Projects</span></a
-        >
-      </article>
     </section>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
       <a
@@ -148,7 +127,7 @@
       <div
         class="collapse navbar-collapse"
         id="navbarSupportedContent">
-        <ul class="navbar-nav ms-4 me-auto">
+        <ul class="navbar-nav mx-auto">
           <li class="nav-item">
             <a
               href="#hero"
@@ -394,8 +373,8 @@
         id="services"
         class="services">
         <div class="container">
-          <div class="row my-2">
-            <div class="col h2 border-bottom">Services</div>
+          <div class="section-title">
+            <h2>Services</h2>
           </div>
           <services-list
             src="/assets/jsons/services.json"
@@ -406,8 +385,8 @@
       </section>
       <section id="badges">
         <div class="container">
-          <div class="row my-2">
-            <div class="col h2 border-bottom">Badges</div>
+          <div class="section-title">
+            <h2>Badges</h2>
           </div>
           <div class="row my-2">
             <div class="col text-center">
@@ -423,8 +402,8 @@
       </section>
       <section id="otherssaid">
         <div class="container">
-          <div class="row my-2">
-            <div class="col h2 border-bottom">Others said about Me</div>
+          <div class="section-title">
+            <h2>Others said about Me</h2>
           </div>
 
           <div class="row">
@@ -485,72 +464,90 @@
           </div>
         </div>
       </section>
-      <article id="footnav">
-        <div class="container">
-          <div class="row py-2">
-            <div class="col-md-4">
-              <h3>Good to know</h3>
-              <ul>
-                <li class="py-1">
-                  <a
-                    href="/app/goodtoknow/geoid/"
-                    class="small"
-                    >Distance of Makó and Jerusalem</a
-                  >
-                </li>
-                <li class="py-1">
-                  <a
-                    href="/app/goodtoknow/pi/"
-                    class="small"
-                    >The first 5000 decimal of the PI</a
-                  >
-                </li>
-                <li class="py-1">
-                  <a
-                    href="/app/goodtoknow/timeline/"
-                    class="small"
-                    >Timeline of Swedish and Hungarian inventions</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4 d-flex">
-              <analog-clock class="mx-auto"></analog-clock>
-            </div>
-            <div class="col-md-4">
-              <h3>Learning</h3>
-              <ul>
-                <li class="py-1">
-                  <a
-                    href="/app/learning/index.html"
-                    class="small"
-                    >Learning materials</a
-                  >
-                </li>
-                <li class="py-1">
-                  <a
-                    href="/app/contentframe/index.html"
-                    class="small"
-                    >SCORM content frame</a
-                  >
-                </li>
-                <li class="py-1">
-                  <a
-                    href="/app/learning/swedish/words/index.html"
-                    class="small"
-                    >Swedish words</a
-                  >
-                </li>
-              </ul>
+    </main>
+    <!-- End #main -->
+
+    <footer
+      class="bg-dark text-white pt-5 pb-4"
+      id="footer">
+      <div class="container text-center text-md-start">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Balázs Bencs</h6>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #0d6efd; height: 2px" />
+            <p>Passionate Full-Stack Developer creating modern and responsive web applications.</p>
+            <div class="mt-4">
+              <analog-clock></analog-clock>
             </div>
           </div>
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Good to know</h6>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #0d6efd; height: 2px" />
+            <p>
+              <a
+                href="/app/goodtoknow/geoid/"
+                class="text-white-50"
+                >Distance of Makó and Jerusalem</a
+              >
+            </p>
+            <p>
+              <a
+                href="/app/goodtoknow/pi/"
+                class="text-white-50"
+                >The first 5000 decimal of the PI</a
+              >
+            </p>
+            <p>
+              <a
+                href="/app/goodtoknow/timeline/"
+                class="text-white-50"
+                >Swedish & Hungarian inventions</a
+              >
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Learning</h6>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #0d6efd; height: 2px" />
+            <p>
+              <a
+                href="/app/learning/index.html"
+                class="text-white-50"
+                >Learning materials</a
+              >
+            </p>
+            <p>
+              <a
+                href="/app/contentframe/index.html"
+                class="text-white-50"
+                >SCORM content frame</a
+              >
+            </p>
+            <p>
+              <a
+                href="/app/learning/swedish/words/index.html"
+                class="text-white-50"
+                >Swedish words</a
+              >
+            </p>
+          </div>
         </div>
-      </article>
-    </main>
-    <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Balázs Bencs 2009-2025</span></strong>
+        <div class="text-center p-3 border-top border-secondary">
+          © 2009 -
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Copyright:
+          <a
+            class="text-white"
+            href="https://bencsbalazs.github.io/"
+            >Balázs Bencs</a
+          >
         </div>
       </div>
     </footer>

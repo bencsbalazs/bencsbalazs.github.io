@@ -6,20 +6,6 @@
     background-repeat: no-repeat;
     background-position: 90% 100%;
 
-    &:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-    }
-    .hero-container {
-        position: relative;
-        z-index: 2;
-        min-width: 300px;
-    }
     h1 {
         margin: 0 0 10px 0;
         font-size: 64px;
@@ -27,12 +13,14 @@
         line-height: 56px;
         color: $font-color;
         text-shadow: 0 0 .5em rgb(255, 255, 255), 0 0 .5em rgb(255, 255, 255);
-        ;
     }
+
     p {
         color: $font-color;
         margin-bottom: 50px;
         font-size: 26px;
+        text-shadow: 0 0 4px rgb(255, 255, 255);
+
         span {
             color: $font-color;
             text-shadow: 0 0 .5em rgb(255, 255, 255), 0 0 .5em rgb(255, 255, 255);
@@ -41,6 +29,7 @@
             border-bottom: 3px solid $font-color;
         }
     }
+
     article {
         max-width: 85vw;
         font-size: 1.2rem;
@@ -48,6 +37,7 @@
         text-shadow: 0 0 1rem white;
         text-align: justify;
     }
+
     .sociallinks {
         position: absolute;
         top: 1rem;
@@ -58,6 +48,7 @@
             float: left;
             font-size: 1.5rem;
         }
+
         a:not(:first-child) {
             margin-left: 0.5rem;
         }

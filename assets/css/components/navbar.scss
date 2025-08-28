@@ -5,24 +5,25 @@ nav {
         border-radius: 50%;
         margin: 0.2rem;
     }
-.social-links {
-    min-width: 18rem;
-    a {
-        font-size: 18px;
-        color: $link-color-on-dark;
-        line-height: 1;
-        padding: 8px 0;
-        margin-right: 4px;
-        border-radius: 50%;
-        text-align: center;
-        transition: color ease-in-out 0.5s;
-        width: 36px;
-        height: 36px;
-        transition: 0.3s;
-    }
 
-    a:hover {
-        color: $link-hover-color-on-dark;
+    .social-links {
+        min-width: 18rem;
+
+        a {
+            font-size: 18px;
+            color: $link-color-on-dark;
+            line-height: 1;
+            padding: 8px 0;
+            margin-right: 4px;
+            border-radius: 50%;
+            text-align: center;
+            transition: color ease-in-out 0.5s;
+            width: 36px;
+            height: 36px;
+        }
+
+        a:hover {
+            color: $link-hover-color-on-dark;
+        }
     }
-}
 }
