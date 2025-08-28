@@ -8,7 +8,6 @@
         i {
             display: block;
             font-size: 44px;
-            color: $link-color;
             float: left;
             line-height: 0;
         }
@@ -32,13 +31,8 @@
             font-weight: 600;
             display: block;
             margin-top: 20px;
-            color: $link-color;
             font-size: 15px;
             transition: ease-in-out 0.3s;
-
-            &:hover {
-                color: $link-hover-color;
-            }
         }
     }
 }

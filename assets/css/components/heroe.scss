@@ -11,22 +11,19 @@
         font-size: 64px;
         font-weight: 700;
         line-height: 56px;
-        color: $font-color;
         text-shadow: 0 0 .5em rgb(255, 255, 255), 0 0 .5em rgb(255, 255, 255);
     }
 
     p {
-        color: $font-color;
         margin-bottom: 50px;
         font-size: 26px;
         text-shadow: 0 0 4px rgb(255, 255, 255);
 
         span {
-            color: $font-color;
             text-shadow: 0 0 .5em rgb(255, 255, 255), 0 0 .5em rgb(255, 255, 255);
             padding-bottom: 4px;
             letter-spacing: 1px;
-            border-bottom: 3px solid $font-color;
+            border-bottom: 3px solid #000;
         }
     }
 

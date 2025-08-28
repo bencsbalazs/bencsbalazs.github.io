@@ -1,24 +1,5 @@
-body {
-    font-family: $font-family;
-    color: $font-color;
-}
-
 a {
-    color: $link-color;
     text-decoration: none;
-
-    &:hover {
-        color: $link-hover-color;
-        text-decoration: none;
-    }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-weight: 500;
 }
 
 iframe {
@@ -56,7 +37,7 @@ section {
         font-weight: bold;
         margin-bottom: 10px;
         padding-bottom: 10px;
-        border-bottom: solid 2px $font-color;
+        border-bottom: solid 2px rgba(0, 0, 0, .6);
         position: relative;
 
         &::after {
@@ -74,5 +55,34 @@ section {
 .blockquote {
     p:first-letter {
         margin-left: 1rem;
+    }
+}
+
+nav {
+    #navProfile {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        margin: 0.2rem;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.55);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+#footer {
+    a {
+        color: rgba(255, 255, 255, 0.55);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #fff;
+        }
     }
 }

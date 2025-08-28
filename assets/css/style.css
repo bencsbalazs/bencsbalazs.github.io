@@ -22,26 +22,8 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: rgb(40, 40, 40);
-}
-
 a {
-  color: rgb(30, 30, 230);
   text-decoration: none;
-}
-a:hover {
-  color: rgba(30, 30, 230, 0.55);
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 500;
 }
 
 iframe {
@@ -78,7 +60,7 @@ section {
   font-weight: bold;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: solid 2px rgb(40, 40, 40);
+  border-bottom: solid 2px rgba(0, 0, 0, 0.6);
   position: relative;
 }
 .section-title h2::after {
@@ -95,56 +77,26 @@ section {
   margin-left: 1rem;
 }
 
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: #149ddd;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
-}
-.back-to-top:hover {
-  background: #2eafec;
-  color: #fff;
-}
-.back-to-top .active {
-  visibility: visible;
-  opacity: 1;
-}
-
 nav #navProfile {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   margin: 0.2rem;
 }
-nav .social-links {
-  min-width: 18rem;
+nav a {
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s ease;
 }
-nav .social-links a {
-  font-size: 18px;
-  color: rgb(230, 190, 30);
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  transition: color ease-in-out 0.5s;
-  width: 36px;
-  height: 36px;
+nav a:hover {
+  color: rgb(255, 255, 255);
 }
-nav .social-links a:hover {
-  color: rgba(250, 250, 250, 0.55);
+
+#footer a {
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s ease;
+}
+#footer a:hover {
+  color: #fff;
 }
 
 #hero {
@@ -160,21 +112,18 @@ nav .social-links a:hover {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: rgb(40, 40, 40);
   text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(255, 255, 255);
 }
 #hero p {
-  color: rgb(40, 40, 40);
   margin-bottom: 50px;
   font-size: 26px;
   text-shadow: 0 0 4px rgb(255, 255, 255);
 }
 #hero p span {
-  color: rgb(40, 40, 40);
   text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(255, 255, 255);
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid rgb(40, 40, 40);
+  border-bottom: 3px solid #000;
 }
 #hero article {
   max-width: 85vw;
@@ -207,7 +156,6 @@ nav .social-links a:hover {
 .facts .count-box i {
   display: block;
   font-size: 44px;
-  color: rgb(30, 30, 230);
   float: left;
   line-height: 0;
 }
@@ -228,26 +176,22 @@ nav .social-links a:hover {
   font-weight: 600;
   display: block;
   margin-top: 20px;
-  color: rgb(30, 30, 230);
   font-size: 15px;
   transition: ease-in-out 0.3s;
-}
-.facts .count-box a:hover {
-  color: rgba(30, 30, 230, 0.55);
 }
 
 .services .icon-box:hover .icon {
   background: #fff;
-  color: rgb(30, 30, 230);
+  color: var(--bs-primary);
 }
 .services .icon-box:hover .icon i {
-  color: rgb(30, 30, 230);
+  color: var(--bs-primary);
 }
 .services .icon {
   width: 3rem;
   height: 3rem;
-  background: rgb(30, 30, 230);
-  border: solid 1px rgb(30, 30, 230);
+  background: var(--bs-primary);
+  border: solid 1px var(--bs-primary);
 }
 .services .icon i {
   color: #fff;
@@ -262,31 +206,6 @@ nav .social-links a:hover {
 .services .description {
   line-height: 1.5rem;
   margin-left: 3.2rem;
-}
-
-#footer {
-  padding: 15px;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 14px;
-  width: 100%;
-  z-index: 9999;
-  background: #040b14;
-}
-#footer .copyright {
-  text-align: center;
-}
-
-#footnav {
-  background: rgb(0, 0, 0);
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 1.5rem;
-}
-#footnav a {
-  color: rgba(255, 255, 255, 0.55);
-  transition: color 0.3s ease;
-}
-#footnav a:hover {
-  color: #fff;
 }
 
 @media (max-width: 1199px) {
