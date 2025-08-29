@@ -22,7 +22,7 @@ section {
 }
 
 .section-bg {
-    background: #f5f8fd;
+    background: hsl(218, 89%, 98%);
 }
 
 .section-title {
@@ -35,7 +35,7 @@ section {
         font-weight: bold;
         margin-bottom: 0.625rem;
         padding-bottom: 0.625rem;
-        border-bottom: solid 2px rgba(0, 0, 0, .6);
+        border-bottom: solid 2px hsl(0, 0%, 0%, 0.6);
         position: relative;
 
         &::after {
@@ -56,6 +56,12 @@ section {
     }
 }
 
+.delimeter {
+    width: 3.75rem;
+    background-color: hsl(211, 98%, 52%);
+    height: 0.125rem;
+}
+
 nav {
     #navProfile {
         width: 3rem;
@@ -65,22 +71,22 @@ nav {
     }
 
     a {
-        color: rgba(255, 255, 255, 0.55);
+        color: hsl(0, 0%, 100%, 0.55);
         transition: color 0.3s ease;
 
         &:hover {
-            color: #fff;
+            color: hsl(0, 0%, 100%);
         }
     }
 }
 
 #footer {
     a {
-        color: rgba(255, 255, 255, 0.55);
+        color: hsl(0, 0%, 100%, 0.55);
         transition: color 0.3s ease;
 
         &:hover {
-            color: #fff;
+            color: hsl(0, 0%, 100%);
         }
     }
 }
@@ -98,27 +104,27 @@ nav {
         font-size: clamp(2.5rem, 1.5rem + 5vw, 4rem);
         font-weight: 700;
         line-height: 1.2;
-        text-shadow: 0 0 .5em rgb(255, 255, 255), 0 0 .5em rgb(255, 255, 255);
+        text-shadow: 0 0 .5em hsl(0, 0%, 100%), 0 0 .5em hsl(0, 0%, 100%);
     }
 
     p {
         margin-bottom: 3.125rem;
         font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
-        text-shadow: 0 0 4px rgb(255, 255, 255);
+        text-shadow: 0 0 4px hsl(0, 0%, 100%);
 
         span {
-            text-shadow: 0 0 .5em rgb(255, 255, 255), 0 0 .5em rgb(255, 255, 255);
+            text-shadow: 0 0 .5em hsl(0, 0%, 100%), 0 0 .5em hsl(0, 0%, 100%);
             padding-bottom: 0.25rem;
             letter-spacing: 0.0625rem;
-            border-bottom: 0.1875rem solid #000;
+            border-bottom: 0.1875rem solid hsl(0, 0%, 0%);
         }
     }
 
     article {
         max-width: 85vw;
         font-size: 1.2rem;
-        background: rgba(255, 255, 255, 0.8);
-        text-shadow: 0 0 1rem white;
+        background: hsl(0, 0%, 100%, 0.8);
+        text-shadow: 0 0 1rem hsl(0, 0%, 100%);
         text-align: justify;
     }
 
@@ -181,7 +187,7 @@ nav {
 .services {
     .icon-box {
         &:hover .icon {
-            background: #fff;
+            background: hsl(0, 0%, 100%);
             color: var(--bs-primary);
 
             i {
@@ -198,7 +204,7 @@ nav {
         border: solid 1px var(--bs-primary);
 
         i {
-            color: #fff;
+            color: hsl(0, 0%, 100%);
             font-size: 1.5rem;
             line-height: 0;
         }
