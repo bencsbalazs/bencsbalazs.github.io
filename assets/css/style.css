@@ -41,7 +41,7 @@ iframe {
 }
 
 section {
-  padding: 60px 0;
+  padding: clamp(2.5rem, 5vw, 3.75rem) 0;
   overflow: hidden;
 }
 
@@ -49,17 +49,14 @@ section {
   background: #f5f8fd;
 }
 
-.section-title {
-  padding-bottom: 30px;
-}
 .section-title p {
   margin-bottom: 0;
 }
 .section-title h2 {
-  font-size: 32px;
+  font-size: clamp(1.75rem, 1.6rem + 0.5vw, 2rem);
   font-weight: bold;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.625rem;
   border-bottom: solid 2px rgba(0, 0, 0, 0.6);
   position: relative;
 }
@@ -67,7 +64,7 @@ section {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 3.125rem;
   height: 3px;
   bottom: 0;
   left: 0;
@@ -88,7 +85,7 @@ nav a {
   transition: color 0.3s ease;
 }
 nav a:hover {
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 #footer a {
@@ -108,22 +105,22 @@ nav a:hover {
   background-position: 90% 100%;
 }
 #hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 64px;
+  margin: 0 0 0.625rem 0;
+  font-size: clamp(2.5rem, 1.5rem + 5vw, 4rem);
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.2;
   text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(255, 255, 255);
 }
 #hero p {
-  margin-bottom: 50px;
-  font-size: 26px;
+  margin-bottom: 3.125rem;
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
   text-shadow: 0 0 4px rgb(255, 255, 255);
 }
 #hero p span {
   text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(255, 255, 255);
-  padding-bottom: 4px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #000;
+  padding-bottom: 0.25rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: 0.1875rem solid #000;
 }
 #hero article {
   max-width: 85vw;
@@ -147,36 +144,36 @@ nav a:hover {
 }
 
 .facts {
-  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
 }
 .facts .count-box {
-  padding: 30px;
+  padding: 1.875rem;
   width: 100%;
 }
 .facts .count-box i {
   display: block;
-  font-size: 44px;
+  font-size: 2.75rem;
   float: left;
   line-height: 0;
 }
 .facts .count-box span {
-  font-size: 48px;
-  line-height: 40px;
+  font-size: clamp(2.5rem, 2rem + 2vw, 3rem);
+  line-height: 1;
   display: block;
   font-family: "Digital Numbers", sans-serif;
   font-weight: 700;
-  margin-left: 60px;
+  margin-left: 3.75rem;
 }
 .facts .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-size: 14px;
+  padding-top: 0.9375rem;
+  margin: 0 0 0 3.75rem;
+  font-size: 0.875rem;
 }
 .facts .count-box a {
   font-weight: 600;
   display: block;
-  margin-top: 20px;
-  font-size: 15px;
+  margin-top: 1.25rem;
+  font-size: 0.9375rem;
   transition: ease-in-out 0.3s;
 }
 
@@ -195,16 +192,16 @@ nav a:hover {
 }
 .services .icon i {
   color: #fff;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 0;
 }
 .services .title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: clamp(1rem, 0.9rem + 0.25vw, 1.125rem);
   margin-left: 3.2rem;
 }
 .services .description {
-  line-height: 1.5rem;
+  line-height: 1.4;
   margin-left: 3.2rem;
 }
 

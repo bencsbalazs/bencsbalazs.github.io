@@ -27,12 +27,12 @@ class ServicesSection extends HTMLElement {
             col.setAttribute('data-aos-delay', String(index * delayStep));
 
             const iconDiv = document.createElement('div');
-            iconDiv.className = 'icon d-flex justify-content-center align-items-center float-start rounded-circle border border-dark transition fs-6';
+            iconDiv.className = 'icon d-flex justify-content-center align-items-center float-start rounded-circle border border-dark transition';
             iconDiv.innerHTML = `<i class="${item.icon}"></i>`;
             col.appendChild(iconDiv);
 
             const h4 = document.createElement('h4');
-            h4.className = 'title mb-1 fs-5 text-primary fw-bold';
+            h4.className = 'title mb-1 text-primary fw-bold';
 
             const a = document.createElement('a');
             a.href = item.link || '#';

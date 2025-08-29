@@ -17,7 +17,7 @@ iframe {
 }
 
 section {
-    padding: 60px 0;
+    padding: clamp(2.5rem, 5vw, 3.75rem) 0;
     overflow: hidden;
 }
 
@@ -26,17 +26,15 @@ section {
 }
 
 .section-title {
-    padding-bottom: 30px;
-
     p {
         margin-bottom: 0;
     }
 
     h2 {
-        font-size: 32px;
+        font-size: clamp(1.75rem, 1.6rem + 0.5vw, 2rem);
         font-weight: bold;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
+        margin-bottom: 0.625rem;
+        padding-bottom: 0.625rem;
         border-bottom: solid 2px rgba(0, 0, 0, .6);
         position: relative;
 
@@ -44,7 +42,7 @@ section {
             content: "";
             position: absolute;
             display: block;
-            width: 50px;
+            width: 3.125rem;
             height: 3px;
             bottom: 0;
             left: 0;
@@ -71,7 +69,7 @@ nav {
         transition: color 0.3s ease;
 
         &:hover {
-            color: rgba(255, 255, 255, 1);
+            color: #fff;
         }
     }
 }
@@ -84,5 +82,136 @@ nav {
         &:hover {
             color: #fff;
         }
+    }
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/cartoonMee.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 90% 100%;
+
+    h1 {
+        margin: 0 0 0.625rem 0;
+        font-size: clamp(2.5rem, 1.5rem + 5vw, 4rem);
+        font-weight: 700;
+        line-height: 1.2;
+        text-shadow: 0 0 .5em rgb(255, 255, 255), 0 0 .5em rgb(255, 255, 255);
+    }
+
+    p {
+        margin-bottom: 3.125rem;
+        font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
+        text-shadow: 0 0 4px rgb(255, 255, 255);
+
+        span {
+            text-shadow: 0 0 .5em rgb(255, 255, 255), 0 0 .5em rgb(255, 255, 255);
+            padding-bottom: 0.25rem;
+            letter-spacing: 0.0625rem;
+            border-bottom: 0.1875rem solid #000;
+        }
+    }
+
+    article {
+        max-width: 85vw;
+        font-size: 1.2rem;
+        background: rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 1rem white;
+        text-align: justify;
+    }
+
+    .sociallinks {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 999;
+
+        a {
+            float: left;
+            font-size: 1.5rem;
+        }
+
+        a:not(:first-child) {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.facts {
+    padding-bottom: 1.875rem;
+
+    .count-box {
+        padding: 1.875rem;
+        width: 100%;
+
+        i {
+            display: block;
+            font-size: 2.75rem;
+            float: left;
+            line-height: 0;
+        }
+
+        span {
+            font-size: clamp(2.5rem, 2rem + 2vw, 3rem);
+            line-height: 1;
+            display: block;
+            font-family: $font-family-digital;
+            font-weight: 700;
+            margin-left: 3.75rem;
+        }
+
+        p {
+            padding-top: 0.9375rem;
+            margin: 0 0 0 3.75rem;
+            font-size: 0.875rem;
+        }
+
+        a {
+            font-weight: 600;
+            display: block;
+            margin-top: 1.25rem;
+            font-size: 0.9375rem;
+            transition: ease-in-out 0.3s;
+        }
+    }
+}
+
+.services {
+    .icon-box {
+        &:hover .icon {
+            background: #fff;
+            color: var(--bs-primary);
+
+            i {
+                color: var(--bs-primary);
+            }
+        }
+
+    }
+
+    .icon {
+        width: 3rem;
+        height: 3rem;
+        background: var(--bs-primary);
+        border: solid 1px var(--bs-primary);
+
+        i {
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 0;
+        }
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: clamp(1rem, 0.9rem + 0.25vw, 1.125rem);
+        margin-left: 3.2rem;
+    }
+
+    .description {
+        line-height: 1.4;
+        margin-left: 3.2rem;
     }
 }
