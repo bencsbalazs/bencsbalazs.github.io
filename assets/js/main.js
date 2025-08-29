@@ -102,8 +102,8 @@ import { on, select } from './helpers.js';
         customElements.define('matrix-code', MatrixCode);
     });
     import('./components/skillcloud.webcomponent.js').then(module => {
-        const skillCloud = module.default;
-        customElements.define('skill-cloud', skillCloud);
+        const SkillCloud = module.default;
+        customElements.define('skill-cloud', SkillCloud);
     });
     import('./components/project.webcomponent.js').then(module => {
         const MyProjects = module.default;

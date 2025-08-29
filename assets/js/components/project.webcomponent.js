@@ -29,11 +29,6 @@ class MyProjects extends HTMLElement {
         this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
       <style>
-        #tag_filter {
-          text-align: center;
-          margin-bottom: 1rem;
-        }
-
         .card {
           transition: all 0.4s ease;
           cursor: pointer;
@@ -86,42 +81,34 @@ class MyProjects extends HTMLElement {
                 margin-top: 2.5vh !important;
             }
         }
-        .hidden {
+        .invisible {
           visibility: hidden;
         }
         .arrow {
-          position: fixed;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 40px;
-          height: 40px;
-          background-color: rgba(0, 0, 0, 0.5);
+          width: 50px;
+          height: 50px;
+          background-color: rgba(33, 37, 41, 0.6);
           color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           cursor: pointer;
+          border-radius: 50%;
+          z-index: 1001; /* Above the modal */
+          transition: background-color 0.2s ease;
         }
-        .arrow.left {
-          left: 10px;
+        .arrow:hover {
+            background-color: rgba(33, 37, 41, 0.8);
         }
-        .arrow.right {
-          right: 10px;
-        }
-        .closeButton {
-        position: absolute;
-        top: 2%;
-        right: 2%;
-        font-size: 2em;
-        z-index: 999;
-        cursor: pointer;
+        .floating-card .btn-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1001;
         }
       </style>
 
-      <div id="tag_filter"></div>
+      <div id="tag_filter" class="text-center mb-4"></div>
       <div class="row" id="portfolio_container"></div>
-      <div class="arrow left" style="display: none;">&#11207;</div>
-      <div class="arrow right" style="display: none;">&#11208;</div>
+      <div class="arrow left d-none position-fixed top-50 start-0 ms-3 translate-middle-y d-flex justify-content-center align-items-center fs-4">&#11207;</div>
+      <div class="arrow right d-none position-fixed top-50 end-0 me-3 translate-middle-y d-flex justify-content-center align-items-center fs-4">&#11208;</div>
     `;
 
         const tagFilterContainer = this.shadowRoot.querySelector('#tag_filter');
@@ -161,7 +148,7 @@ class MyProjects extends HTMLElement {
         const filterCards = (tagName) => {
             cards.forEach(({ wrapper, tags }, index) => {
                 const visible = tagName === 'All' || tags.includes(tagName);
-                wrapper.style.display = visible ? '' : 'none';
+                wrapper.classList.toggle('d-none', !visible);
                 // Close floating card if it's filtered out
                 if (!visible && index === currentIndex) {
                     closeFloatingCard();
@@ -172,16 +159,17 @@ class MyProjects extends HTMLElement {
         const openFloatingCard = (index) => {
             if (index < 0 || index >= cards.length) return;
 
-            const closeButton = document.createElement("div");
-            closeButton.classList.add('closeButton');
-            closeButton.textContent = "X"
+            const closeButton = document.createElement("button");
+            closeButton.type = 'button';
+            closeButton.className = 'btn-close';
+            closeButton.setAttribute('aria-label', 'Close');
             closeButton.addEventListener('click', () => {
                 closeFloatingCard();
             });
             const cardWrapper = cards[index].wrapper;
             const rect = cardWrapper.getBoundingClientRect();
             const clone = cardWrapper.querySelector('.card').cloneNode(true);
-            cardWrapper.classList.add('hidden'); // Hide original card's wrapper
+            cardWrapper.classList.add('invisible'); // Hide original card's wrapper
             clone.classList.remove('h-100', 'shadow-sm'); // Keep .card, remove others
             clone.classList.add('floating-card');
             clone.appendChild(closeButton);
@@ -194,8 +182,8 @@ class MyProjects extends HTMLElement {
             activeFloating = clone;
             currentIndex = index;
 
-            leftArrow.style.display = 'flex';
-            rightArrow.style.display = 'flex';
+            leftArrow.classList.remove('d-none');
+            rightArrow.classList.remove('d-none');
 
             requestAnimationFrame(() => {
                 clone.classList.add('centered');
@@ -212,7 +200,7 @@ class MyProjects extends HTMLElement {
 
             const originalCardWrapper = cards[currentIndex].wrapper;
             const clone = activeFloating;
-            const closeBtn = clone.querySelector('.closeButton');
+            const closeBtn = clone.querySelector('.btn-close');
             if (closeBtn) {
                 closeBtn.remove();
             }
@@ -223,16 +211,16 @@ class MyProjects extends HTMLElement {
                 setTimeout(() => {
                     clone.remove();
                     activeFloating = null;
-                    originalCardWrapper.classList.remove('hidden');
-                    leftArrow.style.display = 'none';
-                    rightArrow.style.display = 'none';
+                    originalCardWrapper.classList.remove('invisible');
+                    leftArrow.classList.add('d-none');
+                    rightArrow.classList.add('d-none');
                 }, 400);
             }, 10);
         };
 
         leftArrow.addEventListener('click', (e) => {
             e.stopPropagation();
-            const visibleIndexes = cards.map((c, i) => ({ i, visible: c.wrapper.style.display !== 'none' }))
+            const visibleIndexes = cards.map((c, i) => ({ i, visible: !c.wrapper.classList.contains('d-none') }))
                 .filter(c => c.visible)
                 .map(c => c.i);
             const current = visibleIndexes.indexOf(currentIndex);
@@ -243,7 +231,7 @@ class MyProjects extends HTMLElement {
 
         rightArrow.addEventListener('click', (e) => {
             e.stopPropagation();
-            const visibleIndexes = cards.map((c, i) => ({ i, visible: c.wrapper.style.display !== 'none' }))
+            const visibleIndexes = cards.map((c, i) => ({ i, visible: !c.wrapper.classList.contains('d-none') }))
                 .filter(c => c.visible)
                 .map(c => c.i);
             const current = visibleIndexes.indexOf(currentIndex);
@@ -262,6 +250,7 @@ class MyProjects extends HTMLElement {
         projects.forEach((project, index) => {
             const cardWrapper = document.createElement('div');
             cardWrapper.className = 'col-lg-4 col-md-6 mb-4';
+            cardWrapper.setAttribute('data-aos', 'fade-up');
 
             const card = document.createElement('div');
             card.className = 'card h-100 shadow-sm';
