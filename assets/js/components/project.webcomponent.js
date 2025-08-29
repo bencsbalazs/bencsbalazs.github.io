@@ -1,53 +1,69 @@
 class MyProjects extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+
     connectedCallback() {
         this.loadProjects();
     }
 
     async loadProjects() {
+        const src = this.getAttribute('src');
+        if (!src) {
+            console.error('MyProjects component requires a "src" attribute.');
+            this.shadowRoot.innerHTML = `<p>Error: src attribute is missing.</p>`;
+            return;
+        }
         try {
-            await fetch((window.location.protocol === 'http:'
-                ? 'http://127.0.0.1:5500/'
-                : 'https://bencsbalazs.github.io/') + 'assets/jsons/projects.json')
-                .then((response) => response.json())
-                .then((data) => { this.renderProjects(data); });
+            const response = await fetch(src);
+            const projects = await response.json();
+            this.renderProjects(projects);
         } catch (error) {
             console.error('Error loading projects:', error);
+            this.shadowRoot.innerHTML = `<p>Error loading projects.</p>`;
         }
     }
 
     renderProjects(projects) {
-        this.innerHTML = `
+        this.shadowRoot.innerHTML = `
+      <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
       <style>
         #tag_filter {
           text-align: center;
           margin-bottom: 1rem;
         }
-        #portfolio_container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: stretch;
-        }
+
         .card {
           transition: all 0.4s ease;
           cursor: pointer;
-          width: calc((100% - 1em) / 3);
-        margin-right: 0.5em;
         }
-        .card:nth-child(3n){
-            margin-right: 0;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
         }
+
         .card .description {
-        display: block;
+          display: block;
           height: 6rem;
           overflow: hidden;
           text-overflow: ellipsis;
+        }
+        .floating-card .description {
+          height: auto;
+          overflow: visible;
+          display: block;
+        }
+        .card .tagList {
+            height: 3.5rem;
+            overflow: hidden;
         }
         .floating-card {
           position: fixed;
           z-index: 1000;
           margin: 0;
           transition: all 0.4s ease;
+          overflow: hidden;
           background: white;
           box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
@@ -63,18 +79,12 @@ class MyProjects extends HTMLElement {
           overflow: auto;
           padding: 1rem;
         }
-        .floating-card .description {
-          height: auto;
-          overflow: hidden;
-        }
-        .floating-card .card {
-          width: 100%;
-        }
-        .floating-card img {
-            display: block;
-        }
-        .card img {
-            display: none;
+        @media (max-width: 768px) {
+            .floating-card.grow {
+                width: 95vw !important;
+                height: 90vh !important;
+                margin-top: 2.5vh !important;
+            }
         }
         .hidden {
           visibility: hidden;
@@ -106,29 +116,19 @@ class MyProjects extends HTMLElement {
         z-index: 999;
         cursor: pointer;
         }
-          @media (max-width: 800px) {
-            .card {
-            width: calc((100% - 2em) / 2);}
-            .floating-card.grow { width: 80vw !important;}
-          }
-        @media (max-width: 500px) {
-            .card {
-            width: calc(100% - 2em);}
-          }
       </style>
 
       <div id="tag_filter"></div>
       <div class="row" id="portfolio_container"></div>
-      <div class="arrow left">&#11207;</div>
-      <div class="arrow right">&#11208;</div>
+      <div class="arrow left" style="display: none;">&#11207;</div>
+      <div class="arrow right" style="display: none;">&#11208;</div>
     `;
 
-        const tagFilterContainer = this.querySelector('#tag_filter');
-        const projectList = this.querySelector('#portfolio_container');
-        const leftArrow = this.querySelector('.arrow.left');
-        const rightArrow = this.querySelector('.arrow.right');
+        const tagFilterContainer = this.shadowRoot.querySelector('#tag_filter');
+        const projectList = this.shadowRoot.querySelector('#portfolio_container');
+        const leftArrow = this.shadowRoot.querySelector('.arrow.left');
+        const rightArrow = this.shadowRoot.querySelector('.arrow.right');
 
-        projectList.innerHTML = '';
         let activeFloating = null;
         let currentIndex = -1;
         const cards = [];
@@ -136,28 +136,32 @@ class MyProjects extends HTMLElement {
         // Unique sorted tags
         const allTags = Array.from(new Set(projects.flatMap(p => p.tags))).sort();
 
+        const updateButtonStyles = (activeButton) => {
+            tagFilterContainer.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-outline-primary');
+            });
+            activeButton.classList.remove('btn-outline-primary');
+            activeButton.classList.add('btn-primary');
+        };
+
         // Tag button factory
         const createTagButton = (tagName) => {
             const button = document.createElement('button');
             button.textContent = tagName;
-            button.classList.add("m-1", "p-1", "btn-outline-primary")
+            button.classList.add("btn", "btn-sm", "m-1", "p-1");
             button.addEventListener('click', () => {
-                // Remove 'active' from all buttons
-                tagFilterContainer.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+                updateButtonStyles(button);
                 filterCards(tagName);
             });
             return button;
         };
 
-        // Populate filter buttons
-        tagFilterContainer.appendChild(createTagButton('All')).classList.add('active');
-        allTags.forEach(tag => tagFilterContainer.appendChild(createTagButton(tag)));
 
         const filterCards = (tagName) => {
-            cards.forEach(({ element, tags }, index) => {
+            cards.forEach(({ wrapper, tags }, index) => {
                 const visible = tagName === 'All' || tags.includes(tagName);
-                element.style.display = visible ? '' : 'none';
+                wrapper.style.display = visible ? '' : 'none';
                 // Close floating card if it's filtered out
                 if (!visible && index === currentIndex) {
                     closeFloatingCard();
@@ -174,11 +178,11 @@ class MyProjects extends HTMLElement {
             closeButton.addEventListener('click', () => {
                 closeFloatingCard();
             });
-            const card = cards[index].element;
-            const rect = card.getBoundingClientRect();
-            const clone = card.cloneNode(true);
-            card.classList.add('hidden');
-            clone.classList.remove(...card.classList);
+            const cardWrapper = cards[index].wrapper;
+            const rect = cardWrapper.getBoundingClientRect();
+            const clone = cardWrapper.querySelector('.card').cloneNode(true);
+            cardWrapper.classList.add('hidden'); // Hide original card's wrapper
+            clone.classList.remove('h-100', 'shadow-sm'); // Keep .card, remove others
             clone.classList.add('floating-card');
             clone.appendChild(closeButton);
             clone.style.top = `${rect.top}px`;
@@ -186,7 +190,7 @@ class MyProjects extends HTMLElement {
             clone.style.width = `${rect.width}px`;
             clone.style.height = `${rect.height}px`;
 
-            document.body.appendChild(clone);
+            this.shadowRoot.appendChild(clone);
             activeFloating = clone;
             currentIndex = index;
 
@@ -206,16 +210,20 @@ class MyProjects extends HTMLElement {
         const closeFloatingCard = () => {
             if (!activeFloating) return;
 
-            const originalCard = cards[currentIndex].element;
+            const originalCardWrapper = cards[currentIndex].wrapper;
             const clone = activeFloating;
-            document.querySelector('.closeButton').remove()
+            const closeBtn = clone.querySelector('.closeButton');
+            if (closeBtn) {
+                closeBtn.remove();
+            }
+
             clone.classList.remove('grow');
             setTimeout(() => {
                 clone.classList.remove('centered');
                 setTimeout(() => {
                     clone.remove();
                     activeFloating = null;
-                    originalCard.classList.remove('hidden');
+                    originalCardWrapper.classList.remove('hidden');
                     leftArrow.style.display = 'none';
                     rightArrow.style.display = 'none';
                 }, 400);
@@ -224,7 +232,7 @@ class MyProjects extends HTMLElement {
 
         leftArrow.addEventListener('click', (e) => {
             e.stopPropagation();
-            const visibleIndexes = cards.map((c, i) => ({ i, visible: c.element.style.display !== 'none' }))
+            const visibleIndexes = cards.map((c, i) => ({ i, visible: c.wrapper.style.display !== 'none' }))
                 .filter(c => c.visible)
                 .map(c => c.i);
             const current = visibleIndexes.indexOf(currentIndex);
@@ -235,7 +243,7 @@ class MyProjects extends HTMLElement {
 
         rightArrow.addEventListener('click', (e) => {
             e.stopPropagation();
-            const visibleIndexes = cards.map((c, i) => ({ i, visible: c.element.style.display !== 'none' }))
+            const visibleIndexes = cards.map((c, i) => ({ i, visible: c.wrapper.style.display !== 'none' }))
                 .filter(c => c.visible)
                 .map(c => c.i);
             const current = visibleIndexes.indexOf(currentIndex);
@@ -244,34 +252,62 @@ class MyProjects extends HTMLElement {
             setTimeout(() => openFloatingCard(nextIndex), 500);
         });
 
+        // Populate filter buttons
+        const allBtn = createTagButton('All');
+        tagFilterContainer.appendChild(allBtn);
+        allTags.forEach(tag => tagFilterContainer.appendChild(createTagButton(tag)));
+        updateButtonStyles(allBtn); // Set 'All' as active initially
+
         // Create all project cards
         projects.forEach((project, index) => {
+            const cardWrapper = document.createElement('div');
+            cardWrapper.className = 'col-lg-4 col-md-6 mb-4';
+
             const card = document.createElement('div');
-            let action = ""
-            let text = ""
-            let tagList = ""
-            card.classList.add('card');
-            if (!project.link) {
-                action = "disabled"
-                text="Internal project"
-            } else {
-                action = "href='"+project.link+"'"
-                text="Repository"
-            }
-            project.tags.forEach((tag) => {
-                tagList += "<span class='badge rounded-pill bg-primary mx-1'>" + tag + "</span>"
-            })
-            card.innerHTML = `
-        <img class="card-img-top" src="${project.image}" alt="${project.title}">
-        <div class="card-body">
-            <h5 class="card-title">${project.title}</h5>
-            <div class="tagList py-1">${tagList}</div>
-            <p class="card-text description">${project.description}</p>
-        </div>
-        <div class="card-footer">
-            <a class="btn btn-primary btn-small" ${action}>${text}</a><br>
-            <small class="text-muted">Publication date: ${project.date}</small>
-        </div>`;
+            card.className = 'card h-100 shadow-sm';
+
+            // Programmatic element creation is safer than innerHTML
+            const img = document.createElement('img');
+            img.className = 'card-img-top';
+            img.src = project.image;
+            img.alt = project.title;
+
+            const cardBody = document.createElement('div');
+            cardBody.className = 'card-body';
+
+            const title = document.createElement('h5');
+            title.className = 'card-title';
+            title.textContent = project.title;
+
+            const tagListContainer = document.createElement('div');
+            tagListContainer.className = 'tagList py-1';
+            project.tags.forEach(tagText => {
+                const tagEl = document.createElement('span');
+                tagEl.className = 'badge rounded-pill bg-primary mx-1';
+                tagEl.textContent = tagText;
+                tagListContainer.appendChild(tagEl);
+            });
+
+            const description = document.createElement('p');
+            description.className = 'card-text description';
+            description.textContent = project.description;
+
+            cardBody.append(title, tagListContainer, description);
+
+            const cardFooter = document.createElement('div');
+            cardFooter.className = 'card-footer';
+
+            const link = document.createElement('a');
+            link.className = 'btn btn-primary btn-small';
+            link.textContent = project.link ? 'Repository' : 'Internal project';
+            project.link ? (link.href = project.link) : link.classList.add('disabled');
+
+            const date = document.createElement('small');
+            date.className = 'text-muted';
+            date.innerHTML = `<br>Publication date: ${project.date}`; // Using innerHTML for <br> is acceptable here
+
+            cardFooter.append(link, date);
+            card.append(img, cardBody, cardFooter);
 
             card.addEventListener('click', () => {
                 if (activeFloating) {
@@ -282,13 +318,10 @@ class MyProjects extends HTMLElement {
                 }
             });
 
-            cards.push({ element: card, tags: project.tags });
-            projectList.appendChild(card);
+            cardWrapper.appendChild(card);
+            cards.push({ wrapper: cardWrapper, tags: project.tags });
+            projectList.appendChild(cardWrapper);
         });
-
-        // Initially hide arrows
-        leftArrow.style.display = 'none';
-        rightArrow.style.display = 'none';
     }
 }
 

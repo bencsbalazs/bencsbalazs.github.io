@@ -1,32 +1,32 @@
 class DigitalClock extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-        this.width = this.getAttribute('width') || '200px';
-        this.height = this.getAttribute('height') || '100px';
-        this.render();
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.width = this.getAttribute('width') || '200px';
+    this.height = this.getAttribute('height') || '100px';
+    this.render();
+  }
 
-    connectedCallback() {
-        this.updateTime();
-        this.interval = setInterval(() => this.updateTime(), 1000);
-    }
+  connectedCallback() {
+    this.updateTime();
+    this.interval = setInterval(() => this.updateTime(), 1000);
+  }
 
-    disconnectedCallback() {
-        clearInterval(this.interval);
-    }
+  disconnectedCallback() {
+    clearInterval(this.interval);
+  }
 
-    updateTime() {
-        const now = new Date();
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-        const seconds = String(now.getSeconds()).padStart(2, '0');
+  updateTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
 
-        this.shadowRoot.querySelector('#clock').textContent = `${hours}:${minutes}:${seconds}`;
-    }
+    this.shadowRoot.querySelector('#clock').textContent = `${hours}:${minutes}:${seconds}`;
+  }
 
-    render() {
-        this.shadowRoot.innerHTML = `
+  render() {
+    this.shadowRoot.innerHTML = `
             <style>
             #clock {
                 width: 100%;
@@ -34,7 +34,6 @@ class DigitalClock extends HTMLElement {
                 margin: 0 auto;
                 font-size: 2em;
                 font-family: 'Digital Numbers', sans-serif;
-                background: black;
                 color: white;
                 border-radius: 10px;
                 width: ${this.width};
@@ -43,15 +42,15 @@ class DigitalClock extends HTMLElement {
             </style>
             <div id="clock">--:--:--</div>
         `;
-    }
+  }
 }
 
 class AnalogClock extends HTMLElement {
-    constructor() {
-        super();
-        const shadow = this.attachShadow({ mode: 'open' });
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
 
-        shadow.innerHTML = `
+    shadow.innerHTML = `
         <style>
           .clock {
             width: 200px;
@@ -128,30 +127,30 @@ class AnalogClock extends HTMLElement {
           <div class="center"></div>
         </div>
       `;
-    }
+  }
 
-    connectedCallback() {
-        this.updateClock()
-        this.interval = setInterval(() => this.updateClock(), 1000);
-    }
+  connectedCallback() {
+    this.updateClock()
+    this.interval = setInterval(() => this.updateClock(), 1000);
+  }
 
-    disconnectedCallback() {
-        clearInterval(this.interval);
-    }
+  disconnectedCallback() {
+    clearInterval(this.interval);
+  }
 
-    updateClock() {
-        const now = new Date();
-        const second = now.getSeconds();
-        const minute = now.getMinutes();
-        const hour = now.getHours();
+  updateClock() {
+    const now = new Date();
+    const second = now.getSeconds();
+    const minute = now.getMinutes();
+    const hour = now.getHours();
 
-        const secondDeg = second * 6;
-        const minuteDeg = minute * 6 + second * 0.1;
-        const hourDeg = (hour % 12) * 30 + minute * 0.5;
-        this.shadowRoot.getElementById("hour").style.transform = `rotate(${hourDeg - 90}deg)`;
-        this.shadowRoot.getElementById("minute").style.transform = `rotate(${minuteDeg - 90}deg)`;
-        this.shadowRoot.getElementById("second").style.transform = `rotate(${secondDeg - 90}deg)`;
-    }
+    const secondDeg = second * 6;
+    const minuteDeg = minute * 6 + second * 0.1;
+    const hourDeg = (hour % 12) * 30 + minute * 0.5;
+    this.shadowRoot.getElementById("hour").style.transform = `rotate(${hourDeg - 90}deg)`;
+    this.shadowRoot.getElementById("minute").style.transform = `rotate(${minuteDeg - 90}deg)`;
+    this.shadowRoot.getElementById("second").style.transform = `rotate(${secondDeg - 90}deg)`;
+  }
 }
 
 export { DigitalClock, AnalogClock };
