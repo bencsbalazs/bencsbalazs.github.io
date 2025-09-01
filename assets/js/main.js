@@ -90,16 +90,8 @@ import { on, select } from './helpers.js';
         customElements.define('credly-badge-list', CredlyBadgeList);
     });
     import('./components/clock.webcomponent.js').then(module => {
-        const DigitalClock = module.DigitalClock;
-        customElements.define('digital-clock', DigitalClock);
-    });
-    import('./components/clock.webcomponent.js').then(module => {
-        const AnalogClock = module.AnalogClock;
-        customElements.define('analog-clock', AnalogClock);
-    });
-    import('./components/matrix.webcomponent.js').then(module => {
-        const MatrixCode = module.default;
-        customElements.define('matrix-code', MatrixCode);
+        customElements.define('digital-clock', module.DigitalClock);
+        customElements.define('analog-clock', module.AnalogClock);
     });
     import('./components/skillcloud.webcomponent.js').then(module => {
         const SkillCloud = module.default;
