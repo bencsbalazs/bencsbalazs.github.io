@@ -4,7 +4,7 @@
     <title>Balázs Bencs'</title>
     <load-resources></load-resources>
     <script
-      src="../goodtoknow/frame.webcomponent.js"
+      src="frame.webcomponent.js"
       defer></script>
   </head>
   <body>
@@ -13,11 +13,6 @@
       home-text="Home">
     </frame-component>
     <main class="container">
-      <div class="row my-2">
-        <div class="col">
-          <h1>Learning materials</h1>
-        </div>
-      </div>
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h3>The goal of this page</h3>
@@ -42,13 +37,18 @@
         </div>
       </div>
       <div class="row my-2">
+        <div class="col">
+          <h2>Learning materials</h2>
+        </div>
+      </div>
+      <div class="row my-2">
         <div class="col-sm-12 col-md-6">
           <div class="card w-75 mx-auto my-3">
             <div class="card-body">
               <h5 class="card-title">Swedish word lists</h5>
               <p class="card-text">Learn swedish words by topic</p>
               <a
-                href="swedish/words/index.html"
+                href="learning/swedish/words/index.html"
                 class="btn btn-primary"
                 >Start learning</a
               >
@@ -61,7 +61,23 @@
               <h5 class="card-title">Swedish grammar</h5>
               <p class="card-text">Learn swedish like from a book</p>
               <a
-                href="swedish/grammar/index.html"
+                href="learning/swedish/grammar/index.html"
+                class="btn btn-primary"
+                >Start learning</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="card w-75 mx-auto my-3">
+            <div class="card-body">
+              <h5 class="card-title">Content frame</h5>
+              <p class="card-text">
+                This is the example of the content frame what uses the SCORM 1.2 standard. I use it for creating
+                learning materials.
+              </p>
+              <a
+                href="contentframe/index.html"
                 class="btn btn-primary"
                 >Start learning</a
               >
@@ -69,8 +85,26 @@
           </div>
         </div>
       </div>
+      <div class="row my-2">
+        <div class="col"><h2>Well-being</h2></div>
+      </div>
+      <div class="row my-2 justify-content-center">
+        <div class="col-sm-12 col-md-6">
+          <div class="card w-75 mx-auto my-3">
+            <div class="card-body">
+              <h5 class="card-title">Positive Mantras</h5>
+              <p class="card-text">Take a moment for positive affirmations.</p>
+              <a
+                href="wellbeing/mantras/index.html"
+                class="btn btn-primary">
+                Get inspired
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <frame-component type="footer"> </frame-component>
-    <script src="../goodtoknow/resources.webcomponent.js"></script>
+    <script src="resources.webcomponent.js"></script>
   </body>
 </html>

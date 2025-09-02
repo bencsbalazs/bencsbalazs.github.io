@@ -1,0 +1,55 @@
+.mantra-container {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: 60vh;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mantra-bubble {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    color: #eff0f1;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-weight: 500;
+    border-radius: 50%;
+    background: rgba(59, 142, 204, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    opacity: 0;
+    transform: scale(0.5);
+    will-change: transform, opacity;
+}
+
+@keyframes float-in {
+    0% {
+        transform: scale(0.5) translateY(20px);
+        opacity: 0;
+    }
+
+    15% {
+        transform: scale(1) translateY(0);
+        opacity: 0.9;
+    }
+
+    85% {
+        transform: scale(1.05) translateY(-10px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(0.8) translateY(30px);
+        opacity: 0;
+    }
+}

@@ -1,13 +1,13 @@
 import { on, select } from './helpers.js';
 
 (function () {
-    'use strict'
+    'use strict';
     const onscroll = (el, listener) => {
         el.addEventListener('scroll', listener);
     };
 
     const scrollto = el => {
-        let elementPos = select(el).offsetTop;
+        const elementPos = select(el).offsetTop;
         window.scrollTo({
             top: elementPos,
             behavior: 'smooth',
@@ -15,10 +15,10 @@ import { on, select } from './helpers.js';
     };
 
     const navbarlinksActive = () => {
-        let position = window.scrollY + 200;
+        const position = window.scrollY + 200;
         select('#navbar .scrollto', true).forEach(navbarlink => {
             if (!navbarlink.hash) return;
-            let section = select(navbarlink.hash);
+            const section = select(navbarlink.hash);
             if (!section) return;
             if (position >= section.offsetTop && position <= section.offsetTop + section.offsetHeight) {
                 navbarlink.classList.add('active');
@@ -28,40 +28,57 @@ import { on, select } from './helpers.js';
         });
     };
 
-    /* --- Listeners --- */
-
-    window.addEventListener("load", navbarlinksActive);
-    onscroll(document, navbarlinksActive);
-    on('click', '.mobile-nav-toggle', function (e) {
+    const toggleMobileNav = () => {
         select('body').classList.toggle('mobile-nav-active');
-        this.classList.toggle('bi-list');
-        this.classList.toggle('bi-x');
-    });
-    on(
-        'click',
-        '.scrollto',
-        function (e) {
-            if (select(this.hash)) {
-                e.preventDefault();
-                let body = select('body');
-                if (body.classList.contains('mobile-nav-active')) {
-                    body.classList.remove('mobile-nav-active');
-                    let navbarToggle = select('.mobile-nav-toggle');
-                    navbarToggle.classList.toggle('bi-list');
-                    navbarToggle.classList.toggle('bi-x');
+        const navbarToggle = select('.mobile-nav-toggle');
+        navbarToggle.classList.toggle('bi-list');
+        navbarToggle.classList.toggle('bi-x');
+    };
+
+    /**
+     * Dynamically imports and defines web components.
+     * @param {object} definition - The component definition.
+     * @param {string} definition.path - The path to the component module.
+     * @param {object} definition.components - A map of tag names to export names.
+     */
+    const defineWebComponents = ({ path, components }) => {
+        import(path)
+            .then(module => {
+                for (const [tagName, exportName] of Object.entries(components)) {
+                    const component = module[exportName];
+                    if (component) {
+                        customElements.define(tagName, component);
+                    } else {
+                        console.error(`Component with export name '${exportName}' not found in ${path}`);
+                    }
                 }
-                scrollto(this.hash);
+            })
+            .catch(err => console.error(`Failed to load module from ${path}`, err));
+    };
+
+    /* --- Event Listeners --- */
+
+    onscroll(document, navbarlinksActive);
+
+    on('click', '.mobile-nav-toggle', toggleMobileNav);
+
+    on('click', '.scrollto', function (e) {
+        if (select(this.hash)) {
+            e.preventDefault();
+            if (select('body').classList.contains('mobile-nav-active')) {
+                toggleMobileNav();
             }
-        },
-        true
-    );
+            scrollto(this.hash);
+        }
+    }, true);
 
     window.addEventListener('load', () => {
-        if (window.location.hash) {
-            if (select(window.location.hash)) {
-                scrollto(window.location.hash);
-            }
+        navbarlinksActive();
+
+        if (window.location.hash && select(window.location.hash)) {
+            scrollto(window.location.hash);
         }
+
         AOS.init({
             duration: 1000,
             easing: 'ease-in-out',
@@ -70,44 +87,14 @@ import { on, select } from './helpers.js';
         });
     });
 
+    const componentsToRegister = [
+        { path: './components/credly.webcomponent.js', components: { 'credly-badge-list': 'default' } },
+        { path: './components/clock.webcomponent.js', components: { 'digital-clock': 'DigitalClock', 'analog-clock': 'AnalogClock' } },
+        { path: './components/skillcloud.webcomponent.js', components: { 'skill-cloud': 'default' } },
+        { path: './components/project.webcomponent.js', components: { 'my-projects-portfolio': 'default' } },
+        { path: './components/services.webcomponent.js', components: { 'services-list': 'default' } },
+        { path: './components/blog.webcomponent.js', components: { 'my-blog-system': 'default' } },
+    ];
 
-    let backtotop = select('.back-to-top');
-    if (backtotop) {
-        const toggleBacktotop = () => {
-            if (window.scrollY > 100) {
-                backtotop.classList.add('active');
-            } else {
-                backtotop.classList.remove('active');
-            }
-        };
-        window.addEventListener('load', toggleBacktotop);
-        onscroll(document, toggleBacktotop);
-    }
-
-    /* --- Init webcomponents --- */
-    import('./components/credly.webcomponent.js').then(module => {
-        const CredlyBadgeList = module.default;
-        customElements.define('credly-badge-list', CredlyBadgeList);
-    });
-    import('./components/clock.webcomponent.js').then(module => {
-        customElements.define('digital-clock', module.DigitalClock);
-        customElements.define('analog-clock', module.AnalogClock);
-    });
-    import('./components/skillcloud.webcomponent.js').then(module => {
-        const SkillCloud = module.default;
-        customElements.define('skill-cloud', SkillCloud);
-    });
-    import('./components/project.webcomponent.js').then(module => {
-        const MyProjects = module.default;
-        customElements.define('my-projects-portfolio', MyProjects);
-    });
-    import('./components/services.webcomponent.js').then(module => {
-        const Services = module.default;
-        customElements.define('services-list', Services);
-    });
-
-    import('./components/blog.webcomponent.js').then(module => {
-        const Blog = module.default;
-        customElements.define('my-blog-system', Blog);
-    });
+    componentsToRegister.forEach(defineWebComponents);
 })();
