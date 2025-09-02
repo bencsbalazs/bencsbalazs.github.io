@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Autogén Tréning Mantrák</title>
+    <style>
+      .autogen-container {
+        width: 90%;
+        max-width: 600px;
+        padding: 30px;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <load-resources></load-resources>
+    <script
+      src="../../frame.webcomponent.js"
+      defer></script>
+    <script
+      src="autogen_training.js"
+      defer></script>
+  </head>
+  <body>
+    <frame-component
+      type="header"
+      home-text="Home">
+    </frame-component>
+    <div class="autogen-container mx-auto my-4">
+      <h1>🧘 Autogén Tréning Mantrák</h1>
+      <autogen-mantra></autogen-mantra>
+    </div>
+    <frame-component type="footer"> </frame-component>
+    <script src="../../resources.webcomponent.js"></script>
+  </body>
+</html>

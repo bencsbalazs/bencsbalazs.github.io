@@ -7,6 +7,27 @@
       src="frame.webcomponent.js"
       defer></script>
   </head>
+  <style>
+    .card.underdevelopment {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card.underdevelopment::after {
+      content: 'Development';
+      position: absolute;
+      top: 1.2rem;
+      right: -1.4rem;
+      background-color: #ffc107;
+      color: #343a40;
+      padding: 0 1.5rem;
+      transform: rotate(45deg);
+      font-weight: bold;
+      font-size: 0.6rem;
+      text-align: center;
+      z-index: 10;
+    }
+  </style>
   <body>
     <frame-component
       type="header"
@@ -43,7 +64,7 @@
       </div>
       <div class="row my-2">
         <div class="col-sm-12 col-md-6">
-          <div class="card w-75 mx-auto my-3">
+          <div class="card w-75 mx-auto my-3 underdevelopment">
             <div class="card-body">
               <h5 class="card-title">Swedish word lists</h5>
               <p class="card-text">Learn swedish words by topic</p>
@@ -56,7 +77,7 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-6">
-          <div class="card w-75 mx-auto my-3">
+          <div class="card w-75 mx-auto my-3 underdevelopment">
             <div class="card-body">
               <h5 class="card-title">Swedish grammar</h5>
               <p class="card-text">Learn swedish like from a book</p>
@@ -69,7 +90,7 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-6">
-          <div class="card w-75 mx-auto my-3">
+          <div class="card w-75 mx-auto my-3 underdevelopment">
             <div class="card-body">
               <h5 class="card-title">Content frame</h5>
               <p class="card-text">
