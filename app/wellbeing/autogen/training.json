@@ -1,64 +1,128 @@
 {
   "mantras": [
     {
-      "text": "Ellazultam, nyugodt vagyok, semmi sem zavar."
+      "text": "Kényelmesen ülök a széken.",
+      "pause": 2
     },
     {
-      "text": "A jobb karom nehéz."
+      "text": "Hátam egyenes.",
+      "pause": 1
     },
     {
-      "text": "A bal karom nehéz."
+      "text": "Kezeim lazán fekszenek az ölemben.",
+      "pause": 2
     },
     {
-      "text": "Mindkét karom kellemesen nehéz."
+      "text": "Nyugodt vagyok, semmi sem zavar.",
+      "pause": 3
     },
     {
-      "text": "A jobb lábam nehéz."
+      "text": "Erre a néhány percre kiszakadok a világból.",
+      "pause": 2
     },
     {
-      "text": "A bal lábam nehéz."
+      "text": "Lassan ellazulnak az izmaim",
+      "pause": 2
     },
     {
-      "text": "Mindkét lábam kellemesen nehéz."
+      "text": "Ellazul a láb",
+      "pause": 1
     },
     {
-      "text": "Az egész testem kellemesen nehéz."
+      "text": "a boka",
+      "pause": 2
     },
     {
-      "text": "A jobb karom meleg."
+      "text": "a vádli",
+      "pause": 2
     },
     {
-      "text": "A bal karom meleg."
+      "text": "a comb",
+      "pause": 2
     },
     {
-      "text": "Mindkét karom kellemesen meleg."
+      "text": "Elenged a derekam.",
+      "pause": 2
     },
     {
-      "text": "A jobb lábam meleg."
+      "text": "Ellazul a vállam.",
+      "pause": 2
     },
     {
-      "text": "A bal lábam meleg."
+      "text": "A jobb karom nehéz.",
+      "pause": 5
     },
     {
-      "text": "Mindkét lábam kellemesen meleg."
+      "text": "A bal karom nehéz.",
+      "pause": 5
     },
     {
-      "text": "Az egész testem kellemesen meleg."
+      "text": "Mindkét karom kellemesen nehéz.",
+      "pause": 5
     },
     {
-      "text": "A szívem nyugodtan és egyenletesen dobog."
+      "text": "A jobb lábam nehéz.",
+      "pause": 5
     },
     {
-      "text": "A légzésem nyugodt és egyenletes."
+      "text": "A bal lábam nehéz.",
+      "pause": 5
     },
     {
-      "text": "A homlokom kellemesen hűvös."
+      "text": "Mindkét lábam kellemesen nehéz.",
+      "pause": 5
     },
     {
-      "text": "A napfény járja át a testem."
+      "text": "Az egész testem kellemesen nehéz.",
+      "pause": 5
     },
     {
-      "text": "Nyugodt vagyok."
+      "text": "A jobb karom meleg.",
+      "pause": 5
+    },
+    {
+      "text": "A bal karom meleg.",
+      "pause": 5
+    },
+    {
+      "text": "Mindkét karom kellemesen meleg.",
+      "pause": 5
+    },
+    {
+      "text": "A jobb lábam meleg.",
+      "pause": 5
+    },
+    {
+      "text": "A bal lábam meleg.",
+      "pause": 5
+    },
+    {
+      "text": "Mindkét lábam kellemesen meleg.",
+      "pause": 5
+    },
+    {
+      "text": "Az egész testem kellemesen meleg.",
+      "pause": 5
+    },
+    {
+      "text": "A szívem nyugodtan és egyenletesen dobog.",
+      "pause": 5
+    },
+    {
+      "text": "A légzésem nyugodt és egyenletes.",
+      "pause": 5
+    },
+    {
+      "text": "A homlokom kellemesen hűvös.",
+      "pause": 5
+    },
+    {
+      "text": "A napfény járja át a testem.",
+      "pause": 5
+    },
+    {
+      "text": "Nyugodt vagyok.",
+      "pause": 5
     }
   ]
 }
