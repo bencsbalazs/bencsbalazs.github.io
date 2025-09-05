@@ -1,3 +1,29 @@
+const UI_TEXTS = {
+  ready: 'Készen áll az indításra!',
+  noMantras: 'Nincs mantra betöltve.',
+  loadError: 'Hiba a mantrák betöltésekor.',
+  stopped: 'Leállítva.',
+  finished: 'Vége.',
+  meditationDurationPrefix: 'A meditáció teljes hossza kb. ',
+  meditationDurationMinutes: ' perc ',
+  meditationDurationSeconds: ' másodperc.',
+  pauseLabel: 'Alap szünet (mp):',
+  speedLabel: 'Beszéd sebesség:',
+  musicSelectLabel: 'Háttérzene:',
+  musicNone: 'Nincs',
+  musicWater: 'Vízcsobogás',
+  musicRain: 'Eső hangja',
+  musicForest: 'Erdei hangok',
+  startButton: 'Indítás',
+  stopButton: 'Leállítás',
+};
+
+const BACKGROUND_MUSIC_SOURCES = {
+  water: '../../assets/audio/water-splash.mp3',
+  rain: '../../assets/audio/rain.mp3',
+  forest: '../../assets/audio/forest.mp3',
+};
+
 class AutogenMantra extends HTMLElement {
   constructor() {
     super();
@@ -10,6 +36,10 @@ class AutogenMantra extends HTMLElement {
     this.speaker = window.speechSynthesis;
     this.utterance = null;
     this.timeoutId = null;
+    this.audioPlayer = null;
+    this.backgroundMusicPlayer = null;
+    this.musicSelect = null;
+    this.selectedMusic = 'none';
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -78,22 +108,29 @@ class AutogenMantra extends HTMLElement {
       <div id="mantra-display"></div>
       <div id="controls">
         <div class="control-group">
-            <label for="pause-input">Alap szünet (mp):</label>
+            <label for="pause-input">${UI_TEXTS.pauseLabel}</label>
             <input type="number" id="pause-input" value="${this.defaultPauseInSeconds}" min="1">
         </div>
         <div class="control-group">
-            <label for="speech-rate-input">Beszéd sebesség:</label>
+            <label for="speech-rate-input">${UI_TEXTS.speedLabel}</label>
             <input type="range" id="speech-rate-input" min="0.5" max="2.0" step="0.1" value="${this.speechRate}">
             <span id="speech-rate-value">${this.speechRate.toFixed(1)}</span>
         </div>
         <div class="control-group">
-          <label for="music">Legyen háttérzene:</label>
-          <input type="checkbox" id="music" checked>
+          <label for="music-select">${UI_TEXTS.musicSelectLabel}</label>
+          <select id="music-select">
+            <option value="none">${UI_TEXTS.musicNone}</option>
+            <option value="water">${UI_TEXTS.musicWater}</option>
+            <option value="rain">${UI_TEXTS.musicRain}</option>
+            <option value="forest">${UI_TEXTS.musicForest}</option>
+          </select>
         </div>
-        <button id="start-btn">Indítás</button>
-        <button id="stop-btn">Leállítás</button>
+        <button id="start-btn">${UI_TEXTS.startButton}</button>
+        <button id="stop-btn">${UI_TEXTS.stopButton}</button>
       </div>
       <div id="meditation-duration-container" style="margin-top: 15px; font-style: italic; color: #555;"></div>
+      <audio id="audio-player"></audio>
+      <audio id="background-music-player" loop></audio>
     `;
 
     this.mantraDisplay = this.shadowRoot.querySelector('#mantra-display');
@@ -103,10 +140,17 @@ class AutogenMantra extends HTMLElement {
     this.speechRateInput = this.shadowRoot.querySelector('#speech-rate-input');
     this.speechRateValueSpan = this.shadowRoot.querySelector('#speech-rate-value');
     this.meditationDurationContainer = this.shadowRoot.querySelector('#meditation-duration-container');
-
+    this.audioPlayer = this.shadowRoot.querySelector('#audio-player');
+    this.backgroundMusicPlayer = this.shadowRoot.querySelector('#background-music-player');
+    this.musicSelect = this.shadowRoot.querySelector('#music-select');
 
     this.startButton.addEventListener('click', () => this.startReading());
     this.stopButton.addEventListener('click', () => this.stopReading());
+    this.audioPlayer.addEventListener('ended', () => this.scheduleNextMantra());
+    this.audioPlayer.addEventListener('error', (e) => {
+      console.error('Audio player error', e);
+      this.scheduleNextMantra();
+    });
     this.pauseInput.addEventListener('change', (e) => {
       this.defaultPauseInSeconds = parseInt(e.target.value);
       this.calculateAndDisplayDuration();
@@ -118,6 +162,12 @@ class AutogenMantra extends HTMLElement {
       if (this.utterance && this.speaker.speaking) {
         this.speaker.cancel();
         this.readCurrentMantraAgain();
+      }
+    });
+    this.musicSelect.addEventListener('change', (e) => {
+      this.selectedMusic = e.target.value;
+      if (this.isReading) {
+        this.playBackgroundMusic();
       }
     });
   }
@@ -132,14 +182,14 @@ class AutogenMantra extends HTMLElement {
       const data = await response.json();
       this.mantras = data.mantras;
       if (this.mantras.length > 0) {
-        this.mantraDisplay.textContent = 'Készen áll az indításra!';
+        this.mantraDisplay.textContent = UI_TEXTS.ready;
       } else {
-        this.mantraDisplay.textContent = 'Nincs mantra betöltve.';
+        this.mantraDisplay.textContent = UI_TEXTS.noMantras;
       }
       this.calculateAndDisplayDuration();
     } catch (error) {
-      console.error('Hiba a mantrák betöltésekor:', error);
-      this.mantraDisplay.textContent = 'Hiba a mantrák betöltésekor.';
+      console.error(`${UI_TEXTS.loadError}:`, error);
+      this.mantraDisplay.textContent = UI_TEXTS.loadError;
     }
   }
 
@@ -147,6 +197,7 @@ class AutogenMantra extends HTMLElement {
     if (this.isReading || this.mantras.length === 0) return;
     this.isReading = true;
     this.currentIndex = 0;
+    this.playBackgroundMusic();
     this.readNextMantra();
   }
 
@@ -154,7 +205,11 @@ class AutogenMantra extends HTMLElement {
     this.isReading = false;
     clearTimeout(this.timeoutId);
     this.speaker.cancel();
-    this.mantraDisplay.textContent = 'Leállítva.';
+    this.audioPlayer.pause();
+    this.audioPlayer.currentTime = 0;
+    this.backgroundMusicPlayer.pause();
+    this.backgroundMusicPlayer.currentTime = 0;
+    this.mantraDisplay.textContent = UI_TEXTS.stopped;
   }
 
   calculateAndDisplayDuration() {
@@ -163,35 +218,56 @@ class AutogenMantra extends HTMLElement {
       return;
     }
 
-    // 1. Összes szünetidő kiszámítása
-    const totalPauseInSeconds = this.mantras.reduce((sum, mantra) => {
-      // A mantra saját szünetidejét használjuk, vagy az alapértelmezettet, ha nincs megadva.
-      return sum + (mantra.pause || this.defaultPauseInSeconds);
-    }, 0);
-
-    // 2. A beszédidő becslése
+    let totalPauseInSeconds = 0;
+    let totalContentInSeconds = 0;
     const avgWordsPerSecond = 2.5; // Átlagos magyar beszédsebesség (szó/mp)
-    const totalSpeechInSeconds = this.mantras.reduce((sum, mantra) => {
-      const wordCount = mantra.text.split(' ').length;
-      const speechDuration = wordCount / avgWordsPerSecond;
-      return sum + speechDuration;
-    }, 0) / this.speechRate; // Korrekció a beállított beszédsebességgel
 
-    const totalDurationInSeconds = Math.round(totalPauseInSeconds + totalSpeechInSeconds);
+    this.mantras.forEach((mantra) => {
+      totalPauseInSeconds += mantra.pause || this.defaultPauseInSeconds;
 
+      // Ha van megadott időtartam (audio fájlokhoz), azt használjuk.
+      if (mantra.duration) {
+        totalContentInSeconds += mantra.duration;
+      } else {
+        // Különben becslést végzünk a szövegből (TTS).
+        const wordCount = mantra.text.split(' ').length;
+        const speechDuration = (wordCount / avgWordsPerSecond) / this.speechRate;
+        totalContentInSeconds += speechDuration;
+      }
+    });
+
+    const totalDurationInSeconds = Math.round(totalPauseInSeconds + totalContentInSeconds);
     const minutes = Math.floor(totalDurationInSeconds / 60);
     const seconds = totalDurationInSeconds % 60;
 
-    this.meditationDurationContainer.textContent = `A meditáció teljes hossza kb. ${minutes} perc ${seconds} másodperc.`;
+    this.meditationDurationContainer.textContent = `${UI_TEXTS.meditationDurationPrefix}${minutes}${UI_TEXTS.meditationDurationMinutes}${seconds}${UI_TEXTS.meditationDurationSeconds}`;
   }
 
   readCurrentMantraAgain() {
-    // This function is called when speech rate changes mid-mantra
-    // It re-reads the current mantra with the new rate
     if (this.currentIndex > 0 && this.currentIndex <= this.mantras.length) {
-      const mantra = this.mantras[this.currentIndex - 1].text; // Get the previously spoken mantra
-      this.mantraDisplay.textContent = mantra; // Ensure display is correct
-      this.speakMantra(mantra, true); // Speak it again, but don't advance index or schedule next
+      const mantra = this.mantras[this.currentIndex - 1];
+      if (!mantra.audioSrc) {
+        this.mantraDisplay.textContent = mantra.text;
+        this.speakMantra(mantra.text, true);
+      }
+    }
+  }
+
+  scheduleNextMantra() {
+    if (this.isReading) {
+      const currentMantra = this.mantras[this.currentIndex - 1];
+      const pauseDuration = (currentMantra.pause || this.defaultPauseInSeconds) * 1000;
+      this.timeoutId = setTimeout(() => this.readNextMantra(), pauseDuration);
+    }
+  }
+
+  playBackgroundMusic() {
+    if (this.selectedMusic !== 'none') {
+      this.backgroundMusicPlayer.src = BACKGROUND_MUSIC_SOURCES[this.selectedMusic];
+      this.backgroundMusicPlayer.volume = 0.3; // Halk hangerő a háttérzenének
+      this.backgroundMusicPlayer.play();
+    } else {
+      this.backgroundMusicPlayer.pause();
     }
   }
 
@@ -201,21 +277,13 @@ class AutogenMantra extends HTMLElement {
     this.utterance.rate = this.speechRate;
 
     this.utterance.onend = () => {
-      if (!isRespeak && this.isReading) { // Only schedule next if not a respeak and still reading
-        const currentMantra = this.mantras[this.currentIndex - 1]; // Get the mantra that just finished
-        // Use mantra-specific pause, or default if not specified
-        const pauseDuration = (currentMantra.pause || this.defaultPauseInSeconds) * 1000;
-        this.timeoutId = setTimeout(() => this.readNextMantra(), pauseDuration);
-      }
+      if (!isRespeak) this.scheduleNextMantra();
     };
 
     this.utterance.onerror = (event) => {
       console.error('SpeechSynthesisUtterance.onerror', event);
       if (!isRespeak && this.isReading) {
-        // If an error occurs, still try to move to the next mantra after a default pause
-        const currentMantra = this.mantras[this.currentIndex - 1];
-        const pauseDuration = (currentMantra.pause || this.defaultPauseInSeconds) * 1000;
-        this.timeoutId = setTimeout(() => this.readNextMantra(), pauseDuration);
+        this.scheduleNextMantra();
       }
     };
 
@@ -224,20 +292,25 @@ class AutogenMantra extends HTMLElement {
 
   readNextMantra() {
     if (!this.isReading) {
-      this.mantraDisplay.textContent = 'Leállítva.';
+      this.mantraDisplay.textContent = UI_TEXTS.stopped;
       return;
     }
 
     if (this.currentIndex >= this.mantras.length) {
       this.stopReading();
-      this.mantraDisplay.textContent = 'Vége.';
+      this.mantraDisplay.textContent = UI_TEXTS.finished;
       return;
     }
 
     const mantraData = this.mantras[this.currentIndex];
     this.mantraDisplay.textContent = mantraData.text;
 
-    this.speakMantra(mantraData.text); // Speak the current mantra
+    if (mantraData.audioSrc) {
+      this.audioPlayer.src = mantraData.audioSrc;
+      this.audioPlayer.play();
+    } else {
+      this.speakMantra(mantraData.text);
+    }
 
     this.currentIndex++;
   }
