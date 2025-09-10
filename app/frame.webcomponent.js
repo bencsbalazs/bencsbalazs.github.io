@@ -16,10 +16,10 @@ class PageHeaderFooter extends HTMLElement {
         const url = linkData.urlAttribute;
         if (url) {
           return `
-                        <a href="${url}" title="${linkData.title}" target="_blank" class="nav-link ${linkData.type}">
-                            <i class="bi ${linkData.icon} text-white"></i>
-                        </a>
-                    `;
+              <a href="${url}" title="${linkData.title}" target="_blank" class="nav-link ${linkData.type}">
+                  <i class="bi ${linkData.icon} text-white"></i>
+              </a>
+          `;
         }
         return '';
       })
@@ -29,7 +29,7 @@ class PageHeaderFooter extends HTMLElement {
   get _headerTemplate() {
     const profileImgSrc = this.getAttribute('profile-img-src') || '/assets/img/profile-img.jpg';
     const profileImgAlt = this.getAttribute('profile-img-alt') || "Balazs' profile";
-    const homeText = this.getAttribute('home-text') || 'Home';
+    const homeText = this.getAttribute('home-text') || '';
 
     return `
             <style>
@@ -37,10 +37,17 @@ class PageHeaderFooter extends HTMLElement {
             </style>
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
                 <div class="container">
-                    <a class="col-4 navbar-brand" href="/">
+                    <div class="col-6 d-flex flex-row justify-content-start">
                         <img src="${profileImgSrc}" class="img-fluid rounded-circle" alt="${profileImgAlt}" style="width: 2rem" />
-                        <span class="me-4">${homeText}</span>
-                    </a>
+                        <h4 class="text-white">${homeText}</h4>
+                        <a class="nav-link text-white" title="Click to go back to home." href="/">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
+                        <a class="nav-link text-white" href="/app/index.html">
+                            <i class="bi bi-collection"></i> Content collection
+                        </a>
+                    </div>
+                    
                     <div class="col-6 d-flex flex-row justify-content-end">
                         ${this._socialLinks}
                     </div>
