@@ -39,7 +39,7 @@ class PageHeaderFooter extends HTMLElement {
                 <div class="container">
                     <div class="col-6 d-flex flex-row justify-content-start">
                         <img src="${profileImgSrc}" class="img-fluid rounded-circle" alt="${profileImgAlt}" style="width: 2rem" />
-                        <h4 class="text-white">${homeText}</h4>
+                        <h4 class="ms-2 mt-1 text-white">${homeText}</h4>
                         <a class="nav-link text-white" title="Click to go back to home." href="/">
                             <i class="bi bi-house-door"></i> Home
                         </a>
