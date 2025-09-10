@@ -16,7 +16,7 @@ class PageHeaderFooter extends HTMLElement {
         const url = linkData.urlAttribute;
         if (url) {
           return `
-              <a href="${url}" title="${linkData.title}" target="_blank" class="nav-link ${linkData.type}">
+              <a href="${url}" title="${linkData.title}" target="_blank" class="nav-link mx-1 ${linkData.type}">
                   <i class="bi ${linkData.icon} text-white"></i>
               </a>
           `;
@@ -27,32 +27,44 @@ class PageHeaderFooter extends HTMLElement {
   }
 
   get _headerTemplate() {
-    const profileImgSrc = this.getAttribute('profile-img-src') || '/assets/img/profile-img.jpg';
-    const profileImgAlt = this.getAttribute('profile-img-alt') || "Balazs' profile";
     const homeText = this.getAttribute('home-text') || '';
 
     return `
-            <style>
-                :host { display: block; }
-            </style>
-            <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-                <div class="container">
-                    <div class="col-6 d-flex flex-row justify-content-start">
-                        <img src="${profileImgSrc}" class="img-fluid rounded-circle" alt="${profileImgAlt}" style="width: 2rem" />
-                        <h4 class="ms-2 mt-1 text-white">${homeText}</h4>
-                        <a class="nav-link text-white" title="Click to go back to home." href="/">
+            <nav
+        class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/app/index.html">Contents</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/">
                             <i class="bi bi-house-door"></i> Home
                         </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="/app/index.html">
-                            <i class="bi bi-collection"></i> Content collection
+                            <i class="bi bi-collection"></i> Contents
                         </a>
-                    </div>
-                    
-                    <div class="col-6 d-flex flex-row justify-content-end">
-                        ${this._socialLinks}
-                    </div>
+                    </li>
+                </ul>
+                <h4 class="me-auto mt-2 text-white">${homeText}</h3>
+                <div class="navbar-nav social-links d-flex flex-row">      
+                    ${this._socialLinks}
                 </div>
-            </nav>
+            </div>
+          </div>
+        </nav>
+        
         `;
   }
 
