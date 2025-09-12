@@ -1,221 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta
-      content="width=device-width, initial-scale=1.0"
-      name="viewport" />
-    <title>Balázs Bencs' portfolio</title>
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Balázs Bencs — Senior Full-Stack Developer" />
-    <meta
-      property="og:description"
-      content="Portfolio, open-source work and services of Balázs Bencs." />
-    <meta
-      property="og:image"
-      content="https://bencsbalazs.github.io/og-cover.png" />
-    <meta
-      property="og:url"
-      content="https://bencsbalazs.github.io" />
-    <meta
-      property="og:type"
-      content="website" />
-    <!-- Twitter (X) -->
-    <meta
-      name="twitter:card"
-      content="summary_large_image" />
-    <meta
-      content="Balázs Bencs, developer, engineer"
-      name="keywords" />
-    <link
-      href="/assets/img/favicon.png"
-      rel="icon" />
-    <link
-      href="/assets/img/apple-touch-icon.png"
-      rel="apple-touch-icon" />
-    <link
-      href="/assets/vendor/aos/aos.css"
-      rel="stylesheet" />
-    <link
-      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Maslow's Pyramid (CSS3)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .pyramid-level {
-        min-height: 100px;
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+        font-size: 1.5vw;
+      }
+
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 80vw;
+        max-width: 1000px;
+      }
+
+      .pyramid-container {
+        position: relative;
+        width: 40vw;
+        height: 34vw;
+        max-width: 500px;
+        max-height: 420px;
+        overflow: hidden;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        z-index: 1;
+      }
+
+      .level {
+        position: absolute;
+        width: 100%;
+        height: 15.4%; /* 80px out of 520px total height (420px pyramid + 100px gap) */
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.25rem;
         color: white;
         font-weight: bold;
-        text-align: center;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        padding: 10px;
-        clear: both;
+        font-size: 0.8em;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
       }
 
-      /* Színek a piramis szinteihez */
+      .level.active,
+      .level:hover {
+        box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.8);
+        transform: scale(1.03);
+        z-index: 10;
+      }
+
+      /* Adjusted 'top' values for spacing */
       .level-5 {
-        background-color: #3498db;
+        top: 0%;
+        background-color: #6a0572;
+        animation: slideIn 1s 0s forwards;
       }
-
-      /* Önmegvalósítás */
       .level-4 {
-        background-color: #2ecc71;
+        top: 19.3%;
+        background-color: #ab3a97;
+        animation: slideIn 1s 0.2s forwards;
       }
-
-      /* Elismerés */
       .level-3 {
-        background-color: #f1c40f;
+        top: 38.6%;
+        background-color: #e55a8a;
+        animation: slideIn 1s 0.4s forwards;
       }
-
-      /* Szeretet, valahova tartozás */
       .level-2 {
-        background-color: #e67e22;
+        top: 57.9%;
+        background-color: #f89679;
+        animation: slideIn 1s 0.6s forwards;
       }
-
-      /* Biztonság */
       .level-1 {
-        background-color: #e74c3c;
+        top: 77.2%;
+        background-color: #ffc47f;
+        animation: slideIn 1s 0.8s forwards;
       }
 
-      /* Fiziológiai szükségletek */
+      @keyframes slideIn {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .tooltip {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        position: absolute;
+        bottom: -5rem;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        text-align: center;
+        font-size: 0.75rem;
+      }
+
+      .tooltip.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .tooltip.desc-1 {
+        background-color: #ffc47f;
+        color: white;
+      }
+      .tooltip.desc-2 {
+        background-color: #f89679;
+        color: white;
+      }
+      .tooltip.desc-3 {
+        background-color: #e55a8a;
+        color: white;
+      }
+      .tooltip.desc-4 {
+        background-color: #ab3a97;
+        color: white;
+      }
+      .tooltip.desc-5 {
+        background-color: #6a0572;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          font-size: 3.5vw;
+        }
+
+        .main-container {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        .pyramid-container {
+          width: 70vw;
+          height: 59.5vw;
+        }
+
+        .level {
+          font-size: 1.25em;
+        }
+      }
     </style>
   </head>
-
   <body>
-    <i class="bi bi-list mobile-nav-toggle d-none"></i>
-
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-      <div class="container">
-        <a
-          class="col-4 navbar-brand"
-          href="/">
-          <img
-            src="/assets/img/profile-img.jpg"
-            class="img-fluid rounded-circle"
-            alt="Balazs' profile"
-            style="width: 2rem" />
-          <span class="me-4">Home</span>
-        </a>
-        <div class="col-6 d-flex flex-row justify-content-end">
-          <a
-            href="https://www.facebook.com/balazs.bencs.9"
-            target="_blank"
-            title="Me on Facebook"
-            class="nav-link facebook"
-            ><i class="bi bi-facebook text-white"></i
-          ></a>
-          <a
-            href="https://github.com/bencsbalazs"
-            title="Me on Github"
-            target="_blank"
-            class="nav-link github"
-            ><i class="bi bi-github text-white"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/bencsbalazs/"
-            target="_blank"
-            class="nav-link instagram"
-            ><i
-              class="bi bi-instagram text-white"
-              title="Me on Instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/bencsbalazs/"
-            target="_blank"
-            title="Me on Linkedin"
-            class="nav-link linkedin"
-            ><i class="bi bi-linkedin text-white"></i
-          ></a>
-          <a
-            href="https://balazsbencs.blogspot.com/"
-            target="_blank"
-            title="Me on Blogger"
-            class="nav-link blogger"
-            ><i class="bi bi-journals text-white"></i
-          ></a>
+    <div class="main-container">
+      <div class="pyramid-container">
+        <div
+          class="level level-5"
+          id="level-5"
+          data-desc="desc-5">
+          Self-Actualization
+        </div>
+        <div
+          class="level level-4"
+          id="level-4"
+          data-desc="desc-4">
+          Esteem
+        </div>
+        <div
+          class="level level-3"
+          id="level-3"
+          data-desc="desc-3">
+          Belonging
+        </div>
+        <div
+          class="level level-2"
+          id="level-2"
+          data-desc="desc-2">
+          Safety
+        </div>
+        <div
+          class="level level-1"
+          id="level-1"
+          data-desc="desc-1">
+          Physiological
         </div>
       </div>
-    </nav>
-    <main class="container">
-      <div class="row mb-5">
-        <div class="col">
-          <h2>Maslow-szükséglethierarchia piramisa</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-4 mb-3">
-          <div
-            class="pyramid-level level-5 shadow"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-delay="2000">
-            Önmegvalósítás
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6 mb-3">
-          <div
-            class="pyramid-level level-4 shadow"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-delay="1500">
-            Elismerési szükségletek
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 mb-3">
-          <div
-            class="pyramid-level level-3 shadow"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-delay="1000">
-            Közösségi (Szeretet, valahova tartozás) szükségletek
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-10 mb-3">
-          <div
-            class="pyramid-level level-2 shadow"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-delay="500">
-            Biztonsági szükségletek
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-12 mb-3">
-          <div
-            class="pyramid-level level-1 shadow"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-delay="0">
-            Fiziológiai szükségletek
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer class="container-fluid bg-dark text-white">
-      <div class="row">
-        <div class="col text-center">&copy; Balázs Bencs</div>
-      </div>
-    </footer>
-    <script src="/assets/vendor/aos/aos.js"></script>
-    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <div
+        class="tooltip"
+        id="tooltip"></div>
+    </div>
     <script>
-      AOS.init({
-        once: true, // Csak egyszer animálja a beúszó elemeket
+      document.addEventListener('DOMContentLoaded', () => {
+        const levels = [
+          {
+            id: 'level-1',
+            text: 'Physiological',
+            desc: 'These are the basic needs for human survival, such as air, food, water, shelter, and clothing.',
+          },
+          {
+            id: 'level-2',
+            text: 'Safety',
+            desc: 'Once physiological needs are met, the need for security, stability, and freedom from fear becomes a priority.',
+          },
+          {
+            id: 'level-3',
+            text: 'Belonging',
+            desc: 'This level emphasizes the need for interpersonal relationships, including friendships, family, and a sense of connection.',
+          },
+          {
+            id: 'level-4',
+            text: 'Esteem',
+            desc: 'Humans have a need for recognition, respect, and a sense of accomplishment. This includes self-respect and the respect of others.',
+          },
+          {
+            id: 'level-5',
+            text: 'Self-Actualization',
+            desc: "The highest level of the hierarchy, representing the realization of one's full potential and personal growth.",
+          },
+        ];
+
+        const tooltip = document.getElementById('tooltip');
+        const levelElements = document.querySelectorAll('.level');
+
+        const updateTooltip = (desc, colorClass) => {
+          tooltip.innerHTML = `<p>${desc}</p>`;
+          tooltip.className = 'tooltip visible ' + colorClass;
+        };
+
+        const resetTooltip = () => {
+          tooltip.classList.remove('visible');
+        };
+
+        const resetLevels = () => {
+          levelElements.forEach(level => level.classList.remove('active'));
+        };
+
+        // Initial highlight with 3-second delay
+        setTimeout(() => {
+          const bottomLevel = document.getElementById('level-1');
+          bottomLevel.classList.add('active');
+          updateTooltip(levels[0].desc, 'desc-1');
+        }, 3000);
+
+        // Click functionality
+        levelElements.forEach(level => {
+          level.addEventListener('click', () => {
+            const levelIndex = level.id.split('-')[1];
+            const descIndex = parseInt(levelIndex) - 1;
+
+            resetLevels();
+            level.classList.add('active');
+
+            updateTooltip(levels[descIndex].desc, `desc-${levelIndex}`);
+          });
+        });
+
+        // Hide tooltip when clicking outside the pyramid
+        document.addEventListener('click', event => {
+          if (!event.target.closest('.pyramid-container')) {
+            resetTooltip();
+            resetLevels();
+          }
+        });
       });
     </script>
   </body>

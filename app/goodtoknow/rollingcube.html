@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Rolling 3D Cube</title>
+    <!-- Bootstrap 5.0 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      xintegrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <!-- Font Awesome for microphone icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      xintegrity="sha512-Fo3rlrZj/k7sLw8G9J6A68D5rL2T3XJvT5F2xG3tT1F5n8/d9D6V5F6pC5zQ0e8y0u6x/m3v6A2R/J5G1fQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .rolling-cube-container {
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      canvas {
+        display: block;
+      }
+      #microphone-button {
+        transition: color 0.3s;
+      }
+      #microphone-button.recording {
+        color: red;
+      }
+    </style>
+  </head>
+  <body class="d-flex justify-content-center align-items-center p-3">
+    <!-- The custom web component will be used here -->
+    <div
+      class="card p-4 shadow-sm border-0 rounded-3 text-center"
+      style="max-width: 500px">
+      <div class="card-body">
+        <h1 class="card-title fw-bold">Rolling 3D Cube</h1>
+        <p class="card-text text-muted mb-4">
+          This is a custom web component displaying a slowly animated 3D cube. It is for demonstrating the power of the
+          Gemini API. You can describe how you want the cube to look like with text or speak to it. Gemini will add that
+          look to the cube. API key is needed for it as I don't share my own.
+        </p>
+        <rolling-cube-component></rolling-cube-component>
+        <div class="mt-4">
+          <p class="mb-2 fw-bold">Describe a new material for the cube:</p>
+          <div class="input-group">
+            <textarea
+              id="material-prompt"
+              class="form-control rounded-start"
+              rows="2"
+              placeholder="e.g., A shimmering gold block, A rough stone, a slimy green alien substance..."></textarea>
+            <button
+              id="generate-button"
+              class="btn btn-dark rounded-end">
+              ✨ Generate Cube Material
+            </button>
+            <button
+              id="microphone-button"
+              class="btn btn-outline-dark"
+              title="Speak to describe material">
+              <i class="fas fa-microphone"></i>
+            </button>
+          </div>
+          <button
+            id="tts-button"
+            class="btn btn-secondary mt-3 w-100">
+            ✨ Describe Cube
+          </button>
+          <audio
+            id="tts-audio"
+            style="display: none"></audio>
+          <div
+            id="loading-spinner"
+            class="spinner-border text-primary mt-3"
+            role="status"
+            style="display: none">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The web component's script -->
+    <script>
+      // Define the template for the web component
+      const template = document.createElement('template');
+      template.innerHTML = `
+            <div class="rolling-cube-container">
+                <canvas></canvas>
+            </div>
+        `;
+
+      class RollingCubeComponent extends HTMLElement {
+        constructor() {
+          super(); // Call the superclass constructor
+
+          // Since we are not using attachShadow, we append to the light DOM
+          this.appendChild(template.content.cloneNode(true));
+
+          // Properties for the Three.js scene
+          this.scene = null;
+          this.camera = null;
+          this.renderer = null;
+          this.cube = null;
+          this.outline = null; // Renamed for clarity
+          this.canvas = null;
+        }
+
+        connectedCallback() {
+          // This is called when the element is inserted into a document
+          this.canvas = this.querySelector('canvas');
+          this.initScene();
+          this.animate();
+          window.addEventListener('resize', () => this.onResize());
+          this.onResize(); // Initial resize
+
+          // Setup the LLM features
+          const generateButton = document.getElementById('generate-button');
+          const ttsButton = document.getElementById('tts-button');
+          const materialPrompt = document.getElementById('material-prompt');
+          const loadingSpinner = document.getElementById('loading-spinner');
+          const ttsAudio = document.getElementById('tts-audio');
+          const microphoneButton = document.getElementById('microphone-button');
+          const apiKey = ''; // API key will be provided by the system.
+
+          // Helper function to handle exponential backoff for API calls
+          const fetchWithBackoff = async (url, options, retries = 3, delay = 1000) => {
+            try {
+              const response = await fetch(url, options);
+              if (response.status === 429 && retries > 0) {
+                console.log(`Too many requests, retrying in ${delay}ms...`);
+                await new Promise(resolve => setTimeout(resolve, delay));
+                return fetchWithBackoff(url, options, retries - 1, delay * 2);
+              }
+              if (!response.ok) {
+                throw new Error(`API call failed with status: ${response.status}`);
+              }
+              return response;
+            } catch (error) {
+              if (retries > 0) {
+                console.log(`Fetch failed, retrying in ${delay}ms...`);
+                await new Promise(resolve => setTimeout(resolve, delay));
+                return fetchWithBackoff(url, options, retries - 1, delay * 2);
+              }
+              throw error;
+            }
+          };
+
+          // Gemini Material Generation Feature
+          generateButton.addEventListener('click', async () => {
+            const userDescription = materialPrompt.value.trim();
+            if (!userDescription) return;
+
+            loadingSpinner.style.display = 'block';
+            generateButton.disabled = true;
+            ttsButton.disabled = true;
+            microphoneButton.disabled = true;
+
+            try {
+              const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+              const payload = {
+                contents: [
+                  {
+                    parts: [
+                      {
+                        text: `Generate a JSON object with a hexadecimal 'color' (e.g., '0xff0000'), a 'transparent' boolean, and numeric 'opacity', 'metalness', and 'roughness' values (0-1) to create a Three.js material for a cube that looks like '${userDescription}'.`,
+                      },
+                    ],
+                  },
+                ],
+                generationConfig: {
+                  responseMimeType: 'application/json',
+                  responseSchema: {
+                    type: 'OBJECT',
+                    properties: {
+                      color: {type: 'STRING'},
+                      transparent: {type: 'BOOLEAN'},
+                      opacity: {type: 'NUMBER'},
+                      metalness: {type: 'NUMBER'},
+                      roughness: {type: 'NUMBER'},
+                    },
+                    propertyOrdering: ['color', 'transparent', 'opacity', 'metalness', 'roughness'],
+                  },
+                },
+              };
+              const response = await fetchWithBackoff(apiUrl, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(payload),
+              });
+
+              const result = await response.json();
+              const candidate = result.candidates?.[0];
+              if (candidate && candidate.content?.parts?.[0]?.text) {
+                const jsonText = candidate.content.parts[0].text;
+                const newMaterial = JSON.parse(jsonText);
+                this.updateCubeMaterial(newMaterial);
+              } else {
+                console.error('API response is not in the expected format:', result);
+              }
+            } catch (error) {
+              console.error('Failed to generate material:', error);
+            } finally {
+              loadingSpinner.style.display = 'none';
+              generateButton.disabled = false;
+              ttsButton.disabled = false;
+              microphoneButton.disabled = false;
+            }
+          });
+
+          // Gemini TTS Feature
+          ttsButton.addEventListener('click', async () => {
+            const ttsPrompt = `Describe the current cube material. It has a hexadecimal color of ${this.cube.material.color.getHexString()}, an opacity of ${
+              this.cube.material.opacity
+            }, a metalness of ${this.cube.material.metalness}, and a roughness of ${
+              this.cube.material.roughness
+            }. It is also ${this.cube.material.transparent ? 'transparent' : 'opaque'}.`;
+
+            loadingSpinner.style.display = 'block';
+            generateButton.disabled = true;
+            ttsButton.disabled = true;
+            microphoneButton.disabled = true;
+
+            try {
+              const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+              const payload = {
+                contents: [
+                  {
+                    parts: [{text: ttsPrompt}],
+                  },
+                ],
+                generationConfig: {
+                  responseModalities: ['AUDIO'],
+                  speechConfig: {
+                    voiceConfig: {
+                      prebuiltVoiceConfig: {voiceName: 'Puck'},
+                    },
+                  },
+                },
+              };
+
+              const response = await fetchWithBackoff(apiUrl, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(payload),
+              });
+
+              const result = await response.json();
+              const part = result?.candidates?.[0]?.content?.parts?.[0];
+              const audioData = part?.inlineData?.data;
+              const mimeType = part?.inlineData?.mimeType;
+
+              if (audioData && mimeType && mimeType.startsWith('audio/')) {
+                const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)[1], 10);
+                const pcmData = this.base64ToArrayBuffer(audioData);
+                const pcm16 = new Int16Array(pcmData);
+                const wavBlob = this.pcmToWav(pcm16, sampleRate);
+                ttsAudio.src = URL.createObjectURL(wavBlob);
+                ttsAudio.play();
+              } else {
+                console.error('API response is not in the expected format:', result);
+              }
+            } catch (error) {
+              console.error('Failed to generate TTS audio:', error);
+            } finally {
+              loadingSpinner.style.display = 'none';
+              generateButton.disabled = false;
+              ttsButton.disabled = false;
+              microphoneButton.disabled = false;
+            }
+          });
+
+          // Voice Recognition Feature
+          if ('webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+
+            microphoneButton.addEventListener('click', () => {
+              recognition.start();
+              microphoneButton.classList.add('recording');
+              materialPrompt.placeholder = 'Listening...';
+              generateButton.disabled = true;
+              ttsButton.disabled = true;
+            });
+
+            recognition.onresult = event => {
+              const transcript = event.results[0][0].transcript;
+              materialPrompt.value = transcript;
+            };
+
+            recognition.onend = () => {
+              microphoneButton.classList.remove('recording');
+              materialPrompt.placeholder =
+                'e.g., A shimmering gold block, A rough stone, a slimy green alien substance...';
+              generateButton.disabled = false;
+              ttsButton.disabled = false;
+              if (materialPrompt.value.trim() !== '') {
+                generateButton.click(); // Automatically trigger generation
+              }
+            };
+
+            recognition.onerror = event => {
+              console.error('Speech recognition error:', event.error);
+              microphoneButton.classList.remove('recording');
+              materialPrompt.placeholder = 'Speech recognition failed.';
+              generateButton.disabled = false;
+              ttsButton.disabled = false;
+            };
+          } else {
+            microphoneButton.style.display = 'none';
+            console.warn('Speech recognition not supported in this browser.');
+          }
+        }
+
+        disconnectedCallback() {
+          // This is called when the element is removed from the document
+          window.removeEventListener('resize', () => this.onResize());
+        }
+
+        initScene() {
+          // 1. Scene setup
+          this.scene = new THREE.Scene();
+
+          // 2. Camera setup
+          // PerspectiveCamera(field of view, aspect ratio, near plane, far plane)
+          this.camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+          this.camera.position.z = 2; // Move the camera back from the origin
+
+          // 3. Renderer setup
+          this.renderer = new THREE.WebGLRenderer({canvas: this.canvas, antialias: true, alpha: true});
+          this.renderer.setClearColor(0x000000, 0); // Transparent background
+
+          // 4. Create the cube
+          // BoxGeometry(width, height, depth)
+          const geometry = new THREE.BoxGeometry(1, 1, 1);
+          // MeshStandardMaterial for the smoke-glass effect
+          const material = new THREE.MeshStandardMaterial({
+            color: 0x444444, // Smoky color
+            transparent: true,
+            opacity: 0.5,
+            metalness: 0.9,
+            roughness: 0.05,
+          });
+          this.cube = new THREE.Mesh(geometry, material);
+          this.scene.add(this.cube);
+
+          // 5. Create the outline using EdgesGeometry
+          const edges = new THREE.EdgesGeometry(geometry);
+          const lineMaterial = new THREE.LineBasicMaterial({color: 0x000000});
+          this.outline = new THREE.LineSegments(edges, lineMaterial);
+          this.scene.add(this.outline);
+
+          // Add a light source for the main cube material to react to
+          const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+          this.scene.add(ambientLight);
+          const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+          directionalLight.position.set(1, 1, 1).normalize();
+          this.scene.add(directionalLight);
+        }
+
+        updateCubeMaterial(newProps) {
+          if (this.cube && this.cube.material) {
+            this.cube.material.color.set(new THREE.Color(newProps.color));
+            this.cube.material.transparent = newProps.transparent;
+            this.cube.material.opacity = newProps.opacity;
+            this.cube.material.metalness = newProps.metalness;
+            this.cube.material.roughness = newProps.roughness;
+            this.cube.material.needsUpdate = true;
+          }
+        }
+
+        // Helper function to convert base64 to ArrayBuffer
+        base64ToArrayBuffer(base64) {
+          const binaryString = window.atob(base64);
+          const len = binaryString.length;
+          const bytes = new Uint8Array(len);
+          for (let i = 0; i < len; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+          }
+          return bytes.buffer;
+        }
+
+        // Helper function to convert PCM audio to WAV format
+        pcmToWav(pcmData, sampleRate) {
+          const buffer = new ArrayBuffer(44 + pcmData.length * 2);
+          const view = new DataView(buffer);
+          let offset = 0;
+
+          // WAV header
+          const writeString = str => {
+            for (let i = 0; i < str.length; i++) {
+              view.setUint8(offset + i, str.charCodeAt(i));
+            }
+            offset += str.length;
+          };
+
+          writeString('RIFF');
+          view.setUint32(offset, 36 + pcmData.length * 2, true);
+          offset += 4;
+          writeString('WAVE');
+          writeString('fmt ');
+          view.setUint32(offset, 16, true);
+          offset += 4;
+          view.setUint16(offset, 1, true); // AudioFormat: PCM
+          offset += 2;
+          view.setUint16(offset, 1, true); // NumChannels: Mono
+          offset += 2;
+          view.setUint32(offset, sampleRate, true);
+          offset += 4;
+          view.setUint32(offset, sampleRate * 2, true);
+          offset += 4;
+          view.setUint16(offset, 2, true);
+          offset += 2;
+          view.setUint16(offset, 16, true);
+          offset += 2;
+          writeString('data');
+          view.setUint32(offset, pcmData.length * 2, true);
+          offset += 4;
+
+          // Write PCM data
+          for (let i = 0; i < pcmData.length; i++) {
+            view.setInt16(offset, pcmData[i], true);
+            offset += 2;
+          }
+
+          return new Blob([view], {type: 'audio/wav'});
+        }
+
+        animate() {
+          // The main animation loop
+          requestAnimationFrame(() => this.animate());
+
+          // Slowly rotate both the cube and its outline together
+          this.cube.rotation.x += 0.005;
+          this.cube.rotation.y += 0.005;
+          this.outline.rotation.x = this.cube.rotation.x;
+          this.outline.rotation.y = this.cube.rotation.y;
+
+          // Render the scene
+          this.renderer.render(this.scene, this.camera);
+        }
+
+        onResize() {
+          // Handle window resizing to keep the scene responsive
+          const container = this.querySelector('.rolling-cube-container');
+          const width = container.offsetWidth;
+          const height = container.offsetHeight;
+
+          this.renderer.setSize(width, height);
+          this.camera.aspect = width / height;
+          this.camera.updateProjectionMatrix();
+        }
+      }
+
+      // Define the new element
+      customElements.define('rolling-cube-component', RollingCubeComponent);
+    </script>
+  </body>
+</html>
