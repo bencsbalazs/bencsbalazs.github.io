@@ -439,8 +439,8 @@
           offset += 4;
 
           // Write PCM data
-          for (let i = 0; i < pcmData.length; i++) {
-            view.setInt16(offset, pcmData[i], true);
+          for (const element of pcmData) {
+            view.setInt16(offset, element, true);
             offset += 2;
           }
 
