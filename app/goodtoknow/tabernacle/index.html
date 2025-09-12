@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Balázs Bencs'</title>
+    <title id="page-title">Balázs Bencs'</title>
     <load-resources></load-resources>
     <script
       src="../../frame.webcomponent.js"
@@ -9,10 +9,15 @@
   </head>
   <body>
     <frame-component
+      id="frame-header"
       type="header"
       home-text="It can come in handy at any time.">
     </frame-component>
     <main class="container">
+      <div class="language-switcher">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('hu')">Magyar</button>
+      </div>
       <div class="row">
         <div class="col">
           <h2 id="title-tabernacle">A találkozás sátora</h2>
@@ -238,49 +243,49 @@
             </thead>
             <tbody>
               <tr>
-                <td>Gold</td>
+                <td id="summary-gold">Gold</td>
                 <td>1,002.04</td>
                 <td>kg</td>
                 <td>117,030.39</td>
                 <td class="amountprice">117,269,009.35</td>
               </tr>
               <tr>
-                <td>Silver</td>
+                <td id="summary-silver">Silver</td>
                 <td>3,447.24</td>
                 <td>kg</td>
                 <td>1,341.97</td>
                 <td class="amountprice">4,626,093.61</td>
               </tr>
               <tr>
-                <td>Copper</td>
+                <td id="summary-copper">Copper</td>
                 <td>2,426.26</td>
                 <td>kg</td>
                 <td>10.20</td>
                 <td class="amountprice">24,747.85</td>
               </tr>
               <tr>
-                <td>Purple Fabric</td>
+                <td id="summary-purple-fabric">Purple Fabric</td>
                 <td>78</td>
                 <td>m&sup2; (est.)</td>
                 <td>200.00</td>
                 <td class="amountprice">15,600.00</td>
               </tr>
               <tr>
-                <td>Goat Skin</td>
+                <td id="summary-goat-skin">Goat Skin</td>
                 <td>276</td>
                 <td>m&sup2; (est.)</td>
                 <td>80.00</td>
                 <td class="amountprice">22,080.00</td>
               </tr>
               <tr>
-                <td>Ram Skin</td>
+                <td id="summary-ram-skin">Ram Skin</td>
                 <td>100</td>
                 <td>m&sup2; (est.)</td>
                 <td>90.00</td>
                 <td class="amountprice">9,000.00</td>
               </tr>
               <tr>
-                <td>Tahash Skin</td>
+                <td id="summary-tahash-skin">Tahash Skin</td>
                 <td>100</td>
                 <td>m&sup2; (est.)</td>
                 <td>150.00</td>
@@ -289,15 +294,30 @@
             </tbody>
             <tfoot>
               <tr>
-                <th colspan="4" style="text-align:right">Grand Total (USD):</th>
+                <th
+                  id="grand-total-usd"
+                  colspan="4"
+                  style="text-align: right">
+                  Grand Total (USD):
+                </th>
                 <td>121,981,530.81</td>
               </tr>
               <tr>
-                <th colspan="4" style="text-align:right">Grand Total (EUR):</th>
+                <th
+                  id="grand-total-eur"
+                  colspan="4"
+                  style="text-align: right">
+                  Grand Total (EUR):
+                </th>
                 <td>103,987,431.48</td>
               </tr>
               <tr>
-                <th colspan="4" style="text-align:right">Grand Total (HUF):</th>
+                <th
+                  id="grand-total-huf"
+                  colspan="4"
+                  style="text-align: right">
+                  Grand Total (HUF):
+                </th>
                 <td>40,712,001,504.02</td>
               </tr>
             </tfoot>
@@ -307,5 +327,103 @@
     </main>
     <frame-component type="footer"> </frame-component>
     <script src="../../resources.webcomponent.js"></script>
+    <script>
+      const translations = {
+        en: {
+          'title-tabernacle': 'The Tabernacle',
+          'intro-text': 'In the Bible, there is a story when the...',
+          'caption-consensus': 'They may not be the most accurate values, but they are based on consensus.',
+          'th-biblical-unit-1': 'Biblical unit',
+          'th-si-unit-1': 'SI unit',
+          'th-exchange-number-1': 'exchange number',
+          'caption-accurate': 'Accurate data from the Bible text',
+          'th-material-2': 'Material',
+          'th-original-word-2': 'Original word (hebrow)',
+          'th-biblical-quantity-2': 'Biblical quantity',
+          'th-biblical-unit-2': 'Biblical unit',
+          'th-evidence-2': 'Evidence',
+          'td-gold-1': 'Gold',
+          'td-silver-1': 'Silver',
+          'td-copper-1': 'Copper',
+          'td-purple-fabric-1': 'Purple fabric',
+          'td-goat-skin-1': "Goats' hair",
+          'td-ram-skin-1': "Rams' skins dyed red",
+          'td-tahash-skin-1': 'Tahash skins (dolphin or seal)',
+          'caption-summary': 'Summary. The quantities and prices for fabrics and skins are estimates.',
+          'th-material-3': 'Material',
+          'th-quantity-sum-3': 'Quantity sum',
+          'th-unit-3': 'Unit',
+          'th-unit-price-3': 'Unit price (USD)',
+          'th-total-amount-3': 'Total Amount (USD)',
+          'summary-gold': 'Gold',
+          'summary-silver': 'Silver',
+          'summary-copper': 'Copper',
+          'summary-purple-fabric': 'Purple Fabric',
+          'summary-goat-skin': 'Goat Skin',
+          'summary-ram-skin': 'Ram Skin',
+          'summary-tahash-skin': 'Tahash Skin',
+          'grand-total-usd': 'Grand Total (USD):',
+          'grand-total-eur': 'Grand Total (EUR):',
+          'grand-total-huf': 'Grand Total (HUF):',
+          'home-text': 'It can come in handy at any time.',
+          'page-title': "Balázs Bencs'",
+        },
+        hu: {
+          'title-tabernacle': 'A találkozás sátora',
+          'intro-text': 'A Bibliában van egy történet, amikor a...',
+          'caption-consensus': 'Lehet, hogy nem a legpontosabb értékek, de konszenzuson alapulnak.',
+          'th-biblical-unit-1': 'Bibliai egység',
+          'th-si-unit-1': 'SI egység',
+          'th-exchange-number-1': 'átváltási szám',
+          'caption-accurate': 'Pontos adatok a Biblia szövegéből',
+          'th-material-2': 'Anyag',
+          'th-original-word-2': 'Eredeti szó (héber)',
+          'th-biblical-quantity-2': 'Bibliai mennyiség',
+          'th-biblical-unit-2': 'Bibliai egység',
+          'th-evidence-2': 'Forrás',
+          'td-gold-1': 'Arany',
+          'td-silver-1': 'Ezüst',
+          'td-copper-1': 'Réz',
+          'td-purple-fabric-1': 'Bíbor szövet',
+          'td-goat-skin-1': 'Kecskeszőr',
+          'td-ram-skin-1': 'Vörösre festett kosbőr',
+          'td-tahash-skin-1': 'Tahás bőr (Delfin vagy fóka)',
+          'caption-summary': 'Összegzés. A szövetek és bőrök mennyisége és ára becsült.',
+          'th-material-3': 'Anyag',
+          'th-quantity-sum-3': 'Mennyiség összesen',
+          'th-unit-3': 'Egység',
+          'th-unit-price-3': 'Egységár (USD)',
+          'th-total-amount-3': 'Teljes összeg (USD)',
+          'summary-gold': 'Arany',
+          'summary-silver': 'Ezüst',
+          'summary-copper': 'Réz',
+          'summary-purple-fabric': 'Bíbor szövet',
+          'summary-goat-skin': 'Kecskebőr',
+          'summary-ram-skin': 'Kosbőr',
+          'summary-tahash-skin': 'Tahás bőr',
+          'grand-total-usd': 'Végösszeg (USD):',
+          'grand-total-eur': 'Végösszeg (EUR):',
+          'grand-total-huf': 'Végösszeg (HUF):',
+          'home-text': 'Bármikor jól jöhet.',
+          'page-title': 'Bencs Balázs',
+        },
+      };
+
+      function setLanguage(lang) {
+        for (const id in translations[lang]) {
+          const element = document.getElementById(id);
+          if (element) {
+            if (id === 'frame-header') {
+              element.setAttribute('home-text', translations[lang][id]);
+            } else {
+              element.innerHTML = translations[lang][id];
+            }
+          }
+        }
+      }
+
+      // Set default language
+      setLanguage('hu');
+    </script>
   </body>
 </html>
