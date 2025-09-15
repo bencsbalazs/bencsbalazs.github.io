@@ -15,8 +15,21 @@
     </frame-component>
     <main class="container">
       <div class="language-switcher">
-        <button onclick="setLanguage('en')">English</button>
-        <button onclick="setLanguage('hu')">Magyar</button>
+        <button
+          class="btn btn-primary m-2"
+          onclick="setLanguage('en')">
+          English
+        </button>
+        <button
+          class="btn btn-primary m-2"
+          onclick="setLanguage('hu')">
+          Magyar
+        </button>
+        <button
+          class="btn btn-primary m-2"
+          onclick="setLanguage('sv')">
+          Svenska
+        </button>
       </div>
       <div class="row">
         <div class="col">
@@ -47,6 +60,16 @@
                 <td id="td-sekel-1">sekel</td>
                 <td id="td-kg-2">kg</td>
                 <td id="td-exchange-2">0,0114</td>
+              </tr>
+              <tr>
+                <td id="td-cubit-1">Cubit</td>
+                <td id="td-m-1">m</td>
+                <td>0.4572</td>
+              </tr>
+              <tr>
+                <td id="td-sacred-cubit-1">Sacred Cubit</td>
+                <td id="td-m-2">m</td>
+                <td>0.525</td>
               </tr>
             </tbody>
           </table>
@@ -227,6 +250,118 @@
         </div>
       </div>
       <div class="row">
+        <h3 id="title-rates">Exchange rates</h3>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label
+              for="gold-price"
+              id="gold-price-label"
+              >Gold (USD/kg)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="gold-price"
+              value="92900"
+              step="0.01" />
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label
+              for="silver-price"
+              id="silver-price-label"
+              >Silver (USD/kg)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="silver-price"
+              value="1341.97"
+              step="0.01" />
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label
+              for="copper-price"
+              id="copper-price-label"
+              >Copper (USD/kg)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="copper-price"
+              value="10.20"
+              step="0.01" />
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label
+              for="eur-rate"
+              id="eur-rate-label"
+              >USD to EUR exchange rate</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="eur-rate"
+              value="0.852178"
+              step="0.000001" />
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label
+              for="huf-rate"
+              id="huf-rate-label"
+              >USD to HUF exchange rate</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="huf-rate"
+              value="332.10"
+              step="0.01" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3 id="title-cubit-selection">Cubit selection for fabrics</h3>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="cubit_type"
+              id="cubit_regular"
+              value="0.4572"
+              checked />
+            <label
+              class="form-check-label"
+              for="cubit_regular"
+              id="label-cubit-regular">
+              Regular Cubit (45.72 cm)
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="cubit_type"
+              id="cubit_sacred"
+              value="0.525" />
+            <label
+              class="form-check-label"
+              for="cubit_sacred"
+              id="label-sacred-cubit">
+              Sacred Cubit (52.5 cm)
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="col">
           <table class="table">
             <caption id="caption-summary">
@@ -247,52 +382,80 @@
             <tbody>
               <tr>
                 <td id="summary-gold">Gold</td>
-                <td>1,002.04</td>
+                <td id="summary-gold-quantity">1,002.04</td>
                 <td>kg</td>
-                <td>92900</td>
-                <td class="amountprice">93,089,516</td>
+                <td id="summary-gold-unit-price">92900</td>
+                <td
+                  class="amountprice"
+                  id="summary-gold-total">
+                  93,089,516
+                </td>
               </tr>
               <tr>
                 <td id="summary-silver">Silver</td>
-                <td>3,447.24</td>
+                <td id="summary-silver-quantity">3,447.24</td>
                 <td>kg</td>
-                <td>1,341.97</td>
-                <td class="amountprice">4,626,093.61</td>
+                <td id="summary-silver-unit-price">1,341.97</td>
+                <td
+                  class="amountprice"
+                  id="summary-silver-total">
+                  4,626,093.61
+                </td>
               </tr>
               <tr>
                 <td id="summary-copper">Copper</td>
-                <td>2,426.26</td>
+                <td id="summary-copper-quantity">2,426.26</td>
                 <td>kg</td>
-                <td>10.20</td>
-                <td class="amountprice">24,747.85</td>
+                <td id="summary-copper-unit-price">10.20</td>
+                <td
+                  class="amountprice"
+                  id="summary-copper-total">
+                  24,747.85
+                </td>
               </tr>
               <tr>
                 <td id="summary-purple-fabric">Purple Fabric</td>
-                <td>78</td>
-                <td>m&sup2; (est.)</td>
-                <td>200.00</td>
-                <td class="amountprice">15,600.00</td>
+                <td id="summary-purple-fabric-quantity">78</td>
+                <td>m&sup2;</td>
+                <td id="summary-purple-fabric-unit-price">200.00</td>
+                <td
+                  class="amountprice"
+                  id="summary-purple-fabric-total">
+                  15,600.00
+                </td>
               </tr>
               <tr>
                 <td id="summary-goat-skin">Goat Skin</td>
-                <td>276</td>
-                <td>m&sup2; (est.)</td>
-                <td>80.00</td>
-                <td class="amountprice">22,080.00</td>
+                <td id="summary-goat-skin-quantity">276</td>
+                <td>m&sup2;</td>
+                <td id="summary-goat-skin-unit-price">80.00</td>
+                <td
+                  class="amountprice"
+                  id="summary-goat-skin-total">
+                  22,080.00
+                </td>
               </tr>
               <tr>
                 <td id="summary-ram-skin">Ram Skin</td>
                 <td>100</td>
                 <td>m&sup2; (est.)</td>
                 <td>90.00</td>
-                <td class="amountprice">9,000.00</td>
+                <td
+                  class="amountprice"
+                  id="summary-ram-skin-total">
+                  9,000.00
+                </td>
               </tr>
               <tr>
                 <td id="summary-tahash-skin">Tahash Skin</td>
                 <td>100</td>
                 <td>m&sup2; (est.)</td>
                 <td>150.00</td>
-                <td class="amountprice">15,000.00</td>
+                <td
+                  class="amountprice"
+                  id="summary-tahash-skin-total">
+                  15,000.00
+                </td>
               </tr>
             </tbody>
             <tfoot>
@@ -303,7 +466,7 @@
                   style="text-align: right">
                   Grand Total (USD):
                 </th>
-                <td>97,802,037.46</td>
+                <td id="grand-total-usd-value">97,802,037.46</td>
               </tr>
               <tr>
                 <th
@@ -312,7 +475,7 @@
                   style="text-align: right">
                   Grand Total (EUR):
                 </th>
-                <td>83,344,656.56</td>
+                <td id="grand-total-eur-value">83,344,656.56</td>
               </tr>
               <tr>
                 <th
@@ -321,7 +484,7 @@
                   style="text-align: right">
                   Grand Total (HUF):
                 </th>
-                <td>32,480,203,343.52</td>
+                <td id="grand-total-huf-value">32,480,203,343.52</td>
               </tr>
             </tfoot>
           </table>
@@ -340,6 +503,8 @@
           'th-biblical-unit-1': 'Biblical unit',
           'th-si-unit-1': 'SI unit',
           'th-exchange-number-1': 'exchange number',
+          'td-cubit-1': 'Cubit',
+          'td-sacred-cubit-1': 'Sacred Cubit',
           'caption-accurate': 'Accurate data from the Bible text',
           'th-material-2': 'Material',
           'th-original-word-2': 'Original word (hebrow)',
@@ -373,6 +538,15 @@
           'grand-total-huf': 'Grand Total (HUF):',
           'home-text': 'It can come in handy at any time.',
           'page-title': "Balázs Bencs'",
+          'title-rates': 'Exchange rates',
+          'gold-price-label': 'Gold (USD/kg)',
+          'silver-price-label': 'Silver (USD/kg)',
+          'copper-price-label': 'Copper (USD/kg)',
+          'eur-rate-label': 'USD to EUR exchange rate',
+          'huf-rate-label': 'USD to HUF exchange rate',
+          'title-cubit-selection': 'Cubit selection for fabrics',
+          'label-cubit-regular': 'Regular Cubit (45.72 cm)',
+          'label-sacred-cubit': 'Sacred Cubit (52.5 cm)',
         },
         hu: {
           'title-tabernacle': 'A találkozás sátora',
@@ -382,6 +556,8 @@
           'th-biblical-unit-1': 'Bibliai egység',
           'th-si-unit-1': 'SI egység',
           'th-exchange-number-1': 'átváltási szám',
+          'td-cubit-1': 'Könyök',
+          'td-sacred-cubit-1': 'Szent könyök',
           'caption-accurate': 'Pontos adatok a Biblia szövegéből',
           'th-material-2': 'Anyag',
           'th-original-word-2': 'Eredeti szó (héber)',
@@ -415,6 +591,68 @@
           'grand-total-huf': 'Végösszeg (HUF):',
           'home-text': 'Bármikor jól jöhet.',
           'page-title': 'Bencs Balázs',
+          'title-rates': 'Árfolyamok',
+          'gold-price-label': 'Arany (USD/kg)',
+          'silver-price-label': 'Ezüst (USD/kg)',
+          'copper-price-label': 'Réz (USD/kg)',
+          'eur-rate-label': 'USD-EUR árfolyam',
+          'huf-rate-label': 'USD-HUF árfolyam',
+          'title-cubit-selection': 'Könyök választás a szövetekhez',
+          'label-cubit-regular': 'Normál könyök (45,72 cm)',
+          'label-sacred-cubit': 'Szent könyök (52,5 cm)',
+        },
+        sv: {
+          'title-tabernacle': 'Tabernaklet',
+          'intro-text':
+            '... var en bärbar helgedom som Mose byggde i öknen för att israeliterna skulle kunna möta Gud. På denna tillfälliga heliga plats talade Mose med Herren "ansikte mot ansikte", och Herrens härlighet uppenbarade sig i en molnpelare. Den fungerade som den centrala anslutningspunkten mellan Gud och hans folk tills templet byggdes i Jerusalem.',
+          'caption-consensus': 'De kanske inte är de mest exakta värdena, men de är baserade på konsensus.',
+          'th-biblical-unit-1': 'Biblisk enhet',
+          'th-si-unit-1': 'SI-enhet',
+          'th-exchange-number-1': 'växlingsnummer',
+          'td-cubit-1': 'Aln',
+          'td-sacred-cubit-1': 'Helig aln',
+          'caption-accurate': 'Exakta data från bibeltexten',
+          'th-material-2': 'Material',
+          'th-original-word-2': 'Originalord (hebreiska)',
+          'th-biblical-quantity-2': 'Biblisk kvantitet',
+          'th-biblical-unit-2': 'Biblisk enhet',
+          'th-evidence-2': 'Bevis',
+          'td-gold-1': 'Guld',
+          'td-silver-1': 'Silver',
+          'td-copper-1': 'Koppar',
+          'td-purple-fabric-1': 'Lila tyg',
+          'td-goat-skin-1': 'Gethår',
+          'td-ram-skin-1': 'Rödfärgade baggskinn',
+          'td-tahash-skin-1': 'Tahash-skinn (delfin eller säl)',
+          'caption-summary': 'Sammanfattning. Kvantiteterna och priserna för tyger och skinn är uppskattningar.',
+          'caption-gold':
+            'Jag använde 18 karats guld för att beräkna värdet på guldet, eftersom israeliterna troligen arbetade med guld som förts från Egypten, vilket var cirka 75% rent.',
+          'th-material-3': 'Material',
+          'th-quantity-sum-3': 'Kvantitetssumma',
+          'th-unit-3': 'Enhet',
+          'th-unit-price-3': 'Enhetspris (USD)',
+          'th-total-amount-3': 'Totalt belopp (USD)',
+          'summary-gold': 'Guld',
+          'summary-silver': 'Silver',
+          'summary-copper': 'Koppar',
+          'summary-purple-fabric': 'Lila tyg',
+          'summary-goat-skin': 'Get-skinn',
+          'summary-ram-skin': 'Baggskinn',
+          'summary-tahash-skin': 'Tahash-skinn',
+          'grand-total-usd': 'Totalt (USD):',
+          'grand-total-eur': 'Totalt (EUR):',
+          'grand-total-huf': 'Totalt (HUF):',
+          'home-text': 'Det kan komma till hands när som helst.',
+          'page-title': 'Bencs Balázs',
+          'title-rates': 'Växelkurser',
+          'gold-price-label': 'Guld (USD/kg)',
+          'silver-price-label': 'Silver (USD/kg)',
+          'copper-price-label': 'Koppar (USD/kg)',
+          'eur-rate-label': 'USD till EUR växelkurs',
+          'huf-rate-label': 'USD till HUF växelkurs',
+          'title-cubit-selection': 'Alnval för tyger',
+          'label-cubit-regular': 'Vanlig aln (45,72 cm)',
+          'label-sacred-cubit': 'Helig aln (52,5 cm)',
         },
       };
 
@@ -433,6 +671,112 @@
 
       // Set default language
       setLanguage('hu');
+    </script>
+    <script>
+      const goldPriceInput = document.getElementById('gold-price');
+      const silverPriceInput = document.getElementById('silver-price');
+      const copperPriceInput = document.getElementById('copper-price');
+      const eurRateInput = document.getElementById('eur-rate');
+      const hufRateInput = document.getElementById('huf-rate');
+      const cubitRegularRadio = document.getElementById('cubit_regular');
+      const cubitSacredRadio = document.getElementById('cubit_sacred');
+
+      const goldQuantity = parseFloat(document.getElementById('summary-gold-quantity').textContent.replace(/,/g, ''));
+      const silverQuantity = parseFloat(
+        document.getElementById('summary-silver-quantity').textContent.replace(/,/g, '')
+      );
+      const copperQuantity = parseFloat(
+        document.getElementById('summary-copper-quantity').textContent.replace(/,/g, '')
+      );
+
+      const goldUnitPriceCell = document.getElementById('summary-gold-unit-price');
+      const goldTotalCell = document.getElementById('summary-gold-total');
+
+      const silverUnitPriceCell = document.getElementById('summary-silver-unit-price');
+      const silverTotalCell = document.getElementById('summary-silver-total');
+
+      const copperUnitPriceCell = document.getElementById('summary-copper-unit-price');
+      const copperTotalCell = document.getElementById('summary-copper-total');
+
+      const purpleFabricQuantityCell = document.getElementById('summary-purple-fabric-quantity');
+      const goatSkinQuantityCell = document.getElementById('summary-goat-skin-quantity');
+
+      const purpleFabricUnitPrice = parseFloat(
+        document.getElementById('summary-purple-fabric-unit-price').textContent.replace(/,/g, '')
+      );
+      const goatSkinUnitPrice = parseFloat(
+        document.getElementById('summary-goat-skin-unit-price').textContent.replace(/,/g, '')
+      );
+
+      const purpleFabricTotalCell = document.getElementById('summary-purple-fabric-total');
+      const goatSkinTotalCell = document.getElementById('summary-goat-skin-total');
+
+      const ramSkinTotal = parseFloat(document.getElementById('summary-ram-skin-total').textContent.replace(/,/g, ''));
+      const tahashSkinTotal = parseFloat(
+        document.getElementById('summary-tahash-skin-total').textContent.replace(/,/g, '')
+      );
+
+      const grandTotalUsdCell = document.getElementById('grand-total-usd-value');
+      const grandTotalEurCell = document.getElementById('grand-total-eur-value');
+      const grandTotalHufCell = document.getElementById('grand-total-huf-value');
+
+      function formatNumber(num) {
+        return num.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      }
+
+      function recalculate() {
+        const goldPrice = parseFloat(goldPriceInput.value) || 0;
+        const silverPrice = parseFloat(silverPriceInput.value) || 0;
+        const copperPrice = parseFloat(copperPriceInput.value) || 0;
+        const usdToEurRate = parseFloat(eurRateInput.value) || 0;
+        const usdToHufRate = parseFloat(hufRateInput.value) || 0;
+
+        goldUnitPriceCell.textContent = formatNumber(goldPrice);
+        silverUnitPriceCell.textContent = formatNumber(silverPrice);
+        copperUnitPriceCell.textContent = formatNumber(copperPrice);
+
+        const goldTotal = goldQuantity * goldPrice;
+        const silverTotal = silverQuantity * silverPrice;
+        const copperTotal = copperQuantity * copperPrice;
+
+        goldTotalCell.textContent = formatNumber(goldTotal);
+        silverTotalCell.textContent = formatNumber(silverTotal);
+        copperTotalCell.textContent = formatNumber(copperTotal);
+
+        const cubitValue = parseFloat(document.querySelector('input[name="cubit_type"]:checked').value);
+
+        const purpleFabricArea = 10 * (28 * cubitValue) * (4 * cubitValue);
+        const goatSkinArea = 11 * (30 * cubitValue) * (4 * cubitValue);
+
+        purpleFabricQuantityCell.textContent = formatNumber(purpleFabricArea);
+        goatSkinQuantityCell.textContent = formatNumber(goatSkinArea);
+
+        const purpleFabricTotal = purpleFabricArea * purpleFabricUnitPrice;
+        const goatSkinTotal = goatSkinArea * goatSkinUnitPrice;
+
+        purpleFabricTotalCell.textContent = formatNumber(purpleFabricTotal);
+        goatSkinTotalCell.textContent = formatNumber(goatSkinTotal);
+
+        const grandTotalUsd =
+          goldTotal + silverTotal + copperTotal + purpleFabricTotal + goatSkinTotal + ramSkinTotal + tahashSkinTotal;
+        const grandTotalEur = grandTotalUsd * usdToEurRate;
+        const grandTotalHuf = grandTotalUsd * usdToHufRate;
+
+        grandTotalUsdCell.textContent = formatNumber(grandTotalUsd);
+        grandTotalEurCell.textContent = formatNumber(grandTotalEur);
+        grandTotalHufCell.textContent = formatNumber(grandTotalHuf);
+      }
+
+      goldPriceInput.addEventListener('input', recalculate);
+      silverPriceInput.addEventListener('input', recalculate);
+      copperPriceInput.addEventListener('input', recalculate);
+      eurRateInput.addEventListener('input', recalculate);
+      hufRateInput.addEventListener('input', recalculate);
+      cubitRegularRadio.addEventListener('change', recalculate);
+      cubitSacredRadio.addEventListener('change', recalculate);
+
+      // Initial calculation
+      recalculate();
     </script>
   </body>
 </html>
