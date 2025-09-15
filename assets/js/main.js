@@ -93,7 +93,7 @@ import { on, select } from './helpers.js';
         { path: './components/skillcloud.webcomponent.js', components: { 'skill-cloud': 'default' } },
         { path: './components/project.webcomponent.js', components: { 'my-projects-portfolio': 'default' } },
         { path: './components/services.webcomponent.js', components: { 'services-list': 'default' } },
-        { path: './components/blog.webcomponent.js', components: { 'my-blog-system': 'default' } },
+        { path: './components/feedbacks.webcomponent.js', components: { 'show-feedbacks': 'default' } },
     ];
 
     componentsToRegister.forEach(defineWebComponents);
