@@ -1,0 +1,36 @@
+[
+  {
+    "id": "level-1",
+    "text": "Physiological",
+    "desc": "These are the basic needs for human survival, such as air, food, water, shelter, and clothing.",
+    "questions": [
+      "Are you hungry? Then eat.",
+      "Drink regularly.",
+      "Don't be in too cold environment, but in too warm either."
+    ]
+  },
+  {
+    "id": "level-2",
+    "text": "Safety",
+    "desc": "Once physiological needs are met, the need for security, stability, and freedom from fear becomes a priority.",
+    "questions": []
+  },
+  {
+    "id": "level-3",
+    "text": "Belonging",
+    "desc": "This level emphasizes the need for interpersonal relationships, including friendships, family, and a sense of connection.",
+    "questions": []
+  },
+  {
+    "id": "level-4",
+    "text": "Esteem",
+    "desc": "Humans have a need for recognition, respect, and a sense of accomplishment. This includes self-respect and the respect of others.",
+    "questions": []
+  },
+  {
+    "id": "level-5",
+    "text": "Self-Actualization",
+    "desc": "The highest level of the hierarchy, representing the realization of one's full potential and personal growth.",
+    "questions": []
+  }
+]

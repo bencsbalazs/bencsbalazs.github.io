@@ -53,7 +53,7 @@ class PageHeaderFooter extends HTMLElement {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/app/index.html">
-                            <i class="bi bi-collection"></i> Contents
+                            <i class="bi bi-collection"></i> Learning & Well-being
                         </a>
                     </li>
                 </ul>

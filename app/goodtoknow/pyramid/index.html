@@ -5,106 +5,12 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Maslow's Pyramid (Bootstrap)</title>
+    <title>Maslow's Pyramid</title>
     <load-resources></load-resources>
     <script
       src="../../frame.webcomponent.js"
       defer></script>
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8f9fa;
-      }
-
-      .pyramid-container {
-        position: relative;
-        width: 40vw;
-        height: 34vw;
-        max-width: 500px;
-        max-height: 420px;
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      }
-
-      .level {
-        position: absolute;
-        width: 100%;
-        height: 19.3%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: bold;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .level:hover {
-        transform: scale(1.03);
-        z-index: 10;
-      }
-
-      .level.active {
-        box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.8);
-        transform: scale(1.03);
-        z-index: 10;
-      }
-
-      .level-5 {
-        top: 0;
-        background-color: #6a0572;
-      }
-      .level-4 {
-        top: 19.3%;
-        background-color: #ab3a97;
-      }
-      .level-3 {
-        top: 38.6%;
-        background-color: #e55a8a;
-      }
-      .level-2 {
-        top: 57.9%;
-        background-color: #f89679;
-      }
-      .level-1 {
-        top: 77.2%;
-        background-color: #ffc47f;
-      }
-
-      .tooltip-inner {
-        color: white;
-        font-size: 1rem;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        text-align: center;
-      }
-
-      .desc-1 {
-        background-color: #ffc47f;
-      }
-      .desc-2 {
-        background-color: #f89679;
-      }
-      .desc-3 {
-        background-color: #e55a8a;
-      }
-      .desc-4 {
-        background-color: #ab3a97;
-      }
-      .desc-5 {
-        background-color: #6a0572;
-      }
-
-      @media (max-width: 768px) {
-        .pyramid-container {
-          width: 70vw;
-          height: 59.5vw;
-        }
-        .level {
-          font-size: 1rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="pyramid.css" />
   </head>
   <body class="min-vh-100">
     <frame-component
@@ -162,39 +68,36 @@
       crossorigin="anonymous"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const levels = [
-          {
-            id: 'level-1',
-            text: 'Physiological',
-            desc: 'These are the basic needs for human survival, such as air, food, water, shelter, and clothing.',
-          },
-          {
-            id: 'level-2',
-            text: 'Safety',
-            desc: 'Once physiological needs are met, the need for security, stability, and freedom from fear becomes a priority.',
-          },
-          {
-            id: 'level-3',
-            text: 'Belonging',
-            desc: 'This level emphasizes the need for interpersonal relationships, including friendships, family, and a sense of connection.',
-          },
-          {
-            id: 'level-4',
-            text: 'Esteem',
-            desc: 'Humans have a need for recognition, respect, and a sense of accomplishment. This includes self-respect and the respect of others.',
-          },
-          {
-            id: 'level-5',
-            text: 'Self-Actualization',
-            desc: "The highest level of the hierarchy, representing the realization of one's full potential and personal growth.",
-          },
-        ];
-
+        let levels = [];
         const tooltipContainer = document.getElementById('tooltip-container');
         const levelElements = document.querySelectorAll('.level');
 
-        const updateTooltip = (desc, colorClass) => {
-          tooltipContainer.innerHTML = `<div class="tooltip-inner ${colorClass}">${desc}</div>`;
+        fetch('pyramid.json')
+          .then(response => response.json())
+          .then(data => {
+            levels = data;
+            setTimeout(() => {
+              const bottomLevel = document.getElementById('level-1');
+              bottomLevel.classList.add('active');
+              updateTooltip(levels[0]);
+            }, 1500);
+          });
+
+        const updateTooltip = (levelData) => {
+          let questionsHtml = '';
+          if (levelData.questions && levelData.questions.length > 0) {
+            questionsHtml = '<ul class="list-group list-group-flush text-start">' + levelData.questions.map(q => `<li class="list-group-item">${q}</li>`).join('') + '</ul>';
+          }
+          tooltipContainer.innerHTML = `
+            <div class="card">
+              <div class="card-header text-white desc-${levelData.id.split('-')[1]}">
+                ${levelData.text}
+              </div>
+              <div class="card-body">
+                <p class="card-text">${levelData.desc}</p>
+                ${questionsHtml}
+              </div>
+            </div>`;
         };
 
         const resetTooltip = () => {
@@ -205,26 +108,22 @@
           levelElements.forEach(level => level.classList.remove('active'));
         };
 
-        setTimeout(() => {
-          const bottomLevel = document.getElementById('level-1');
-          bottomLevel.classList.add('active');
-          updateTooltip(levels[0].desc, 'desc-1');
-        }, 1500);
-
         levelElements.forEach(level => {
           level.addEventListener('click', () => {
             const levelIndex = level.id.split('-')[1];
-            const descIndex = parseInt(levelIndex) - 1;
+            const levelData = levels.find(l => l.id === level.id);
 
             resetLevels();
             level.classList.add('active');
 
-            updateTooltip(levels[descIndex].desc, `desc-${levelIndex}`);
+            if(levelData) {
+              updateTooltip(levelData);
+            }
           });
         });
 
         document.addEventListener('click', event => {
-          if (!event.target.closest('.pyramid-container')) {
+          if (!event.target.closest('.pyramid-container') && !event.target.closest('#tooltip-container')) {
             resetTooltip();
             resetLevels();
           }
