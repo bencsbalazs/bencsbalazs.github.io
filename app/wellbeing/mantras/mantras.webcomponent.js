@@ -2,27 +2,30 @@ class MantraBubbles extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.mantras = [];
+        this.data = null;
         this.bubbles = [];
         this.container = null;
         this.animationInterval = null;
-        this.activeBubbleIndex = -1; // -1 means no bubble is active initially
-        this.animationDuration = 8000; // Total cycle duration for one mantra
-        this.transitionDuration = 1500; // Duration for enter/exit animations
-        this.transitionOverlap = 500; // How much enter and exit animations overlap
+        this.activeBubbleIndex = -1;
+        this.selectedLanguage = 'en';
+        this.selectedCategory = 'general';
+        this.animationDuration = 8000;
+        this.transitionDuration = 1500;
+        this.transitionOverlap = 500;
         this.colors = [
-            'rgba(0, 120, 215, 0.3)', // Windows Blue
-            'rgba(13, 128, 128, 0.3)', // Teal
-            'rgba(136, 23, 152, 0.3)', // Purple
-            'rgba(0, 153, 188, 0.3)', // Cyan
-            'rgba(231, 72, 86, 0.3)', // Red
+            'rgba(0, 120, 215, 0.3)',
+            'rgba(13, 128, 128, 0.3)',
+            'rgba(136, 23, 152, 0.3)',
+            'rgba(0, 153, 188, 0.3)',
+            'rgba(231, 72, 86, 0.3)',
         ];
     }
 
     async connectedCallback() {
         this.setupDOM();
         await this.loadMantras();
-        if (this.mantras.length > 0) {
+        if (this.data) {
+            this.populateSelectors();
             requestAnimationFrame(() => this.startAnimationLoop());
         }
     }
@@ -36,6 +39,24 @@ class MantraBubbles extends HTMLElement {
     setupDOM() {
         const style = document.createElement('style');
         style.textContent = `
+            :host {
+                display: block;
+                position: relative;
+            }
+            .controls {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                z-index: 10;
+                display: flex;
+                gap: 1rem;
+            }
+            .controls select {
+                padding: 0.5rem;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+            }
             .mantra-container {
                 position: relative;
                 width: 100%;
@@ -55,7 +76,7 @@ class MantraBubbles extends HTMLElement {
                 padding: 30px;
                 color: #ffffff;
                 font-family: 'Segoe UI', 'Noto Sans', sans-serif;
-                font-size: clamp(1em, 3vw, 1.4em);
+                font-size: clamp(0.9em, 2.5vw, 1.3em);
                 line-height: 1.5;
                 font-weight: 400;
                 border-radius: 50%;
@@ -69,6 +90,8 @@ class MantraBubbles extends HTMLElement {
                 will-change: transform, opacity;
                 pointer-events: none;
                 transition: background-color 0.5s ease;
+                box-sizing: border-box;
+                overflow-wrap: break-word;
             }
             @keyframes mantra-enter {
                 0% { transform: scale(0.5) translateY(20px); opacity: 0; }
@@ -85,6 +108,29 @@ class MantraBubbles extends HTMLElement {
             }
         `;
 
+        const controls = document.createElement('div');
+        controls.classList.add('controls');
+
+        const langSelector = document.createElement('select');
+        langSelector.id = 'lang-selector';
+        langSelector.innerHTML = `
+            <option value="en">English</option>
+            <option value="hu">Hungarian</option>
+        `;
+        langSelector.addEventListener('change', (e) => {
+            this.selectedLanguage = e.target.value;
+            this.restartAnimation();
+        });
+
+        const categorySelector = document.createElement('select');
+        categorySelector.id = 'category-selector';
+        categorySelector.addEventListener('change', (e) => {
+            this.selectedCategory = e.target.value;
+            this.restartAnimation();
+        });
+
+        controls.append(langSelector, categorySelector);
+
         this.container = document.createElement('div');
         this.container.classList.add('mantra-container');
 
@@ -95,7 +141,7 @@ class MantraBubbles extends HTMLElement {
             this.bubbles.push(bubble);
         }
 
-        this.shadowRoot.append(style, this.container);
+        this.shadowRoot.append(style, controls, this.container);
     }
 
     async loadMantras() {
@@ -109,47 +155,76 @@ class MantraBubbles extends HTMLElement {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            this.mantras = await response.json(); // Correctly parse the JSON body.
+            this.data = await response.json();
         } catch (error) {
             console.error('Error loading mantras:', error);
-            const container = this.shadowRoot.querySelector('.mantra-container');
-            if (container) {
-                container.textContent = 'Could not load mantras.';
-                container.style.display = 'flex';
-                container.style.alignItems = 'center';
-                container.style.justifyContent = 'center';
-                container.style.color = '#eff0f1';
+            if (this.container) {
+                this.container.textContent = 'Could not load mantras.';
+                this.container.style.display = 'flex';
+                this.container.style.alignItems = 'center';
+                this.container.style.justifyContent = 'center';
+                this.container.style.color = '#eff0f1';
             }
         }
     }
 
+    populateSelectors() {
+        const categorySelector = this.shadowRoot.getElementById('category-selector');
+        if (!categorySelector || !this.data || !this.data.categories) return;
+
+        for (const key in this.data.categories) {
+            const option = document.createElement('option');
+            option.value = key;
+            option.textContent = this.data.categories[key][this.selectedLanguage];
+            categorySelector.appendChild(option);
+        }
+    }
+
     getRandomMantra(exclude = []) {
-        if (this.mantras.length === 0) return '';
-        let availableMantras = this.mantras.filter(m => !exclude.includes(m));
+        if (!this.data || !this.data.mantras) return '';
+        
+        const mantras = this.data.mantras[this.selectedCategory] || [];
+        if (mantras.length === 0) return '';
+
+        let availableMantras = mantras.filter(m => !exclude.includes(m[this.selectedLanguage]));
         if (availableMantras.length === 0) {
-            availableMantras = this.mantras;
+            availableMantras = mantras;
         }
         const randomIndex = Math.floor(Math.random() * availableMantras.length);
-        return availableMantras[randomIndex];
+        return availableMantras[randomIndex][this.selectedLanguage];
     }
 
     setupAndAnimateBubble(bubble, mantra) {
         bubble.style.animation = 'none';
-        void bubble.offsetWidth;
+        bubble.offsetWidth; // Trigger reflow
         bubble.textContent = mantra;
+        
         const containerWidth = this.container.offsetWidth;
         const containerHeight = this.container.offsetHeight;
-        const baseSize = Math.min(containerWidth, containerHeight);
-        const size = Math.random() * (baseSize * 0.2) + (baseSize * 0.5); // Bubble size between 50% and 70% of the smaller container dimension
+        
+        const margin = 30;
+        const effectiveHeight = containerHeight - margin * 2;
+        const effectiveWidth = containerWidth - margin * 2;
+
+        const baseSize = Math.min(effectiveWidth, effectiveHeight);
+
+        // Calculate a minimum size based on text length
+        const estimatedFontSize = 20; // Approximate font size in pixels
+        const minSize = Math.sqrt(mantra.length) * estimatedFontSize;
+        
+        const randomSize = Math.random() * (baseSize * 0.3) + (baseSize * 0.5);
+
+        let size = Math.max(minSize, randomSize);
+        size = Math.min(size, baseSize); // Cap the size to the effective container size
+
         bubble.style.width = `${size}px`;
         bubble.style.height = `${size}px`;
 
-        // Calculate max top/left to keep bubble fully within container
-        const maxTop = Math.max(0, containerHeight - size - 20);
-        const maxLeft = Math.max(0, containerWidth - size - 20);
+        const maxTop = effectiveHeight - size;
+        const maxLeft = effectiveWidth - size;
 
-        const top = Math.random() * maxTop + 10;
-        const left = Math.random() * maxLeft + 10;
+        const top = Math.random() * maxTop + margin;
+        const left = Math.random() * maxLeft + margin;
 
         bubble.style.top = `${top}px`;
         bubble.style.left = `${left}px`;
@@ -160,23 +235,48 @@ class MantraBubbles extends HTMLElement {
     }
 
     showNewMantras() {
-        if (this.mantras.length === 0) return;
+        if (!this.data) return;
         const prevBubble = this.activeBubbleIndex !== -1 ? this.bubbles[this.activeBubbleIndex] : null;
         this.activeBubbleIndex = (this.activeBubbleIndex + 1) % 2;
         const currentBubble = this.bubbles[this.activeBubbleIndex];
         const newMantra = this.getRandomMantra(prevBubble ? [prevBubble.textContent] : []);
+
+        if (!newMantra) {
+            currentBubble.style.opacity = 0;
+            return;
+        }
+
         if (prevBubble) {
             prevBubble.style.animation = `mantra-exit ${this.transitionDuration / 1000}s forwards`;
             prevBubble.style.pointerEvents = 'none';
         }
         setTimeout(() => {
             this.setupAndAnimateBubble(currentBubble, newMantra);
-        }, prevBubble ? (this.transitionDuration - this.transitionOverlap) : 0); // Start new bubble animation after old one has started fading
+        }, prevBubble ? (this.transitionDuration - this.transitionOverlap) : 0);
     }
 
     startAnimationLoop() {
         this.showNewMantras();
         this.animationInterval = setInterval(() => this.showNewMantras(), this.animationDuration);
+    }
+
+    restartAnimation() {
+        if (this.animationInterval) {
+            clearInterval(this.animationInterval);
+        }
+        // Hide bubbles immediately
+        this.bubbles.forEach(b => b.style.opacity = 0);
+        
+        // Update category selector text
+        const categorySelector = this.shadowRoot.getElementById('category-selector');
+        if (categorySelector && this.data && this.data.categories) {
+            for (const option of categorySelector.options) {
+                option.textContent = this.data.categories[option.value][this.selectedLanguage];
+            }
+        }
+
+        // Restart loop
+        this.startAnimationLoop();
     }
 }
 

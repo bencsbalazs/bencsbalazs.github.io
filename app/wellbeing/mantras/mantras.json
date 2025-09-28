@@ -1,12 +1,118 @@
-[
-  "I am capable and strong.",
-  "I choose to be happy and grateful today.",
-  "My potential to succeed is infinite.",
-  "I am calm, confident, and powerful.",
-  "I am resilient and can overcome any challenge.",
-  "Every day brings new opportunities for growth.",
-  "I am surrounded by positivity and love.",
-  "I trust my journey and embrace the process.",
-  "I am worthy of all the good things that come my way.",
-  "I release all that no longer serves me."
-]
+{
+  "categories": {
+    "general": {
+      "en": "General",
+      "hu": "Általános"
+    },
+    "avoid_loneliness": {
+      "en": "Avoid Loneliness",
+      "hu": "Magány elkerülése"
+    },
+    "connection": {
+      "en": "Connection",
+      "hu": "Kapcsolódás"
+    },
+    "inner_peace": {
+      "en": "Inner Peace",
+      "hu": "Belső béke"
+    }
+  },
+  "mantras": {
+    "general": [
+      {
+        "en": "I am capable and strong.",
+        "hu": "Képes vagyok és erős."
+      },
+      {
+        "en": "I choose to be happy and grateful today.",
+        "hu": "Úgy döntök, hogy ma boldog és hálás leszek."
+      },
+      {
+        "en": "My potential to succeed is infinite.",
+        "hu": "A sikerre való képességem végtelen."
+      },
+      {
+        "en": "I am calm, confident, and powerful.",
+        "hu": "Nyugodt, magabiztos és erős vagyok."
+      },
+      {
+        "en": "I am resilient and can overcome any challenge.",
+        "hu": "Rugalmas vagyok és minden kihívást le tudok győzni."
+      },
+      {
+        "en": "Every day brings new opportunities for growth.",
+        "hu": "Minden nap új lehetőségeket hoz a növekedésre."
+      },
+      {
+        "en": "I am surrounded by positivity and love.",
+        "hu": "Pozitivitás és szeretet vesz körül."
+      },
+      {
+        "en": "I trust my journey and embrace the process.",
+        "hu": "Bízom az utamban és elfogadom a folyamatot."
+      },
+      {
+        "en": "I am worthy of all the good things that come my way.",
+        "hu": "Minden jó dologra méltó vagyok, ami az utamba kerül."
+      },
+      {
+        "en": "I release all that no longer serves me.",
+        "hu": "Elengedek mindent, ami már nem szolgál engem."
+      }
+    ],
+    "avoid_loneliness": [
+      {
+        "en": "Being alone is a gift that gives me an opportunity to grow and find my inner peace.",
+        "hu": "Az egyedüllét ajándék, amely lehetőséget ad a növekedésre és a belső békém megtalálására."
+      },
+      {
+        "en": "I am my own best company. I feel good in my own skin.",
+        "hu": "Én vagyok a saját legjobb társaságom. Jól érzem magam a saját bőrömben."
+      },
+      {
+        "en": "I am enough. I don't need anyone else to feel complete.",
+        "hu": "Én vagyok elég. Nem kell senki más ahhoz, hogy teljesnek érezzem magam."
+      },
+      {
+        "en": "The time I spend with myself is valuable. I recharge and connect with my inner strength.",
+        "hu": "Az önmagammal töltött idő értékes. Feltöltődöm és kapcsolódom a belső erőmhöz."
+      }
+    ],
+    "connection": [
+      {
+        "en": "I am open to love and new, meaningful connections.",
+        "hu": "Nyitott vagyok a szeretetre és az új, értelmes kapcsolatokra."
+      },
+      {
+        "en": "I attract positive and supportive people.",
+        "hu": "Vonzom magamhoz a pozitív és támogató embereket."
+      },
+      {
+        "en": "The world is full of love, and I am ready to receive it.",
+        "hu": "A világ tele van szeretettel, és készen állok arra, hogy befogadjam azt."
+      },
+      {
+        "en": "Loneliness is not my final state, but an opportunity for change.",
+        "hu": "A magány nem a végleges állapotom, hanem egy lehetőség a változásra."
+      }
+    ],
+    "inner_peace": [
+      {
+        "en": "Everything is alright. I let the feeling of peace fill my heart.",
+        "hu": "Minden rendben van. Hagyom, hogy a béke érzése elöntse a szívemet."
+      },
+      {
+        "en": "This feeling is temporary. I accept it with respect and love, and I let it go.",
+        "hu": "Ez az érzés múlandó. Tisztelettel és szeretettel elfogadom, és hagyom, hogy elengedjem."
+      },
+      {
+        "en": "Being alone does not mean being lonely. I can be whole and happy by myself.",
+        "hu": "Az egyedüllét nem jelent magányt. Teljes és boldog lehetek egyedül is."
+      },
+      {
+        "en": "I have enough strength in me to cope with any challenge that comes my way.",
+        "hu": "Van bennem elég erő, hogy megbirkózzak minden kihívással, ami az utamba kerül."
+      }
+    ]
+  }
+}
