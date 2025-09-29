@@ -12,8 +12,19 @@ class SkillCloud extends HTMLElement {
         }
         try {
             const response = await fetch(src);
-            const skills = await response.json();
-            this.render(skills);
+            const skillData = await response.json();
+            const type = this.getAttribute("type")
+            if (!type || type == "cloud") {
+                let allSkill = []
+                skillData.forEach(category => {
+                    allSkill = [...allSkill, ...category.skills]
+                })
+                this.render(skills);
+            } else {
+                console.log(skills)
+                this.render(skills);
+            }
+
         } catch (error) {
             console.error('Error loading skills:', error);
             this.shadowRoot.innerHTML = `<p>Error loading skills.</p>`;
