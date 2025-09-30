@@ -3,20 +3,35 @@
     "title": "Frontend",
     "skills": [
       {
-        "text": "Angular",
-        "level": 5
+        "groupName": "Basics",
+        "skills": [
+          {
+            "text": "CSS",
+            "level": 5
+          },
+          {
+            "text": "HTML",
+            "level": 5
+          }
+        ]
       },
       {
-        "text": "Canvas",
-        "level": 3
+        "groupName": "Frameworks",
+        "skills": [
+          {
+            "text": "Angular",
+            "level": 5
+          }
+        ]
       },
       {
-        "text": "CSS",
-        "level": 5
-      },
-      {
-        "text": "HTML",
-        "level": 5
+        "groupName": "Animation",
+        "skills": [
+          {
+            "text": "Canvas",
+            "level": 3
+          }
+        ]
       }
     ]
   },
