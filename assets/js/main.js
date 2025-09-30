@@ -92,7 +92,6 @@ import { on, select } from './helpers.js';
         { path: './components/clock.webcomponent.js', components: { 'digital-clock': 'DigitalClock', 'analog-clock': 'AnalogClock' } },
         { path: './components/skillcloud.webcomponent.js', components: { 'skill-cloud': 'default' } },
         { path: './components/project.webcomponent.js', components: { 'my-projects-portfolio': 'default' } },
-        { path: './components/services.webcomponent.js', components: { 'services-list': 'default' } },
         { path: './components/feedbacks.webcomponent.js', components: { 'show-feedbacks': 'default' } },
     ];
 

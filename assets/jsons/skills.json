@@ -1,27 +1,181 @@
-[
-  {"text": "Angular", "level": 5},
-  {"text": "Ansible", "level": 3},
-  {"text": "Canvas", "level": 3},
-  {"text": "ChatGPT", "level": 4},
-  {"text": "Cloudant", "level": 3},
-  {"text": "CSS", "level": 5},
-  {"text": "Django", "level": 5},
-  {"text": "Docker", "level": 4},
-  {"text": "Gemini", "level": 4},
-  {"text": "Git", "level": 5},
-  {"text": "GraphQL", "level": 2},
-  {"text": "HTML", "level": 5},
-  {"text": "JavaScript", "level": 5},
-  {"text": "Jira", "level": 4},
-  {"text": "MongoDB", "level": 3},
-  {"text": "MySQL", "level": 4},
-  {"text": "Node.js", "level": 4},
-  {"text": "PHP", "level": 3},
-  {"text": "Plotly", "level": 4},
-  {"text": "PostgreSQL", "level": 4},
-  {"text": "Python", "level": 5},
-  {"text": "React", "level": 2},
-  {"text": "RestAPI", "level": 5},
-  {"text": "TypeScript", "level": 4},
-  {"text": "WebComponent", "level": 1}
-]
+{
+  "frontend": {
+    "title": "Frontend",
+    "icon": "bi-window-desktop",
+    "skills": [
+      {
+        "groupName": "Basics",
+        "skills": [
+          {"text": "HTML", "level": 5},
+          {"text": "CSS", "level": 5},
+          {"text": "JavaScript", "level": 5},
+          {"text": "TypeScript", "level": 4}
+        ]
+      },
+      {
+        "groupName": "Frameworks",
+        "skills": [
+          {"text": "Angular", "level": 5},
+          {"text": "React", "level": 2},
+          {"text": "WebComponent", "level": 1}
+        ]
+      },
+      {
+        "groupName": "Animation",
+        "skills": [{"text": "Canvas", "level": 3}]
+      },
+      {
+        "groupName": "Styles",
+        "skills": [
+          {"text": "Bootstrap", "level": 5},
+          {"text": "MaterialUI", "level": 2},
+          {"text": "Tailwind", "level": 3}
+        ]
+      }
+    ]
+  },
+  "backend": {
+    "title": "Backend & Data",
+    "icon": "bi-server",
+    "skills": [
+      {
+        "groupName": "Languages",
+        "skills": [
+          {"text": "Python", "level": 5},
+          {"text": "Node", "level": 4},
+          {"text": "PHP", "level": 3}
+        ]
+      },
+      {
+        "groupName": "Frameworks",
+        "skills": [
+          {"text": "Django", "level": 5},
+          {"text": "Flask", "level": 4},
+          {"text": "FastAPI", "level": 4},
+          {"text": "RestAPI", "level": 5}
+        ]
+      },
+      {
+        "groupName": "Relational Database",
+        "skills": [
+          {"text": "MySQL", "level": 4},
+          {"text": "MariaDB", "level": 3},
+          {"text": "PostgreSQL", "level": 4}
+        ]
+      },
+      {
+        "groupName": "NoSQL Database",
+        "skills": [
+          {"text": "Cloudant", "level": 3},
+          {"text": "MongoDB", "level": 3}
+        ]
+      },
+      {
+        "groupName": "Data-viz",
+        "skills": [
+          {"text": "Plotly", "level": 4},
+          {"text": "GraphQL", "level": 2}
+        ]
+      }
+    ]
+  },
+  "data_ai": {
+    "title": "Devops & Cloud",
+    "icon": "bi-robot",
+    "skills": [
+      {
+        "groupName": "Infrastructure",
+        "skills": [
+          {"text": "Apache", "level": 4},
+          {"text": "Nginx", "level": 3},
+          {"text": "Docker", "level": 4},
+          {"text": "Kubernetes", "level": 3}
+        ]
+      },
+      {
+        "groupName": "Cloud",
+        "skills": [
+          {"text": "IBM Cloud", "level": 3},
+          {"text": "AWS", "level": 2},
+          {"text": "Google Cloud", "level": 2}
+        ]
+      },
+      {
+        "groupName": "CICD",
+        "skills": [
+          {"text": "GitHub Actions", "level": 4},
+          {"text": "GitLab CI/CD", "level": 5},
+          {"text": "Jenkins", "level": 3}
+        ]
+      },
+      {
+        "groupName": "Log",
+        "skills": [
+          {"text": "ElastikSearch", "level": 3},
+          {"text": "Kibana", "level": 3}
+        ]
+      }
+    ]
+  },
+  "mobile_web": {
+    "title": "Mobile & Methods",
+    "icon": "bi-phone",
+    "skills": [
+      {
+        "groupName": "Mobile",
+        "skills": [{"text": "Flutter", "level": 3}]
+      },
+      {
+        "groupName": "AI",
+        "skills": [
+          {"text": "ChatGPT", "level": 4},
+          {"text": "Gemini CLI", "level": 4},
+          {"text": "pyTorch", "level": 3},
+          {"text": "TensorFlow", "level": 3}
+        ]
+      }
+    ]
+  },
+  "tools": {
+    "title": "Tools & Methodologies",
+    "icon": "bi-tools",
+    "skills": [
+      {
+        "groupName": "Agile & Version control",
+        "skills": [
+          {"text": "Git", "level": 5},
+          {"text": "Jira", "level": 4},
+          {"text": "Trello", "level": 4},
+          {"text": "Scrum", "level": 4},
+          {"text": "Kanban", "level": 4}
+        ]
+      },
+      {
+        "groupName": "Clean code",
+        "skills": [
+          {"text": "TDD", "level": 4},
+          {"text": "BDD", "level": 4},
+          {"text": "DDD", "level": 3},
+          {"text": "Event Sourcing", "level": 3}
+        ]
+      },
+      {
+        "groupName": "Quality",
+        "skills": [
+          {"text": "SonarQube", "level": 3},
+          {"text": "Ruff", "level": 3},
+          {"text": "Pylint", "level": 3}
+        ]
+      },
+      {
+        "groupName": "Testing",
+        "skills": [
+          {"text": "Pytest", "level": 3},
+          {"text": "Selenium", "level": 2},
+          {"text": "Cypress", "level": 2},
+          {"text": "Jest", "level": 2}
+        ]
+      }
+    ]
+  }
+}
