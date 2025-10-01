@@ -1,9 +1,5 @@
 class CredlyBadgeList extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
-        // const badgeIds = this.getAttribute("badge-ids")?.split(",") || [];
         const badgeIdsValid = [
             "2e9d7b8c-5d79-4bdf-9df5-7349dafefed8", // IBM Agile Explorer
             "d0ea1870-8fe8-42d8-b00e-3c4b2dbcc941", // Enterprise Design Thinking Practitioner

@@ -62,15 +62,20 @@ import { on, select } from './helpers.js';
 
     on('click', '.mobile-nav-toggle', toggleMobileNav);
 
-    on('click', '.scrollto', function (e) {
-        if (select(this.hash)) {
-            e.preventDefault();
-            if (select('body').classList.contains('mobile-nav-active')) {
-                toggleMobileNav();
+    on(
+        'click',
+        '.scrollto',
+        function (e) {
+            if (select(this.hash)) {
+                e.preventDefault();
+                if (select('body').classList.contains('mobile-nav-active')) {
+                    toggleMobileNav();
+                }
+                scrollto(this.hash);
             }
-            scrollto(this.hash);
-        }
-    }, true);
+        },
+        true
+    );
 
     window.addEventListener('load', () => {
         navbarlinksActive();
@@ -89,7 +94,10 @@ import { on, select } from './helpers.js';
 
     const componentsToRegister = [
         { path: './components/credly.webcomponent.js', components: { 'credly-badge-list': 'default' } },
-        { path: './components/clock.webcomponent.js', components: { 'digital-clock': 'DigitalClock', 'analog-clock': 'AnalogClock' } },
+        {
+            path: './components/clock.webcomponent.js',
+            components: { 'digital-clock': 'DigitalClock', 'analog-clock': 'AnalogClock' },
+        },
         { path: './components/skillcloud.webcomponent.js', components: { 'skill-cloud': 'default' } },
         { path: './components/project.webcomponent.js', components: { 'my-projects-portfolio': 'default' } },
         { path: './components/feedbacks.webcomponent.js', components: { 'show-feedbacks': 'default' } },
