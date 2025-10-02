@@ -1,0 +1,58 @@
+{
+  "hu": {
+    "title": "Geoid Számítás: Távolság Makó és Jeruzsálem között",
+    "lang_hu": "Magyar",
+    "lang_en": "Angol",
+    "next_step": "Következő lépés",
+    "steps": [
+      {
+        "title": "1. Alapértékek",
+        "content": "<b>Makó:</b> λ₁ = 20°28′38″, φ₁ = 46°12′00″<br><b>Jeruzsálem:</b> λ₂ = 35°12′48″, φ₂ = 31°48′07″<br><b>Föld sugara (R):</b> 6378 km",
+        "diagram_ids": ["point_mako", "point_jerusalem", "label_mako", "label_jerusalem"]
+      },
+      {
+        "title": "2. Képlet",
+        "content": "A két pont közötti `d` szögtávolság koszinusz-tétellel számolható gömbháromszögekre:<br><code>cos(d) = sin(φ₁)sin(φ₂) + cos(φ₁)cos(φ₂)cos(λ₂-λ₁)</code>",
+        "diagram_ids": ["arc_d", "label_d"]
+      },
+      {
+        "title": "3. Szögkülönbség Számítása",
+        "content": "Először is, a hosszúsági körök különbsége:<br><code>λ₂ − λ₁ = 14.7333°</code><br>Behelyettesítve a fenti képletbe:<br><code>d = 18.3293°</code>",
+        "diagram_ids": ["angle_lambda", "angle_phi1", "angle_phi2", "label_lambda", "label_phi1", "label_phi2"]
+      },
+      {
+        "title": "4. Távolság Számítása",
+        "content": "A `d` szögtávolságot átváltjuk kilométerre a Föld kerületének segítségével:<br><code>Távolság = (2 * π * R * d) / 360°</code><br><b>Eredmény: 2040.36 km</b>",
+        "diagram_ids": ["radius_R1", "radius_R2", "label_R1", "label_R2"]
+      }
+    ]
+  },
+  "en": {
+    "title": "Geoid Calculation: Distance between Makó and Jerusalem",
+    "lang_hu": "Hungarian",
+    "lang_en": "English",
+    "next_step": "Next Step",
+    "steps": [
+      {
+        "title": "1. Initial Data",
+        "content": "<b>Makó:</b> λ₁ = 20°28′38″, φ₁ = 46°12′00″<br><b>Jerusalem:</b> λ₂ = 35°12′48″, φ₂ = 31°48′07″<br><b>Earth's Radius (R):</b> 6378 km",
+        "diagram_ids": ["point_mako", "point_jerusalem", "label_mako", "label_jerusalem"]
+      },
+      {
+        "title": "2. Formula",
+        "content": "The angular distance `d` between the two points can be calculated using the law of cosines for spherical triangles:<br><code>cos(d) = sin(φ₁)sin(φ₂) + cos(φ₁)cos(φ₂)cos(λ₂-λ₁)</code>",
+        "diagram_ids": ["arc_d", "label_d"]
+      },
+      {
+        "title": "3. Angular Difference Calculation",
+        "content": "First, the difference in longitude:<br><code>λ₂ − λ₁ = 14.7333°</code><br>Substituting into the formula above:<br><code>d = 18.3293°</code>",
+        "diagram_ids": ["angle_lambda", "angle_phi1", "angle_phi2", "label_lambda", "label_phi1", "label_phi2"]
+      },
+      {
+        "title": "4. Distance Calculation",
+        "content": "We convert the angular distance `d` to kilometers using the Earth's circumference:<br><code>Distance = (2 * π * R * d) / 360°</code><br><b>Result: 2040.36 km</b>",
+        "diagram_ids": ["radius_R1", "radius_R2", "label_R1", "label_R2"]
+      }
+    ]
+  }
+}
