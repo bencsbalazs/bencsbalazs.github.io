@@ -23,6 +23,7 @@ class MantraBubbles extends HTMLElement {
 
     async connectedCallback() {
         this.setupDOM();
+        this.fullScreen();
         await this.loadMantras();
         if (this.data) {
             this.populateSelectors();
@@ -129,10 +130,14 @@ class MantraBubbles extends HTMLElement {
             this.restartAnimation();
         });
 
-        controls.append(langSelector, categorySelector);
+        const fullScreenButton = document.createElement('button');
+        fullScreenButton.id = 'fullscreen-button';
+        fullScreenButton.textContent = 'Toggle Fullscreen';
+
+        controls.append(langSelector, categorySelector, fullScreenButton);
 
         this.container = document.createElement('div');
-        this.container.classList.add('mantra-container');
+        this.container.classList.add('mantra-container', 'fullscreen-container');
 
         for (let i = 0; i < 2; i++) {
             const bubble = document.createElement('div');
@@ -182,7 +187,7 @@ class MantraBubbles extends HTMLElement {
 
     getRandomMantra(exclude = []) {
         if (!this.data || !this.data.mantras) return '';
-        
+
         const mantras = this.data.mantras[this.selectedCategory] || [];
         if (mantras.length === 0) return '';
 
@@ -198,24 +203,19 @@ class MantraBubbles extends HTMLElement {
         bubble.style.animation = 'none';
         bubble.offsetWidth; // Trigger reflow
         bubble.textContent = mantra;
-        
+
         const containerWidth = this.container.offsetWidth;
         const containerHeight = this.container.offsetHeight;
-        
+
         const margin = 30;
         const effectiveHeight = containerHeight - margin * 2;
         const effectiveWidth = containerWidth - margin * 2;
-
         const baseSize = Math.min(effectiveWidth, effectiveHeight);
-
-        // Calculate a minimum size based on text length
-        const estimatedFontSize = 20; // Approximate font size in pixels
+        const estimatedFontSize = 20;
         const minSize = Math.sqrt(mantra.length) * estimatedFontSize;
-        
         const randomSize = Math.random() * (baseSize * 0.3) + (baseSize * 0.5);
-
         let size = Math.max(minSize, randomSize);
-        size = Math.min(size, baseSize); // Cap the size to the effective container size
+        size = Math.min(size, baseSize);
 
         bubble.style.width = `${size}px`;
         bubble.style.height = `${size}px`;
@@ -264,10 +264,7 @@ class MantraBubbles extends HTMLElement {
         if (this.animationInterval) {
             clearInterval(this.animationInterval);
         }
-        // Hide bubbles immediately
         this.bubbles.forEach(b => b.style.opacity = 0);
-        
-        // Update category selector text
         const categorySelector = this.shadowRoot.getElementById('category-selector');
         if (categorySelector && this.data && this.data.categories) {
             for (const option of categorySelector.options) {
@@ -275,8 +272,34 @@ class MantraBubbles extends HTMLElement {
             }
         }
 
-        // Restart loop
         this.startAnimationLoop();
+    }
+
+    fullScreen() {
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = this.shadowRoot.getElementById('fullscreen-container');
+
+            this.shadowRoot.getElementById('fullscreen-button').addEventListener('click', () => {
+                console.log("clicked")
+                if (this.shadowRoot.fullscreenEnabled) {
+                    if (!this.shadowRoot.fullscreenElement) {
+                        container.requestFullscreen();
+                    } else {
+                        this.shadowRoot.exitFullscreen();
+                    }
+                } else {
+                    console.log('A teljes képernyős mód nem támogatott a böngésződben.');
+                }
+            });
+
+            document.addEventListener('fullscreenchange', () => {
+                if (document.fullscreenElement) {
+                    console.log('Beléptél a teljes képernyős módba!');
+                } else {
+                    console.log('Kiléptél a teljes képernyős módból.');
+                }
+            });
+        });
     }
 }
 
