@@ -12,6 +12,17 @@
       defer></script>
   </head>
   <body>
+    <style>
+      .fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        background-color: #fff;
+      }
+    </style>
     <frame-component
       type="header"
       home-text="Makes the life easier.">
@@ -24,7 +35,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div
+          class="col"
+          id="mantras">
           <mantra-bubbles src="mantras.json"></mantra-bubbles>
         </div>
       </div>

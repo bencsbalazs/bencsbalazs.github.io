@@ -38,80 +38,11 @@ class MantraBubbles extends HTMLElement {
     }
 
     setupDOM() {
-        const style = document.createElement('style');
-        style.textContent = `
-            :host {
-                display: block;
-                position: relative;
-            }
-            .controls {
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-                z-index: 10;
-                display: flex;
-                gap: 1rem;
-            }
-            .controls select {
-                padding: 0.5rem;
-                border-radius: 4px;
-                border: 1px solid #ccc;
-                background-color: #fff;
-            }
-            .mantra-container {
-                position: relative;
-                width: 100%;
-                min-height: 400px;
-                height: 60vh;
-                overflow: hidden;
-                border-radius: 8px;
-                margin-top: 2rem;
-                margin-bottom: 2rem;
-            }
-            .mantra-bubble {
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 30px;
-                color: #ffffff;
-                font-family: 'Segoe UI', 'Noto Sans', sans-serif;
-                font-size: clamp(0.9em, 2.5vw, 1.3em);
-                line-height: 1.5;
-                font-weight: 400;
-                border-radius: 50%;
-                backdrop-filter: blur(20px) saturate(120%);
-                -webkit-backdrop-filter: blur(20px) saturate(120%);
-                border: 1px solid rgba(255, 255, 255, 0.18);
-                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-                opacity: 0;
-                transform: scale(0.5);
-                will-change: transform, opacity;
-                pointer-events: none;
-                transition: background-color 0.5s ease;
-                box-sizing: border-box;
-                overflow-wrap: break-word;
-            }
-            @keyframes mantra-enter {
-                0% { transform: scale(0.5) translateY(20px); opacity: 0; }
-                100% { transform: scale(1) translateY(0); opacity: 1; }
-            }
-            @keyframes mantra-exit {
-                0% { opacity: 1; transform: scale(1) translateY(0); }
-                100% { transform: scale(0.8) translateY(30px); opacity: 0; }
-            }
-            @keyframes mantra-idle-float {
-                0% { transform: translateY(0px) rotate(-2deg); }
-                50% { transform: translateY(-15px) rotate(2deg) scale(1.02); }
-                100% { transform: translateY(0px) rotate(-2deg); }
-            }
-        `;
-
+        const style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.href = './mantras.css';
         const controls = document.createElement('div');
         controls.classList.add('controls');
-
         const langSelector = document.createElement('select');
         langSelector.id = 'lang-selector';
         langSelector.innerHTML = `
@@ -130,14 +61,29 @@ class MantraBubbles extends HTMLElement {
             this.restartAnimation();
         });
 
+        const autoplay = document.createElement('input');
+        autoplay.type = 'checkbox';
+        autoplay.id = 'autoplay';
+        autoplay.checked = true;
+        autoplay.classList.add('form-input');
+        autoplay.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                this.startAnimationLoop();
+                this.toggleManualChange();
+            } else {
+                this.toggleManualChange();
+                clearInterval(this.animationInterval);
+            }
+        });
+
+
         const fullScreenButton = document.createElement('button');
         fullScreenButton.id = 'fullscreen-button';
         fullScreenButton.textContent = 'Toggle Fullscreen';
-
-        controls.append(langSelector, categorySelector, fullScreenButton);
+        controls.append(langSelector, categorySelector, fullScreenButton, autoplay);
 
         this.container = document.createElement('div');
-        this.container.classList.add('mantra-container', 'fullscreen-container');
+        this.container.classList.add('mantra-container');
 
         for (let i = 0; i < 2; i++) {
             const bubble = document.createElement('div');
@@ -147,6 +93,7 @@ class MantraBubbles extends HTMLElement {
         }
 
         this.shadowRoot.append(style, controls, this.container);
+        this.toggleManualChange();
     }
 
     async loadMantras() {
@@ -172,6 +119,42 @@ class MantraBubbles extends HTMLElement {
             }
         }
     }
+
+    toggleManualChange() {
+        const controls = this.shadowRoot.querySelector('.controls');
+        const autoplay = this.shadowRoot.getElementById('autoplay');
+        if (autoplay.checked) {
+            const nextButton = this.shadowRoot.getElementById('next-button');
+            if (nextButton) {
+                nextButton.remove();
+            }
+            const duration = document.createElement('input');
+            duration.type = 'number';
+            duration.id = 'duration';
+            duration.value = this.animationDuration;
+            duration.classList.add('form-control');
+            duration.addEventListener('change', (e) => {
+                this.animationDuration = parseInt(e.target.value);
+                this.restartAnimation();
+            });
+            controls.appendChild(duration);
+        } else {
+            const duration = this.shadowRoot.getElementById('duration');
+
+            if (duration) {
+                duration.remove();
+            }
+            const nextButton = document.createElement('button');
+            nextButton.textContent = 'Next';
+            nextButton.classList.add('form-control');
+            nextButton.id = 'next-button';
+            nextButton.addEventListener('click', () => {
+                this.showNewMantras();
+            });
+            controls.appendChild(nextButton);
+        }
+    }
+
 
     populateSelectors() {
         const categorySelector = this.shadowRoot.getElementById('category-selector');
@@ -277,27 +260,8 @@ class MantraBubbles extends HTMLElement {
 
     fullScreen() {
         document.addEventListener('DOMContentLoaded', () => {
-            const container = this.shadowRoot.getElementById('fullscreen-container');
-
             this.shadowRoot.getElementById('fullscreen-button').addEventListener('click', () => {
-                console.log("clicked")
-                if (this.shadowRoot.fullscreenEnabled) {
-                    if (!this.shadowRoot.fullscreenElement) {
-                        container.requestFullscreen();
-                    } else {
-                        this.shadowRoot.exitFullscreen();
-                    }
-                } else {
-                    console.log('A teljes képernyős mód nem támogatott a böngésződben.');
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                if (document.fullscreenElement) {
-                    console.log('Beléptél a teljes képernyős módba!');
-                } else {
-                    console.log('Kiléptél a teljes képernyős módból.');
-                }
+                document.querySelector('#mantras').classList.toggle('fullscreen');
             });
         });
     }
