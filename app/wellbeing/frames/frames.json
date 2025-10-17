@@ -1,0 +1,47 @@
+{
+  "categories": {
+    "Star Wars": {
+      "privacy": "Privacy policy goes here",
+      "characters": {
+        "Yoda": {
+          "image": "https://picsum.photos/id/1025/200/200",
+          "quotes": ["Do. Or do not. There is no try."]
+        },
+        "Darth Vader": {
+          "image": "https://picsum.photos/id/10/200/200",
+          "quotes": ["I find your lack of faith disturbing."]
+        },
+        "Obi-Wan Kenobi": {
+          "image": "https://picsum.photos/id/1015/200/200",
+          "quotes": ["Hello there."]
+        }
+      }
+    },
+    "The Office": {
+      "privacy": "",
+      "characters": {
+        "Michael Scott": {
+          "image": "https://picsum.photos/id/1022/200/200",
+          "quotes": ["That's what she said."]
+        },
+        "Dwight Schrute": {
+          "image": "https://picsum.photos/id/1021/200/200",
+          "quotes": ["Bears. Beets. Battlestar Galactica."]
+        }
+      }
+    },
+    "Friends": {
+      "privacy": "",
+      "characters": {
+        "Joey Tribbiani": {
+          "image": "https://picsum.photos/id/1003/200/200",
+          "quotes": ["How you doin'?"]
+        },
+        "Phoebe Buffay": {
+          "image": "https://picsum.photos/id/1011/200/200",
+          "quotes": ["Smelly cat, smelly cat, what are they feeding you?"]
+        }
+      }
+    }
+  }
+}
