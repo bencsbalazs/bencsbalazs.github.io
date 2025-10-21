@@ -1,0 +1,34 @@
+{
+  "categories": {
+    "Family Guy": {
+      "privacy": "Privacy policy goes here",
+      "characters": {
+        "Peter": {
+          "image": "https://picsum.photos/id/1025/200/200",
+          "quotes": ["A madár az ász!"]
+        },
+        "Lois": {
+          "image": "https://picsum.photos/id/10/200/200",
+          "quotes": ["I find your lack of faith disturbing."]
+        },
+        "Stewie": {
+          "image": "https://picsum.photos/id/1015/200/200",
+          "quotes": ["Ördög és pokol!", "Enyém a győzelem!", ""]
+        }
+      }
+    },
+    "Bricklebery": {
+      "privacy": "",
+      "characters": {
+        "Maloy": {
+          "image": "https://picsum.photos/id/1022/200/200",
+          "quotes": ["That's what she said."]
+        },
+        "Woody": {
+          "image": "https://picsum.photos/id/1021/200/200",
+          "quotes": ["Bears. Beets. Battlestar Galactica."]
+        }
+      }
+    }
+  }
+}
