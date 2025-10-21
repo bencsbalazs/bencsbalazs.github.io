@@ -1,45 +1,32 @@
 {
   "categories": {
-    "Star Wars": {
+    "Family Guy": {
       "privacy": "Privacy policy goes here",
       "characters": {
-        "Yoda": {
+        "Peter": {
           "image": "https://picsum.photos/id/1025/200/200",
-          "quotes": ["Do. Or do not. There is no try."]
+          "quotes": ["A madár az ász!"]
         },
-        "Darth Vader": {
+        "Lois": {
           "image": "https://picsum.photos/id/10/200/200",
           "quotes": ["I find your lack of faith disturbing."]
         },
-        "Obi-Wan Kenobi": {
+        "Stewie": {
           "image": "https://picsum.photos/id/1015/200/200",
-          "quotes": ["Hello there."]
+          "quotes": ["Ördög és pokol!", "Enyém a győzelem!", ""]
         }
       }
     },
-    "The Office": {
+    "Bricklebery": {
       "privacy": "",
       "characters": {
-        "Michael Scott": {
+        "Maloy": {
           "image": "https://picsum.photos/id/1022/200/200",
           "quotes": ["That's what she said."]
         },
-        "Dwight Schrute": {
+        "Woody": {
           "image": "https://picsum.photos/id/1021/200/200",
           "quotes": ["Bears. Beets. Battlestar Galactica."]
-        }
-      }
-    },
-    "Friends": {
-      "privacy": "",
-      "characters": {
-        "Joey Tribbiani": {
-          "image": "https://picsum.photos/id/1003/200/200",
-          "quotes": ["How you doin'?"]
-        },
-        "Phoebe Buffay": {
-          "image": "https://picsum.photos/id/1011/200/200",
-          "quotes": ["Smelly cat, smelly cat, what are they feeding you?"]
         }
       }
     }

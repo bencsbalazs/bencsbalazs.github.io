@@ -194,8 +194,7 @@ class FramesComponent extends HTMLElement {
             }
             this.render();
             this.resetTimer();
-            // The new render will not have the fade-out class, so it will fade in.
-        }, 500); // Match CSS transition time
+        }, 1000);
     }
 
     showNext() {
@@ -217,7 +216,7 @@ class FramesComponent extends HTMLElement {
                 width++;
                 if (timerBar) timerBar.style.width = width + '%';
             }
-        }, 100); // 10 seconds
+        }, 100);
     }
 
     stopTimer() {
