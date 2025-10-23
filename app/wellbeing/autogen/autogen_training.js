@@ -32,8 +32,8 @@ class AutogenMantra extends HTMLElement {
     this.currentIndex = 0;
     this.isReading = false;
     this.defaultPauseInSeconds = 5;
-    this.speechRate = 1.0;
-    this.speaker = window.speechSynthesis;
+    this.speechRate = 1;
+    this.speaker = globalThis.speechSynthesis;
     this.utterance = null;
     this.timeoutId = null;
     this.audioPlayer = null;
@@ -152,11 +152,11 @@ class AutogenMantra extends HTMLElement {
       this.scheduleNextMantra();
     });
     this.pauseInput.addEventListener('change', (e) => {
-      this.defaultPauseInSeconds = parseInt(e.target.value);
+      this.defaultPauseInSeconds = Number.parseInt(e.target.value);
       this.calculateAndDisplayDuration();
     });
     this.speechRateInput.addEventListener('input', (e) => {
-      this.speechRate = parseFloat(e.target.value);
+      this.speechRate = Number.parseFloat(e.target.value);
       this.speechRateValueSpan.textContent = this.speechRate.toFixed(1);
       this.calculateAndDisplayDuration();
       if (this.utterance && this.speaker.speaking) {
@@ -220,12 +220,11 @@ class AutogenMantra extends HTMLElement {
 
     let totalPauseInSeconds = 0;
     let totalContentInSeconds = 0;
-    const avgWordsPerSecond = 2.5; // Átlagos magyar beszédsebesség (szó/mp)
+    const avgWordsPerSecond = 2.5;
 
-    this.mantras.forEach((mantra) => {
+    for (let mantra of this.mantras) {
       totalPauseInSeconds += mantra.pause || this.defaultPauseInSeconds;
 
-      // Ha van megadott időtartam (audio fájlokhoz), azt használjuk.
       if (mantra.duration) {
         totalContentInSeconds += mantra.duration;
       } else {
@@ -234,7 +233,7 @@ class AutogenMantra extends HTMLElement {
         const speechDuration = (wordCount / avgWordsPerSecond) / this.speechRate;
         totalContentInSeconds += speechDuration;
       }
-    });
+    };
 
     const totalDurationInSeconds = Math.round(totalPauseInSeconds + totalContentInSeconds);
     const minutes = Math.floor(totalDurationInSeconds / 60);
@@ -262,9 +261,9 @@ class AutogenMantra extends HTMLElement {
   }
 
   playBackgroundMusic() {
-    if (this.selectedMusic !== 'none') {
+    if (this.selectedMusic) {
       this.backgroundMusicPlayer.src = BACKGROUND_MUSIC_SOURCES[this.selectedMusic];
-      this.backgroundMusicPlayer.volume = 0.3; // Halk hangerő a háttérzenének
+      this.backgroundMusicPlayer.volume = 0.3;
       this.backgroundMusicPlayer.play();
     } else {
       this.backgroundMusicPlayer.pause();

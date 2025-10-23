@@ -3,7 +3,7 @@ class LoadResources extends HTMLElement {
         this.addMeta('charset', 'utf-8');
         this.addMeta('viewport', 'width=device-width, initial-scale=1.0');
         this.addTitle("Balázs Bencs' portfolio");
-        this.addMeta('og:title', 'Balázs Bencs — Senior Full-Stack Developer', 'property');
+        this.addMeta('og:title', 'Balázs Bencs — Senior Full-Stack Engineer', 'property');
         this.addMeta('og:description', 'Portfolio, open-source work and services of Balázs Bencs.', 'property');
         this.addMeta('og:image', 'https://bencsbalazs.github.io/og-cover.png', 'property');
         this.addMeta('og:url', 'https://bencsbalazs.github.io', 'property');

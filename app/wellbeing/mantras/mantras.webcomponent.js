@@ -1,29 +1,37 @@
+const DEFAULT_LANGUAGE = 'en';
+const DEFAULT_CATEGORY = 'general';
+const ANIMATION_DURATION = 8000;
+const TRANSITION_DURATION = 1500;
+const TRANSITION_OVERLAP = 500;
+const BUBBLE_COLORS = [
+    'rgba(0, 120, 215, 0.3)',
+    'rgba(13, 128, 128, 0.3)',
+    'rgba(136, 23, 152, 0.3)',
+    'rgba(0, 153, 188, 0.3)',
+    'rgba(231, 72, 86, 0.3)',
+];
+
 class MantraBubbles extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
+
         this.data = null;
         this.bubbles = [];
         this.container = null;
         this.animationInterval = null;
         this.activeBubbleIndex = -1;
-        this.selectedLanguage = 'en';
-        this.selectedCategory = 'general';
-        this.animationDuration = 8000;
-        this.transitionDuration = 1500;
-        this.transitionOverlap = 500;
-        this.colors = [
-            'rgba(0, 120, 215, 0.3)',
-            'rgba(13, 128, 128, 0.3)',
-            'rgba(136, 23, 152, 0.3)',
-            'rgba(0, 153, 188, 0.3)',
-            'rgba(231, 72, 86, 0.3)',
-        ];
+        this.selectedLanguage = DEFAULT_LANGUAGE;
+        this.selectedCategory = DEFAULT_CATEGORY;
+        this.animationDuration = ANIMATION_DURATION;
+        this.transitionDuration = TRANSITION_DURATION;
+        this.transitionOverlap = TRANSITION_OVERLAP;
+        this.colors = BUBBLE_COLORS;
     }
 
     async connectedCallback() {
         this.setupDOM();
-        this.fullScreen();
+        this.addEventListeners();
         await this.loadMantras();
         if (this.data) {
             this.populateSelectors();
@@ -37,49 +45,34 @@ class MantraBubbles extends HTMLElement {
         }
     }
 
-    setupDOM() {
+    createDOM() {
         const style = document.createElement('link');
         style.rel = 'stylesheet';
         style.href = './mantras.css';
+
         const controls = document.createElement('div');
         controls.classList.add('controls');
+
         const langSelector = document.createElement('select');
         langSelector.id = 'lang-selector';
         langSelector.innerHTML = `
             <option value="en">English</option>
             <option value="hu">Hungarian</option>
         `;
-        langSelector.addEventListener('change', (e) => {
-            this.selectedLanguage = e.target.value;
-            this.restartAnimation();
-        });
 
         const categorySelector = document.createElement('select');
         categorySelector.id = 'category-selector';
-        categorySelector.addEventListener('change', (e) => {
-            this.selectedCategory = e.target.value;
-            this.restartAnimation();
-        });
 
         const autoplay = document.createElement('input');
         autoplay.type = 'checkbox';
         autoplay.id = 'autoplay';
         autoplay.checked = true;
         autoplay.classList.add('form-input');
-        autoplay.addEventListener('change', (e) => {
-            if (e.target.checked) {
-                this.startAnimationLoop();
-                this.toggleManualChange();
-            } else {
-                this.toggleManualChange();
-                clearInterval(this.animationInterval);
-            }
-        });
-
 
         const fullScreenButton = document.createElement('button');
         fullScreenButton.id = 'fullscreen-button';
         fullScreenButton.textContent = 'Toggle Fullscreen';
+
         controls.append(langSelector, categorySelector, fullScreenButton, autoplay);
 
         this.container = document.createElement('div');
@@ -93,7 +86,36 @@ class MantraBubbles extends HTMLElement {
         }
 
         this.shadowRoot.append(style, controls, this.container);
+    }
+
+    setupDOM() {
+        this.createDOM();
         this.toggleManualChange();
+    }
+
+    addEventListeners() {
+        this.shadowRoot.getElementById('lang-selector').addEventListener('change', (e) => {
+            this.selectedLanguage = e.target.value;
+            this.restartAnimation();
+        });
+
+        this.shadowRoot.getElementById('category-selector').addEventListener('change', (e) => {
+            this.selectedCategory = e.target.value;
+            this.restartAnimation();
+        });
+
+        this.shadowRoot.getElementById('autoplay').addEventListener('change', (e) => {
+            if (e.target.checked) {
+                this.startAnimationLoop();
+            } else {
+                clearInterval(this.animationInterval);
+            }
+            this.toggleManualChange();
+        });
+
+        this.shadowRoot.getElementById('fullscreen-button').addEventListener('click', () => {
+            document.querySelector('#mantras').classList.toggle('fullscreen');
+        });
     }
 
     async loadMantras() {
@@ -112,10 +134,12 @@ class MantraBubbles extends HTMLElement {
             console.error('Error loading mantras:', error);
             if (this.container) {
                 this.container.textContent = 'Could not load mantras.';
-                this.container.style.display = 'flex';
-                this.container.style.alignItems = 'center';
-                this.container.style.justifyContent = 'center';
-                this.container.style.color = '#eff0f1';
+                Object.assign(this.container.style, {
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#eff0f1',
+                });
             }
         }
     }
@@ -123,53 +147,52 @@ class MantraBubbles extends HTMLElement {
     toggleManualChange() {
         const controls = this.shadowRoot.querySelector('.controls');
         const autoplay = this.shadowRoot.getElementById('autoplay');
-        if (autoplay.checked) {
-            const nextButton = this.shadowRoot.getElementById('next-button');
-            if (nextButton) {
-                nextButton.remove();
-            }
-            const duration = document.createElement('input');
-            duration.type = 'number';
-            duration.id = 'duration';
-            duration.value = this.animationDuration;
-            duration.classList.add('form-control');
-            duration.addEventListener('change', (e) => {
-                this.animationDuration = parseInt(e.target.value);
-                this.restartAnimation();
-            });
-            controls.appendChild(duration);
-        } else {
-            const duration = this.shadowRoot.getElementById('duration');
+        const durationInput = this.shadowRoot.getElementById('duration');
+        const nextButton = this.shadowRoot.getElementById('next-button');
 
-            if (duration) {
-                duration.remove();
+        if (autoplay.checked) {
+            if (nextButton) nextButton.remove();
+
+            if (!durationInput) {
+                const duration = document.createElement('input');
+                duration.type = 'number';
+                duration.id = 'duration';
+                duration.value = this.animationDuration;
+                duration.classList.add('form-control');
+                duration.addEventListener('change', (e) => {
+                    this.animationDuration = Number.parseInt(e.target.value, 10);
+                    this.restartAnimation();
+                });
+                controls.appendChild(duration);
             }
-            const nextButton = document.createElement('button');
-            nextButton.textContent = 'Next';
-            nextButton.classList.add('form-control');
-            nextButton.id = 'next-button';
-            nextButton.addEventListener('click', () => {
-                this.showNewMantras();
-            });
-            controls.appendChild(nextButton);
+        } else {
+            if (durationInput) durationInput.remove();
+
+            if (!nextButton) {
+                const button = document.createElement('button');
+                button.textContent = 'Next';
+                button.classList.add('form-control');
+                button.id = 'next-button';
+                button.addEventListener('click', () => this.showNewMantras());
+                controls.appendChild(button);
+            }
         }
     }
 
-
     populateSelectors() {
         const categorySelector = this.shadowRoot.getElementById('category-selector');
-        if (!categorySelector || !this.data || !this.data.categories) return;
+        if (!categorySelector || !this.data?.categories) return;
 
-        for (const key in this.data.categories) {
+        for (const [key, value] of Object.entries(this.data.categories)) {
             const option = document.createElement('option');
             option.value = key;
-            option.textContent = this.data.categories[key][this.selectedLanguage];
+            option.textContent = value[this.selectedLanguage];
             categorySelector.appendChild(option);
         }
     }
 
     getRandomMantra(exclude = []) {
-        if (!this.data || !this.data.mantras) return '';
+        if (!this.data?.mantras) return '';
 
         const mantras = this.data.mantras[this.selectedCategory] || [];
         if (mantras.length === 0) return '';
@@ -184,12 +207,10 @@ class MantraBubbles extends HTMLElement {
 
     setupAndAnimateBubble(bubble, mantra) {
         bubble.style.animation = 'none';
-        bubble.offsetWidth; // Trigger reflow
+        bubble.offsetWidth = 0;
         bubble.textContent = mantra;
 
-        const containerWidth = this.container.offsetWidth;
-        const containerHeight = this.container.offsetHeight;
-
+        const { offsetWidth: containerWidth, offsetHeight: containerHeight } = this.container;
         const margin = 30;
         const effectiveHeight = containerHeight - margin * 2;
         const effectiveWidth = containerWidth - margin * 2;
@@ -200,27 +221,29 @@ class MantraBubbles extends HTMLElement {
         let size = Math.max(minSize, randomSize);
         size = Math.min(size, baseSize);
 
-        bubble.style.width = `${size}px`;
-        bubble.style.height = `${size}px`;
-
         const maxTop = effectiveHeight - size;
         const maxLeft = effectiveWidth - size;
 
         const top = Math.random() * maxTop + margin;
         const left = Math.random() * maxLeft + margin;
 
-        bubble.style.top = `${top}px`;
-        bubble.style.left = `${left}px`;
         const randomColor = this.colors[Math.floor(Math.random() * this.colors.length)];
-        bubble.style.backgroundColor = randomColor;
-        bubble.style.animation = `mantra-enter ${this.transitionDuration / 1000}s forwards, mantra-idle-float 8s ease-in-out 1s infinite alternate`;
-        bubble.style.pointerEvents = 'auto';
+
+        Object.assign(bubble.style, {
+            width: `${size}px`,
+            height: `${size}px`,
+            top: `${top}px`,
+            left: `${left}px`,
+            backgroundColor: randomColor,
+            animation: `mantra-enter ${this.transitionDuration / 1000}s forwards, mantra-idle-float 8s ease-in-out 1s infinite alternate`,
+            pointerEvents: 'auto',
+        });
     }
 
     showNewMantras() {
         if (!this.data) return;
         const prevBubble = this.activeBubbleIndex !== -1 ? this.bubbles[this.activeBubbleIndex] : null;
-        this.activeBubbleIndex = (this.activeBubbleIndex + 1) % 2;
+        this.activeBubbleIndex = (this.activeBubbleIndex + 1) % this.bubbles.length;
         const currentBubble = this.bubbles[this.activeBubbleIndex];
         const newMantra = this.getRandomMantra(prevBubble ? [prevBubble.textContent] : []);
 
@@ -233,6 +256,7 @@ class MantraBubbles extends HTMLElement {
             prevBubble.style.animation = `mantra-exit ${this.transitionDuration / 1000}s forwards`;
             prevBubble.style.pointerEvents = 'none';
         }
+
         setTimeout(() => {
             this.setupAndAnimateBubble(currentBubble, newMantra);
         }, prevBubble ? (this.transitionDuration - this.transitionOverlap) : 0);
@@ -247,23 +271,15 @@ class MantraBubbles extends HTMLElement {
         if (this.animationInterval) {
             clearInterval(this.animationInterval);
         }
-        this.bubbles.forEach(b => b.style.opacity = 0);
+        for (b of this.bubbles) { b.style.opacity = 0 };
         const categorySelector = this.shadowRoot.getElementById('category-selector');
-        if (categorySelector && this.data && this.data.categories) {
+        if (categorySelector && this.data?.categories) {
             for (const option of categorySelector.options) {
                 option.textContent = this.data.categories[option.value][this.selectedLanguage];
             }
         }
 
         this.startAnimationLoop();
-    }
-
-    fullScreen() {
-        document.addEventListener('DOMContentLoaded', () => {
-            this.shadowRoot.getElementById('fullscreen-button').addEventListener('click', () => {
-                document.querySelector('#mantras').classList.toggle('fullscreen');
-            });
-        });
     }
 }
 
