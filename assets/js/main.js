@@ -80,8 +80,8 @@ import { on, select } from './helpers.js';
     window.addEventListener('load', () => {
         navbarlinksActive();
 
-        if (window.location.hash && select(window.location.hash)) {
-            scrollto(window.location.hash);
+        if (globalThis.location.hash && select(globalThis.location.hash)) {
+            scrollto(globalThis.location.hash);
         }
 
         AOS.init({
