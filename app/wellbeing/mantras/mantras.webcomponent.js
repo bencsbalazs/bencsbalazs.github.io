@@ -242,7 +242,7 @@ class MantraBubbles extends HTMLElement {
 
     showNewMantras() {
         if (!this.data) return;
-        const prevBubble = this.activeBubbleIndex !== -1 ? this.bubbles[this.activeBubbleIndex] : null;
+        const prevBubble = this.activeBubbleIndex >= 0 ? this.bubbles[this.activeBubbleIndex] : null;
         this.activeBubbleIndex = (this.activeBubbleIndex + 1) % this.bubbles.length;
         const currentBubble = this.bubbles[this.activeBubbleIndex];
         const newMantra = this.getRandomMantra(prevBubble ? [prevBubble.textContent] : []);
@@ -271,7 +271,7 @@ class MantraBubbles extends HTMLElement {
         if (this.animationInterval) {
             clearInterval(this.animationInterval);
         }
-        for (b of this.bubbles) { b.style.opacity = 0 };
+        for (let b of this.bubbles) { b.style.opacity = 0 };
         const categorySelector = this.shadowRoot.getElementById('category-selector');
         if (categorySelector && this.data?.categories) {
             for (const option of categorySelector.options) {

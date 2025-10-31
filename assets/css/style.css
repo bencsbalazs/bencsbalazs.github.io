@@ -6,6 +6,7 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
 @font-face {
   src: url("/assets/fonts/digital-numbers/DigitalNumbers-Regular.ttf") format("truetype");
   font-family: "Digital Numbers";
@@ -14,6 +15,7 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
 @font-face {
   src: url("/assets/fonts/Open_Sans/static/OpenSans-Regular.ttf") format("truetype");
   font-family: "Open Sans";
@@ -22,6 +24,7 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
 a {
   text-decoration: none;
 }
@@ -40,6 +43,15 @@ iframe {
   z-index: 999;
 }
 
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
 section {
   padding: clamp(2.5rem, 5vw, 3.75rem) 0;
   overflow: hidden;
@@ -52,6 +64,7 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+
 .section-title h2 {
   font-size: clamp(1.75rem, 1.6rem + 0.5vw, 2rem);
   font-weight: bold;
@@ -60,6 +73,7 @@ section {
   border-bottom: solid 2px hsla(0, 0%, 0%, 0.6);
   position: relative;
 }
+
 .section-title h2::after {
   content: "";
   position: absolute;
@@ -86,10 +100,12 @@ nav #navProfile {
   border-radius: 50%;
   margin: 0.2rem;
 }
+
 nav a {
   color: hsla(0, 0%, 100%, 0.55);
   transition: color 0.3s ease;
 }
+
 nav a:hover {
   color: hsl(0, 0%, 100%);
 }
@@ -98,6 +114,7 @@ nav a:hover {
   color: hsla(0, 0%, 100%, 0.55);
   transition: color 0.3s ease;
 }
+
 #footer a:hover {
   color: hsl(0, 0%, 100%);
 }
@@ -110,6 +127,7 @@ nav a:hover {
   background-repeat: no-repeat;
   background-position: 90% 100%;
 }
+
 #hero h1 {
   margin: 0 0 0.625rem 0;
   font-size: clamp(2.5rem, 1.5rem + 5vw, 4rem);
@@ -117,17 +135,20 @@ nav a:hover {
   line-height: 1.2;
   text-shadow: 0 0 0.5em hsl(0, 0%, 100%), 0 0 0.5em hsl(0, 0%, 100%);
 }
+
 #hero p {
   margin-bottom: 3.125rem;
   font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
   text-shadow: 0 0 4px hsl(0, 0%, 100%);
 }
+
 #hero p span {
   text-shadow: 0 0 0.5em hsl(0, 0%, 100%), 0 0 0.5em hsl(0, 0%, 100%);
   padding-bottom: 0.25rem;
   letter-spacing: 0.0625rem;
   border-bottom: 0.1875rem solid hsl(0, 0%, 0%);
 }
+
 #hero article {
   max-width: 85vw;
   font-size: 1.2rem;
@@ -135,16 +156,19 @@ nav a:hover {
   text-shadow: 0 0 1rem hsl(0, 0%, 100%);
   text-align: justify;
 }
+
 #hero .sociallinks {
   position: absolute;
   top: 1rem;
   left: 1rem;
   z-index: 999;
 }
+
 #hero .sociallinks a {
   float: left;
   font-size: 1.5rem;
 }
+
 #hero .sociallinks a:not(:first-child) {
   margin-left: 0.5rem;
 }
@@ -152,16 +176,19 @@ nav a:hover {
 .facts {
   padding-bottom: 1.875rem;
 }
+
 .facts .count-box {
   padding: 1.875rem;
   width: 100%;
 }
+
 .facts .count-box i {
   display: block;
   font-size: 2.75rem;
   float: left;
   line-height: 0;
 }
+
 .facts .count-box span {
   font-size: clamp(2.5rem, 2rem + 2vw, 3rem);
   line-height: 1;
@@ -170,11 +197,13 @@ nav a:hover {
   font-weight: 700;
   margin-left: 3.75rem;
 }
+
 .facts .count-box p {
   padding-top: 0.9375rem;
   margin: 0 0 0 3.75rem;
   font-size: 0.875rem;
 }
+
 .facts .count-box a {
   font-weight: 600;
   display: block;
@@ -187,25 +216,30 @@ nav a:hover {
   background: hsl(0, 0%, 100%);
   color: var(--bs-primary);
 }
+
 .services .icon-box:hover .icon i {
   color: var(--bs-primary);
 }
+
 .services .icon {
   width: 3rem;
   height: 3rem;
   background: var(--bs-primary);
   border: solid 1px var(--bs-primary);
 }
+
 .services .icon i {
   color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
   line-height: 0;
 }
+
 .services .title {
   font-weight: 700;
   font-size: clamp(1rem, 0.9rem + 0.25vw, 1.125rem);
   margin-left: 3.2rem;
 }
+
 .services .description {
   line-height: 1.4;
   margin-left: 3.2rem;
@@ -230,30 +264,38 @@ nav a:hover {
     padding-right: 20px 15px;
   }
 }
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
   }
+
   #hero article {
     max-width: 40vw;
   }
 }
+
 @media (max-width: 1199px) {
   #main {
     margin-left: 0;
   }
 }
+
 @media (max-width: 768px) {
   .floating-card.grow {
     width: 80vw !important;
   }
+
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
   }
+
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
