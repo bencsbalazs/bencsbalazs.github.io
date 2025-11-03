@@ -1,134 +1,182 @@
-const avatarImageBase64 = "/assets/images/cartoonme.jpg";
+class AnimatedAvatar extends HTMLElement {
 
+  // Figyelt attribútumok definiálása, ha a komponens reagálna a változásra.
+  static get observedAttributes() {
+    return ['width', 'height'];
+  }
 
-class ParallaxAvatar extends HTMLElement {
-    constructor() {
-        super();
-        // Shadow DOM létrehozása a teljes beágyazáshoz
-        this.attachShadow({ mode: 'open' });
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' }); // Shadow DOM az izolációhoz
 
-        // A 'this' kontextus "bidelése" az eseménykezelőkhöz
-        this.onMouseMove = this.onMouseMove.bind(this);
-        this.onMouseLeave = this.onMouseLeave.bind(this);
-        this.onClick = this.onClick.bind(this);
+    // Állapotok
+    this.images = {};
+    this.allImagesLoaded = false;
+    this.isBlinking = false;
+    this.blinkFrame = 0;
+    this.breathScale = 1;
+    this.breathDirection = 0.0001;
+
+    // Elem inicializálás
+    this.canvas = document.createElement('canvas');
+    this.ctx = this.canvas.getContext('2d');
+
+    // Attribútumok beolvasása, ha nincsenek megadva, alapértelmezett értékek
+    this.canvas.width = this.getAttribute('width') || 400;
+    this.canvas.height = this.getAttribute('height') || 400;
+    this.shadowRoot.appendChild(this.canvas);
+
+    // Képcímek beolvasása az attribútumokból
+    this.imagePaths = {
+      base: this.getAttribute('image-base'),
+      open: this.getAttribute('image-open'),
+      half: this.getAttribute('image-half'),
+      closed: this.getAttribute('image-closed')
+    };
+  }
+
+  /**
+   * connectedCallback: Erőforrások inicializálása és animációk indítása.
+   * Ez a TDD szempontból is kritikus pont, itt indul az élet.
+   */
+  connectedCallback() {
+    // TDD szempont: Csak akkor indítjuk az animációt, ha sikeresen csatlakozott a DOM-hoz.
+    this.loadImages().then(() => {
+      this.allImagesLoaded = true;
+      // requestAnimationFrame indítása a folyamatos rajzoláshoz és légzéshez
+      this.rafId = requestAnimationFrame(this.gameLoop.bind(this));
+
+      // Interval indítása a véletlenszerű pislogáshoz
+      this.blinkInterval = setInterval(() => {
+        if (!this.isBlinking) this.animateBlink();
+      }, Math.random() * 3000 + 2000);
+    }).catch(error => {
+      console.error('Hiba a képek betöltésekor, az animáció nem indul el:', error);
+      // Itt megjeleníthetsz egy hibaüzenetet a Shadow DOM-ban.
+    });
+  }
+
+  /**
+   * disconnectedCallback: Erőforrások felszabadítása a memóriaszivárgás elkerülésére.
+   * TDD szempont: Teszteli a "cleanup" mechanizmus helyes működését.
+   */
+  disconnectedCallback() {
+    // requestAnimationFrame leállítása
+    if (this.rafId) {
+      cancelAnimationFrame(this.rafId);
+      this.rafId = null;
     }
 
-    connectedCallback() {
-        this.imageSrc = this.getAttribute('src');
-        this.altText = this.getAttribute('alt') || 'Avatar';
-        this.render();
-        this.container = this.shadowRoot.querySelector('.avatar-container');
-        this.card = this.shadowRoot.querySelector('.avatar-card');
-        this.container.addEventListener('mousemove', this.onMouseMove);
-        this.container.addEventListener('mouseleave', this.onMouseLeave);
-        this.container.addEventListener('click', this.onClick);
+    // Interval leállítása
+    if (this.blinkInterval) {
+      clearInterval(this.blinkInterval);
+      this.blinkInterval = null;
     }
+    console.log('<animated-avatar> animációk leállítva.');
+  }
 
-    disconnectedCallback() {
-        // Eseményfigyelők eltávolítása a memória szivárgás elkerülése végett
-        this.container.removeEventListener('mousemove', this.onMouseMove);
-        this.container.removeEventListener('mouseleave', this.onMouseLeave);
-        this.container.removeEventListener('click', this.onClick);
-    }
+  // === ADATKEZELÉS ÉS RAJZOLÁS LOGIKA ===
 
-    render() {
-        // A komponens stílusa és HTML struktúrája a Shadow DOM-on belül
-        this.shadowRoot.innerHTML = `
-      <style>
-        :host {
-          /* A komponens kívülről látható mérete */
-          display: block;
-          width: 250px;
-          height: 250px;
+  /**
+   * Képek aszinkron betöltése.
+   */
+  loadImages() {
+    let loadedCount = 0;
+    const totalImages = Object.keys(this.imagePaths).length;
+
+    return new Promise((resolve, reject) => {
+      for (const key in this.imagePaths) {
+        const path = this.imagePaths[key];
+        if (!path) {
+          return reject(`Hiányzó kép elérési út a(z) ${key} attribútumban.`);
         }
 
-        .avatar-container {
-          /* A 3D perspektíva szülőeleme */
-          width: 100%;
-          height: 100%;
-          perspective: 1000px; /* Ez adja a 3D-s mélységet */
-          cursor: pointer;
-        }
+        this.images[key] = new Image();
+        this.images[key].src = path;
+        this.images[key].onload = () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            resolve();
+          }
+        };
+        this.images[key].onerror = () => {
+          reject(`Hiba a kép betöltésekor: ${path}`);
+        };
+      }
+    });
+  }
 
-        .avatar-card {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%; /* Kerek avatar */
-          background-color: #f0f0f0;
-          overflow: hidden;
-          
-          /* A mozgás finomítása */
-          transition: transform 0.1s ease-out, box-shadow 0.2s ease;
-          transform-style: preserve-3d;
-          
-          /* Finom árnyék a "lebegés" érzetéhez */
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          
-          /* GPU gyorsítás "kikényszerítése" */
-          will-change: transform;
-        }
-        
-        .avatar-card:hover {
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-          display: block;
-          object-fit: cover;
-          /* A kép "kiemelése" a kártya síkjából */
-          transform: translateZ(30px) scale(1.05);
-        }
-      </style>
-      
-      <div class="avatar-container">
-        <div class="avatar-card">
-          <img src="${this.imageSrc}" alt="${this.altText}">
-        </div>
-      </div>
-    `;
+  /**
+   * A légzés animáció állapotának frissítése (finom Y tengelyű skálázás).
+   */
+  updateBreath() {
+    if (this.breathScale + this.breathDirection > 1.005 || this.breathScale + this.breathDirection < 0.995) {
+      this.breathDirection *= -1; // Irányváltás
     }
+    this.breathScale += this.breathDirection;
+  }
 
-    onMouseMove(e) {
-        // Adatok lekérése a pozíció számításához
-        const rect = this.container.getBoundingClientRect();
-        const x = e.clientX - rect.left; // X pozíció a komponensen belül
-        const y = e.clientY - rect.top;  // Y pozíció a komponensen belül
+  /**
+   * A pislogás animáció logikája.
+   */
+  animateBlink() {
+    this.isBlinking = true;
+    const BLINK_SPEED = 50; // Képkocka idő
 
-        const { width, height } = rect;
-        const centerX = width / 2;
-        const centerY = height / 2;
+    // A pislogás fázisai (0:nyitott -> 1:félig -> 2:csukott -> 1:félig -> 0:nyitott)
 
-        // Értékek normalizálása (-1 és 1 között)
-        const deltaX = (x - centerX) / centerX;
-        const deltaY = (y - centerY) / centerY;
+    // Használjuk a setTimeout-ot a Canvas rajzolási idejének szimulálásához
+    setTimeout(() => { this.blinkFrame = 1; this.draw(); }, BLINK_SPEED);
+    setTimeout(() => { this.blinkFrame = 2; this.draw(); }, BLINK_SPEED * 2);
+    setTimeout(() => { this.blinkFrame = 1; this.draw(); }, BLINK_SPEED * 3);
+    setTimeout(() => {
+      this.blinkFrame = 0;
+      this.isBlinking = false;
+      this.draw();
+    }, BLINK_SPEED * 4);
+  }
 
-        // A dőlés mértéke (pl. max 15 fok)
-        const tiltX = deltaY * -15; // Y egérmozgás forgat X tengelyen
-        const tiltY = deltaX * 15;  // X egérmozgás forgat Y tengelyen
+  /**
+   * Az aktuális állapot kirajzolása a Canvas-ra.
+   */
+  draw() {
+    if (!this.allImagesLoaded) return;
+    const W = this.canvas.width;
+    const H = this.canvas.height;
+    this.ctx.clearRect(0, 0, W, H);
 
-        // Transzformáció alkalmazása
-        this.card.style.transform = "rotateX(" + tiltX
-            + "deg) rotateY(" + tiltY + "deg) scale(1.05)";
-    }
+    // LÉGZÉS ANIMÁCIÓ (Skálázás)
+    this.ctx.save();
 
-    onMouseLeave() {
-        // Alaphelyzetbe állítás, ha az egér elhagyja a komponenst
-        this.card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
-    }
+    // A transzformáció origóját a test aljához állítjuk.
+    const anchorY = H * 0.9;
+    this.ctx.translate(W / 2, anchorY);
+    this.ctx.scale(1, this.breathScale);
+    this.ctx.translate(-W / 2, -anchorY);
 
-    onClick() {
-        console.log('Avatar clicked! Indulhat a Gemini API hívás...');
+    // 1. Rajzoljuk az alap testet (szemek nélkül)
+    this.ctx.drawImage(this.images.base, 0, 0, W, H);
 
-        // Egy "custom event" (egyéni esemény) küldése,
-        // amire az oldalon kívül tudsz majd figyelni.
-        // Ez a "best practice" a komponenseken belüli eseménykezelésre.
-        this.dispatchEvent(new CustomEvent('avatar-click', {
-            bubbles: true, // Az esemény "buborékolhat" felfelé a DOM-ban
-            composed: true // Az esemény átléphet a Shadow DOM határon
-        }));
-    }
+    // 2. Rajzoljuk rá a megfelelő szem állapotot
+    let currentEyeImage;
+    if (this.blinkFrame === 0) currentEyeImage = this.images.open;
+    else if (this.blinkFrame === 1) currentEyeImage = this.images.half;
+    else currentEyeImage = this.images.closed;
+
+    this.ctx.drawImage(currentEyeImage, 0, 0, W, H);
+
+    this.ctx.restore(); // Visszaállítjuk a transzformációt
+  }
+
+  /**
+   * A fő animációs ciklus. requestAnimationFrame-t használ a hatékonyságért.
+   */
+  gameLoop() {
+    this.updateBreath();
+    this.draw();
+    this.rafId = requestAnimationFrame(this.gameLoop.bind(this));
+  }
 }
 
-export default ParallaxAvatar;
+// Komponens regisztrálása
+export default AnimatedAvatar;

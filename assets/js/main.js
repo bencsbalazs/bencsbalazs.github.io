@@ -80,7 +80,7 @@ import { on, select } from './helpers.js';
     window.addEventListener('load', () => {
         navbarlinksActive();
 
-        document.querySelector('parallax-avatar').addEventListener('avatar-click', () => {
+        document.querySelector('animated-avatar').addEventListener('avatar-click', () => {
             console.log('Az oldalamon észleltem az avatar kattintást!');
             // TODO: Ide jöhet a Gemini API indítása
         });
@@ -106,7 +106,7 @@ import { on, select } from './helpers.js';
         { path: './components/skillcloud.webcomponent.js', components: { 'skill-cloud': 'default' } },
         { path: './components/project.webcomponent.js', components: { 'my-projects-portfolio': 'default' } },
         { path: './components/feedbacks.webcomponent.js', components: { 'show-feedbacks': 'default' } },
-        { path: './components/avatar.webcomponent.js', components: { 'parallax-avatar': 'default' } },
+        { path: './components/avatar.webcomponent.js', components: { 'animated-avatar': 'default' } },
 
     ];
 

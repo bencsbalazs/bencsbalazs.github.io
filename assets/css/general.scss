@@ -93,11 +93,7 @@ nav {
 
 #hero {
     width: 100%;
-    height: 100vh;
-    background: url("../img/cartoonMee.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 90% 100%;
+    min-height: 100vh;
 
     h1 {
         margin: 0 0 0.625rem 0;
@@ -118,6 +114,10 @@ nav {
             letter-spacing: 0.0625rem;
             border-bottom: 0.1875rem solid hsl(0, 0%, 0%);
         }
+    }
+
+    .avatar {
+        position: relative;
     }
 
     article {
@@ -163,7 +163,6 @@ nav {
             font-size: clamp(2.5rem, 2rem + 2vw, 3rem);
             line-height: 1;
             display: block;
-            font-family: $font-family-digital;
             font-weight: 700;
             margin-left: 3.75rem;
         }
@@ -223,13 +222,13 @@ nav {
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
