@@ -104,11 +104,7 @@ nav a:hover {
 
 #hero {
   width: 100%;
-  height: 100vh;
-  background: url("../img/cartoonMee.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 90% 100%;
+  min-height: 100vh;
 }
 #hero h1 {
   margin: 0 0 0.625rem 0;
@@ -127,6 +123,9 @@ nav a:hover {
   padding-bottom: 0.25rem;
   letter-spacing: 0.0625rem;
   border-bottom: 0.1875rem solid hsl(0, 0%, 0%);
+}
+#hero .avatar {
+  position: relative;
 }
 #hero article {
   max-width: 85vw;
@@ -166,7 +165,6 @@ nav a:hover {
   font-size: clamp(2.5rem, 2rem + 2vw, 3rem);
   line-height: 1;
   display: block;
-  font-family: "Digital Numbers", sans-serif;
   font-weight: 700;
   margin-left: 3.75rem;
 }

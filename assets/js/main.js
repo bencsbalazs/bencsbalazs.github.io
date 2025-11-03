@@ -16,7 +16,7 @@ import { on, select } from './helpers.js';
 
     const navbarlinksActive = () => {
         const position = window.scrollY + 200;
-        select('#navbar .scrollto', true).forEach(navbarlink => {
+        for (let navbarlink of select('#navbar .scrollto', true)) {
             if (!navbarlink.hash) return;
             const section = select(navbarlink.hash);
             if (!section) return;
@@ -25,7 +25,7 @@ import { on, select } from './helpers.js';
             } else {
                 navbarlink.classList.remove('active');
             }
-        });
+        };
     };
 
     const toggleMobileNav = () => {
@@ -80,6 +80,11 @@ import { on, select } from './helpers.js';
     window.addEventListener('load', () => {
         navbarlinksActive();
 
+        document.querySelector('animated-avatar').addEventListener('avatar-click', () => {
+            console.log('Az oldalamon észleltem az avatar kattintást!');
+            // TODO: Ide jöhet a Gemini API indítása
+        });
+
         if (globalThis.location.hash && select(globalThis.location.hash)) {
             scrollto(globalThis.location.hash);
         }
@@ -101,7 +106,11 @@ import { on, select } from './helpers.js';
         { path: './components/skillcloud.webcomponent.js', components: { 'skill-cloud': 'default' } },
         { path: './components/project.webcomponent.js', components: { 'my-projects-portfolio': 'default' } },
         { path: './components/feedbacks.webcomponent.js', components: { 'show-feedbacks': 'default' } },
+        { path: './components/avatar.webcomponent.js', components: { 'animated-avatar': 'default' } },
+
     ];
 
-    componentsToRegister.forEach(defineWebComponents);
+    for (const component of componentsToRegister) {
+        defineWebComponents(component);
+    }
 })();
