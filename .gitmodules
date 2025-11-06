@@ -1,3 +1,6 @@
 [submodule "app/contentframe"]
 	path = app/contentframe
 	url = https://github.com/bencsbalazs/contentframework.git
+[submodule "assets/backend"]
+	path = assets/backend
+	url = https://github.com/bencsbalazs/backend-gemini.git

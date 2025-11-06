@@ -127,6 +127,13 @@ nav a:hover {
 #hero .avatar {
   position: relative;
 }
+#hero #aiAnswer {
+  display: flex;
+  flex-direction: column;
+}
+#hero .showAnswer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 #hero article {
   max-width: 85vw;
   font-size: 1.2rem;
