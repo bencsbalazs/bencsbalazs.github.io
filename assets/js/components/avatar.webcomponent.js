@@ -16,7 +16,7 @@ class AnimatedAvatar extends HTMLElement {
     this.breathScale = 1;
     this.breathDirection = 0.0001;
 
-    this.backendUrl = 'https://<az-ön-cloud-function-endpointja>.cloudfunctions.net/generateContent';
+    this.backendUrl = 'https://backend-gemini-1021576013555.europe-west1.run.app/'
 
     this.shadowRoot.innerHTML = `
     <style>
@@ -40,8 +40,8 @@ class AnimatedAvatar extends HTMLElement {
     }
 
     </style>
-    <h5>I'm an AI agent to anwer about Balázs Bencs and his works with the power of Gemini AI.</h5>
-    <div id="container"></div>
+    <h5>I'm an AI agent to answer about Balázs Bencs and his works with the power of Gemini AI.</h5>
+    <div id="container" style="display: none;"></div>
     `
 
     this.promptInput = document.createElement('input');
@@ -59,7 +59,6 @@ class AnimatedAvatar extends HTMLElement {
     this.ctx = this.canvas.getContext('2d');
 
     this.shadowRoot.getElementById('container').append(this.promptInput, this.sendButton);
-
 
     this.canvas.width = this.getAttribute('width') || 400;
     this.canvas.height = this.getAttribute('height') || 500;
@@ -81,7 +80,8 @@ class AnimatedAvatar extends HTMLElement {
       }
       this.sendButton.disabled = true;
 
-      this.callGeminiApi(this.promptValue);
+      console.log('Sending prompt:', promptValue);
+      this.callGeminiApi(promptValue);
     });
 
     this.promptInput.addEventListener('keydown', (event) => {
@@ -222,7 +222,7 @@ class AnimatedAvatar extends HTMLElement {
       const response = await fetch(this.backendUrl, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({ prompt: prompt }),
       });
