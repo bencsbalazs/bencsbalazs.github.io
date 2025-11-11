@@ -41,7 +41,7 @@ class AnimatedAvatar extends HTMLElement {
 
     </style>
     <h5>I'm an AI agent to answer about Balázs Bencs and his works with the power of Gemini AI.</h5>
-    <div id="container" style="display: none;"></div>
+    <div id="container"></div>
     `
 
     this.promptInput = document.createElement('input');
@@ -201,7 +201,7 @@ class AnimatedAvatar extends HTMLElement {
   showResponse = (response) => {
     this.dispatchEvent(new CustomEvent('answare', {
       detail: {
-        message: response
+        message: marked.parse(response)
       },
       bubbles: true,
       composed: true
