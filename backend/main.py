@@ -1,23 +1,21 @@
-from flask import Flask
 import os
 from google import genai
 from google.genai.errors import APIError
+import functions_framework
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-port = int(os.environ.get("PORT", 8080))
-ALLOWED_ORIGIN = "https://bencsbalazs.github.io"
+ALLOWED_ORIGIN = "https://bencsbalazs.com"
 
-ai = genai.Client()
+ai = genai.Client(api_key=GEMINI_API_KEY)
 
 INSTRUCTIONS_FOR_GEMINI = """
 You are now a helpful agent, who tells the user about Balázs Bencs.
 Title: Balázs Bencs, Senior Full Stack Engineer, 15 years of experience
 Skills: Frontend (HTML5, CSS3, JavaScript, TypeScript, Angular, React, jQuery, Bootstrap, Carbon, Material, Tailwind, WebPack); Backend (Node, Java, Python, Django, Rest API, PHP); Databases (MySQL, MongoDB, Cloudant, PostgreSQL, MariaDB); Cloud & DevOps (Docker, Kubernetes, GitLab CI/CD, Jenkins, Travis CI, AWS, Nginx, Apache); Testing & Quality (Pytest, Jest, Cucumber, SonarQube, Snyk, Black, Ruff); Methodologies (Agile, Scrum, Extreme Programming (XP), TDD, BDD); AI & Automation (ChatGPT API, TensorFlow, PyTorch, Gemini CLI).
 """
-app = Flask(__name__)
 
 
-@app.route("/")
+@functions_framework.http
 def generate_content(request):
     """
     HTTP Cloud Function, what accepts the post and communicate with gemini model.
@@ -59,7 +57,3 @@ def generate_content(request):
     except Exception as e:
         print(f"General error: {e}")
         return ({"error": "Internal server error"}, 500, response_headers)
-
-
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=port)
