@@ -22,8 +22,8 @@ def generate_content(request):
     """
     request_origin = request.headers.get("Origin")
     if request_origin and request_origin != ALLOWED_ORIGIN:
-        print(f"BIZTONSÁGI HIBA: Tiltott Origin: {request_origin}")
-        return ('{"error": "Hozzáférés megtagadva. Tiltott forrás."}', 403, {})
+        print(f"SECURITY WARNING: Origin denied: {request_origin}")
+        return ('{"error": "Access denied. Source denied."}', 403, {})
     response_headers = {
         "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
     }
