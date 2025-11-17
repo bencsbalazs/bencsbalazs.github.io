@@ -4,8 +4,10 @@
     "rewrites": [
       {
         "source": "/api/**",
-        "function": "backend-call-gemini",
-        "region": "europe-west1"
+        "run": {
+          "serviceId": "backend-call-gemini",
+          "region": "europe-west1"
+        }
       }
     ],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
