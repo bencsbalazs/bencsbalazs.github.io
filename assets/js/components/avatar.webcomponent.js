@@ -212,7 +212,6 @@ class AnimatedAvatar extends HTMLElement {
       bubbles: true,
       composed: true
     }));
-    console.log(response)
   }
 
 
