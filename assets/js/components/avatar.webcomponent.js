@@ -16,7 +16,8 @@ class AnimatedAvatar extends HTMLElement {
     this.breathScale = 1;
     this.breathDirection = 0.0001;
 
-    this.backendUrl = 'https://backend-call-gemini-1021576013555.europe-west1.run.app'
+    this.backendUrl = '/api'
+    //this.backendUrl = 'https://backend-call-gemini-1021576013555.europe-west1.run.app'
 
     this.shadowRoot.innerHTML = `
     <style>
