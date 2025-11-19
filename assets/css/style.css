@@ -138,6 +138,9 @@ nav a:hover {
   border: solid 1px;
   box-shadow: 0 0 0.2rem;
   z-index: 0;
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 #hero .response::after {
   content: "";

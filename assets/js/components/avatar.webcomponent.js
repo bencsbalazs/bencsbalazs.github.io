@@ -46,7 +46,7 @@ class AnimatedAvatar extends HTMLElement {
     this.promptInput = document.createElement('input');
     this.promptInput.type = 'text';
     this.promptInput.setAttribute("id", "prompt-input")
-    this.promptInput.setAttribute("placeholder", "Ask me anything...")
+    this.promptInput.setAttribute("placeholder", "Ask me anything about Balázs Bencs' works...")
 
     this.sendButton = document.createElement('button');
     this.sendButton.setAttribute("id", "send-button");
