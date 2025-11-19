@@ -16,8 +16,7 @@ class AnimatedAvatar extends HTMLElement {
     this.breathScale = 1;
     this.breathDirection = 0.0001;
 
-    this.backendUrl = '/api/v1'
-    //this.backendUrl = 'https://backend-call-gemini-1021576013555.europe-west1.run.app'
+    this.backendUrl = (globalThis.location.href.includes('github.io')) ? 'https://backend-call-gemini-1021576013555.europe-west1.run.app' : '/api/v1'
 
     this.shadowRoot.innerHTML = `
     <style>
@@ -33,16 +32,15 @@ class AnimatedAvatar extends HTMLElement {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      translate: scale easing 1s;
+      z-index: +1;
     }
     #send-button:hover {
       cursor: pointer;
       transform: scale(1.1);
     }
-
     </style>
-    <h5 class="hideongithub" style="display: none;">I'm an AI agent to answer about Balázs Bencs and his works with the power of Gemini AI.</h5>
-    <div id="container" class="hideongithub" style="display: none;"></div>
+    <h5>I'm an AI agent to answer about Balázs Bencs and his works with the power of Gemini AI.</h5>
+    <div id="container"></div>
     `
 
     this.promptInput = document.createElement('input');
@@ -95,11 +93,6 @@ class AnimatedAvatar extends HTMLElement {
 
   // Load data to the shadowDom
   connectedCallback() {
-    this.shadowRoot.querySelectorAll('.hideongithub').forEach(element => {
-      if (!window.location.href.includes('github.io')) {
-        element.style.display = 'block';
-      }
-    });
     this.loadImages().then(() => {
       this.allImagesLoaded = true;
       this.rafId = requestAnimationFrame(this.gameLoop.bind(this));

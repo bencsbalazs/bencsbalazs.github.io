@@ -131,6 +131,28 @@ nav a:hover {
   display: flex;
   flex-direction: column;
 }
+#hero .response {
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 0.4rem;
+  border: solid 1px;
+  box-shadow: 0 0 0.2rem;
+  z-index: 0;
+}
+#hero .response::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  width: 2rem;
+  height: 2rem;
+  background: #f0f0f0;
+  transform: translateY(-50%) rotate(-45deg);
+  z-index: 0;
+  box-shadow: 1px 1px 1px;
+  border-right: solid 1px #000;
+  border-bottom: solid 1px #000;
+}
 #hero .showAnswer {
   background-color: rgba(0, 0, 0, 0.5);
 }

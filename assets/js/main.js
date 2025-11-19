@@ -83,12 +83,12 @@ import { on, select } from './helpers.js';
         document.querySelector('animated-avatar').addEventListener('answare', (e) => {
 
             const answerContainer = document.getElementById('aiAnswer')
-
+            answerContainer.classList.add("response")
             if (document.querySelector('#aiAnswer > h1')) {
                 const storage = document.querySelector('#aiAnswer > *')
-                answerContainer.innerHTML = e.detail.message;
+                answerContainer.innerHTML = marked.parse(e.detail.message);
             } else {
-                answerContainer.innerHTML = e.detail.message;
+                answerContainer.innerHTML = marked.parse(e.detail.message);
             }
 
 
