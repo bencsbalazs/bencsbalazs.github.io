@@ -45,6 +45,7 @@ class AnimatedAvatar extends HTMLElement {
 
     this.promptInput = document.createElement('input');
     this.promptInput.type = 'text';
+    this.promptInput.setAttribute("max-length", 50);
     this.promptInput.setAttribute("id", "prompt-input")
     this.promptInput.setAttribute("placeholder", "Ask me anything about Balázs Bencs' works...")
 
