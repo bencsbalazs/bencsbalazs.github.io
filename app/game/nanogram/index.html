@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">Nanogram</title>
+
+    <!-- Framework Components -->
+    <load-resources></load-resources>
+    <script
+      src="/app/frame.webcomponent.js"
+      defer></script>
+    <script src="/app/resources.webcomponent.js"></script>
+
+    <!-- Local Styles and Scripts -->
+    <link
+      rel="stylesheet"
+      href="./style.css" />
+    <script
+      src="./nanogram.js"
+      defer></script>
+  </head>
+  <body>
+    <frame-component
+      type="header"
+      home-text="Just enjoy the game."></frame-component>
+
+    <main class="container my-5">
+      <nonogram-grid></nonogram-grid>
+      <script>
+        const nonogram = document.querySelector('nonogram-grid');
+        // Example puzzle (a simple 5x5 heart shape)
+        const puzzle = [
+          [0, 1, 1, 0, 0],
+          [1, 1, 1, 1, 0],
+          [1, 1, 1, 1, 1],
+          [0, 1, 1, 1, 0],
+          [0, 0, 1, 0, 0],
+        ];
+        nonogram.setPuzzle(puzzle);
+      </script>
+    </main>
+
+    <frame-component type="footer"></frame-component>
+  </body>
+</html>
