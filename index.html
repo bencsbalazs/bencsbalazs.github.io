@@ -1,490 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      content="width=device-width, initial-scale=1.0"
-      name="viewport" />
-    <title>Balázs Bencs' portfolio</title>
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Balázs Bencs — Senior Full-Stack Developer" />
-    <meta
-      property="og:description"
-      content="Portfolio, open-source work and services of Balázs Bencs." />
-    <meta
-      property="og:image"
-      content="https://bencsbalazs.github.io/og-cover.png" />
-    <meta
-      property="og:url"
-      content="https://bencsbalazs.github.io" />
-    <meta
-      property="og:type"
-      content="website" />
-    <!-- Twitter (X) -->
-    <meta
-      name="twitter:card"
-      content="summary_large_image" />
-    <meta
-      content="Balázs Bencs, developer, engineer"
-      name="keywords" />
-    <link
-      href="assets/img/favicon.png"
-      rel="icon" />
-    <link
-      href="assets/img/apple-touch-icon.png"
-      rel="apple-touch-icon" />
-    <link
-      href="assets/vendor/aos/aos.css"
-      rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link
-      href="assets/css/style.css"
-      rel="stylesheet" />
-  </head>
 
-  <body>
-    <button
-      class="bi bi-list mobile-nav-toggle d-none"
-      aria-label="Toggle mobile navigation"></button>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Balázs Bencs' portfolio</title>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Balázs Bencs — Senior Full-Stack Developer" />
+  <meta property="og:description" content="Portfolio, open-source work and services of Balázs Bencs." />
+  <meta property="og:image" content="https://bencsbalazs.github.io/og-cover.png" />
+  <meta property="og:url" content="https://bencsbalazs.github.io" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter (X) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta content="Balázs Bencs, developer, engineer" name="keywords" />
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
 
-    <!-- ======= Hero Section ======= -->
-    <section
-      id="hero"
-      class="d-flex align-items-center text-center">
+<body>
+  <button class="bi bi-list mobile-nav-toggle d-none" aria-label="Toggle mobile navigation"></button>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center text-center">
+    <div class="container">
+      <div class="row content-start">
+        <div class="col-lg-8" id="aiAnswer">
+          <h1 class="display-3 fw-bold">Balázs Bencs</h1>
+          <p class="lead">Full-Stack Software Engineer</p>
+          <p class="mb-4">
+            ...with a passion for building elegant, efficient web applications. I specialize in Python, Django, React,
+            and cloud-based deployments with Docker. I enjoy turning complex problems into clean, maintainable code
+            that delivers real-world impact.
+          </p>
+          <div class="d-flex justify-content-center flex-wrap gap-3 mb-4 mw-100">
+            <span class="badge bg-dark text-light rounded-pill p-2"><i class="bi bi-geo-alt-fill me-1"></i> Willing to
+              relocate</span>
+            <span class="badge bg-dark text-light rounded-pill p-2"><i class="bi bi-building-fill me-1"></i> Love to
+              work onsite</span>
+            <span class="badge bg-dark text-light rounded-pill p-2"><i class="bi bi-people-fill me-1"></i> Strong
+              teamplayer</span>
+          </div>
+          <div>
+            <a href="#experience" class="btn btn-primary btn-lg rounded-pill mx-2 scrollto">Experience</a>
+            <a href="#projects" class="btn btn-primary btn-lg rounded-pill mx-2 scrollto">Projects</a>
+          </div>
+        </div>
+        <animated-avatar class="col-md-4" width="400" height="500" image-base="./assets/img/avatar/body.png"
+          image-open="./assets/img/avatar/open.png" image-half="./assets/img/avatar/half.png"
+          image-closed="./assets/img/avatar/closed.png">
+        </animated-avatar>
+      </div>
+    </div>
+  </section>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <a class="navbar-brand ms-4" href="#">
+      <img src="assets/img/profile-img.jpg" id="navProfile" alt="Balazs' profile" />
+      <span class="ml-1">Balázs Bencs</span>
+    </a>
+    <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a href="#hero" class="nav-link scrollto active"><span>Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#experience" class="nav-link scrollto"><span>Experience</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link scrollto"><span>Projects</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link scrollto"><span>Skills</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#badges" class="nav-link scrollto"><span>Badges</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="mailto:bencsbalazs@gmail.com?subject=Inquiry" class="nav-link scrollto"><span>Hire Me</span></a>
+        </li>
+      </ul>
+      <div class="navbar-nav navbar-right social-links d-flex flex-row justify-content-end">
+        <a href="https://www.facebook.com/balazs.bencs.9" target="_blank" aria-label="Balázs on Facebook"
+          class="nav-link facebook"><i class="bi bi-facebook" aria-hidden="true"></i><span
+            class="visually-hidden">(opens in a new tab)</span></a>
+        <a href="https://github.com/bencsbalazs" aria-label="Me on Github" target="_blank" class="nav-link github"><i
+            class="bi bi-github" aria-hidden="true"></i><span class="visually-hidden">(opens in a new tab)</span></a>
+        <a href="https://www.instagram.com/bencsbalazs/" target="_blank" class="nav-link instagram"
+          aria-label="Me on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i><span
+            class="visually-hidden">(opens in a new tab)</span></a>
+        <a href="https://www.linkedin.com/in/bencsbalazs/" target="_blank" aria-label="Me on Linkedin"
+          class="nav-link linkedin"><i class="bi bi-linkedin" aria-hidden="true"></i><span
+            class="visually-hidden">(opens in a new tab)</span></a>
+        <a href="https://balazsbencs.blogspot.com/" target="_blank" aria-label="Me on Blogger"
+          class="nav-link blogger"><i class="bi bi-journals" aria-hidden="true"></i><span class="visually-hidden">(opens
+            in a new tab)</span></a>
+      </div>
+    </div>
+  </nav>
+  <main id="main">
+    <section id="experience" class="facts">
       <div class="container">
-        <div class="row content-start">
-          <div
-            class="col-lg-8"
-            id="aiAnswer">
-            <h1 class="display-3 fw-bold">Balázs Bencs</h1>
-            <p class="lead">Full-Stack Software Engineer</p>
-            <p class="mb-4">
-              ...with a passion for building elegant, efficient web applications. I specialize in Python, Django, React,
-              and cloud-based deployments with Docker. I enjoy turning complex problems into clean, maintainable code
-              that delivers real-world impact.
-            </p>
-            <div class="d-flex justify-content-center flex-wrap gap-3 mb-4 mw-100">
-              <span class="badge bg-dark text-light rounded-pill p-2"
-                ><i class="bi bi-geo-alt-fill me-1"></i> Willing to relocate</span
-              >
-              <span class="badge bg-dark text-light rounded-pill p-2"
-                ><i class="bi bi-building-fill me-1"></i> Love to work onsite</span
-              >
-              <span class="badge bg-dark text-light rounded-pill p-2"
-                ><i class="bi bi-people-fill me-1"></i> Strong teamplayer</span
-              >
-            </div>
-            <div>
-              <a
-                href="#experience"
-                class="btn btn-primary btn-lg rounded-pill mx-2 scrollto"
-                >Experience</a
-              >
-              <a
-                href="#projects"
-                class="btn btn-primary btn-lg rounded-pill mx-2 scrollto"
-                >Projects</a
-              >
+        <div class="section-title">
+          <h2 class="display-5 fw-bold">Experience</h2>
+          <p class="lead text-muted">
+            We can stare at the skill of others, but remember, with the same amount of time and energy, we could
+            significantly improve our own performance. Often experience is the only difference.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
+            <h3 class="fw-bold float-left">European Spallation Source ERIC via evopro Innovation Kft</h3>
+            <div class="text-muted float-left small mb-1">
+              <span>2024 - Present</span> | <span>Automation Engineer | Sweden</span>
             </div>
           </div>
-          <animated-avatar
-            class="col-md-4"
-            width="400"
-            height="500"
-            image-base="./assets/img/avatar/body.png"
-            image-open="./assets/img/avatar/open.png"
-            image-half="./assets/img/avatar/half.png"
-            image-closed="./assets/img/avatar/closed.png">
-          </animated-avatar>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
+            <h3 class="fw-bold float-left">IBM International Shared Service Center Hungary LTD</h3>
+            <div class="text-muted float-left small mb-1">
+              <span>2019 - 2024</span> | <span>Application developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
+            <h3 class="fw-bold float-left">IBM International Shared Service Center Hungary LTD</h3>
+            <div class="text-muted float-left small mb-1"><span>2018 - 2019</span> | <span>Web developer</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
+            <h3 class="fw-bold">University of Dunaújváros</h3>
+            <div class="text-muted small mb-1">
+              <span>2013 - 2018</span> | <span>software engineer, framework-expert</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
+            <h3 class="fw-bold">Ecotech Zrt.</h3>
+            <div class="text-muted small mb-1">
+              <span>2011 - 2013</span> | <span>software engineer, framework-expert</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
+            <h3 class="fw-bold float-left">Onetech Kft.</h3>
+            <div class="text-muted float-left small mb-1">
+              <span>2011 - 2018</span> | <span>software engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile" aria-hidden="true"></i><span data-purecounter-start="0"
+                data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Companies</strong> served in total.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext" aria-hidden="true"></i><span data-purecounter-start="0"
+                data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong>, I took part in.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-headset" aria-hidden="true"></i><span data-purecounter-start="0"
+                data-purecounter-end="650" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Teaching</strong> to improve others and myself.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-people" aria-hidden="true"></i><span data-purecounter-start="0" data-purecounter-end="28"
+                data-purecounter-duration="1" class="purecounter"></span>
+              <p>
+                <strong>Certificates</strong> earned
+                <br />
+                <a href="https://www.credly.com/users/balazs-bencs/badges" target="_blank">Some of them on Credly<span
+                    class="visually-hidden"> (opens in a new tab)</span></a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-      <a
-        class="navbar-brand ms-4"
-        href="#">
-        <img
-          src="assets/img/profile-img.jpg"
-          id="navProfile"
-          alt="Balazs' profile" />
-        <span class="ml-1">Balázs Bencs</span>
-      </a>
-      <button
-        class="navbar-toggler me-4"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <section id="projects" class="projects section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="display-5 fw-bold">Projects</h2>
+          <p class="lead text-muted">
+            I have worked on many projects, some of them are open-source, some of them are private. Here are some
+            examples.
+          </p>
+        </div>
+        <my-projects-portfolio src="/assets/jsons/projects.json"> </my-projects-portfolio>
+      </div>
+    </section>
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="display-5 fw-bold">Skills</h2>
+          <p class="lead text-muted">"Do, or do Not. There is no try!" - <i>Master Yoda</i></p>
+        </div>
+        <skill-cloud src="/assets/jsons/skills.json" type="full-stack"></skill-cloud>
+      </div>
+    </section>
+    <section id="badges">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="display-5 fw-bold">Badges</h2>
+          <p class="lead text-muted">Some of my certifications and badges.</p>
+        </div>
+        <div class="row my-2">
+          <div class="col text-center">
+            <img class="mx-auto" src="https://www.codewars.com/users/bencsbalazs/badges/small"
+              alt="My rank badge on Codewars" />
+          </div>
+        </div>
+        <credly-badge-list></credly-badge-list>
+      </div>
+    </section>
+    <section id="otherssaid">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="display-5 fw-bold">Others said about Me</h2>
+          <p class="lead text-muted">...because if others trusted me, you can do so too.</p>
+        </div>
+        <show-feedbacks src="/assets/jsons/feedbacks.json"></show-feedbacks>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-dark text-white pt-5 pb-4" id="footer">
+    <div class="container text-center text-md-start">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Balázs Bencs</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto delimeter" />
+          <p>Passionate Full-Stack Developer creating modern and responsive web applications.</p>
+          <p>
+            <a href="/app/index.html"> - Learning materials and well-being</a>
+          </p>
+          <div class="mt-4">
+            <digital-clock></digital-clock>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-4 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Good to know</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto delimeter" />
+          <p>
+            <a href="/app/goodtoknow/geoid/">Distance of Makó and Jerusalem</a>
+          </p>
+          <p>
+            <a href="/app/goodtoknow/pi/">The first 5000 decimals of the π</a>
+          </p>
+          <p>
+            <a href="/app/goodtoknow/tabernacle/">The price of the Tabernacle tent</a>
+          </p>
+          <p>
+            <a href="/app/goodtoknow/timeline/">Swedish & Hungarian inventions</a>
+          </p>
+        </div>
+      </div>
+      <div class="text-center p-3 border-top border-secondary">
+        © 2009 -
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Copyright:
+        <a class="text-white" href="https://bencsbalazs.github.io/">Balázs Bencs</a>
+      </div>
+    </div>
+  </footer>
+  <a href="#" aria-label="Back to top" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short" aria-hidden="true">
+    </i></a>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/marked.min.js"></script>
+  <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  <script type="module" src="assets/js/main.js" defer></script>
+</body>
 
-      <div
-        class="collapse navbar-collapse"
-        id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a
-              href="#hero"
-              class="nav-link scrollto active"
-              ><span>Home</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="#experience"
-              class="nav-link scrollto"
-              ><span>Experience</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="#projects"
-              class="nav-link scrollto"
-              ><span>Projects</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="#skills"
-              class="nav-link scrollto"
-              ><span>Skills</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="#badges"
-              class="nav-link scrollto"
-              ><span>Badges</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="mailto:bencsbalazs@gmail.com?subject=Inquiry"
-              class="nav-link scrollto"
-              ><span>Hire Me</span></a
-            >
-          </li>
-        </ul>
-        <div class="navbar-nav navbar-right social-links d-flex flex-row justify-content-end">
-          <a
-            href="https://www.facebook.com/balazs.bencs.9"
-            target="_blank"
-            aria-label="Balázs on Facebook"
-            class="nav-link facebook"
-            ><i
-              class="bi bi-facebook"
-              aria-hidden="true"></i
-            ><span class="visually-hidden">(opens in a new tab)</span></a
-          >
-          <a
-            href="https://github.com/bencsbalazs"
-            aria-label="Me on Github"
-            target="_blank"
-            class="nav-link github"
-            ><i
-              class="bi bi-github"
-              aria-hidden="true"></i
-            ><span class="visually-hidden">(opens in a new tab)</span></a
-          >
-          <a
-            href="https://www.instagram.com/bencsbalazs/"
-            target="_blank"
-            class="nav-link instagram"
-            aria-label="Me on Instagram"
-            ><i
-              class="bi bi-instagram"
-              aria-hidden="true"></i
-            ><span class="visually-hidden">(opens in a new tab)</span></a
-          >
-          <a
-            href="https://www.linkedin.com/in/bencsbalazs/"
-            target="_blank"
-            aria-label="Me on Linkedin"
-            class="nav-link linkedin"
-            ><i
-              class="bi bi-linkedin"
-              aria-hidden="true"></i
-            ><span class="visually-hidden">(opens in a new tab)</span></a
-          >
-          <a
-            href="https://balazsbencs.blogspot.com/"
-            target="_blank"
-            aria-label="Me on Blogger"
-            class="nav-link blogger"
-            ><i
-              class="bi bi-journals"
-              aria-hidden="true"></i
-            ><span class="visually-hidden">(opens in a new tab)</span></a
-          >
-        </div>
-      </div>
-    </nav>
-    <main id="main">
-      <section
-        id="experience"
-        class="facts">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="display-5 fw-bold">Experience</h2>
-            <p class="lead text-muted">
-              We can stare at the skill of others, but remember, with the same amount of time and energy, we could
-              significantly improve our own performance. Often experience is the only difference.
-            </p>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
-              <h3 class="fw-bold float-left">European Spallation Source ERIC via evopro Innovation Kft</h3>
-              <div class="text-muted float-left small mb-1">
-                <span>2024 - Present</span> | <span>Automation Engineer | Sweden</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
-              <h3 class="fw-bold float-left">IBM International Shared Service Center Hungary LTD</h3>
-              <div class="text-muted float-left small mb-1">
-                <span>2019 - 2024</span> | <span>Application developer</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
-              <h3 class="fw-bold float-left">IBM International Shared Service Center Hungary LTD</h3>
-              <div class="text-muted float-left small mb-1"><span>2018 - 2019</span> | <span>Web developer</span></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
-              <h3 class="fw-bold">University of Dunaújváros</h3>
-              <div class="text-muted small mb-1">
-                <span>2013 - 2018</span> | <span>software engineer, framework-expert</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
-              <h3 class="fw-bold">Ecotech Zrt.</h3>
-              <div class="text-muted small mb-1">
-                <span>2011 - 2013</span> | <span>software engineer, framework-expert</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4">
-              <h3 class="fw-bold float-left">Onetech Kft.</h3>
-              <div class="text-muted float-left small mb-1">
-                <span>2011 - 2018</span> | <span>software engineer</span>
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up">
-              <div class="count-box">
-                <i
-                  class="bi bi-emoji-smile"
-                  aria-hidden="true"></i
-                ><span
-                  data-purecounter-start="0"
-                  data-purecounter-end="14"
-                  data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p><strong>Companies</strong> served in total.</p>
-              </div>
-            </div>
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="100">
-              <div class="count-box">
-                <i
-                  class="bi bi-journal-richtext"
-                  aria-hidden="true"></i
-                ><span
-                  data-purecounter-start="0"
-                  data-purecounter-end="25"
-                  data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p><strong>Projects</strong>, I took part in.</p>
-              </div>
-            </div>
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="count-box">
-                <i
-                  class="bi bi-headset"
-                  aria-hidden="true"></i
-                ><span
-                  data-purecounter-start="0"
-                  data-purecounter-end="650"
-                  data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p><strong>Hours Of Teaching</strong> to improve others and myself.</p>
-              </div>
-            </div>
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="300">
-              <div class="count-box">
-                <i
-                  class="bi bi-people"
-                  aria-hidden="true"></i
-                ><span
-                  data-purecounter-start="0"
-                  data-purecounter-end="28"
-                  data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>
-                  <strong>Certificates</strong> earned
-                  <br />
-                  <a
-                    href="https://www.credly.com/users/balazs-bencs/badges"
-                    target="_blank"
-                    >Some of them on Credly<span class="visually-hidden"> (opens in a new tab)</span></a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        id="projects"
-        class="projects section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="display-5 fw-bold">Projects</h2>
-            <p class="lead text-muted">
-              I have worked on many projects, some of them are open-source, some of them are private. Here are some
-              examples.
-            </p>
-          </div>
-          <my-projects-portfolio src="/assets/jsons/projects.json"> </my-projects-portfolio>
-        </div>
-      </section>
-      <section
-        id="skills"
-        class="skills section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="display-5 fw-bold">Skills</h2>
-            <p class="lead text-muted">"Do, or do Not. There is no try!" - <i>Master Yoda</i></p>
-          </div>
-          <skill-cloud
-            src="/assets/jsons/skills.json"
-            type="full-stack"></skill-cloud>
-        </div>
-      </section>
-      <section id="badges">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="display-5 fw-bold">Badges</h2>
-            <p class="lead text-muted">Some of my certifications and badges.</p>
-          </div>
-          <div class="row my-2">
-            <div class="col text-center">
-              <img
-                class="mx-auto"
-                src="https://www.codewars.com/users/bencsbalazs/badges/small"
-                alt="My rank badge on Codewars" />
-            </div>
-          </div>
-          <credly-badge-list></credly-badge-list>
-        </div>
-      </section>
-      <section id="otherssaid">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="display-5 fw-bold">Others said about Me</h2>
-            <p class="lead text-muted">...because if others trusted me, you can do so too.</p>
-          </div>
-          <show-feedbacks src="/assets/jsons/feedbacks.json"></show-feedbacks>
-        </div>
-      </section>
-    </main>
-    <footer
-      class="bg-dark text-white pt-5 pb-4"
-      id="footer">
-      <div class="container text-center text-md-start">
-        <div class="row">
-          <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold">Balázs Bencs</h6>
-            <hr class="mb-4 mt-0 d-inline-block mx-auto delimeter" />
-            <p>Passionate Full-Stack Developer creating modern and responsive web applications.</p>
-            <p>
-              <a href="/app/index.html"> - Learning materials and well-being</a>
-            </p>
-            <div class="mt-4">
-              <digital-clock></digital-clock>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-4 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold">Good to know</h6>
-            <hr class="mb-4 mt-0 d-inline-block mx-auto delimeter" />
-            <p>
-              <a href="/app/goodtoknow/geoid/">Distance of Makó and Jerusalem</a>
-            </p>
-            <p>
-              <a href="/app/goodtoknow/pi/">The first 5000 decimals of the π</a>
-            </p>
-            <p>
-              <a href="/app/goodtoknow/tabernacle/">The price of the Tabernacle tent</a>
-            </p>
-            <p>
-              <a href="/app/goodtoknow/timeline/">Swedish & Hungarian inventions</a>
-            </p>
-          </div>
-        </div>
-        <div class="text-center p-3 border-top border-secondary">
-          © 2009 -
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          Copyright:
-          <a
-            class="text-white"
-            href="https://bencsbalazs.github.io/"
-            >Balázs Bencs</a
-          >
-        </div>
-      </div>
-    </footer>
-    <a
-      href="#"
-      aria-label="Back to top"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i
-        class="bi bi-arrow-up-short"
-        aria-hidden="true">
-      </i
-    ></a>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/marked.min.js"></script>
-    <script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
-    <script
-      type="module"
-      src="assets/js/main.js"
-      defer></script>
-  </body>
 </html>

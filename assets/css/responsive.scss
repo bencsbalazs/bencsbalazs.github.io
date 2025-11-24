@@ -2,7 +2,7 @@
     #footer {
         position: static;
         width: auto;
-        padding-right: 20px 15px;
+        padding-right: $spacing-lg $spacing-md;
     }
 }
 
@@ -27,13 +27,15 @@
     .floating-card.grow {
         width: 80vw !important;
     }
+
     #hero h1 {
-        font-size: 28px;
+        font-size: 28px; // Keep px for specific media query adjustments or use rem
         line-height: 36px;
     }
+
     #hero h2 {
         font-size: 18px;
         line-height: 24px;
-        margin-bottom: 30px;
+        margin-bottom: $spacing-xl;
     }
 }

@@ -16,7 +16,7 @@ import { on, select } from './helpers.js';
 
     const navbarlinksActive = () => {
         const position = window.scrollY + 200;
-        for (let navbarlink of select('#navbar .scrollto', true)) {
+        for (let navbarlink of select('.nav-link.scrollto', true)) {
             if (!navbarlink.hash) return;
             const section = select(navbarlink.hash);
             if (!section) return;
