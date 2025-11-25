@@ -230,7 +230,7 @@ class SkillCloud extends HTMLElement {
      */
     _createSkillPill(skill) {
         const skillPill = document.createElement('span');
-        skillPill.className = 'badge rounded-pill bg-primary-soft text-primary m-1 skill-name';
+        skillPill.className = 'badge rounded-pill bg-primary-soft text-white m-1 skill-name';
         skillPill.textContent = skill.text;
         return skillPill;
     }
