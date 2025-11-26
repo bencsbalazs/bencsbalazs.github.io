@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Részletes 3-Bites Számláló (AND-OR Logika)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <detailed-counter></detailed-counter>
+
+    <script>
+        class DetailedCounter extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+
+                // State
+                this.state = {
+                    q0: 0, q1: 0, q2: 0,
+                    a: 1, // 1 = UP, 0 = DOWN
+                    clk: 0,
+                    autoRun: false
+                };
+
+                // Belső logikai állapotok a vizualizációhoz
+                this.internal = {
+                    and_up_0: 0,  // Q0 AND A
+                    and_down_0: 0,// !Q0 AND !A
+                    or_0: 0,      // Carry az 1-es bithez
+
+                    and_up_1: 0,
+                    and_down_1: 0,
+                    or_1: 0       // Carry a 2-es bithez
+                };
+            }
+
+            connectedCallback() {
+                this.render();
+                this.setupEventListeners();
+                this.calculateLogic(); // Kezdeti állapot számítása
+                this.updateVisuals();
+            }
+
+            calculateLogic() {
+                // Ez a függvény számolja ki a KOMBINÁCIÓS hálózat állapotát (az órajel előtt!)
+                // Ez felelős a "wires" színezéséért a D bemenetek előtt.
+
+                const { q0, q1, a } = this.state;
+
+                // Stage 0 -> 1 logika (Carry/Borrow generálás)
+                this.internal.and_up_0 = (q0 === 1 && a === 1) ? 1 : 0;
+                this.internal.and_down_0 = (q0 === 0 && a === 0) ? 1 : 0;
+                this.internal.or_0 = (this.internal.and_up_0 || this.internal.and_down_0) ? 1 : 0;
+
+                // Stage 1 -> 2 logika
+                // A következő fokozat akkor vált, ha az előző logika (or_0) igaz ÉS a jelenlegi bit is kész a váltásra
+                this.internal.and_up_1 = (q1 === 1 && this.internal.or_0 === 1 && a === 1) ? 1 : 0;
+                // Megjegyzés: A rajzodon egyszerűsített lánc van, de a szabványos láncolásnál:
+                // UP carry out = (Previous Carry) AND Q
+                // DOWN carry out = (Previous Carry) AND !Q
+                // A rajz hű követéséhez: A flip-flopok közötti kapuk állapota:
+
+                // Korrekció a vizualizációhoz a szabványos láncolt logika alapján:
+                const carryIn1 = this.internal.or_0; // Ez megy be a középső blokkba
+
+                // A középső blokk AND kapui:
+                // Felső AND: Q1 és (az előző fokozat carry-je, ha A=1) -> De a rajzon A direktben be van kötve.
+                // Egyszerűsítsünk a vizuális hűség kedvéért: 
+                // Az "or_0" jelzi, hogy az LSB átfordult-e (enable).
+
+                this.internal.and_up_1 = (q1 === 1 && a === 1 && carryIn1 === 1) ? 1 : 0;
+                this.internal.and_down_1 = (q1 === 0 && a === 0 && carryIn1 === 1) ? 1 : 0;
+                this.internal.or_1 = (this.internal.and_up_1 || this.internal.and_down_1) ? 1 : 0;
+            }
+
+            toggleClock() {
+                this.state.clk = 1;
+                this.updateVisuals();
+
+                setTimeout(() => {
+                    // Szinkron állapotfrissítés
+                    // Itt történik a tényleges számlálás
+                    let val = this.state.q0 + (this.state.q1 * 2) + (this.state.q2 * 4);
+
+                    if (this.state.a === 1) val = (val + 1) % 8;
+                    else {
+                        val = val - 1;
+                        if (val < 0) val = 7;
+                    }
+
+                    this.state.q0 = val & 1;
+                    this.state.q1 = (val >> 1) & 1;
+                    this.state.q2 = (val >> 2) & 1;
+
+                    this.state.clk = 0;
+                    this.calculateLogic(); // Újraszámoljuk a kapukat az új Q értékekkel
+                    this.updateVisuals();
+                }, 150);
+            }
+
+            setupEventListeners() {
+                const root = this.shadowRoot;
+                root.getElementById('btn-step').addEventListener('click', () => this.toggleClock());
+
+                const btnAuto = root.getElementById('btn-auto');
+                btnAuto.addEventListener('click', () => {
+                    this.state.autoRun = !this.state.autoRun;
+                    btnAuto.textContent = this.state.autoRun ? "Stop ⏹" : "Auto Play ▶";
+                    btnAuto.classList.toggle('active', this.state.autoRun);
+
+                    if (this.state.autoRun) this.timer = setInterval(() => this.toggleClock(), 1200); // Lassabb, hogy látszódjon a logika
+                    else clearInterval(this.timer);
+                });
+
+                root.getElementById('switch-a').addEventListener('change', (e) => {
+                    this.state.a = e.target.checked ? 1 : 0;
+                    this.calculateLogic(); // Azonnal frissíteni kell a kapukat, ha A változik!
+                    this.updateVisuals();
+                });
+            }
+
+            updateVisuals() {
+                const root = this.shadowRoot;
+                const setClass = (id, active) => {
+                    const el = root.getElementById(id);
+                    if (el) el.classList.toggle('high', active);
+                };
+
+                // Main Wires
+                setClass('wire-a', this.state.a);
+                setClass('wire-not-a', !this.state.a);
+                setClass('wire-clk', this.state.clk);
+
+                // Flip Flop Outputs
+                setClass('wire-q0', this.state.q0);
+                setClass('wire-nq0', !this.state.q0);
+                setClass('wire-q1', this.state.q1);
+                setClass('wire-nq1', !this.state.q1);
+                setClass('wire-q2', this.state.q2);
+
+                // LOGIC GATES VISUALIZATION (A kérés lényege)
+                // Stage 0->1 Gates
+                setClass('gate-and-0-up', this.internal.and_up_0);
+                setClass('wire-and-0-up-out', this.internal.and_up_0);
+
+                setClass('gate-and-0-down', this.internal.and_down_0);
+                setClass('wire-and-0-down-out', this.internal.and_down_0);
+
+                setClass('gate-or-0', this.internal.or_0);
+                setClass('wire-or-0-out', this.internal.or_0);
+
+                // Stage 1->2 Gates
+                setClass('gate-and-1-up', this.internal.and_up_1);
+                setClass('wire-and-1-up-out', this.internal.and_up_1);
+
+                setClass('gate-and-1-down', this.internal.and_down_1);
+                setClass('wire-and-1-down-out', this.internal.and_down_1);
+
+                setClass('gate-or-1', this.internal.or_1);
+                setClass('wire-or-1-out', this.internal.or_1);
+
+                // FF Active States
+                root.getElementById('ff0').classList.toggle('active-ff', this.state.q0);
+                root.getElementById('ff1').classList.toggle('active-ff', this.state.q1);
+                root.getElementById('ff2').classList.toggle('active-ff', this.state.q2);
+
+                // Displays
+                const val = this.state.q0 + (this.state.q1 * 2) + (this.state.q2 * 4);
+                root.getElementById('display-number').textContent = val;
+                root.getElementById('led-0').classList.toggle('on', this.state.q0);
+                root.getElementById('led-1').classList.toggle('on', this.state.q1);
+                root.getElementById('led-2').classList.toggle('on', this.state.q2);
+            }
+
+            render() {
+                this.shadowRoot.innerHTML = `
+            <style>
+                :host {
+                    display: block;
+                    background: #222;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+                    width: 900px;
+                    max-width: 100%;
+                }
+                .container { display: flex; flex-direction: column; align-items: center; }
+                
+                svg {
+                    width: 100%;
+                    height: 400px;
+                    background: #1e1e1e;
+                    border: 1px solid #333;
+                    border-radius: 4px;
+                }
+
+                /* Wires & Signals */
+                .wire {
+                    fill: none;
+                    stroke: #444;
+                    stroke-width: 2;
+                    transition: stroke 0.3s;
+                }
+                .wire.high {
+                    stroke: #0f0;
+                    stroke-width: 3;
+                    filter: drop-shadow(0 0 5px #0f0);
+                    stroke-dasharray: 8,4;
+                    animation: flow 0.5s linear infinite;
+                }
+                @keyframes flow { to { stroke-dashoffset: -12; } }
+
+                /* Components */
+                .gate {
+                    fill: #333;
+                    stroke: #777;
+                    stroke-width: 2;
+                }
+                .gate.high {
+                    stroke: #0f0;
+                    fill: #1a331a;
+                }
+                .ff-box {
+                    fill: #2a2a2a;
+                    stroke: #aaa;
+                    stroke-width: 2;
+                }
+                .ff-box.active-ff {
+                    stroke: #0f0;
+                    box-shadow: 0 0 10px #0f0;
+                }
+                text {
+                    fill: #888;
+                    font-family: monospace;
+                    font-size: 12px;
+                    pointer-events: none;
+                }
+                .label-gate { font-size: 10px; fill: #666; }
+
+                /* Controls */
+                .panel {
+                    margin-top: 15px;
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: space-between;
+                    background: #2a2a2a;
+                    padding: 10px 20px;
+                    border-radius: 8px;
+                    box-sizing: border-box;
+                }
+                button {
+                    background: #444; color: #fff; border: 0; padding: 8px 16px;
+                    cursor: pointer; border-radius: 4px; font-weight: bold;
+                }
+                button.active { background: #c00; }
+                button:hover { background: #555; }
+                
+                .leds { display: flex; gap: 8px; }
+                .led { width: 20px; height: 20px; background: #333; border-radius: 50%; border: 1px solid #555; }
+                .led.on { background: #0f0; box-shadow: 0 0 10px #0f0; }
+                
+                .seg { font-size: 32px; font-family: 'Courier New', monospace; color: #0f0; font-weight: bold; }
+                .ctrl-group { display: flex; align-items: center; gap: 10px; }
+            </style>
+
+            <div class="container">
+                <svg viewBox="0 0 900 400">
+                    <defs>
+                        <path id="shape-and" d="M0,0 L15,0 A15,15 0 0 1 15,30 L0,30 Z" />
+                        <path id="shape-or" d="M0,0 Q15,0 30,15 Q15,30 0,30 Q10,15 0,0 Z" />
+                    </defs>
+
+                    <text x="10" y="375">A (Control)</text>
+                    <line id="wire-a" x1="40" y1="370" x2="850" y2="370" class="wire" />
+                    
+                    <text x="10" y="395">!A</text>
+                    <line id="wire-not-a" x1="40" y1="390" x2="850" y2="390" class="wire" />
+                    
+                    <circle cx="60" cy="380" r="3" stroke="#777" fill="none"/>
+                    <line x1="60" y1="370" x2="60" y2="377" class="wire" style="stroke-width:1"/>
+                    <line x1="60" y1="383" x2="60" y2="390" class="wire" style="stroke-width:1"/>
+
+                    <text x="10" y="340">CLK</text>
+                    <line id="wire-clk" x1="40" y1="335" x2="800" y2="335" class="wire" />
+
+                    <g transform="translate(50, 50)">
+                        <rect id="ff0" x="0" y="50" width="60" height="100" class="ff-box" />
+                        <text x="20" y="70">D</text>
+                        <text x="45" y="70">Q</text>
+                        <text x="45" y="130">!Q</text>
+                        <text x="15" y="140" style="font-size:10px">FF0</text>
+                        
+                        <line id="wire-q0" x1="60" y1="70" x2="200" y2="70" class="wire" />
+                        <line id="wire-nq0" x1="60" y1="130" x2="200" y2="130" class="wire" />
+
+                        <line x1="30" y1="285" x2="30" y2="150" class="wire" />
+                        <path d="M25,150 L30,140 L35,150" fill="none" stroke="#777" />
+                    </g>
+
+                    <g transform="translate(200, 50)">
+                        <use href="#shape-and" x="0" y="55" class="gate" id="gate-and-0-up" />
+                        <text x="5" y="50" class="label-gate">AND</text>
+                        
+                        <line x1="0" y1="70" x2="-50" y2="70" class="wire" /> <path d="M 0,60 L -20,60 L -20,320" class="wire" style="stroke-width:1; stroke:#555" /> <circle cx="-20" cy="320" r="2" fill="#777" />
+
+                        <use href="#shape-and" x="0" y="115" class="gate" id="gate-and-0-down" />
+                        <text x="5" y="155" class="label-gate">AND</text>
+
+                        <line x1="0" y1="130" x2="-50" y2="130" class="wire" /> <path d="M 0,120 L -10,120 L -10,340" class="wire" style="stroke-width:1; stroke:#555" /> <circle cx="-10" cy="340" r="2" fill="#777" />
+
+                        <use href="#shape-or" x="60" y="85" class="gate" id="gate-or-0" />
+                        <text x="65" y="80" class="label-gate">OR</text>
+
+                        <path id="wire-and-0-up-out" d="M 30,70 L 45,70 L 45,90 L 60,90" class="wire" />
+                        <path id="wire-and-0-down-out" d="M 30,130 L 45,130 L 45,110 L 60,110" class="wire" />
+
+                        <line id="wire-or-0-out" x1="90" y1="100" x2="130" y2="100" class="wire" />
+                    </g>
+
+                    <g transform="translate(330, 50)">
+                        <rect id="ff1" x="0" y="50" width="60" height="100" class="ff-box" />
+                        <text x="20" y="70">D</text>
+                        <text x="45" y="70">Q</text>
+                        <text x="45" y="130">!Q</text>
+                        <text x="15" y="140" style="font-size:10px">FF1</text>
+                        
+                        <line id="wire-q1" x1="60" y1="70" x2="200" y2="70" class="wire" />
+                        <line id="wire-nq1" x1="60" y1="130" x2="200" y2="130" class="wire" />
+                        
+                        <line x1="-30" y1="100" x2="-10" y2="100" class="wire" /> <line x1="30" y1="285" x2="30" y2="150" class="wire" />
+                         <path d="M25,150 L30,140 L35,150" fill="none" stroke="#777" />
+                    </g>
+
+                    <g transform="translate(480, 50)">
+                         <use href="#shape-and" x="0" y="55" class="gate" id="gate-and-1-up" />
+                        
+                        <line x1="0" y1="70" x2="-50" y2="70" class="wire" /> <path d="M 0,60 L -20,60 L -20,320" class="wire" style="stroke-width:1; stroke:#555" /> <path d="M 0,65 L -100,65 L -100,50 L -160,50" class="wire" style="opacity:0.3" /> 
+
+                        <use href="#shape-and" x="0" y="115" class="gate" id="gate-and-1-down" />
+                        
+                         <line x1="0" y1="130" x2="-50" y2="130" class="wire" /> <path d="M 0,120 L -10,120 L -10,340" class="wire" style="stroke-width:1; stroke:#555" /> <use href="#shape-or" x="60" y="85" class="gate" id="gate-or-1" />
+
+                        <path id="wire-and-1-up-out" d="M 30,70 L 45,70 L 45,90 L 60,90" class="wire" />
+                        <path id="wire-and-1-down-out" d="M 30,130 L 45,130 L 45,110 L 60,110" class="wire" />
+
+                        <line id="wire-or-1-out" x1="90" y1="100" x2="130" y2="100" class="wire" />
+                    </g>
+
+                    <g transform="translate(610, 50)">
+                        <rect id="ff2" x="0" y="50" width="60" height="100" class="ff-box" />
+                        <text x="20" y="70">D</text>
+                        <text x="45" y="70">Q</text>
+                        <text x="45" y="130">!Q</text>
+                         <text x="15" y="140" style="font-size:10px">FF2</text>
+                        
+                        <line id="wire-q2" x1="60" y1="70" x2="100" y2="70" class="wire" />
+                        
+                         <line x1="30" y1="285" x2="30" y2="150" class="wire" />
+                         <path d="M25,150 L30,140 L35,150" fill="none" stroke="#777" />
+                    </g>
+                </svg>
+
+                <div class="panel">
+                    <div class="ctrl-group">
+                        <button id="btn-step">Step Clock</button>
+                        <button id="btn-auto">Auto Play ▶</button>
+                    </div>
+                    
+                    <div class="ctrl-group">
+                        <label style="cursor:pointer">
+                            <input type="checkbox" id="switch-a" checked>
+                            Control (A) - UP/DOWN
+                        </label>
+                    </div>
+
+                    <div class="ctrl-group">
+                        <div class="seg" id="display-number">0</div>
+                        <div class="leds">
+                            <div class="led" id="led-2"></div>
+                            <div class="led" id="led-1"></div>
+                            <div class="led" id="led-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+            }
+        }
+        customElements.define('detailed-counter', DetailedCounter);
+    </script>
+
+</body>
+
+</html>

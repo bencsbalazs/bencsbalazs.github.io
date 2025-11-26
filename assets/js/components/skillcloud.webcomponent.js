@@ -74,17 +74,17 @@ class SkillCloud extends HTMLElement {
      * @private
      */
     _loadSkillsAsCloud(skillData) {
-        let allSkills = [];
-        for (const value of Object.values(skillData)) {
-            value.skills.forEach(group => {
-                allSkills.push(...group.skills);
-            });
-        }
-
-        const shuffledSkills = [...allSkills].sort(() => Math.random() - 0.5);
-        const types = ['primary', 'secondary', 'success', 'danger', 'warning', 'info'];
+        const shuffledSkills = skillData.sort(() => 0.5 - Math.random());
+        const types = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
 
         const style = `
+            .tag-cloud {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
             .badge {
                 transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             }
@@ -122,8 +122,8 @@ class SkillCloud extends HTMLElement {
         tagElement.className = `badge rounded-pill bg-${types[index % types.length]} mx-2 my-2 p-3`;
         tagElement.textContent = skill.text;
         tagElement.style.fontSize = `${fontSize}rem`;
-        tagElement.setAttribute('data-aos', 'zoom-in');
-        tagElement.setAttribute('data-aos-delay', `${index * 50}`);
+        tagElement.dataset.aos = 'zoom-in';
+        tagElement.dataset.aosDelay = `${index * 50}`;
         return tagElement;
     }
 
@@ -197,7 +197,7 @@ class SkillCloud extends HTMLElement {
         h5.textContent = category.title;
         cardBody.appendChild(h5);
 
-        category.skills.forEach(group => {
+        for (const group of category.skills) {
             if (group.groupName) {
                 const groupName = document.createElement('p');
                 groupName.className = 'text-muted fw-light mb-2';
@@ -208,11 +208,11 @@ class SkillCloud extends HTMLElement {
             const skillContainer = document.createElement('div');
             skillContainer.className = 'd-flex flex-wrap justify-content-center';
 
-            group.skills.forEach(skill => {
+            for (const skill of group.skills) {
                 skillContainer.appendChild(this._createSkillPill(skill));
-            });
+            }
             cardBody.appendChild(skillContainer);
-        });
+        }
 
         card.appendChild(cardBody);
         column.appendChild(card);
