@@ -124,8 +124,8 @@ class SkillCloud extends HTMLElement {
         tagElement.className = `badge rounded-pill bg-${types[index % types.length]} mx-2 my-2 p-3`;
         tagElement.textContent = skill.text;
         tagElement.style.fontSize = `${fontSize}rem`;
-        tagElement.setAttribute('data-aos', 'zoom-in');
-        tagElement.setAttribute('data-aos-delay', `${index * 50}`);
+        tagElement.dataset.aos = 'zoom-in';
+        tagElement.dataset.aosDelay = `${index * 50}`;
         return tagElement;
     }
 
