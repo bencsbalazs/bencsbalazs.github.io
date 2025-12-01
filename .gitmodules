@@ -4,3 +4,6 @@
 [submodule "assets/backend"]
 	path = assets/backend
 	url = https://github.com/bencsbalazs/backend-gemini.git
+[submodule "app/goodtoknow/pi"]
+	path = app/goodtoknow/pi
+	url = https://github.com/bencsbalazs/calculations-of-pi.git

@@ -16,7 +16,7 @@ import { on, select } from './helpers.js';
 
     const navbarlinksActive = () => {
         const position = window.scrollY + 200;
-        for (let navbarlink of select('#navbar .scrollto', true)) {
+        for (let navbarlink of select('.nav-link.scrollto', true)) {
             if (!navbarlink.hash) return;
             const section = select(navbarlink.hash);
             if (!section) return;
@@ -84,14 +84,7 @@ import { on, select } from './helpers.js';
 
             const answerContainer = document.getElementById('aiAnswer')
             answerContainer.classList.add("response")
-            if (document.querySelector('#aiAnswer > h1')) {
-                const storage = document.querySelector('#aiAnswer > *')
-                answerContainer.innerHTML = marked.parse(e.detail.message);
-            } else {
-                answerContainer.innerHTML = marked.parse(e.detail.message);
-            }
-
-
+            answerContainer.innerHTML = marked.parse(e.detail.message);
         });
 
         if (globalThis.location.hash && select(globalThis.location.hash)) {

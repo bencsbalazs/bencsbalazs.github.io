@@ -1,0 +1,111 @@
+// Google Cloud Style Components
+
+// Buttons
+.btn {
+    font-family: $font-family-base;
+    font-weight: 500;
+    text-transform: none; // Google uses sentence case or title case, not all caps
+    letter-spacing: 0.25px;
+    border-radius: 4px; // Slightly rounded
+    padding: 8px 24px;
+    transition: $transition-base;
+    box-shadow: none;
+    border: 1px solid transparent;
+
+    &:hover {
+        transform: none;
+        box-shadow: $shadow-1;
+    }
+
+    &:active {
+        box-shadow: none;
+        background-color: darken($google-blue, 10%);
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+        background-color: $google-blue-dark;
+        color: $white;
+    }
+}
+
+.btn-secondary {
+    background-color: $white;
+    color: $primary;
+    border: 1px solid $border-color;
+
+    &:hover {
+        background-color: $google-grey-100;
+        color: $google-blue-dark;
+    }
+}
+
+// Cards
+.card {
+    background: $surface;
+    color: $text-secondary;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-1;
+    border: 1px solid $border-color;
+    transition: $transition-base;
+
+    &:hover {
+        background: $surface;
+        box-shadow: $shadow-2;
+        transform: translateY(-2px);
+    }
+}
+
+// Navbar
+.navbar {
+    background: rgba(0, 0, 0, 0.7) !important;
+    border-bottom: 1px solid $border-color;
+    box-shadow: $shadow-1;
+
+    .navbar-brand,
+    .nav-link {
+        color: $google-grey-100 !important;
+        font-family: $font-family-base;
+        font-weight: 500;
+
+        &:hover {
+            color: $google-blue-light !important;
+        }
+    }
+
+    .nav-link.active {
+        color: $google-blue-light !important;
+        font-weight: 700;
+        border-bottom: 2px solid $google-blue-light;
+    }
+}
+
+// Badges / Chips
+.badge {
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    background-color: $google-grey-100;
+    color: $text-secondary;
+    border: 1px solid $border-color;
+}
+
+.badge.bg-dark {
+    background-color: $text-primary !important;
+    color: $white !important;
+}
+
+// Sections
+.section-title h2 {
+    font-family: $font-family-display;
+    color: $text-primary;
+}
+
+.section-bg {
+    background-color: $surface-alt;
+}

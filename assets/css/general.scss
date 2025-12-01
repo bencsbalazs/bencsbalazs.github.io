@@ -1,5 +1,28 @@
+:root {
+    --bs-primary: #{$google-blue};
+    --bs-secondary: #{$google-grey-700};
+    --bs-body-bg: #{$white};
+    --bs-body-color: #{$google-grey-700};
+    --bs-border-color: #{$google-grey-300};
+}
+
+body {
+    font-family: $font-family-base;
+    color: $text-secondary;
+    background: $background;
+    min-height: 100vh;
+    position: relative;
+}
+
 a {
     text-decoration: none;
+    color: $primary;
+    transition: $transition-base;
+
+    &:hover {
+        color: $google-blue-dark;
+        text-decoration: underline;
+    }
 }
 
 iframe {
@@ -7,14 +30,6 @@ iframe {
     margin: 0 auto;
 }
 
-#forkMeOnGithub {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 10em;
-    height: 10em;
-    z-index: 999;
-}
 
 section {
     padding: clamp(2.5rem, 5vw, 3.75rem) 0;
@@ -22,31 +37,23 @@ section {
 }
 
 .section-bg {
-    background: hsl(218, 89%, 98%);
+    background-color: $surface-alt;
 }
 
 .section-title {
     p {
         margin-bottom: 0;
+        color: $text-secondary;
     }
 
     h2 {
+        font-family: $font-family-display;
         font-size: clamp(1.75rem, 1.6rem + 0.5vw, 2rem);
-        font-weight: bold;
+        font-weight: 500;
         margin-bottom: 0.625rem;
         padding-bottom: 0.625rem;
-        border-bottom: solid 2px hsl(0, 0%, 0%, 0.6);
         position: relative;
-
-        &::after {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 3.125rem;
-            height: 3px;
-            bottom: 0;
-            left: 0;
-        }
+        color: $text-primary;
     }
 }
 
@@ -58,7 +65,7 @@ section {
 
 .delimeter {
     width: 3.75rem;
-    background-color: hsl(211, 98%, 52%);
+    background-color: $primary;
     height: 0.125rem;
 }
 
@@ -71,48 +78,58 @@ nav {
     }
 
     a {
-        color: hsl(0, 0%, 100%, 0.55);
+        color: $text-secondary;
         transition: color 0.3s ease;
+        font-weight: 500;
 
         &:hover {
-            color: hsl(0, 0%, 100%);
+            color: $primary;
         }
     }
 }
 
 #footer {
+    background: $surface-alt;
+    color: $text-secondary;
+    border-top: 1px solid $border-color;
+
     a {
-        color: hsl(0, 0%, 100%, 0.55);
+        color: $primary;
         transition: color 0.3s ease;
 
         &:hover {
-            color: hsl(0, 0%, 100%);
+            color: $google-blue-dark;
         }
+    }
+
+    .text-white {
+        color: $text-primary !important;
     }
 }
 
 #hero {
     width: 100%;
     min-height: 100vh;
+    color: $text-primary;
+    background-color: $white;
 
     h1 {
         margin: 0 0 0.625rem 0;
         font-size: clamp(2.5rem, 1.5rem + 5vw, 4rem);
         font-weight: 700;
         line-height: 1.2;
-        text-shadow: 0 0 .5em hsl(0, 0%, 100%), 0 0 .5em hsl(0, 0%, 100%);
+        color: $text-primary;
     }
 
     p {
         margin-bottom: 3.125rem;
         font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
-        text-shadow: 0 0 4px hsl(0, 0%, 100%);
+        color: $text-secondary;
 
         span {
-            text-shadow: 0 0 .5em hsl(0, 0%, 100%), 0 0 .5em hsl(0, 0%, 100%);
             padding-bottom: 0.25rem;
             letter-spacing: 0.0625rem;
-            border-bottom: 0.1875rem solid hsl(0, 0%, 0%);
+            border-bottom: 0.1875rem solid $primary;
         }
     }
 
@@ -127,10 +144,11 @@ nav {
 
     .response {
         position: relative;
-        background: #f0f0f0;
-        border-radius: 0.4rem;
-        border: solid 1px;
-        box-shadow: 0 0 0.2rem;
+        background: $surface;
+        color: $text-secondary;
+        border-radius: $border-radius-md;
+        border: 1px solid $border-color;
+        box-shadow: $shadow-1;
         z-index: 0;
         max-height: 80vh;
         overflow-y: auto;
@@ -144,12 +162,11 @@ nav {
         right: -1rem;
         width: 2rem;
         height: 2rem;
-        background: #f0f0f0;
+        background: $surface;
         transform: translateY(-50%) rotate(-45deg);
         z-index: 0;
-        box-shadow: 1px 1px 1px;
-        border-right: solid 1px #000;
-        border-bottom: solid 1px #000;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
     }
 
     .showAnswer {
@@ -159,9 +176,12 @@ nav {
     article {
         max-width: 85vw;
         font-size: 1.2rem;
-        background: hsl(0, 0%, 100%, 0.8);
-        text-shadow: 0 0 1rem hsl(0, 0%, 100%);
+        background: $surface;
+        color: $text-secondary;
         text-align: justify;
+        padding: $spacing-md;
+        border-radius: $border-radius-md;
+        border: 1px solid $border-color;
     }
 
     .sociallinks {
@@ -173,6 +193,11 @@ nav {
         a {
             float: left;
             font-size: 1.5rem;
+            color: $text-secondary;
+
+            &:hover {
+                color: $primary;
+            }
         }
 
         a:not(:first-child) {
@@ -187,12 +212,17 @@ nav {
     .count-box {
         padding: 1.875rem;
         width: 100%;
+        background: $surface;
+        box-shadow: $shadow-1;
+        border-radius: $border-radius-md;
+        border: 1px solid $border-color;
 
         i {
             display: block;
             font-size: 2.75rem;
             float: left;
             line-height: 0;
+            color: $primary;
         }
 
         span {
@@ -201,12 +231,14 @@ nav {
             display: block;
             font-weight: 700;
             margin-left: 3.75rem;
+            color: $text-primary;
         }
 
         p {
             padding-top: 0.9375rem;
             margin: 0 0 0 3.75rem;
             font-size: 0.875rem;
+            color: $text-secondary;
         }
 
         a {
@@ -215,6 +247,7 @@ nav {
             margin-top: 1.25rem;
             font-size: 0.9375rem;
             transition: ease-in-out 0.3s;
+            color: $primary;
         }
     }
 }
@@ -222,11 +255,12 @@ nav {
 .services {
     .icon-box {
         &:hover .icon {
-            background: hsl(0, 0%, 100%);
-            color: var(--bs-primary);
+            background: $primary;
+            color: $white;
+            border-color: $primary;
 
             i {
-                color: var(--bs-primary);
+                color: $white;
             }
         }
 
@@ -235,11 +269,15 @@ nav {
     .icon {
         width: 3rem;
         height: 3rem;
-        background: var(--bs-primary);
-        border: solid 1px var(--bs-primary);
+        background: $surface-alt;
+        border: 1px solid $border-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         i {
-            color: hsl(0, 0%, 100%);
+            color: $primary;
             font-size: 1.5rem;
             line-height: 0;
         }
@@ -249,11 +287,13 @@ nav {
         font-weight: 700;
         font-size: clamp(1rem, 0.9rem + 0.25vw, 1.125rem);
         margin-left: 3.2rem;
+        color: $text-primary;
     }
 
     .description {
         line-height: 1.4;
         margin-left: 3.2rem;
+        color: $text-secondary;
     }
 }
 

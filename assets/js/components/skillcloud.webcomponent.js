@@ -17,6 +17,7 @@ class SkillCloud extends HTMLElement {
      */
     _setupStylesAndScripts() {
         this.bootstrapCSS = this._createLink("/assets/vendor/bootstrap/css/bootstrap.min.css", "stylesheet");
+        this.customCSS = this._createLink("/assets/css/style.css", "stylesheet");
         this.bootstrapIcons = this._createLink("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css", "stylesheet");
         this.bootstrapJS = this._createScript("/assets/vendor/bootstrap/js/bootstrap.bundle.min.js");
     }
@@ -97,6 +98,7 @@ class SkillCloud extends HTMLElement {
         `;
 
         this.shadowRoot.innerHTML = `<style>${style}</style><div class="tag-cloud d-flex flex-wrap justify-content-center align-items-center p-3"></div>`;
+        this.shadowRoot.prepend(this.customCSS);
         this.shadowRoot.prepend(this.bootstrapCSS);
         this.shadowRoot.appendChild(this.bootstrapJS);
 
@@ -122,8 +124,8 @@ class SkillCloud extends HTMLElement {
         tagElement.className = `badge rounded-pill bg-${types[index % types.length]} mx-2 my-2 p-3`;
         tagElement.textContent = skill.text;
         tagElement.style.fontSize = `${fontSize}rem`;
-        tagElement.setAttribute('data-aos', 'zoom-in');
-        tagElement.setAttribute('data-aos-delay', `${index * 50}`);
+        tagElement.dataset.aos = 'zoom-in';
+        tagElement.dataset.aosDelay = `${index * 50}`;
         return tagElement;
     }
 
@@ -162,6 +164,7 @@ class SkillCloud extends HTMLElement {
             </div>
         `;
 
+        this.shadowRoot.prepend(this.customCSS);
         this.shadowRoot.prepend(this.bootstrapCSS);
         this.shadowRoot.prepend(this.bootstrapIcons);
         this.shadowRoot.appendChild(this.bootstrapJS);
@@ -227,7 +230,7 @@ class SkillCloud extends HTMLElement {
      */
     _createSkillPill(skill) {
         const skillPill = document.createElement('span');
-        skillPill.className = 'badge rounded-pill bg-primary-soft text-primary m-1 skill-name';
+        skillPill.className = 'badge rounded-pill bg-primary-soft text-white m-1 skill-name';
         skillPill.textContent = skill.text;
         return skillPill;
     }

@@ -37,18 +37,19 @@ class ProjectsSection extends HTMLElement {
         const allTags = Array.from(new Set(this.projects.flatMap(p => p.tags))).sort();
         this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/assets/css/style.css">
             <style>
-                .card { transition: all 0.4s ease; cursor: pointer; }
-                .card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important; }
-                .card .description { display: block; height: 6rem; overflow: hidden; text-overflow: ellipsis; }
+                .card { transition: all 0.2s ease-in-out; cursor: pointer; border: none; background: white; border: 1px solid #dadce0; color: #3c4043; }
+                .card:hover { transform: translateY(-1px); box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15); } 
+                .card .description { display: block; height: 6rem; overflow: hidden; text-overflow: ellipsis; color: #5f6368; }
                 .card .tagList { height: 3.5rem; overflow: hidden; }
-                .floating-card { position: fixed; z-index: 1000; margin: 0; transition: all 0.4s ease; overflow: hidden; background: white; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
-                .floating-card .description { height: auto; overflow: visible; display: block; }
+                .floating-card { position: fixed; z-index: 1000; margin: 0; transition: all 0.4s ease; overflow: hidden; background: white; box-shadow: 0 4px 8px 3px rgba(60,64,67,0.15); border: 1px solid #dadce0; color: #3c4043; border-radius: 8px; }
+                .floating-card .description { height: auto; overflow: visible; display: block; color: #3c4043; }
                 .floating-card.centered { top: 50% !important; left: 50% !important; transform: translate(-50%, -50%); }
                 .floating-card.grow { margin-top: 5vh !important; width: 50vw !important; height: 80vh !important; overflow: auto; padding: 1rem; }
                 @media (max-width: 768px) { .floating-card.grow { width: 95vw !important; height: 90vh !important; margin-top: 2.5vh !important; } }
-                .arrow { width: 50px; height: 50px; background-color: rgba(33, 37, 41, 0.6); color: white; cursor: pointer; border-radius: 50%; z-index: 1001; transition: background-color 0.2s ease; }
-                .arrow:hover { background-color: rgba(33, 37, 41, 0.8); }
+                .arrow { width: 50px; height: 50px; background-color: white; color: #5f6368; cursor: pointer; border-radius: 50%; z-index: 1001; transition: all 0.2s ease; border: 1px solid #dadce0; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); }
+                .arrow:hover { background-color: #f8f9fa; transform: scale(1.1); color: #1a73e8; }
                 .floating-card .btn-close { position: absolute; top: 1rem; right: 1rem; z-index: 1001; }
             </style>
 
