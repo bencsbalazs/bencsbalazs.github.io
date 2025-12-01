@@ -7,3 +7,6 @@
 [submodule "app/goodtoknow/pi"]
 	path = app/goodtoknow/pi
 	url = https://github.com/bencsbalazs/calculations-of-pi.git
+[submodule "app/goodtoknow/geoid"]
+	path = app/goodtoknow/geoid
+	url = https://github.com/bencsbalazs/distance-on-geoid.git
