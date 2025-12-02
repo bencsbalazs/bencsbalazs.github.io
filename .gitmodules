@@ -13,3 +13,6 @@
 [submodule "app/goodtoknow/tabernacle"]
 	path = app/goodtoknow/tabernacle
 	url = https://github.com/bencsbalazs/tabernacle.git
+[submodule "app/goodtoknow/timeline"]
+	path = app/goodtoknow/timeline
+	url = https://github.com/bencsbalazs/timeline.git
