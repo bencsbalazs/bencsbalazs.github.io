@@ -10,3 +10,6 @@
 [submodule "app/goodtoknow/geoid"]
 	path = app/goodtoknow/geoid
 	url = https://github.com/bencsbalazs/distance-on-geoid.git
+[submodule "app/goodtoknow/tabernacle"]
+	path = app/goodtoknow/tabernacle
+	url = https://github.com/bencsbalazs/tabernacle.git
