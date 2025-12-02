@@ -1,4 +1,5 @@
 {
     "WhiteSource Advise.Diff.BaseBranch": "main",
-    "djlint.showInstallError": false
+    "djlint.showInstallError": false,
+    "liveServer.settings.port": 5501
 }
