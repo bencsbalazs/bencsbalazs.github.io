@@ -19,3 +19,6 @@
 [submodule "app/wellbeing/autogen"]
 	path = app/wellbeing/autogen
 	url = https://github.com/bencsbalazs/autogen.git
+[submodule "app/wellbeing/mantras"]
+	path = app/wellbeing/mantras
+	url = https://github.com/bencsbalazs/mantras.git
