@@ -21,23 +21,47 @@ class AnimatedAvatar extends HTMLElement {
     this.shadowRoot.innerHTML = `
     <style>
     #prompt-input {
-      border-radius: .4rem;
-      width: 70%;
-      margin: .2rem;
-      padding: .2rem;
-      box-shadow: 0 0 .2rem;
-      background: rgba(0, 0, 0, .2);
-    }
-    #send-button {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      z-index: +1;
-    }
-    #send-button:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-    }
+        width: 70%;
+        flex-grow: 1;
+        border-radius: 1.5rem;
+        border: 1px solid #ccc;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        outline: none;
+        transition: box-shadow 0.2s;
+      }
+      #prompt-input:focus {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        border-color: #0d6efd;
+      }
+
+      #send-button {
+        float: right;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: none;
+        background-color: #0d6efd;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s, background-color 0.2s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      #send-button:hover {
+        transform: scale(1.1);
+        background-color: #0b5ed7;
+      }
+      #send-button:active {
+        transform: scale(0.95);
+      }
+      #send-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        transform: none;
+      }
     </style>
     <h5>I'm an AI agent to answer about Balázs Bencs and his works with the power of Gemini AI.</h5>
     <div id="container"></div>
@@ -46,22 +70,26 @@ class AnimatedAvatar extends HTMLElement {
     this.promptInput = document.createElement('input');
     this.promptInput.type = 'text';
     this.promptInput.setAttribute("max-length", 50);
+    this.promptInput.setAttribute("placeholder", "Ask me anything about Balázs Bencs");
     this.promptInput.setAttribute("id", "prompt-input")
-    this.promptInput.setAttribute("placeholder", "Ask me anything about Balázs Bencs' works...")
 
     this.sendButton = document.createElement('button');
     this.sendButton.setAttribute("id", "send-button");
     this.sendButton.setAttribute("type", "button");
     this.sendButton.classList.add('btn', 'btn-primary', 'btn-sm', 'rounded-pill');
-    this.sendButton.textContent = 'Ask';
+    this.sendButton.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+      </svg>
+    `;
 
     this.canvas = document.createElement('canvas');
     this.ctx = this.canvas.getContext('2d');
 
     this.shadowRoot.getElementById('container').append(this.promptInput, this.sendButton);
 
-    this.canvas.width = this.getAttribute('width') || 400;
-    this.canvas.height = this.getAttribute('height') || 500;
+    this.canvas.width = globalThis.innerWidth < 800 ? 200 : 400;
+    this.canvas.height = globalThis.innerHeight < 600 ? 250 : 500;
     this.shadowRoot.appendChild(this.canvas);
 
     this.imagePaths = {
