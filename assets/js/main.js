@@ -80,12 +80,6 @@ import { on, select } from './helpers.js';
     window.addEventListener('load', () => {
         navbarlinksActive();
 
-        document.querySelector('animated-avatar').addEventListener('answare', (e) => {
-
-            const answerContainer = document.getElementById('aiAnswer')
-            answerContainer.classList.add("response")
-            answerContainer.innerHTML = marked.parse(e.detail.message);
-        });
 
         if (globalThis.location.hash && select(globalThis.location.hash)) {
             scrollto(globalThis.location.hash);
