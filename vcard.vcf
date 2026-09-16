@@ -2,17 +2,11 @@ BEGIN:VCARD
 N:Bencs;Balazs;
 TEL;TYPE=HOME,VOICE:+36306905610
 EMAIL;TYPE=HOME:bencsbalazs@gmail.com
-EMAIL;type=INTERNET;type=WORK;type=pref:balazs.bencs@ess.eu
-EMAIL;type=WORK;type=pref:balazs.bencs@eilabs.com
-ORG:European Spallation Source
-TITLE:Software Engineer
+TITLE:AI Software Engineer
 ADR;TYPE=HOME,PREF:;;Delej utca 51/14/fsz/6;Budapest;HU;1089;Hungary
-ADR;TYPE=HABITAT,PREF:;;Dag Hammarskjölds torg 9/1001;Malmö;SE;211 18;Sweden
-ADR;TYPE=WORK,PREF:;;Partikelgatan 2;Lund;SE;224 84;Sweden
 URL:https://bencsbalazs.github.io
 socialProfile;type=linkedin:https://www.linkedin.com/in/bencsbalazs/
 socialProfile;type=github:https://github.com/bencsbalazs
 socialProfile;type=facebook:https://www.facebook.com/balazs.bencs.9
-socialProfile;type=instagram:https://www.instagram.com/bencsbalazs/
 VERSION:3.0
 END:VCARD
